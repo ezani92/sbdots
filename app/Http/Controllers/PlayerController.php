@@ -20,6 +20,8 @@ class PlayerController extends Controller
 
         $now = time();
 
+        //github
+
         if($user->tac_send_at == null)
         {
             return $response = Curl::to('http://sms.sms2asia.com/xmlgateway.php')
