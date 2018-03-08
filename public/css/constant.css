@@ -1,0 +1,57 @@
+
+a { text-decoration:none;}
+a img { border:none;}
+
+.error
+{
+    font-size: 12px;
+    color: #FFFF00;
+}
+.forinput2 { height:20px; background:#2f3032; border:1px solid #41474a;
+				color:#d8d8d8;  padding-left:5px; font-size:11px;}
+.forinput3 { height:20px; background:#2f3032; border:1px solid #41474a;
+				color:#d8d8d8;  padding-left:5px; font-size:14px;}
+				
+.tdpadleft{padding-left: 10px;}
+
+.table1 {}
+.table1 td {border:1px solid #41474a;}
+.table2 {}
+.table2 td {border:1px solid #41474a; padding-left: 10px; padding-top: 5px; padding-bottom: 5px;}
+
+.a_hover:hover 
+{
+    text-decoration: underline;}
+    
+
+.field-txtbox {
+	width:250px;
+	line-height:26px;
+	height:30px;
+	padding:0px 6px;
+	color:#6d6d6d;
+	-webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.table-member .pgr tr td {
+	line-height:22px;
+	padding: 5px 10px;
+	border:none;
+}
+.table-member .pgr tr td span
+{
+    text-decoration: underline;
+}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]
+    {
+        position: absolute;
+    margin-top: 4px\9;
+    margin-left:0px;
+    margin-top: 10px;
+    }
+.checkbox label, .checkbox-inline label {
+    text-align: left;
+        margin-top: 8px;
+    }
