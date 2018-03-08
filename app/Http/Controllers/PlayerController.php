@@ -24,7 +24,7 @@ class PlayerController extends Controller
 
         if($user->tac_send_at == null)
         {
-            return $response = Curl::to('http://sms.sms2asia.com/xmlgateway.php')
+            $response = Curl::to('http://sms.sms2asia.com/xmlgateway.php')
             ->withData( array( 
                 'command' => 'sendRandom',
                 'email' => 'sbdots88@gmail.com',
@@ -49,7 +49,7 @@ class PlayerController extends Controller
             }
             else
             {
-                return $response = Curl::to('http://sms.sms2asia.com/xmlgateway.php')
+                $response = Curl::to('http://sms.sms2asia.com/xmlgateway.php')
                 ->withData( array( 
                     'command' => 'sendRandom',
                     'email' => 'sbdots88@gmail.com',
