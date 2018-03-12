@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
 
-	return view('front.index');
+	return view('front.maintanance');
 	
 });
 
