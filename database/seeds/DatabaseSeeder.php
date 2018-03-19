@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UserTableSeeder');
-        // $this->command->info('User table seeded!');
+        $this->call('UserTableSeeder');
+        $this->command->info('User table seeded!');
 
         $this->call('GameTableSeeder');
         $this->command->info('Game table seeded!');
@@ -40,15 +40,26 @@ class UserTableSeeder extends Seeder {
         DB::table('users')->delete();
 
         User::create(array(
-            'name' => 'shaiful ezani',
-        	'email' => 'shaiful@naxpansion.com',
+            'name' => 'Administrator',
+        	'email' => 'admin@sbdots.com',
         	'password' => bcrypt('123456'),
         	'phone' => '60129718420',
-            'role' => 3,
+            'role' => 1,
             'tac_no' => '123456',
             'phone_verification' => 1
 
     	));
+
+        User::create(array(
+            'name' => 'shaiful ezani',
+            'email' => 'shaiful@naxpansion.com',
+            'password' => bcrypt('123456'),
+            'phone' => '60129718420',
+            'role' => 3,
+            'tac_no' => '123456',
+            'phone_verification' => 1
+
+        ));
     }
 
 }

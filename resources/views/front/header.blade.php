@@ -39,7 +39,7 @@
                     <form method="post" action="{{ route('login') }}">
                         @csrf
                         <div class="loginfield">
-                            <input name="email" type="email" class="txtbox" placeholder="Email"/ required>
+                            <input name="email" type="email" class="txtbox" placeholder="Email"/ value="{{ old('email') }}" required>
                         </div>
                         <div class="loginfield">
                             <input name="password" type="password" class="txtbox" placeholder="Password" / required>
@@ -51,7 +51,13 @@
                             <a href="{{ url('/register') }}"><button type="button" class="btn-register">Register</button></a>
                         </div>
                     </form>
-                    <div class="invalid"></div>
+                    <div class="invalid">
+                        @if ($errors->has('email'))
+                            <span class="invalid-feedback">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                    </div>
                 </div>
                 <div class="forgotpw"><a href="{{ url('password/reset') }}">forgot password?</a></div>
                 @else

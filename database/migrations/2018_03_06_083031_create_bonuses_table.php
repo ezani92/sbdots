@@ -23,6 +23,7 @@ class CreateBonusesTable extends Migration
             $table->integer('allow_multiple');
             $table->decimal('min_deposit',10,2);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

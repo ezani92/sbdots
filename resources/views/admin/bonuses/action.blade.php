@@ -1,0 +1,1 @@
+<a href="{{ URL::to('admin/bonuses/'.$bonus->id) }}" class="btn btn-xs btn-info">View</a>

@@ -7,13 +7,13 @@
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| contains the "web" middleware group. 
 |
 */
 
 Route::get('/', function () {
 
-	return view('front.maintanance');
+	return view('front.index');
 	
 });
 
@@ -25,7 +25,38 @@ Auth::routes();
 Route::middleware(['isadmin'])->group(function () {
     
     Route::get('/admin', 'DashboardController@index');
+
+    Route::get('/admin/games/data', 'GameController@data');
     Route::resource('/admin/games', 'GameController');
+
+    Route::get('/admin/bonuses/data-active', 'BonusController@dataActive');
+    Route::get('/admin/bonuses/data-deactive', 'BonusController@dataDeactive');
+    Route::resource('/admin/bonuses', 'BonusController');
+    Route::get('/admin/bonuses/{bonus_id}/restore', 'BonusController@restore');
+
+    Route::get('/admin/transaction/data', 'TransactionController@data');
+
+    Route::get('/admin/transaction/deposit', 'TransactionController@deposit');
+    Route::get('/admin/transaction/deposit-data', 'TransactionController@depositData');
+
+    Route::get('/admin/transaction/withdrawal', 'TransactionController@withdrawal');
+    Route::get('/admin/transaction/withdrawal-data', 'TransactionController@withdrawalData');
+
+    Route::get('/admin/transaction/transfer', 'TransactionController@transfer');
+    Route::get('/admin/transaction/transfer-data', 'TransactionController@transferData');
+
+
+
+    Route::resource('/admin/transaction', 'TransactionController');
+
+    Route::get('/admin/settings', 'settingController@index');
+    Route::post('/admin/settings', 'settingController@update');
+
+    Route::get('/admin/users/data', 'UserController@data');
+    Route::get('/admin/users/{user_id}/ban', 'UserController@ban');
+    Route::get('/admin/users/{user_id}/unban', 'UserController@unban');
+    Route::resource('/admin/users', 'UserController');
+
     
 });
 

@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration
             $table->string('address')->nullable();
             $table->string('state')->nullable();
             $table->integer('sms_service')->nullable();
-            $table->integer('is_active')->default(1);
+            $table->integer('is_ban')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

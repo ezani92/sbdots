@@ -73,9 +73,9 @@
                                                                             <td scope="col">
                                                                                 @if($transaction->status == 1)
                                                                                     <span class="label label-info">Processing</span>
-                                                                                @elseif($transaction->status == 2)
-                                                                                    <span class="label label-danger">Declined</span>
                                                                                 @elseif($transaction->status == 3)
+                                                                                    <span class="label label-danger">Declined</span>
+                                                                                @elseif($transaction->status == 2)
                                                                                     <span class="label label-success">Succesfull</span>
                                                                                 @endif
                                                                             </td>
