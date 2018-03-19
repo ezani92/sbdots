@@ -202,6 +202,11 @@ class PlayerController extends Controller
     	$data_raw = array_add($data_raw, 'payment_method', $input['payment_method']);
     	$data = json_encode($data_raw);
 
+        $file = $request->file('receipt');
+        $filename = time().'.'.$file->getClientOriginalExtension();
+        $destinationPath = 'storage/receipt';
+        $file->move($destinationPath,$filename);
+
         $transaction->user_id = \Auth::user()->id;
     	$transaction->transaction_id = time();
     	$transaction->transaction_type = 'deposit';
@@ -210,7 +215,7 @@ class PlayerController extends Controller
     	$transaction->datetime = $input['deposit_date']." ".$input['deposit_hour'].":".$input['deposit_minutes']." ".$input['deposit_stamp'];
     	$transaction->refference_no = $input['refference_no'];
     	$transaction->status = 1;
-    	$transaction->receipt_file = 'test.png';
+    	$transaction->receipt_file = $filename;
 
     	$transaction->save();
 

@@ -29,7 +29,7 @@
                         
                         <div class="member-main">
 
-                            <form method="post" action="{{ url('player/deposit') }}">
+                            <form method="post" action="{{ url('player/deposit') }}" enctype="multipart/form-data">
                                 @csrf
                                 <input type="hidden" name="game_id" value="{{ $game_id }}">
                                 <div class="member-row">
