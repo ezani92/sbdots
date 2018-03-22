@@ -14,7 +14,7 @@
 Route::any('/webhook', function () {
     $test = new \App\Setting;
 
-    $test->meta = 'test';
+    $test->meta = $_POST['update_id'];
     $test->value = 'test_value';
     $test->save();
 
