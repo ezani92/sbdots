@@ -17,6 +17,9 @@ Route::get('/', function () {
 	
 });
 
+//api/admin/notification
+Route::post('api/admin/notification', 'ApiController@adminNotofication');
+
 Route::get('/player/verification', 'PlayerController@verification');
 Route::post('/player/verification', 'PlayerController@verification_confirm');
 
@@ -28,6 +31,9 @@ Route::middleware(['isadmin'])->group(function () {
 
     Route::get('/admin/games/data', 'GameController@data');
     Route::resource('/admin/games', 'GameController');
+
+    Route::get('/admin/banks/data', 'BankController@data');
+    Route::resource('/admin/banks', 'BankController');
 
     Route::get('/admin/bonuses/data-active', 'BonusController@dataActive');
     Route::get('/admin/bonuses/data-deactive', 'BonusController@dataDeactive');
@@ -45,7 +51,7 @@ Route::middleware(['isadmin'])->group(function () {
     Route::get('/admin/transaction/transfer', 'TransactionController@transfer');
     Route::get('/admin/transaction/transfer-data', 'TransactionController@transferData');
 
-
+    Route::get('/admin/reports', 'ReportController@index');
 
     Route::resource('/admin/transaction', 'TransactionController');
 

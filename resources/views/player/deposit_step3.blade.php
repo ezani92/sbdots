@@ -174,7 +174,12 @@
                                         <tr>
                                             <td>Bonus Code</td>
                                             <td>
-                                                <input name="bonus_code" type="text" maxlength="30" class="field-register" />
+                                                <select name="bonus_code"  class="field-register">
+                                                    <option value="">No Bonus</option>
+                                                    @foreach($bonuses as $bonus)
+                                                        <option value="{{ $bonus->bonus_code }}">{{ $bonus->name }}</option>
+                                                    @endforeach
+                                                </select>
                                             </td>
                                             <td><span class="text-error"></span></td>
                                         </tr>

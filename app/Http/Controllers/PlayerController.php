@@ -11,6 +11,10 @@ use App\Bonus;
 use Session;
 use Ixudra\Curl\Facades\Curl;
 use Hash;
+use App\Notifications\NewDeposit;
+use App\Notifications\NewWithdraw;
+use App\Notifications\NewTransfer;
+use Pusher\Pusher;
 
 class PlayerController extends Controller
 {	
@@ -132,6 +136,8 @@ class PlayerController extends Controller
     {
     	$input = $request->all();
 
+        $bonuses = Bonus::all();
+
     	if(!isset($input['games']))
     	{	
     		Session::flash('message', 'Please select games first before proceed!'); 
@@ -142,6 +148,7 @@ class PlayerController extends Controller
 
     	return view('player.deposit_step3',[
     		'game_id' => $input['games'],
+            'bonuses' => $bonuses
     	]);
     }
 
@@ -219,6 +226,19 @@ class PlayerController extends Controller
 
     	$transaction->save();
 
+        $admins = User::where('role',1)->get();
+        foreach($admins as $admin)
+        {
+            $admin->notify(new NewDeposit($transaction));
+        }
+
+        $options = array(
+            'cluster' => 'ap1',
+            'encrypted' => true
+        );
+        $pusher = new Pusher('32a087e0e1378c7b7210', 'bda79f5550252850598e', '494870', $options);
+        $pusher->trigger('sbdots', 'transaction', []);
+
     	Session::flash('message', 'Thank you for you deposit. Please wait while we process your transaction. You can view the status on this page.'); 
         Session::flash('alert-class', 'alert-info');
 
@@ -267,6 +287,19 @@ class PlayerController extends Controller
 
         $transaction->save();
 
+        $admins = User::where('role',1)->get();
+        foreach($admins as $admin)
+        {
+            $admin->notify(new NewWithdraw($transaction));
+        }
+
+        $options = array(
+            'cluster' => 'ap1',
+            'encrypted' => true
+        );
+        $pusher = new Pusher('32a087e0e1378c7b7210', 'bda79f5550252850598e', '494870', $options);
+        $pusher->trigger('sbdots', 'transaction', []);
+
         return view('player.withdrawal.step3',['transaction' => $transaction]);
 
     }
@@ -297,6 +330,19 @@ class PlayerController extends Controller
         $transaction->status = 1;
 
         $transaction->save();
+
+        $admins = User::where('role',1)->get();
+        foreach($admins as $admin)
+        {
+            $admin->notify(new NewTransfer($transaction));
+        }
+
+        $options = array(
+            'cluster' => 'ap1',
+            'encrypted' => true
+        );
+        $pusher = new Pusher('32a087e0e1378c7b7210', 'bda79f5550252850598e', '494870', $options);
+        $pusher->trigger('sbdots', 'transaction', []);
 
         return view('player.transfer.step2',['transaction' => $transaction]);
     }

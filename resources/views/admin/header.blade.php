@@ -53,49 +53,31 @@
                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle"><span class="icon mdi mdi-notifications"></span><span class="indicator"></span></a>
                                 <ul class="dropdown-menu be-notifications">
                                     <li>
-                                        <div class="title">Notifications<span class="badge">3</span></div>
+                                        <div class="title">Notifications<span class="badge">{{ \Auth::user()->unreadNotifications->count() }}</span></div>
                                         <div class="list">
                                             <div class="be-scroller">
                                                 <div class="content">
                                                     <ul>
-                                                        {{-- <li class="notification notification-unread">
-                                                            <a href="#">
-                                                                <div class="image"><img src="assets/img/avatar2.png" alt="Avatar"></div>
+                                                        @foreach(Auth::user()->unreadNotifications as $notification)
+                                                        <li class="notification notification-unread">
+                                                            @if($notification->type == 'App\Notifications\NewDeposit')
+                                                            <a href="{{ url('/admin/transaction/'.$notification->data['transaction_id']) }}">
+                                                                <div class="image"><img src="{{ secure_asset('assets/img/avatar2.png') }}" alt="Avatar"></div>
                                                                 <div class="notification-info">
-                                                                    <div class="text"><span class="user-name">Jessica Caruso</span> accepted your invitation to join the team.</div>
-                                                                    <span class="date">2 min ago</span>
+                                                                    <div class="text"><span class="user-name">{{ $notification->data['title'] }}</span> {{ $notification->data['message'] }}</div>
+                                                                    <span class="date">{{ $notification->created_at->diffForHumans() }}</span>
                                                                 </div>
                                                             </a>
+                                                            @else
+
+                                                            @endif
                                                         </li>
-                                                        <li class="notification">
-                                                            <a href="#">
-                                                                <div class="image"><img src="assets/img/avatar3.png" alt="Avatar"></div>
-                                                                <div class="notification-info">
-                                                                    <div class="text"><span class="user-name">Joel King</span> is now following you</div>
-                                                                    <span class="date">2 days ago</span>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="notification">
-                                                            <a href="#">
-                                                                <div class="image"><img src="assets/img/avatar4.png" alt="Avatar"></div>
-                                                                <div class="notification-info">
-                                                                    <div class="text"><span class="user-name">John Doe</span> is watching your main repository</div>
-                                                                    <span class="date">2 days ago</span>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="notification">
-                                                            <a href="#">
-                                                                <div class="image"><img src="assets/img/avatar5.png" alt="Avatar"></div>
-                                                                <div class="notification-info"><span class="text"><span class="user-name">Emily Carter</span> is now following you</span><span class="date">5 days ago</span></div>
-                                                            </a>
-                                                        </li> --}}
+                                                        @endforeach
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="footer"> <a href="#">View all notifications</a></div>
+                                        <div class="footer"> <a href="{{ url('admin/') }}">View all notifications</a></div>
                                     </li>
                                 </ul>
                             </li>
@@ -119,6 +101,16 @@
                                             <li class="{{ Request::is('admin/games') ? 'active' : '' }}"><a href="{{ url('admin/games') }}">Game Lists</a>
                                             </li>
                                             <li class="{{ Request::is('admin/games/create') ? 'active' : '' }}"><a href="{{ url('admin/games/create') }}">Add New Game</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="parent {{ Request::is('admin/banks*') ? 'active' : '' }}">
+                                        <a href="#"><i class="icon mdi mdi-city"></i><span>Banks</span></a>
+                                        <ul class="sub-menu">
+                                            <li class="{{ Request::is('admin/banks') ? 'active' : '' }}"><a href="{{ url('admin/banks') }}">Bank Lists</a>
+                                            </li>
+                                            <li class="{{ Request::is('admin/banks/create') ? 'active' : '' }}"><a href="{{ url('admin/banks/create') }}">Add New Bank</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -147,7 +139,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class=""><a href="{{ url('admin/reports') }}"><i class="icon mdi mdi-chart"></i><span>Reports</span></a>
+                                    <li class="{{ Request::is('admin/reports*') ? 'active' : '' }}"><a href="{{ url('admin/reports') }}"><i class="icon mdi mdi-chart"></i><span>Reports</span></a>
                                     </li>
                                     
                                     <li class="divider">Admin Action</li>

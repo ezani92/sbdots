@@ -35,4 +35,8 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'telegram' => [
+        'token' => env('TELEGRAM_TOKEN', '591396238:AAGZtP_Ks2tWpwsZmjRHy9hn--h9fJIuQHA')
+    ],
+
 ];

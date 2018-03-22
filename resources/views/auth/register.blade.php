@@ -20,7 +20,7 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-register">
                             <tr>
                                 <td>
-                                    <input name="name" type="text" id="name" placeholder="Full Name" autocomplete="name" class="field-register" onkeyup="nospaces(this)" />
+                                    <input name="name" type="text" id="name" placeholder="Full Name" autocomplete="name" class="field-register" onkeyup="nospaces(this)" value="{{old('name') }}" />
                                 </td>
                                 <td class="col-2">&nbsp;</td>
                                 <td><span class="text-error">
@@ -29,7 +29,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input name="phone" type="text" placeholder="60123456789" class="field-register" autocomplete="tel-national" />
+                                    <input name="phone" type="text" placeholder="60123456789" class="field-register" autocomplete="tel-national" value="{{old('phone') }}"/>
                                 </td>
                                 <td class="col-2">Please provide a valid Contact Number for future promotion and payment correspondences.</td>
                                 <td><span class="text-error">
@@ -72,6 +72,11 @@
                                     </table>
                                 </td>
                                 <td><span class="text-error">
+                                    @if ($errors->has('email'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
                                     </span>
                                 </td>
                             </tr>
