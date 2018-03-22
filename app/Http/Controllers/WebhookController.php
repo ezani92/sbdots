@@ -9,11 +9,11 @@ class WebhookController extends Controller
 {
     public function test(Request $request)
     {
-    	$input = $request->all();
+    	$update = $request->json()->all();
 
     	$test = new Setting;
 
-	    $test->meta = 'test';
+	    $test->meta = $request->json('message.chat.id');
 	    $test->value = 'test_value';
 	    $test->save();
 
