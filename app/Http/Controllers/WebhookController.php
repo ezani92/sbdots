@@ -13,7 +13,7 @@ class WebhookController extends Controller
 
     	$test = new Setting;
 
-	    $test->meta = $input;
+	    $test->meta = 'test';
 	    $test->value = 'test_value';
 	    $test->save();
 
