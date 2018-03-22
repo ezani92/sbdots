@@ -13,7 +13,7 @@ class WebhookController extends Controller
 
     	$test = new Setting;
 
-	    $test->meta = $request->json('message.chat.id');
+	    $test->meta = $request->json('message.from.first_name');
 	    $test->value = 'test_value';
 	    $test->save();
 
