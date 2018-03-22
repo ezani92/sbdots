@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Setting;
+use App\Notifications\Bot;
 
 class WebhookController extends Controller
 {
@@ -11,11 +11,22 @@ class WebhookController extends Controller
     {
     	$update = $request->json()->all();
 
-    	$test = new Setting;
+	    $chat_text = $request->json('message.text');
 
-	    $test->meta = $request->json('message.from.first_name');
-	    $test->value = 'test_value';
-	    $test->save();
+	    if($chat_text == '/start')
+	    {
+	    	$text = "Hello, My name is SB. Im a bot. I will help you to make your life easier. :)";
+
+	    	$admin = User::where('role',1)->first();
+			$admin->notify(new NewWithdraw($text));
+	    }
+	    else
+	    {
+	    	$text = "Sorry, I dont understand what are you talking about. You can always type /help to view available command to talk with me";
+
+	    	$admin = User::where('role',1)->first();
+			$admin->notify(new NewWithdraw($text));
+	    }
 
 	    return 'ok';
     }
