@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class NewDeposit extends Notification implements ShouldQueue
+class Bot extends Notification implements ShouldQueue
 {
     use Queueable;
 
