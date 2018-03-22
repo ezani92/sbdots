@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Notifications\Bot;
+use App\User;
 
 class WebhookController extends Controller
 {
