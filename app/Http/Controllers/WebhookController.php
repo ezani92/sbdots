@@ -20,7 +20,7 @@ class WebhookController extends Controller
 	    $setting = new Setting;
 
 	    $setting->meta = $chat_text;
-	    $setting->meta = $chat_text;
+	    $setting->value = $chat_text;
 
 	    $setting->save();
 
