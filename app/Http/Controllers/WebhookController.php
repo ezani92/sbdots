@@ -36,7 +36,7 @@ class WebhookController extends Controller
 	    elseif($chat_text == '/help' || $chat_text == '/help@SbdotsBot')
 	    {
 
-	    	$text = "Here is list of command to start talking with me \n\n\start - Wake me up\n\pending - Get total pending ticket\n\help - List of command available";
+	    	$text = "Here is list of command to start talking with me \n\n/start - Wake me up\n/pending - Get total pending ticket\n/help - List of command available";
 
 	    	$admin = User::where('role',1)->first();
 			$admin->notify(new Bot($text));
