@@ -10,16 +10,7 @@
 | contains the "web" middleware group. 
 |
 */
-
-Route::any('/webhook', function () {
-    $test = new \App\Setting;
-
-    $test->meta = $_POST['update_id'];
-    $test->value = 'test_value';
-    $test->save();
-
-    return 'ok';
-});
+Route::any('/webhook', 'WebhookController@test');
 
 Route::get('/', function () {
 
