@@ -100,7 +100,7 @@
                             <div class="annTitle">News:</div>
                             <div class="runText">
                                 <marquee scrolldelay="150">
-                                    Dear Players, we are pleased to announce that the minimum deposit and withdrawal amount has been reduced.
+                                    {{ \App\Setting::find(7)->value }}
                                 </marquee>
                             </div>
                         </div>

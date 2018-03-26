@@ -138,6 +138,11 @@ class SettingTableSeeder extends Seeder {
             'meta' => 'MAX_WITHDRAWAL',
             'value' => '50',
         ));
+
+        Setting::create(array(
+            'meta' => 'ANNOUCEMENT',
+            'value' => 'Any Annoucement Here!',
+        ));
     }
 
 }

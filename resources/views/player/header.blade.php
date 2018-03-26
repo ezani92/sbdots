@@ -88,10 +88,10 @@
                     <div id="announcement">
                         <div class="announceIcon"><img src="{{ secure_asset('images/common/announce-left.png') }}" width="38" height="30" alt=""/></div>
                         <div class="annContent">
-                            <div class="annTitle">News:</div>
+                            <div class="annTitle">Annoucement:</div>
                             <div class="runText">
                                 <marquee scrolldelay="150">
-                                    Dear Players, we are pleased to announce that the minimum deposit and withdrawal amount has been reduced.
+                                    {{ \App\Setting::find(7)->value }}
                                 </marquee>
                             </div>
                         </div>

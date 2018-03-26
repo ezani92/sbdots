@@ -60,6 +60,7 @@ Route::middleware(['isadmin'])->group(function () {
     Route::post('/admin/settings', 'settingController@update');
 
     Route::get('/admin/users/data', 'UserController@data');
+    Route::get('/admin/users/{user_id}/transaction-data', 'UserController@transactiondata');
     Route::get('/admin/users/{user_id}/ban', 'UserController@ban');
     Route::get('/admin/users/{user_id}/unban', 'UserController@unban');
     Route::resource('/admin/users', 'UserController');

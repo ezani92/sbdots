@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Transaction;
 use DataTables;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -105,6 +106,37 @@ class UserController extends Controller
         $user = User::find($id);
 
         return view('admin.users.show',compact('user'));
+    }
+
+    public function transactiondata(Datatables $datatables,$user_id)
+    {
+        $transactions = Transaction::where('user_id',$user_id)->get();
+        return Datatables::of($transactions)
+            ->addColumn('actions', function($transaction) {
+                return view('admin.transaction.action', compact('transaction'))->render();
+            })
+            ->editColumn('status', function ($transaction) {
+                
+                if($transaction->status == 1)
+                {
+                    return '<span class="label label-warning">Progress</span>';
+                }
+                else if($transaction->status == 2)
+                {
+                    return '<span class="label label-success">Complete</span>';
+                }
+                else if($transaction->status == 3)
+                {
+                    return '<span class="label label-danger">Decline</span>';
+                }
+
+
+            })
+            ->editColumn('created_at', function ($transaction) {
+                return $transaction->created_at ? with(new Carbon($transaction->created_at))->format('d M Y, h:i A') : '';
+            })
+            ->rawColumns(['actions','status'])
+            ->make(true);
     }
 
     /**

@@ -23,7 +23,7 @@
                     <br /><br /><br />
                     <div class="splash-container">
                         <div class="panel panel-default panel-border-color panel-border-color-primary">
-                            <div class="panel-heading">Proplenx<span class="splash-description">Please enter your user information.</span></div>
+                            <div class="panel-heading">SBDOTS.COM<span class="splash-description">Please enter your user information.</span></div>
                             <div class="panel-body">
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
@@ -59,7 +59,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="splash-footer"><span>Copyright {{ date('Y') }} | <a href="#">Proplenx Sdn Bhd</a></span></div>
+                        <div class="splash-footer"><span>Copyright {{ date('Y') }} | <a href="#">SBDOTS.COM</a></span></div>
                     </div>
                 </div>
             </div>
