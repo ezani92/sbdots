@@ -1,3 +1,2 @@
-# proplenx
-A Laravel Project For Proplenx
-# sbdots
+# Personal Project By Naxpansion
+A Laravel Project For Sbdots
