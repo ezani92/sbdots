@@ -30,11 +30,11 @@ class ReportController extends Controller
             $pending_transactions = Transaction::where('status',1)->where('created_at','>=',$from)->where('created_at','<=',$to)->paginate(10);
 
             $count_deposit = Transaction::where('transaction_type','deposit')->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
-            $count_withdrawal = Transaction::where('transaction_type','withdrawal')->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
+            $count_withdrawal = Transaction::where('transaction_type','withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
             $count_transfer = Transaction::where('transaction_type','transfer')->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
 
             $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
-            $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdrawal')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+            $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
             $worth_transfer = DB::table('transactions')->where('transaction_type','transfer')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
         }
         else
@@ -50,11 +50,11 @@ class ReportController extends Controller
             $pending_transactions = Transaction::where('status',1)->paginate(10);
 
             $count_deposit = Transaction::where('transaction_type','deposit')->count();
-            $count_withdrawal = Transaction::where('transaction_type','withdrawal')->count();
+            $count_withdrawal = Transaction::where('transaction_type','withdraw')->count();
             $count_transfer = Transaction::where('transaction_type','transfer')->count();
 
             $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->sum('amount');
-            $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdrawal')->sum('amount');
+            $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->sum('amount');
             $worth_transfer = DB::table('transactions')->where('transaction_type','transfer')->sum('amount');
         }
         

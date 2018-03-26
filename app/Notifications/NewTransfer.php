@@ -70,6 +70,6 @@ class NewTransfer extends Notification implements ShouldQueue
         return TelegramMessage::create()
             ->to('-242559530')
             ->content("*ALERT!* \n\n We have new Transfer request from ".$this->transaction->user->name."!")
-            ->button('View Deposit Request', url('https://sbdots.com'));
+            ->button('View Transfer Request', url('https://sbdots.com'));
     }
 }
