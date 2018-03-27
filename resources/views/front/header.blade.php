@@ -20,7 +20,7 @@
                     <div class="helpCenter"><a href="#"><i class="fa fa-question-circle"></i> help</a></div>
                     <div class="languageWrap">
                         <div class="dropdown">
-                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-language" style="background:rgba(3,43,55,0.85) url({{ secure_asset('images/common/flag-en.png') }}) no-repeat;"> English <span class="caret" style=""></span> </button>
+                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-language"> English <span class="caret" style=""></span> </button>
                             <ul class="dropdown-menu" aria-labelledby="dLabel">
                                 <li><a id="ctl00_lnkbtnen" class="language-en" href="javascript:__doPostBack(&#39;ctl00$lnkbtnen&#39;,&#39;&#39;)">English</a></li>{{-- 
                                 <li><a id="ctl00_lnkbtncn" class="language-cn" href="javascript:__doPostBack(&#39;ctl00$lnkbtncn&#39;,&#39;&#39;)">中文</a></li>
@@ -77,7 +77,7 @@
                 @endif
                 <div id="menu">
                     <ul>
-                        <li><a href="{{ url('/') }}" class=""><i class="fa fa-home"></i></a></li>
+                        <li class="home-menu"><a href="{{ url('/') }}" class=""><i class="fa fa-home"></i></a></li>
                         <li><a href="#" class=""><i class="fa fa-mobile"></i></a></li>
                         <li><a href="#" class="">sportsbooks</a></li>
                         <li><a href="#" class="">live casinos</a></li>
@@ -86,7 +86,7 @@
                         <li><a href="#" class="">poker</a></li>
                         <li><a href="#" class="">promotions</a></li>
                         <li><a href="#" class="">contact us</a></li>
-                        <li><a href="#" onclick=""><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
+                        <li class="comment"><a href="#" onclick=""><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
                     </ul>
                 </div>
             </div>
@@ -95,7 +95,7 @@
             <div class="bg-banner">
                 <div class="container">
                     <div id="announcement">
-                        <div class="announceIcon"><img src="images/common/announce-left.png" width="38" height="30" alt=""/></div>
+                        <div class="announceIcon"><i class="fa fa-fw fa-bullhorn"></i></div>
                         <div class="annContent">
                             <div class="annTitle">News:</div>
                             <div class="runText">

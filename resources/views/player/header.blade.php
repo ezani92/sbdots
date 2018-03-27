@@ -68,7 +68,7 @@
                 @endif
                 <div id="menu">
                     <ul>
-                        <li><a href="#" class=""><i class="fa fa-home"></i></a></li>
+                        <li class="home-menu"><a href="#" class=""><i class="fa fa-home"></i></a></li>
                         <li><a href="#" class=""><i class="fa fa-mobile"></i></a></li>
                         <li><a href="#" class="">sportsbooks</a></li>
                         <li><a href="#" class="">live casinos</a></li>
@@ -77,7 +77,7 @@
                         <li><a href="#" class="">poker</a></li>
                         <li><a href="#" class="">promotions</a></li>
                         <li><a href="#" class="">contact us</a></li>
-                        <li><a href="#" onclick=""><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
+                        <li class="comment"><a href="#" onclick=""><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
                     </ul>
                 </div>
             </div>
