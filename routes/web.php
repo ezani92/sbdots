@@ -18,6 +18,60 @@ Route::get('/', function () {
 	
 });
 
+Route::get('mobile', function(){
+
+    return view('front.mobile');
+
+});
+
+Route::get('sportsbooks', function(){
+
+    return view('front.sportsbook');
+
+});
+
+Route::get('live_casinos', function(){
+
+    return view('front.live_casino');
+
+});
+
+Route::get('slots', function(){
+
+    return view('front.slot');
+
+});
+
+Route::get('arcades', function(){
+
+    return view('front.Arcade.arcade');
+
+});
+
+Route::get('game-live22', function(){
+
+    return view('front.Arcade.game-live22');
+
+});
+
+Route::get('poker_', function(){
+
+    return view('front.poker');
+
+});
+
+Route::get('promotions', function(){
+
+    return view('front.promotion');
+
+});
+
+Route::get('contact_us', function(){
+
+    return view('front.contact_us');
+
+});
+
 //api/admin/notification
 Route::post('api/admin/notification', 'ApiController@adminNotofication');
 

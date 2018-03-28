@@ -526,7 +526,7 @@ font-size:18px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
 	background-color: transparent;
-	padding:10px 0 3px 10px;
+	padding:10px 0 3px 6px;
 	margin:10px auto;
 	min-height:300px;
 	position:relative;
@@ -845,6 +845,13 @@ font-size:18px;
 	background: linear-gradient(to bottom,  #30515a 0%,#264852 28%,#1c404c 42%,#1b4049 47%,#183d46 49%,#08303a 50%,#032b37 51%,#032b37 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30515a', endColorstr='#032b37',GradientType=0 ); /* IE6-9 */
 }
+.download-icon .d-img {
+    padding: 0 8px;
+    color: #fde487;
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
 .download-icon .d-img:hover {	
 	-webkit-box-shadow: 0 2px 3px 1px #4E7F8E;
 	box-shadow: 0 2px 3px 1px #4E7F8E;
@@ -1135,7 +1142,7 @@ textarea {
 	float: left;
 	width: 790px;
 	min-height: 515px;
-	background: #31525b;
+	background: transparent;
 	padding: 20px;
 	-webkit-border-radius: 7px 7px 7px 7px;
 	border-radius: 7px 7px 7px 7px;
@@ -1417,7 +1424,7 @@ textarea {
 	float: right;
 	width: 814px;
 	min-height: 670px;
-	background: #31525b;
+	background: transparent;
 	padding: 20px;
 	-webkit-border-radius: 7px 7px 7px 7px;
 	border-radius: 7px 7px 7px 7px;
@@ -1716,7 +1723,7 @@ textarea {
 	float: right;
 	width: 790px;
 	min-height: 515px;
-	background: #31525b;
+	background: transparent;
 	padding: 20px;
 	-webkit-border-radius: 7px 7px 7px 7px;
 	border-radius: 7px 7px 7px 7px;
@@ -1797,7 +1804,6 @@ textarea {
 
 .sportsbook {
 	background:url(../images/common/products-box-sports.jpg)no-repeat;
-	padding: 30px;
 	text-align: center;
 }
 .livecasino {
@@ -1807,7 +1813,6 @@ textarea {
 }
 .slots {
 	background:url(../images/common/products-box-slots.jpg)no-repeat;
-	padding: 30px;
 	text-align: center;
 }
 .games {

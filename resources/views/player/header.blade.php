@@ -68,15 +68,15 @@
                 @endif
                 <div id="menu">
                     <ul>
-                        <li class="home-menu"><a href="#" class=""><i class="fa fa-home"></i></a></li>
-                        <li><a href="#" class=""><i class="fa fa-mobile"></i></a></li>
-                        <li><a href="#" class="">sportsbooks</a></li>
-                        <li><a href="#" class="">live casinos</a></li>
-                        <li><a href="#" class="">slots</a></li>
-                        <li><a href="#" class="">arcades</a></li>
-                        <li><a href="#" class="">poker</a></li>
-                        <li><a href="#" class="">promotions</a></li>
-                        <li><a href="#" class="">contact us</a></li>
+                        <li class="home-menu"><a href="{{ url('/') }}" class=""><i class="fa fa-home"></i></a></li>
+                        <li><a href="mobile" class=""><i class="fa fa-mobile"></i></a></li>
+                        <li><a href="sportsbooks" class="">sportsbooks</a></li>
+                        <li><a href="live_casinos" class="">live casinos</a></li>
+                        <li><a href="slots" class="">slots</a></li>
+                        <li><a href="arcades" class="">arcades</a></li>
+                        <li><a href="poker_" class="">poker</a></li>
+                        <li><a href="promotions" class="">promotions</a></li>
+                        <li><a href="contact_us" class="">contact us</a></li>
                         <li class="comment"><a href="#" onclick=""><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
                     </ul>
                 </div>
