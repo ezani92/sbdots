@@ -33,7 +33,9 @@
         </div>
         <div id="header">
             <div class="headWrap container">
-                <div class="logo"><a href="{{ url('/') }}"></a></div>
+                <div class="logo"><a href="{{ url('/') }}">
+                <img src="../images/common/sb_logo.jpg" alt="" height="85px">
+                </a></div>
                 @if(Auth::guest())
 	                <div class="loginpart pull-right">
 	                    <div class="loginfield">
