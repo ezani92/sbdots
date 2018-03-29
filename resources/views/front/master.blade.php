@@ -100,10 +100,15 @@
                 </div>
                 @if(Request::is('/'))
                 <div class="slider-wrapper theme-default">
-                    <div id="slider" class="nivoSlider"> 
-                        <a href="promotions"><img src="images/en/banner-01.jpg" width="1040" height="373" alt=""/></a> 
-                        <a href="promotions"><img src="images/en/banner-02.jpg" width="1040" height="373" alt=""/></a> 
-                        <a href="promotions"><img src="images/en/banner-03.jpg" width="1040" height="373" alt=""/></a> 
+                    <div id="slider" class="nivoSlider" style="height:350px;"> 
+                        <a href="promotions"><img src="images/en/Main1.jpg" width="1040" height="350" alt=""/></a> 
+                        <a href="promotions"><img src="images/en/Main2.jpg" width="1040" height="350" alt=""/></a> 
+                        <a href="promotions"><img src="images/en/Main3.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/Promo-1rebate.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/Promo-1rebatesport.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/Promo-3deposit.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/Promo-10deposit.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/Promo-newmember.jpg" width="1040" height="350" alt=""/></a>
                     </div>
                 </div>
                 @else

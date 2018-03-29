@@ -23,6 +23,9 @@ a:focus, :focus, .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.f
 	background-size: cover;
 }
 
+.nivoSlider img{height:100% !important; object-position: bottom;} 
+.nivo-main-image{height:100% !important;}
+
 /* Left */
 #sidebar {
 	position: absolute; 
@@ -453,7 +456,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8bd4a', end
 	background-image: linear-gradient(to bottom, #f72626, #bd0605 40%, #560402);	
 }
 #announcement {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 1040px;
@@ -1135,6 +1138,11 @@ textarea {
 	display: none;
 	margin: 0 auto 20px auto;
 }
+#portfoliolist img{
+
+	width:100%;
+
+}
 #portfoliolist .portfolio:last-child {
 	margin: 0 auto;
 }
@@ -1155,7 +1163,7 @@ textarea {
 }
 .promo-title-row {
 	position: absolute;
-	top: 160px;
+	top: 195px;
 	right: 10px;
 }
 .promo-button {
