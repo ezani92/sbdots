@@ -6,6 +6,8 @@ use App\Game;
 use App\Bank;
 use App\Setting;
 use App\Bonus;
+use App\Group;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,6 +20,9 @@ class DatabaseSeeder extends Seeder
     {
         $this->call('UserTableSeeder');
         $this->command->info('User table seeded!');
+
+        $this->call('GroupTableSeeder');
+        $this->command->info('User Group table seeded!');
 
         $this->call('GameTableSeeder');
         $this->command->info('Game table seeded!');
@@ -59,6 +64,46 @@ class UserTableSeeder extends Seeder {
             'tac_no' => '123456',
             'phone_verification' => 1
 
+        ));
+
+        User::create(array(
+            'name' => 'Nic Tee',
+            'email' => 'nic@naxpansion.com',
+            'password' => bcrypt('123456'),
+            'phone' => '60123456789',
+            'role' => 3,
+            'tac_no' => '123456',
+            'phone_verification' => 1
+
+        ));
+    }
+
+}
+
+class GroupTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('groups')->delete();
+
+        Group::create(array(
+            'name' => 'Basic',
+            'icon' => 'fa fa-user',
+        ));
+
+        Group::create(array(
+            'name' => 'Silver',
+            'icon' => 'fa fa-user',
+        ));
+
+        Group::create(array(
+            'name' => 'Platinum',
+            'icon' => 'fa fa-user',
+        ));
+
+        Group::create(array(
+            'name' => 'Gold',
+            'icon' => 'fa fa-user',
         ));
     }
 

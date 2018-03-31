@@ -109,8 +109,9 @@ class PlayerController extends Controller
         }
 
         $games = Game::all();
+        $banks = Bank::all();
 
-    	return view('player.deposit_step1',['games' => $games]);
+    	return view('player.deposit_step1',['games' => $games , 'banks' => $banks]);
     }
 
     public function deposit_step2(Request $request)
@@ -137,6 +138,7 @@ class PlayerController extends Controller
     	$input = $request->all();
 
         $bonuses = Bonus::all();
+        $banks = Bank::all();
 
     	if(!isset($input['games']))
     	{	
@@ -148,7 +150,8 @@ class PlayerController extends Controller
 
     	return view('player.deposit_step3',[
     		'game_id' => $input['games'],
-            'bonuses' => $bonuses
+            'bonuses' => $bonuses,
+            'banks' => $banks
     	]);
     }
 
@@ -209,20 +212,28 @@ class PlayerController extends Controller
     	$data_raw = array_add($data_raw, 'payment_method', $input['payment_method']);
     	$data = json_encode($data_raw);
 
-        $file = $request->file('receipt');
-        $filename = time().'.'.$file->getClientOriginalExtension();
-        $destinationPath = 'storage/receipt';
-        $file->move($destinationPath,$filename);
+        if ($request->hasFile('receipt')) {
+            
+            $file = $request->file('receipt');
+            $filename = time().'.'.$file->getClientOriginalExtension();
+            $destinationPath = 'storage/receipt';
+            $file->move($destinationPath,$filename);
+
+            $transaction->receipt_file = $filename;
+        }
+
+        
 
         $transaction->user_id = \Auth::user()->id;
     	$transaction->transaction_id = time();
     	$transaction->transaction_type = 'deposit';
+        $transaction->deposit_type = 'normal';
     	$transaction->data = $data;
     	$transaction->amount = $input['amount'];
+        $transaction->bank_id = $input['bank'];
     	$transaction->datetime = $input['deposit_date']." ".$input['deposit_hour'].":".$input['deposit_minutes']." ".$input['deposit_stamp'];
     	$transaction->refference_no = $input['refference_no'];
     	$transaction->status = 1;
-    	$transaction->receipt_file = $filename;
 
     	$transaction->save();
 

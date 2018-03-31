@@ -21,14 +21,27 @@ class TransactionController extends Controller
     }
 
     public function data(Datatables $datatables)
-    {
-        $transactions = Transaction::All();
+    {   
+        
+        $arrStart = explode("-", Input::get('from'));
+        $arrEnd = explode("-", Input::get('to'));
+        $from = Carbon::create($arrStart[2], $arrStart[1], $arrStart[0], 0, 0, 0);
+        $to = Carbon::create($arrEnd[2], $arrEnd[1], $arrEnd[0], 23, 59, 59);
+
+        $transactions = Transaction::between($from, $to);
+
         return Datatables::of($transactions)
             ->addColumn('actions', function($transaction) {
                 return view('admin.transaction.action', compact('transaction'))->render();
             })
+            ->editColumn('transaction_id', function ($transaction) {
+                return '#'.sprintf('%05d', $transaction->id);
+            })
             ->editColumn('user_id', function ($transaction) {
                 return $transaction->user->name;
+            })
+            ->editColumn('user_email', function ($transaction) {
+                return $transaction->user->email;
             })
             ->editColumn('status', function ($transaction) {
                 
@@ -47,6 +60,9 @@ class TransactionController extends Controller
 
 
             })
+            ->editColumn('group', function ($transaction) {
+                return $transaction->user->group->name;
+            })
             ->editColumn('created_at', function ($transaction) {
                 return $transaction->created_at ? with(new Carbon($transaction->created_at))->format('d M Y, h:i A') : '';
             })
@@ -59,15 +75,37 @@ class TransactionController extends Controller
         return view('admin.transaction.deposit');
     }
 
-    public function depositData(Datatables $datatables)
+    public function depositData(Datatables $datatables,Request $request)
     {
-        $transactions = Transaction::where('transaction_type','deposit');
+        $input = $request->all();
+
+        $arrStart = explode("-", $input['from_date']);
+        $arrEnd = explode("-", $input['to_date']);
+
+        $from_date = Carbon::create($arrStart[2], $arrStart[1], $arrStart[0], 0, 0, 0);
+        $to_date = Carbon::create($arrEnd[2], $arrEnd[1], $arrEnd[0], 23, 59, 59);
+
+
+        $transactions = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->where('created_at','<=',$to_date)->where('created_at','>=',$from_date);
+
         return Datatables::of($transactions)
             ->addColumn('actions', function($transaction) {
                 return view('admin.transaction.action', compact('transaction'))->render();
             })
+            ->editColumn('transaction_id', function ($transaction) {
+                return '#'.sprintf('%06d', $transaction->id);
+            })
             ->editColumn('user_id', function ($transaction) {
                 return $transaction->user->name;
+            })
+            ->editColumn('user_email', function ($transaction) {
+                return $transaction->user->email;
+            })
+            ->editColumn('group', function ($transaction) {
+                return $transaction->user->group->name;
+            })
+            ->editColumn('bank', function ($transaction) {
+                return $transaction->bank->name.' - '.$transaction->bank->account_name;
             })
             ->editColumn('status', function ($transaction) {
                 
@@ -98,15 +136,43 @@ class TransactionController extends Controller
         return view('admin.transaction.withdrawal');
     }
 
-    public function withdrawalData(Datatables $datatables)
+    public function withdrawalData(Datatables $datatables,Request $request)
     {
-        $transactions = Transaction::where('transaction_type','withdrawal');
+        $input = $request->all();
+
+        $arrStart = explode("-", $input['from_date']);
+        $arrEnd = explode("-", $input['to_date']);
+
+        $from_date = Carbon::create($arrStart[2], $arrStart[1], $arrStart[0], 0, 0, 0);
+        $to_date = Carbon::create($arrEnd[2], $arrEnd[1], $arrEnd[0], 23, 59, 59);
+
+        $transactions = Transaction::where('transaction_type','withdraw')->where('created_at','<=',$to_date)->where('created_at','>=',$from_date);
         return Datatables::of($transactions)
             ->addColumn('actions', function($transaction) {
                 return view('admin.transaction.action', compact('transaction'))->render();
             })
+            ->editColumn('transaction_id', function ($transaction) {
+                return '#'.sprintf('%06d', $transaction->id);
+            })
             ->editColumn('user_id', function ($transaction) {
                 return $transaction->user->name;
+            })
+            ->editColumn('user_email', function ($transaction) {
+                return $transaction->user->email;
+            })
+            ->editColumn('group', function ($transaction) {
+                return $transaction->user->group->name;
+            })
+            ->editColumn('bank', function ($transaction) {
+                
+                if($transaction->bank_id == null)
+                {
+                    return '-';
+                }
+                else
+                {
+                    return $transaction->bank->name.' - '.$transaction->bank->account_name;
+                }
             })
             ->editColumn('status', function ($transaction) {
                 
@@ -211,7 +277,16 @@ class TransactionController extends Controller
      */
     public function edit(Transaction $transaction)
     {
-        return view('admin.transaction.edit',compact('transaction'));
+        if($transaction->bonus_id == null)
+        {
+            $bonus = "No Bonus Applied";
+        }
+        else
+        {
+            $bonus = $transaction->bonus->name;
+        }
+
+        return view('admin.transaction.edit',compact('transaction','bonus'));
     }
 
     /**
@@ -225,11 +300,42 @@ class TransactionController extends Controller
     {
         $input = $request->all();
 
-        $transaction->amount = $input['amount'];
-        $transaction->status = $input['status'];
-        $transaction->remarks = $input['remarks'];
+        if($input['type_transaction'] == 'deposit')
+        {
+            if($input['bonus_amount'] != '0')
+            {
+                $transaction_bonus = new Transaction;
 
-        $transaction->save();
+                $transaction_bonus->user_id = $transaction->user_id;
+                $transaction_bonus->transaction_id = time();
+                $transaction_bonus->transaction_type = 'deposit';
+                $transaction_bonus->deposit_type = 'bonus';
+                $transaction_bonus->data = $transaction->data;
+                $transaction_bonus->amount = $input['bonus_amount'];
+                $transaction_bonus->status = 2;
+                $transaction_bonus->remarks = 'Bonus for deposit transaction [#'.sprintf('%06d', $transaction->id).']';
+
+                $transaction_bonus->save();
+            }
+
+            $transaction->amount = $input['amount'];
+            $transaction->status = $input['status'];
+            $transaction->remarks = $input['remarks'];
+
+            $transaction->save();
+        }
+        else if($input['type_transaction'] == 'withdraw')
+        {
+            $transaction->amount = $input['amount'];
+            $transaction->status = $input['status'];
+            $transaction->bank_id = $input['bank'];
+            $transaction->remarks = $input['remarks'];
+
+            $transaction->save();
+
+        }
+
+        
 
         Session::flash('message', 'Transaction succesfully updated!'); 
         Session::flash('alert-class', 'alert-success');

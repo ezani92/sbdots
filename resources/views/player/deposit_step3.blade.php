@@ -53,6 +53,18 @@
                                             <td>&nbsp;</td>
                                         </tr>
                                         <tr>
+                                            <td>Deposit To Bank</td>
+                                            <td>
+                                                <select name="bank"  class="field-register" required>
+                                                    <option value="">Select Bank</option>
+                                                    @foreach($banks as $bank)
+                                                        <option value="{{ $bank->id }}">{{ $bank->name }} - {{ $bank->account_name }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </td>
+                                            <td><span class="text-error"></span></td>
+                                        </tr>
+                                        <tr>
                                             <td>Date / Time</td>
                                             <td>
                                                 <div style="float:left;">
@@ -166,7 +178,7 @@
                                             <td>Scanned Receipt</td>
                                             <td>
                                                 <div id="ctl00_MainContent_UpdatePanel5">
-                                                    <input type="file" name="receipt" id="receipt" value="{{ old('receipt') }}" required/>
+                                                    <input type="file" name="receipt" id="receipt" value="{{ old('receipt') }}" />
                                                 </div>
                                             </td>
                                             <td><span class="text-error"></span></td>

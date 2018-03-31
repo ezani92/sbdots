@@ -18,8 +18,10 @@ class CreateTransactionsTable extends Migration
             $table->integer('user_id');
             $table->string('transaction_id');
             $table->string('transaction_type');
+            $table->string('deposit_type')->nullable();
             $table->text('data');
             $table->decimal('amount',10,2);
+            $table->integer('bank_id')->nullable();
             $table->string('datetime')->nullable();
             $table->string('refference_no')->nullable();
             $table->string('receipt_file')->nullable();

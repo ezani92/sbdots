@@ -54,17 +54,39 @@
 				                				</tr>
 				                				@if($transaction->bonus_id == 0)
 				                					<tr>
-					                					<td><strong>Bonus Code</strong></td>
+					                					<td><strong>Bonus</strong></td>
 					                					<td>No Bonus Code</td>
 					                				</tr>
 				                				@else
 				                					<tr>
-					                					<td><strong>Bonus Code</strong></td>
-					                					<td>{{ $transaction->bonus->bonus_code }}</td>
+					                					<td><strong>Bonus</strong></td>
+					                					<td>{{ $transaction->bonus->name }}</td>
 					                				</tr>
 				                				@endif
-			                				@elseif($transaction->transaction_type == 'withdrawal')
+			                				@elseif($transaction->transaction_type == 'withdraw')
+			                					@php
 
+                                                    $data = json_decode($transaction->data, true);
+                                                    $game = \App\Game::find($data['game_id']);
+
+                                                @endphp
+			                					<tr>
+				                					<td><strong>Game Name</strong></td>
+				                					<td>{{ $game->name }}</td>
+				                				</tr>
+				                				<tr>
+				                					<td><strong>Amount Withdraw</strong></td>
+				                					<td>RM {{ $transaction->amount }}</td>
+				                				</tr>
+				                				@if($transaction->bank_id == null)
+
+				                				@else
+				                					<tr>
+					                					<td><strong>Withdraw From Bank</strong></td>
+					                					<td>{{ $transaction->bank->name }} - {{ $transaction->bank->account_name }}</td>
+					                				</tr>
+				                				@endif
+				                				
 			                				@elseif($transaction->transaction_type == 'transfer')
 
 			                				@endif

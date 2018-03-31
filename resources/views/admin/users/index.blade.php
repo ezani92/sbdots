@@ -15,9 +15,11 @@
 			                        <tr>
 			                            <th>Fullname</th>
 			                            <th>Email</th>
+			                            <th>Phone</th>
 			                            <th>Role</th>
+			                            <th>Group</th>
 			                            <th>Is Verified?</th>
-			                            <th>Date Register</th>
+			                            <th>Last Login</th>
 			                            <th>Action</th>
 			                        </tr>
 			                    </thead>
@@ -39,9 +41,11 @@
             columns: [
                 { data: 'name', name: 'name' },
                 { data: 'email', name: 'email' },
+                { data: 'phone', name: 'phone' },
                 { data: 'role', name: 'role' },
+                { data: 'group_id', name: 'group_id' },
                 { data: 'phone_verification', name: 'phone_verification' },
-                { data: 'created_at', name: 'created_at' },
+                { data: 'last_login', name: 'last_login' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }
             ]
         });

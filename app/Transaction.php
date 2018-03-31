@@ -17,4 +17,9 @@ class Transaction extends Model
     {
         return $this->belongsTo('App\Bonus');
     }
+
+    public function bank()
+    {
+        return $this->belongsTo('App\Bank');
+    }
 }

@@ -129,8 +129,6 @@
                                     <li class="parent {{ Request::is('admin/transaction*') ? 'active' : '' }}">
                                         <a href="#"><i class="icon mdi mdi-view-list-alt"></i><span>Transactions</span></a>
                                         <ul class="sub-menu">
-                                            <li class="{{ Request::is('admin/transaction') ? 'active' : '' }}"><a href="{{ url('admin/transaction') }}">All Transaction Lists</a>
-                                            </li>
                                             <li class="{{ Request::is('admin/transaction/deposit') ? 'active' : '' }}"><a href="{{ url('admin/transaction/deposit') }}">Deposit Transaction</a>
                                             </li>
                                             <li class="{{ Request::is('admin/transaction/withdrawal') ? 'active' : '' }}"><a href="{{ url('admin/transaction/withdrawal') }}">Withdrawal Transaction</a>
@@ -145,11 +143,20 @@
                                     
                                     <li class="divider">Admin Action</li>
                                     <li class="parent {{ Request::is('admin/users*') ? 'active' : '' }}">
-                                        <a href="#"><i class="icon mdi mdi-accounts"></i><span>User Management</span></a>
+                                        <a href="#"><i class="icon mdi mdi-account"></i><span>User Accounts</span></a>
                                         <ul class="sub-menu">
                                             <li class="{{ Request::is('admin/users') ? 'active' : '' }}"><a href="{{ url('admin/users') }}">User Lists</a>
                                             </li>
                                             <li class="{{ Request::is('admin/users/create') ? 'active' : '' }}"><a href="{{ url('admin/users/create') }}">Add New User</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent {{ Request::is('admin/groups*') ? 'active' : '' }}">
+                                        <a href="#"><i class="icon mdi mdi-accounts"></i><span>User Group</span></a>
+                                        <ul class="sub-menu">
+                                            <li class="{{ Request::is('admin/groups') ? 'active' : '' }}"><a href="{{ url('admin/groups') }}">Group Lists</a>
+                                            </li>
+                                            <li class="{{ Request::is('admin/groups/create') ? 'active' : '' }}"><a href="{{ url('admin/groups/create') }}">Add New Group</a>
                                             </li>
                                         </ul>
                                     </li>

@@ -18,6 +18,13 @@ class User extends Authenticatable
         'name', 'email', 'password' , 'phone',
     ];
 
+    protected $dates = [
+        'last_login',
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -30,5 +37,10 @@ class User extends Authenticatable
     public function transactions()
     {
         return $this->hasMany('App\Transaction');
+    }
+
+    public function group()
+    {
+        return $this->belongsTo('App\Group');
     }
 }

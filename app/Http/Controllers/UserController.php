@@ -52,6 +52,11 @@ class UserController extends Controller
                     return '<span class="label label-warning">Pending Verification</span>';
                 }
             })
+            ->editColumn('group_id', function ($user) {
+                
+                return $user->group->name;
+
+            })
             ->editColumn('created_at', function ($user) {
                 return $user->created_at ? with(new Carbon($user->created_at))->format('d M Y, h:i A') : '';
             })
@@ -132,8 +137,8 @@ class UserController extends Controller
 
 
             })
-            ->editColumn('created_at', function ($transaction) {
-                return $transaction->created_at ? with(new Carbon($transaction->created_at))->format('d M Y, h:i A') : '';
+            ->editColumn('last_login', function ($transaction) {
+                return $transaction->last_login ? with(new Carbon($transaction->last_login))->format('d M Y, h:i A') : '';
             })
             ->rawColumns(['actions','status'])
             ->make(true);

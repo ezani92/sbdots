@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->integer('group_id')->default(1);
             $table->integer('role')->default(3);
             $table->string('phone');
             $table->integer('phone_verification')->default(0);
@@ -32,6 +33,7 @@ class CreateUsersTable extends Migration
             $table->integer('sms_service')->nullable();
             $table->integer('is_ban')->default(0);
             $table->rememberToken();
+            $table->timestamp('last_login');
             $table->timestamps();
         });
     }

@@ -3,10 +3,16 @@
         <div class="main-content container-fluid">
 			<div class="row">
 				<div class="col-md-3">
-					<div class="well"><h3>Total User Registered : {{ $total_user }}</h3></div>
+					<div class="well"><h3>Today Registered : {{ $user_today }}</h3></div>
 				</div>
 				<div class="col-md-3">
-					<div class="well"><h3>New Registered Today : {{ $user_today }}</h3></div>
+					<div class="well"><h3>Today Deposit : RM {{ $today_deposit_sum }}</h3></div>
+				</div>
+				<div class="col-md-3">
+					<div class="well"><h3>Today Withdrawal : RM {{ $today_withdraw_sum }}</h3></div>
+				</div>
+				<div class="col-md-3">
+					<div class="well"><h3>Today Bonus : RM {{ $today_bonus_amount }}</h3></div>
 				</div>
 				<div class="col-md-3">
 					<div class="well"><h3>Total Transaction  : {{ $total_transaction }}</h3></div>

@@ -42,16 +42,17 @@
                                                         <td colspan="7">
                                                             <table cellspacing="0" border="0" style="width:100%;border-collapse:collapse;" class="table-member">
                                                                 <tr>
-                                                                    <th scope="col">No</th>
                                                                     <th scope="col">Transaction No</th>
+                                                                    <th scope="col">Type</th>
                                                                     <th scope="col">Deposit To</th>
                                                                     <th scope="col">Amount (MYR)</th>
                                                                     <th scope="col">Date</th>
+                                                                    <th scope="col">Status</th>
                                                                     <th scope="col">Remarks</th>
                                                                 </tr>
                                                                 @if($transactions->count() == 0)
                                                                 <tr >
-                                                                    <th scope="col" colspan="6" style="padding-top: 10px; text-align: center">No Transaction</th>
+                                                                    <th scope="col" colspan="7" style="padding-top: 10px; text-align: center">No Transaction</th>
                                                                 </tr>
                                                                 @else
                                                                     @php
@@ -59,17 +60,17 @@
                                                                     @endphp
                                                                     @foreach($transactions as $transaction)
                                                                         <tr>
-                                                                            <td scope="col">{{ $i }}</td>
-                                                                            <td scope="col">{{ $transaction->transaction_id }}</td>
+                                                                            <td scope="col">#{{ sprintf('%06d', $transaction->id) }}</td>
                                                                             @php
 
                                                                                 $data = json_decode($transaction->data, true);
                                                                                 $game = \App\Game::find($data['game_id']);
 
                                                                             @endphp
+                                                                            <td scope="col">{{ $transaction->deposit_type }}</td>
                                                                             <td scope="col">{{ $game->name }}</td>
-                                                                            <td scope="col">MYR {{ $transaction->amount }}</td>
-                                                                            <td scope="col">{{ $transaction->datetime }}</td>
+                                                                            <td scope="col">RM {{ $transaction->amount }}</td>
+                                                                            <td scope="col">{{ $transaction->updated_at->format('d M Y, h:iA') }}</td>
                                                                             <td scope="col">
                                                                                 @if($transaction->status == 1)
                                                                                     <span class="label label-info">Processing</span>
@@ -79,6 +80,7 @@
                                                                                     <span class="label label-success">Succesfull</span>
                                                                                 @endif
                                                                             </td>
+                                                                            <td scope="col">{{ $transaction->remarks }}</td>
                                                                         </tr>
                                                                     @php
                                                                         $i++;

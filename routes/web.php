@@ -119,6 +119,9 @@ Route::middleware(['isadmin'])->group(function () {
     Route::get('/admin/users/{user_id}/unban', 'UserController@unban');
     Route::resource('/admin/users', 'UserController');
 
+    Route::get('/admin/groups/data', 'GroupController@data');
+    Route::resource('/admin/groups', 'GroupController');
+
     
 });
 

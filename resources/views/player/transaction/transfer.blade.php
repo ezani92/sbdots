@@ -61,7 +61,7 @@
                                                                     @foreach($transactions as $transaction)
                                                                         <tr>
                                                                             <td scope="col">{{ $i }}</td>
-                                                                            <td scope="col">{{ $transaction->transaction_id }}</td>
+                                                                            <td scope="col">#{{ sprintf('%06d', $transaction->id) }}</td>
                                                                             @php
 
                                                                                 $data = json_decode($transaction->data, true);

@@ -47,11 +47,12 @@
                                                                     <th scope="col">Withdraw From</th>
                                                                     <th scope="col">Amount (MYR)</th>
                                                                     <th scope="col">Date</th>
+                                                                    <th scope="col">Status</th>
                                                                     <th scope="col">Remarks</th>
                                                                 </tr>
                                                                 @if($transactions->count() == 0)
                                                                 <tr >
-                                                                    <th scope="col" colspan="6" style="padding-top: 10px; text-align: center">No Transaction</th>
+                                                                    <th scope="col" colspan="7" style="padding-top: 10px; text-align: center">No Transaction</th>
                                                                 </tr>
                                                                 @else
                                                                     @php
@@ -60,7 +61,7 @@
                                                                     @foreach($transactions as $transaction)
                                                                         <tr>
                                                                             <td scope="col">{{ $i }}</td>
-                                                                            <td scope="col">{{ $transaction->transaction_id }}</td>
+                                                                            <td scope="col">#{{ sprintf('%06d', $transaction->id) }}</td>
                                                                             @php
 
                                                                                 $data = json_decode($transaction->data, true);
@@ -74,11 +75,12 @@
                                                                                 @if($transaction->status == 1)
                                                                                     <span class="label label-info">Processing</span>
                                                                                 @elseif($transaction->status == 3)
-                                                                                    <span class="label label-danger">Declined</span>
+                                                                                    <span class="label label-danger">Rejected</span>
                                                                                 @elseif($transaction->status == 2)
                                                                                     <span class="label label-success">Succesfull</span>
                                                                                 @endif
                                                                             </td>
+                                                                            <td scope="col">{{ $transaction->remarks }}</td>
                                                                         </tr>
                                                                     @php
                                                                         $i++;
