@@ -4,6 +4,9 @@ body {
 	font-size: 13px;
 	background-color: #000;
 	color: #fff;
+	background-image: url(../images/common/black-floral-patterns-3.jpg);
+	background-size: cover;
+	background-attachment: fixed;
 }
 a:focus, a:focus:visited, a:focus:hover, a:hover:focus {
 	text-decoration: none;
@@ -17,10 +20,10 @@ a:focus, :focus, .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.f
 	padding-right: 0;
 }
 .content {
-	/* border-top:3px solid #1d86a6; */
-	background-color: #fff;
-	background-image: url(../images/common/home_bg.jpg);
-	background-size: cover;
+	/* border-top:3px solid #1d86a6;
+	background-color: #000;
+	background-image: url(../images/common/black-floral-patterns-3.jpg);
+	background-size: cover; */
 }
 
 .nivoSlider img{height:100% !important; object-position: bottom;} 
@@ -137,12 +140,36 @@ a:focus, :focus, .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.f
 	text-shadow: -1px 1px 1px #000;
 }
 
+.social-menu {
+    display: inline-block;
+    height: 29px;
+    vertical-align: bottom;
+    margin-right: 30px;
+}
+
+.social-menu .social-link {
+
+	color: #fff;
+
+}
+
+.help-bar {
+
+display: inline-block;
+
+}
+
 /* Header */
 #topLanguage {
 	height: 30px;
-	background: #000305;
-	border-bottom: 1px solid #142b3a;
 }
+
+#topLanguage > .container {
+
+	text-align: right;
+
+}
+
 #topLanguage .helpCenter {
 	float: left;
 	border-right: 1px solid #0d3453;
@@ -211,9 +238,9 @@ a:focus, :focus, .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.f
 }
 #header {
 	height: 134px;
-	background: #050505; /* Old browsers */
 }
 #header .headWrap {
+	background:#000;
 	position: relative;
 	height: 134px;
 }
@@ -356,18 +383,30 @@ a:focus, :focus, .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.f
 
 }
 #menu {
+	width: 100%;
 	bottom: 0;
 	left: 0;
 	position: absolute;
 }
 #menu > ul {
+	display: flex;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 #menu > ul > li {
 	float: left;
+    display: block;
+    flex: auto;
+    text-align: center;
 }
+
+#menu > ul > li:first-child {
+
+flex: 45;
+
+}
+
 #menu > ul > li > a {
 	display: block;
 	height: 35px;
@@ -423,18 +462,19 @@ background: -webkit-linear-gradient(-45deg, #ff9307 29%,#ffc642 45%,#ffc642 55%,
 background: linear-gradient(135deg, #ff9307 29%,#ffc642 45%,#ffc642 55%,#ff9307 66%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9307', endColorstr='#ff9307',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-#menu > ul > li:first-child > a {
-	-webkit-border-radius: 5px 0 0 0;
-	border-radius: 5px 0 0 0;
-	border-left: none;
-	padding: 6px 11px;
-	background: #e8bd4a; /* Old browsers */
-background: -moz-linear-gradient(-45deg, #e8bd4a 0%, #e8be4c 51%, #e8bd4a 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #e8bd4a 0%,#e8be4c 51%,#e8bd4a 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #e8bd4a 0%,#e8be4c 51%,#e8bd4a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8bd4a', endColorstr='#e8bd4a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+#menu > ul > li:last-child > a {
+
+	color: #fff;
+	
 }
-#menu > ul > li:first-child > a:hover,#menu > ul > li:last-child > a:hover {
+#menu > ul > li:last-child > a:hover{
+
+color: #fff;
+background-color: #cc1919;
+
+}
+#menu > ul > li:last-child > a:hover {
 
 	color: #fff;
 
@@ -516,8 +556,8 @@ font-size:18px;
 	background: #1a194e; /* Old browsers */
 }
 .bg-banner {
-	/* background:#000 url(../images/common/bg-banner.jpg)top center no-repeat; */
-	background-color: #050505;
+	/* background:#000 url(../images/common/bg-banner.jpg)top center no-repeat;
+	background-color: #050505; */
 }
 .bg-banner .container {
 	position:relative;
@@ -596,6 +636,145 @@ font-size:18px;
 	background: #070707; /* Old browsers */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21444e', endColorstr='#032b37',GradientType=0 ); /* IE6-9 */
 }
+
+.footer .row {
+
+display:flex;
+
+}
+
+.half-box {
+    position: relative;
+	padding: 12px;
+}
+
+.half-box.icon {
+    padding-left: 75px;
+}
+
+.half-box h2.title {
+	position: relative;
+	color: #ffbf47;
+}
+
+.container.terms h2.title {
+
+text-transform: uppercase;
+
+}
+
+.container.payments {
+
+padding: 36px 12px;
+
+}
+
+.container.payments h2.title {
+
+	text-transform: capitalize;
+	color: #ffbf47;
+	margin:0;
+	font-size: 18px;
+
+}
+
+.container.payments .col.banks {
+
+}
+
+.container.payments .row.center-payments {
+
+justify-content: center;
+
+}
+
+.container.payments .col.title-payments {
+
+display: flex;
+align-items: center;
+
+}
+
+.container.payments .col .bank {
+
+    margin: 0 8px;
+	padding: 2px;
+	
+}
+
+.container.payments .col .bank img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.half-box.icon p.description {
+    padding-left: 30px;
+}
+
+.half-box.icon h2.title.footer-sportbook:before {
+	content: "";
+    background: url(../images/common/Malaysia-Sportsbook.png);
+    position: absolute;
+    left: -70px;
+    width: 64px;
+    display: block;
+    top: 0;
+    height: 64px;
+    background-repeat: no-repeat;
+    z-index: 999999;
+    background-size: contain;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.half-box.icon h2.title.footer-slotgame:before {
+	content: "";
+    background: url(../images/common/slot.png);
+    position: absolute;
+    left: -70px;
+    width: 64px;
+    display: block;
+    top: 0;
+    height: 64px;
+    background-repeat: no-repeat;
+    z-index: 999999;
+    background-size: contain;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.half-box.icon h2.title.footer-livecasino:before {
+	content: "";
+    background: url(../images/common/casino.png);
+    position: absolute;
+    left: -70px;
+    width: 64px;
+    display: block;
+    top: 0;
+    height: 64px;
+    background-repeat: no-repeat;
+    z-index: 999999;
+    background-size: contain;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.half-box.icon h2.title.footer-lotterygame:before {
+	content: "";
+    background: url(../images/common/totoico.png);
+    position: absolute;
+    left: -70px;
+    width: 64px;
+    display: block;
+    top: 0;
+    height: 64px;
+    background-repeat: no-repeat;
+    z-index: 999999;
+    background-size: contain;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 .link {
 	-webkit-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.5);
 	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.5);
@@ -604,6 +783,9 @@ font-size:18px;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c808e', endColorstr='#05485b',GradientType=0 ); /* IE6-9 */
 }
 .f-link {
+	text-align: center;
+	margin: 0 auto;
+    width: 100%;
 	float:left;
 	margin-bottom:0;
 	padding:0;
@@ -622,7 +804,10 @@ font-size:18px;
 	border-right:none;
 }
 .copyright {
-	float:right;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	text-align: center;
+	width:100%;
 	color:#fff;
 }
 .f-link, .copyright {
@@ -637,11 +822,10 @@ font-size:18px;
 	text-align:justify;
 	font-size:12px;
 }
-.f-col-1 {
-	width:380px;
-}
-.f-col-2 {
-	width:400px;
+.f-column.f-col {
+
+width: 50%;
+
 }
 .f-col p {
 	font-size:12px;
@@ -658,20 +842,28 @@ font-size:18px;
 	margin:0 5px;
 }
 .bank {
-	background:#494949;
 	color:#fff;
 	text-align:center;
-	line-height:24px;
-	font-size:13px;
 	margin:0 7px 7px 0;
 	width:100px;
 	float:left;
 }
+
+.container.logos {
+
+	margin: 24px auto;
+	width: 100vw;
+	margin-bottom: 0;
+
+}
+
 .provider {
-	text-align:center;
-	border-top:1px dotted #fff;
-	border-bottom:1px dotted #fff;
-	margin-bottom:20px;
+    text-align: center;
+    border-top: 2px solid #f9a328;
+    border-bottom: 2px solid #f9a328;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
 }
 .provider img {
 	display:inline-block;

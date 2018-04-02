@@ -6,7 +6,12 @@
 <body>
     <div id="topLanguage">
         <div class="container">
-            <div class="pull-right">
+            <div class="social-menu">
+                <span><a href="#" class="social-link">Facebook</a></span>
+                <span> | </span>
+                <span><a href="#" class="social-link">Twitter</a></span>
+            </div>
+            <div class="help-bar">
                 <div class="helpCenter"><a href="#"><i class="fa fa-question-circle"></i> help</a></div>
                 <div class="languageWrap">
                     <div class="dropdown">
@@ -69,8 +74,7 @@
             @endif
             <div id="menu">
                 <ul>
-                    <li class="home-menu"><a href="{{ url('/') }}" class=""><i class="fa fa-home"></i></a></li>
-                    <li><a href="mobile" class=""><i class="fa fa-mobile"></i></a></li>
+                    <li><a href="{{ url('/') }}" class="">Home</a></li>
                     <li><a href="sportsbooks" class="">sportsbooks</a></li>
                     <li><a href="live_casinos" class="">live casinos</a></li>
                     <li><a href="slots" class="">slots</a></li>
@@ -101,14 +105,15 @@
                 @if(Request::is('/'))
                 <div class="slider-wrapper theme-default">
                     <div id="slider" class="nivoSlider" style="height:350px;"> 
-                        <a href="promotions"><img src="images/en/Main1.jpg" width="1040" height="350" alt=""/></a> 
-                        <a href="promotions"><img src="images/en/Main2.jpg" width="1040" height="350" alt=""/></a> 
+                        <!-- <a href="promotions"><img src="images/en/Main1.jpg" width="1040" height="350" alt=""/></a> 
+                        <a href="promotions"><img src="images/en/Main2.jpg" width="1040" height="350" alt=""/></a> -->
                         <a href="promotions"><img src="images/en/Main3.jpg" width="1040" height="350" alt=""/></a>
-                        <a href="promotions"><img src="images/en/Promo-1rebate.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/homepagebanner_new.jpg" width="1040" height="350" alt=""/></a>
+                        <!-- <a href="promotions"><img src="images/en/Promo-1rebate.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/Promo-1rebatesport.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/Promo-3deposit.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/Promo-10deposit.jpg" width="1040" height="350" alt=""/></a>
-                        <a href="promotions"><img src="images/en/Promo-newmember.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/Promo-newmember.jpg" width="1040" height="350" alt=""/></a> -->
                     </div>
                 </div>
                 @else
