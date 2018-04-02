@@ -7,6 +7,7 @@ use DataTables;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
+use App\BankRecord;
 
 class TransactionController extends Controller
 {
@@ -318,11 +319,11 @@ class TransactionController extends Controller
                 $transaction_bonus->save();
             }
 
+
             $transaction->amount = $input['amount'];
             $transaction->status = $input['status'];
             $transaction->remarks = $input['remarks'];
 
-            $transaction->save();
         }
         else if($input['type_transaction'] == 'withdraw')
         {
@@ -331,7 +332,30 @@ class TransactionController extends Controller
             $transaction->bank_id = $input['bank'];
             $transaction->remarks = $input['remarks'];
 
-            $transaction->save();
+        }
+
+        if($transaction->save())
+        {
+            $record = new BankRecord;
+
+            if($input['type_transaction'] == 'deposit')
+            {
+                $record->bank_id = $transaction->bank_id;
+                $record->transaction_type = "Deposit";
+                $record->description = 'Deposit for transaction [#'.sprintf('%06d', $transaction->id).']';
+                $record->record = 1;
+            }
+            else if($input['type_transaction'] == 'withdraw')
+            {
+                $record->bank_id = $transaction->bank_id;
+                $record->transaction_type = "Withdraw";
+                $record->description = 'Withdrawal for transaction [#'.sprintf('%06d', $transaction->id).']';
+                $record->record = 0;
+            }
+
+            $record->amount = $input['amount'];
+
+            $record->save();
 
         }
 

@@ -7,6 +7,7 @@ use DataTables;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
+use App\BankRecord;
 
 class BankController extends Controller
 {
@@ -80,7 +81,12 @@ class BankController extends Controller
      */
     public function show(Bank $bank)
     {
-        return view('admin.banks.show',compact('bank'));
+        $win = $bank->records->where('record',1)->sum('amount');
+        $loss = $bank->records->where('record',0)->sum('amount');
+
+        $bank_balance = $win - $loss;
+
+        return view('admin.banks.show',compact('bank','bank_balance'));
     }
 
     /**
@@ -127,5 +133,43 @@ class BankController extends Controller
     public function destroy(Bank $bank)
     {
         //
+    }
+
+    public function debit(Request $request, $bank_id)
+    {
+        $input = $request->all();
+        $record = new BankRecord;
+
+        $record->bank_id = $bank_id;
+        $record->transaction_type = "Debit";
+        $record->description = $input['description'];
+        $record->record = 0;
+        $record->amount = $input['amount'];
+
+        $record->save();
+
+        Session::flash('message', 'Debit transaction succesfully added!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        return redirect('admin/banks/'.$bank_id);
+    }
+
+    public function credit(Request $request, $bank_id)
+    {
+        $input = $request->all();
+        $record = new BankRecord;
+
+        $record->bank_id = $bank_id;
+        $record->transaction_type = "Credit";
+        $record->description = $input['description'];
+        $record->record = 1;
+        $record->amount = $input['amount'];
+
+        $record->save();
+
+        Session::flash('message', 'Credit transaction succesfully added!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        return redirect('admin/banks/'.$bank_id);
     }
 }

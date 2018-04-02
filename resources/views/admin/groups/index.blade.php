@@ -15,6 +15,7 @@
 			                        <tr>
 			                            <th>Name</th>
 			                            <th>Icon</th>
+			                            <th>Total User</th>
 			                            <th>Created At</th>
 			                            <th>Action</th>
 			                        </tr>
@@ -37,6 +38,7 @@
             columns: [
                 { data: 'name', name: 'name' },
                 { data: 'icon', name: 'icon' },
+                { data: 'total_user', name: 'total_user' },
                 { data: 'created_at', name: 'created_at' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }
             ]

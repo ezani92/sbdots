@@ -63,6 +63,10 @@
 			                					<td><strong>Register At</strong></td>
 			                					<td>{{ $user->created_at->format('d M Y,  h:iA') }}</td>
 			                				</tr>
+			                				<tr>
+			                					<td><strong>Referral By</strong></td>
+			                					<td>{{ $user->referred_by }}</td>
+			                				</tr>
 			                			</tbody>
 			                		</table>
 			                	</div>

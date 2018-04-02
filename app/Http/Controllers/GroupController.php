@@ -24,6 +24,9 @@ class GroupController extends Controller
     {
         $groups = Group::All();
         return Datatables::of($groups)
+            ->editColumn('total_user', function ($group) {
+                return $group->user->count();
+            })
             ->addColumn('actions', function($group) {
                 return view('admin.groups.action', compact('group'))->render();
             })

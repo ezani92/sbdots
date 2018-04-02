@@ -42,6 +42,9 @@ Route::middleware(['isadmin'])->group(function () {
 
     Route::get('/admin/banks/data', 'BankController@data');
     Route::resource('/admin/banks', 'BankController');
+    Route::get('/admin/banks/{bank_id}/data', 'BankRecordController@data');
+    Route::post('/admin/banks/{bank_id}/debit', 'BankController@debit');
+    Route::post('/admin/banks/{bank_id}/credit', 'BankController@credit');
 
     Route::get('/admin/bonuses/data-active', 'BonusController@dataActive');
     Route::get('/admin/bonuses/data-deactive', 'BonusController@dataDeactive');

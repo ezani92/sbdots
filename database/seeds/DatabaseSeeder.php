@@ -79,6 +79,18 @@ class UserTableSeeder extends Seeder {
             'affiliate_id' => str_random('8')
 
         ));
+
+        User::create(array(
+            'name' => 'Vic khoo',
+            'email' => 'vickhoo@gmail.com',
+            'password' => bcrypt('123456'),
+            'phone' => '60123456789',
+            'role' => 3,
+            'tac_no' => '123456',
+            'phone_verification' => 1,
+            'affiliate_id' => str_random('8')
+
+        ));
     }
 
 }
