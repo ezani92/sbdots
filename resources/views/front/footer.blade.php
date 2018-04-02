@@ -37,27 +37,27 @@
                 <div class="row center-payments">
                     <div class="col title-payments"><h2 class="title">Payments: </h2></div>
                     <div class="col banks">
-                        <div class="bank"><img src="{{ asset('images/common/Maybank_logo.jpg') }}"/></div>
-                        <div class="bank"><img src="{{ asset('images/common/cimb.jpg') }}"/></div>
-                        <div class="bank"><img src="{{ asset('images/common/hong-leong.jpg') }}"/></div>
-                        <div class="bank"><img src="{{ asset('images/common/publicbank-logo.png') }}"/></div>
+                        <div class="bank"><img src="{{ secure_asset('images/common/Maybank_logo.jpg') }}"/></div>
+                        <div class="bank"><img src="{{ secure_asset('images/common/cimb.jpg') }}"/></div>
+                        <div class="bank"><img src="{{ secure_asset('images/common/hong-leong.jpg') }}"/></div>
+                        <div class="bank"><img src="{{ secure_asset('images/common/publicbank-logo.png') }}"/></div>
                     </div>
                 </div>
             </div>
 
             <div class="container logos">
                 <div class="provider clearfix">
-                    <img src="{{ asset('images/common/provider/logo-ibc.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-wft.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-sbo.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-1s.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-gs.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-naga.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-calibet.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-joker.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-suncity.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-poker.png') }}"/>
-                    <img src="{{ asset('images/common/provider/logo-918.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-ibc.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-wft.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-sbo.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-1s.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-gs.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-naga.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-calibet.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-joker.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-suncity.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-poker.png') }}"/>
+                    <img src="{{ secure_asset('images/common/provider/logo-918.png') }}"/>
                 </div>
             </div>
 
@@ -99,17 +99,17 @@
                             <div class="bank">Public Bank</div>
                         </div>
                     </div>
-                    <div class="f-title"><img src="{{ asset('images/common/f-secure.jpg') }}"/></div>
+                    <div class="f-title"><img src="{{ secure_asset('images/common/f-secure.jpg') }}"/></div>
                 </div>
             </div> -->
         </div>
-        <script type="text/javascript" src="{{ asset('js/jquery-sidebar.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/jquery-sidebar.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/jquery-1.12.4.min.js') }}"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/banner/jquery.nivo.slider.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/push_menus.js') }}"></script>
-        <script src="{{ asset('js/moment.js') }}" type="text/javascript"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/banner/jquery.nivo.slider.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/push_menus.js') }}"></script>
+        <script src="{{ secure_asset('js/moment.js') }}" type="text/javascript"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
         <script type="text/javascript">
             $(window).load(function () {

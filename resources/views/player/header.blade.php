@@ -2,29 +2,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link href="{{ asset('images/common/favicon.ico') }}" rel="icon" type="image/x-icon" />
+        <link href="{{ secure_asset('images/common/favicon.ico') }}" rel="icon" type="image/x-icon" />
         <title>
             Super B
         </title>
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/banner/nivo-slider.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
-        <link href="{{ asset('css/constant.css') }}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/font-awesome.min.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/banner/nivo-slider.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/main.css') }}" />
+        <link href="{{ secure_asset('css/constant.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     </head>
     <body>
         <div id="topLanguage">
             <div class="container">
-                <div class="pull-right">
+                <div class="social-menu">
+                    <span><a href="#" class="social-link">Facebook</a></span>
+                    <span> | </span>
+                    <span><a href="#" class="social-link">Twitter</a></span>
+                </div>
+                <div class="help-bar">
                     <div class="helpCenter"><a href="#"><i class="fa fa-question-circle"></i> help</a></div>
                     <div class="languageWrap">
                         <div class="dropdown">
-                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-language" style="background:rgba(3,43,55,0.85) url({{ asset('images/common/flag-en.png') }}) no-repeat;"> English <span class="caret" style=""></span> </button>
+                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-language"> English <span class="caret" style=""></span> </button>
                             <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                <li><a id="ctl00_lnkbtnen" class="language-en" href="javascript:__doPostBack(&#39;ctl00$lnkbtnen&#39;,&#39;&#39;)">English</a></li>
+                                <li><a id="ctl00_lnkbtnen" class="language-en" href="javascript:__doPostBack(&#39;ctl00$lnkbtnen&#39;,&#39;&#39;)">English</a></li>{{-- 
                                 <li><a id="ctl00_lnkbtncn" class="language-cn" href="javascript:__doPostBack(&#39;ctl00$lnkbtncn&#39;,&#39;&#39;)">中文</a></li>
-                                <li><a id="ctl00_lnkbtnbm" class="language-my" href="javascript:__doPostBack(&#39;ctl00$lnkbtnbm&#39;,&#39;&#39;)">Bahasa Melayu</a></li>
+                                <li><a id="ctl00_lnkbtnbm" class="language-my" href="javascript:__doPostBack(&#39;ctl00$lnkbtnbm&#39;,&#39;&#39;)">Bahasa Melayu</a></li> --}}
                             </ul>
                         </div>
                     </div>
@@ -87,7 +92,7 @@
             <div class="bg-banner">
                 <div class="container">
                     <div id="announcement">
-                        <div class="announceIcon"><img src="{{ asset('images/common/announce-left.png') }}" width="38" height="30" alt=""/></div>
+                        <div class="announceIcon"><img src="{{ secure_asset('images/common/announce-left.png') }}" width="38" height="30" alt=""/></div>
                         <div class="annContent">
                             <div class="annTitle">Annoucement:</div>
                             <div class="runText">
@@ -99,7 +104,7 @@
                         <div class="annTime"><i class="fa fa-clock-o fa-lg"></i><span id="nowTime"></span></div>
                     </div>
                     <div class="banner-p">
-                        <img src="{{ asset('images/common/banner-contact.jpg') }}"/>
+                        <img src="{{ secure_asset('images/common/banner-contact.jpg') }}"/>
                     </div>
                 </div>
             </div>
