@@ -51,7 +51,8 @@ class UserTableSeeder extends Seeder {
         	'phone' => '60129718420',
             'role' => 1,
             'tac_no' => '123456',
-            'phone_verification' => 1
+            'phone_verification' => 1,
+            'affiliate_id' => str_random('8')
 
     	));
 
@@ -62,7 +63,8 @@ class UserTableSeeder extends Seeder {
             'phone' => '60129718420',
             'role' => 3,
             'tac_no' => '123456',
-            'phone_verification' => 1
+            'phone_verification' => 1,
+            'affiliate_id' => str_random('8')
 
         ));
 
@@ -73,7 +75,8 @@ class UserTableSeeder extends Seeder {
             'phone' => '60123456789',
             'role' => 3,
             'tac_no' => '123456',
-            'phone_verification' => 1
+            'phone_verification' => 1,
+            'affiliate_id' => str_random('8')
 
         ));
     }

@@ -34,6 +34,8 @@ class CreateUsersTable extends Migration
             $table->integer('is_ban')->default(0);
             $table->rememberToken();
             $table->timestamp('last_login');
+            $table->string('referred_by')->nullable();
+            $table->string('affiliate_id')->unique();
             $table->timestamps();
         });
     }
