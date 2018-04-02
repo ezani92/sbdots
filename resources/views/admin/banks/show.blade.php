@@ -82,7 +82,7 @@
 			                            <th>Description</th>
 			                            <th>Amount (RM)</th>
 			                            <th>Time / Date</th>
-			                            {{-- <th>Action</th> --}}
+			                            <th>Approve By</th>
 			                        </tr>
 			                    </thead>
 			                </table>
@@ -168,6 +168,7 @@
                 { data: 'description', name: 'description', orderable: false },
                 { data: 'amount', name: 'amount', orderable: false },
                 { data: 'created_at', name: 'created_at', orderable: false },
+                { data: 'user_id', name: 'user_id', orderable: false },
                 // { data: 'actions', name: 'actions', orderable: false, searchable: false }
             ]
         });

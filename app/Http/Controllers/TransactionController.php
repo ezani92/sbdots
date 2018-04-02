@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
 use App\BankRecord;
+use Auth;
 
 class TransactionController extends Controller
 {
@@ -339,7 +340,8 @@ class TransactionController extends Controller
             $record = new BankRecord;
 
             if($input['type_transaction'] == 'deposit')
-            {
+            {   
+                $record->user_id = Auth::user()->id;
                 $record->bank_id = $transaction->bank_id;
                 $record->transaction_type = "Deposit";
                 $record->description = 'Deposit for transaction [#'.sprintf('%06d', $transaction->id).']';
@@ -347,6 +349,7 @@ class TransactionController extends Controller
             }
             else if($input['type_transaction'] == 'withdraw')
             {
+                $record->user_id = Auth::user()->id;
                 $record->bank_id = $transaction->bank_id;
                 $record->transaction_type = "Withdraw";
                 $record->description = 'Withdrawal for transaction [#'.sprintf('%06d', $transaction->id).']';

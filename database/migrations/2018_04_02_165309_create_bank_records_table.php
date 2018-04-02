@@ -16,6 +16,7 @@ class CreateBankRecordsTable extends Migration
         Schema::create('bank_records', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('bank_id');
+            $table->integer('user_id');
             $table->string('transaction_type');
             $table->text('description');
             $table->integer('record');

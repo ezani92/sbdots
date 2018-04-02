@@ -10,4 +10,9 @@ class BankRecord extends Model
     {
         return $this->belongsTo('App\Bank');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

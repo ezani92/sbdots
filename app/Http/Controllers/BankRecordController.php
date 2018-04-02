@@ -51,6 +51,9 @@ class BankRecordController extends Controller
                     return '<span class="label label-danger">'.$bankrecord->amount.'</span>';
                 }
             })
+            ->editColumn('user_id', function ($bankrecord) {
+                return $bankrecord->user->name;
+            })
             ->editColumn('created_at', function ($bankrecord) {
                 return $bankrecord->created_at ? with(new Carbon($bankrecord->created_at))->format('d M Y, h:i A') : '';
             })

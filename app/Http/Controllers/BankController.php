@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
 use App\BankRecord;
+use Auth;
 
 class BankController extends Controller
 {
@@ -140,6 +141,7 @@ class BankController extends Controller
         $input = $request->all();
         $record = new BankRecord;
 
+        $record->user_id = Auth::user()->id;
         $record->bank_id = $bank_id;
         $record->transaction_type = "Debit";
         $record->description = $input['description'];
@@ -159,6 +161,7 @@ class BankController extends Controller
         $input = $request->all();
         $record = new BankRecord;
 
+        $record->user_id = Auth::user()->id;
         $record->bank_id = $bank_id;
         $record->transaction_type = "Credit";
         $record->description = $input['description'];
