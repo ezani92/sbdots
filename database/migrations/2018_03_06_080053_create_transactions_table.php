@@ -28,6 +28,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('bonus_id')->nullable();
             $table->integer('status');
             $table->text('remarks')->nullable();
+            $table->integer('first_time_update')->default(0);
             $table->timestamps();
         });
     }

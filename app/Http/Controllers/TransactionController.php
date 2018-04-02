@@ -325,6 +325,23 @@ class TransactionController extends Controller
             $transaction->status = $input['status'];
             $transaction->remarks = $input['remarks'];
 
+            if($transaction->first_time_update == 0)
+            {
+                $record = new BankRecord;
+                $record->user_id = Auth::user()->id;
+                $record->bank_id = $transaction->bank_id;
+                $record->transaction_type = "Deposit";
+                $record->description = 'Deposit for transaction [#'.sprintf('%06d', $transaction->id).']';
+                $record->record = 1;
+                $record->amount = $input['amount'];
+
+                $record->save();
+
+                $transaction->first_time_update = 1;
+            }
+
+            
+
         }
         else if($input['type_transaction'] == 'withdraw')
         {
@@ -333,36 +350,26 @@ class TransactionController extends Controller
             $transaction->bank_id = $input['bank'];
             $transaction->remarks = $input['remarks'];
 
-        }
-
-        if($transaction->save())
-        {
-            $record = new BankRecord;
-
-            if($input['type_transaction'] == 'deposit')
-            {   
-                $record->user_id = Auth::user()->id;
-                $record->bank_id = $transaction->bank_id;
-                $record->transaction_type = "Deposit";
-                $record->description = 'Deposit for transaction [#'.sprintf('%06d', $transaction->id).']';
-                $record->record = 1;
-            }
-            else if($input['type_transaction'] == 'withdraw')
+            if($transaction->first_time_update == 0)
             {
+
+                $record = new BankRecord;
                 $record->user_id = Auth::user()->id;
                 $record->bank_id = $transaction->bank_id;
                 $record->transaction_type = "Withdraw";
                 $record->description = 'Withdrawal for transaction [#'.sprintf('%06d', $transaction->id).']';
                 $record->record = 0;
+                $record->amount = $input['amount'];
+
+                $record->save();
+
+                $transaction->first_time_update = 1;
+
             }
-
-            $record->amount = $input['amount'];
-
-            $record->save();
 
         }
 
-        
+        $transaction->save();
 
         Session::flash('message', 'Transaction succesfully updated!'); 
         Session::flash('alert-class', 'alert-success');
