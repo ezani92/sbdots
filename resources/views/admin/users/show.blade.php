@@ -74,19 +74,21 @@
 			                		<table class="table table-bordered table-striped">
 			                			<tbody>
 			                				<tr>
-			                					<td width="30%"><strong>Total Approve Deposit</strong></td>
+			                					<td width="60%"><strong>Total Approve Deposit</strong></td>
 			                					<td>{{ $user->transactions->where('transaction_type','deposit')->where('status',2)->count() }} (RM {{ $user->transactions->where('transaction_type','deposit')->where('status',2)->sum('amount') }})</td>
 			                				</tr>
 			                				<tr>
-			                					<td width="30%"><strong>Total Approve Withdraw</strong></td>
+			                					<td width="60%"><strong>Total Approve Withdraw</strong></td>
 			                					<td>{{ $user->transactions->where('transaction_type','withdraw')->where('status',2)->count() }} (RM {{ $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount') }})</td>
 			                				</tr>
 			                				<tr>
-			                					<td width="30%"><strong>Win Lost Rate (Withdraw - deposit)</strong></td>
+			                					<td width="60%"><strong>Win Lost Rate (Withdraw - deposit)</strong></td>
 			                					<td>RM {{ $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount') - $user->transactions->where('transaction_type','deposit')->where('status',2)->sum('amount') }}</td>
 			                				</tr>
 			                			</tbody>
 			                		</table>
+			                		
+			                		<a href="{{ url('admin/users/'.$user->id.'/edit') }}" class="btn btn-default btn-block">Add Transaction</a><br />
 			                		<a href="{{ url('admin/users/'.$user->id.'/edit') }}" class="btn btn-info btn-block">Edit User</a><br />
 
 			                		@if($user->is_ban == 0)

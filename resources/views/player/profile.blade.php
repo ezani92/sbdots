@@ -42,17 +42,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Full Name</td>
-                                                    <td>
-                                                        <input name="fullname" type="text" class="field-register" value="{{ \Auth::user()->name }}" required/>
-                                                        <span class="text-error"></span>
-                                                    </td>
+                                                    <td>{{ \Auth::user()->name }}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Contact Number</td>
-                                                    <td>
-                                                        <input name="phone" type="text" class="field-register" value="{{ \Auth::user()->phone }}" required/>
-                                                        <span class="text-error">
-                                                        </span>
+                                                    <td>{{ \Auth::user()->phone }}
                                                     </td>
                                                 </tr>
                                                 <tr>

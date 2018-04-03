@@ -74,7 +74,12 @@
                                 <td><span class="text-error">
                                     @if ($errors->has('email'))
                                         <span class="invalid-feedback">
-                                            <strong>{{ $errors->first('email') }}</strong>
+                                            <strong>You are already a registered member of us! Please Contact Customer Services for more assistance.</strong>
+                                        </span>
+                                    @endif
+                                    @if ($errors->has('phone'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ old('phone') }} has already used for registration. Please Contact Customer Services for more assistance.</strong>
                                         </span>
                                     @endif
                                     </span>

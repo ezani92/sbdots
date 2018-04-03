@@ -173,6 +173,7 @@ class UserController extends Controller
         $user->name = $input['name'];
         $user->email = $input['email'];
         $user->role = $input['role'];
+        $user->group_id = $input['group'];
         $user->phone = $input['phone'];
         $user->phone_verification = $input['phone_verification'];
         $user->bank_name = $input['bank_name'];

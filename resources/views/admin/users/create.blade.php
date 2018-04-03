@@ -22,7 +22,7 @@
 							    </div>
 							    <div class="form-group">
 							        <label>Role</label>
-							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Agent'], 3, ['class' => 'form-control']) }}
+							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate'], 3, ['class' => 'form-control']) }}
 							    </div>
 							    <div class="form-group">
 							        <label>Phone No</label>

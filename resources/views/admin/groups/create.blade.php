@@ -14,11 +14,11 @@
 			                	@csrf
 							    <div class="form-group">
 							        <label>Group Name</label>
-							        <input type="text" name="name" class="form-control" required>
+							        <input type="text" name="name" class="form-control" placeholder="Diamond" required>
 							    </div>
 							    <div class="form-group">
-							        <label>Group Icon (Font Awesome Class)</label>
-							        <input type="text" name="icon" class="form-control" required>
+							        <label>Group Icon <a href="https://fontawesome.com/icons?d=listing&m=free" target="_blank">(Font Awesome Class)</a></label>
+							        <input  type="text" name="icon" class="form-control" placeholder="gem" required>
 							    </div>
 							    
 							    <div class="form-group">
