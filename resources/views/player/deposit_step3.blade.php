@@ -68,7 +68,7 @@
                                             <td>Date / Time</td>
                                             <td>
                                                 <div style="float:left;">
-                                                    <input name="deposit_date" type="text" maxlength="10" class="field-register datepicker" style="width: 100px;" value="{{ old('deposit_date') }}" required/>
+                                                    <input name="deposit_date" id="deposit_date" type="text" maxlength="10" class="field-register datepicker" style="width: 100px;" value="{{ old('deposit_date') }}" required/>
                                                 </div>
                                                 <div style="float:left;">
                                                     <div id="ctl00_MainContent_uptxtdatetime">
@@ -160,6 +160,9 @@
                                                             </select>
                                                             &nbsp;
                                                         </div>
+                                                        <div style="float:left; margin-right: 5px; ">
+                                                            <button id="now" style="height: 30px; padding-top: 3px;" type="button" class="btn btn-default">Now</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </td>
@@ -231,6 +234,18 @@
             maxDate: "+0D",
             showOtherMonths: true
         });
+</script>
+<script type="text/javascript">
+    
+    $('#now').click(function(){
+        
+        $('#deposit_date').val('{{ \Carbon\Carbon::now()->format('d/m/Y') }}');
+        $('#deposit_hour').val('{{ \Carbon\Carbon::now()->format('h') }}');
+        $('#deposit_minutes').val('{{ \Carbon\Carbon::now()->format('i') }}');
+        $('#deposit_stamp').val('{{ \Carbon\Carbon::now()->format('A') }}');
+
+    });
+
 </script>
 
 </body></html>

@@ -1,4 +1,4 @@
-@include('front.header')
+@include('player.header')
 <div class="content">
     <div class="container">
         <div class="page-content">
