@@ -128,9 +128,9 @@
 
     @include('front.footer')
     @yield('script')
-    <!-- Start of LiveChat (www.livechatinc.com) code -->
+<!-- Start of LiveChat (www.livechatinc.com) code -->
 <script type="text/javascript">
-    window._lc = window._lc || {};
+    window.__lc = window.__lc || {};
     window.__lc.license = 9644895;
     (function() {
       var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
