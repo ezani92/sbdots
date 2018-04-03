@@ -123,14 +123,21 @@
                                                 <td>
                                                     @if($transaction->transaction_type == 'deposit')
                                                         <span class="label label-success">Deposit</span>
-                                                    @else
+                                                    @elseif($transaction->transaction_type == 'withdraw')
                                                         <span class="label label-danger">Withdraw</span>
+                                                    @else
+                                                        <span class="label label-info">Transfer</span>
                                                     @endif
                                                 </td>
                                                 <td>{{ $transaction->updated_at->format('d M Y, h:i A') }}</td>
                                                 <td>{{ $transaction->user->name }}</td>
                                                 <td>{{ $transaction->user->group->name }}</td>
-                                                <td>{{ $transaction->bank->name }}</td>
+                                                <td>
+                                                    @if($transaction->transaction_type == 'transfer')
+                                                        -
+                                                    @else
+                                                        {{ $transaction->bank->name }}
+                                                    @endif
                                                 <td>{{ $transaction->amount }}</td>
                                             </tr>
                                         @endif
