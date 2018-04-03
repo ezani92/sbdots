@@ -369,6 +369,13 @@ class TransactionController extends Controller
 
         }
 
+        else if($input['type_transaction'] == 'transfer')
+        {
+            $transaction->amount = $input['amount'];
+            $transaction->status = $input['status'];
+            $transaction->remarks = $input['remarks'];
+        }
+
         $transaction->save();
 
         Session::flash('message', 'Transaction succesfully updated!'); 
