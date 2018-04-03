@@ -33,7 +33,7 @@
 					<div class="box"><img src="images/common/contact_wechat.png"/>betasia_my</div>
 				</div>
 				<div class="horizontal clearfix">
-					<div class="box p-r"><img src="images/common/contact_live.png"/><input type="button" class="btn btn-warning btn-more btn-chat" value="LIVE CHAT 24/7" onclick="parent.LC_API.open_chat_window({source:'minimized'})"></div>
+					<div class="box p-r"><img src="images/common/contact_live.png"/><input type="button" class="btn btn-warning btn-more btn-chat" value="LIVE CHAT 24/7" onclick="parent.LC_API.open_chat_window({source:'minimized'}); return false"></div>
 				</div>
 			</div>
 			<!-- <div class="register">

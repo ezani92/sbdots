@@ -83,7 +83,7 @@
                         <li><a href="poker_" class="">poker</a></li>
                         <li><a href="promotions" class="">promotions</a></li>
                         <li><a href="contact_us" class="">contact us</a></li>
-                        <li class="comment"><a href="#" onclick=""><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
+                        <li class="comment"><a href="#" onclick="parent.LC_API.open_chat_window({source:'minimized'}); return false"><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
                     </ul>
                 </div>
             </div>
