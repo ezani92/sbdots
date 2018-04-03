@@ -42,7 +42,6 @@
         		</div>
         	</div>
         	</form>
-        	<hr />
 			<div class="row">
 				<div class="col-md-6">
                     <table class="table table-bordered">

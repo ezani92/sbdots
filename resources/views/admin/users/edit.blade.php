@@ -23,7 +23,11 @@
 							    </div>
 							    <div class="form-group">
 							        <label>Role</label>
-							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'User'], $user->role, ['class' => 'form-control']) }}
+							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate'], $user->role, ['class' => 'form-control']) }}
+							    </div>
+							    <div class="form-group">
+							        <label>Group</label>
+							        {{ Form::select('group', \App\Group::all()->pluck('name', 'id'), $user->group_id, ['class' => 'form-control']) }}
 							    </div>
 							    <div class="form-group">
 							        <label>Phone No</label>
