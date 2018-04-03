@@ -23,19 +23,23 @@ class ReportController extends Controller
 
             $user_today = User::where('role',3)->where('created_at', '>=', Carbon::today())->count();
 
-            $total_transaction = Transaction::all()->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
+            
 
             $pending_transaction_count = Transaction::where('status',1)->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
 
             $pending_transactions = Transaction::where('status',1)->where('created_at','>=',$from)->where('created_at','<=',$to)->paginate(10);
 
-            $count_deposit = Transaction::where('transaction_type','deposit')->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
+            $count_deposit = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
             $count_withdrawal = Transaction::where('transaction_type','withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
             $count_transfer = Transaction::where('transaction_type','transfer')->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
 
-            $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+            $total_transaction = $count_deposit + $count_withdrawal;
+
+            $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->where('deposit_type','normal')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
             $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
-            $worth_transfer = DB::table('transactions')->where('transaction_type','transfer')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+            $worth_bonus = DB::table('transactions')->where('deposit_type','bonus')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+
+            $transactions = Transaction::where('created_at','>=',$from)->where('created_at','<=',$to)->paginate(10);
         }
         else
         {
@@ -43,19 +47,23 @@ class ReportController extends Controller
 
             $user_today = User::where('role',3)->where('created_at', '>=', Carbon::today())->count();
 
-            $total_transaction = Transaction::all()->count();
+
 
             $pending_transaction_count = Transaction::where('status',1)->count();
 
-            $pending_transactions = Transaction::where('status',1)->paginate(10);
+            $pending_transactions = Transaction::where('status',1)->count();
 
-            $count_deposit = Transaction::where('transaction_type','deposit')->count();
+            $count_deposit = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->count();
             $count_withdrawal = Transaction::where('transaction_type','withdraw')->count();
             $count_transfer = Transaction::where('transaction_type','transfer')->count();
 
-            $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->sum('amount');
+            $total_transaction = $count_deposit + $count_withdrawal;
+
+            $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->where('deposit_type','normal')->sum('amount');
             $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->sum('amount');
-            $worth_transfer = DB::table('transactions')->where('transaction_type','transfer')->sum('amount');
+            $worth_bonus = DB::table('transactions')->where('deposit_type','bonus')->sum('amount');
+
+            $transactions = Transaction::paginate(10);
         }
         
 
@@ -65,6 +73,7 @@ class ReportController extends Controller
     	
 
     	return view('admin.reports.summary',[
+            'transactions' => $transactions ,
     		'total_user' => $total_user,
     		'user_today' => $user_today,
     		'total_transaction' => $total_transaction,
@@ -75,7 +84,7 @@ class ReportController extends Controller
     		'count_transfer' => $count_transfer,
             'worth_deposit' => $worth_deposit,
             'worth_withdrawal' => $worth_withdrawal,
-            'worth_transfer' => $worth_transfer,
+            'worth_bonus' => $worth_bonus,
             'input' => $input
     	]);
     }
