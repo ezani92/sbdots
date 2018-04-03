@@ -14,7 +14,7 @@
 	                            <div class="col-xs-4 form-inline" style="position: absolute; z-index: 2;">
 	                                <div class="input-daterange input-group" id="datepicker">
 	                                	<span class="input-group-addon">from</span>
-	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="from" value="{{ \Carbon\Carbon::now()->format('d-m-Y') }}" />
+	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="from" value="{{ \Carbon\Carbon::now()->startOfYear()->format('d-m-Y') }}" />
 	                                    <span class="input-group-addon">to</span>
 	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="to" value="{{ \Carbon\Carbon::now()->format('d-m-Y') }}"/>
 	                                </div>
@@ -38,6 +38,9 @@
 			                <br />
 			            </div>
 			        </div>
+			    </div>
+			    <div class="col-md-12">
+			    	<h3 class="pull-right">TOTAL CONFIRM WITHDRAW : RM <span id="totalWithdraw">0.00</span></h3>
 			    </div>
 			</div>
 		</div>
@@ -78,10 +81,26 @@
 
 	$("input[name=from]").change(function(){
 	    oTable.draw();
+	    calculateTotal();
 	});
 
 	$("input[name=to]").change(function(){
 	    oTable.draw();
+	    calculateTotal();
 	});
+
+	calculateTotal();
+
+	function calculateTotal()
+	{
+		var from_date = $('input[name=from]').val();
+		var to_date = $('input[name=to]').val();
+
+		$.get("{{ url('api/admin/withdrawTotal?fromdate=') }}"+ from_date + "&todate=" + to_date, function(data, status){
+	        
+	        $("#totalWithdraw").text(data);
+
+	    });
+	}
 </script>
 </body></html>

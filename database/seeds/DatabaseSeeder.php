@@ -221,6 +221,7 @@ class BonusTableSeeder extends Seeder {
             'value' => '100',
             'min_deposit' => '100',
             'allow_multiple' => 0,
+            'daily' => 0,
         ));
     }
 }

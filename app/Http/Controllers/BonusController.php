@@ -79,6 +79,7 @@ class BonusController extends Controller
         $bonus->value = $input['value'];
         $bonus->allow_multiple = $input['multi_used'];
         $bonus->min_deposit = $input['min_deposit'];
+        $bonus->daily = $input['daily'];
 
         $bonus->save();
 
@@ -128,6 +129,7 @@ class BonusController extends Controller
         $bonus->value = $input['bonus_value'];
         $bonus->min_deposit = $input['min_deposit'];
         $bonus->allow_multiple = $input['allow_multiple'];
+        $bonus->daily = $input['daily'];
 
         $bonus->save();
 

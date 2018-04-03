@@ -41,6 +41,10 @@
 							        <label>Allow Multiple Use?</label>
 							        {{ Form::select('allow_multiple', ['0' => 'No', '1' => 'Yes'], $bonus->allow_multiple, ['class' => 'form-control']) }}
 							    </div>
+							    <div class="form-group">
+							        <label>Daily Used Once?</label>
+							        {{ Form::select('daily', ['0' => 'No', '1' => 'Yes'], $bonus->daily, ['class' => 'form-control']) }}
+							    </div>
 							    
 							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Update Bonus Details</button>

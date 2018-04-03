@@ -14,7 +14,7 @@
 	                            <div class="col-xs-4 form-inline" style="position: absolute; z-index: 2;">
 	                                <div class="input-daterange input-group" id="datepicker">
 	                                	<span class="input-group-addon">from</span>
-	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="from" value="{{ \Carbon\Carbon::now()->format('d-m-Y') }}" />
+	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="from" value="{{ \Carbon\Carbon::now()->startOfYear()->format('d-m-Y') }}" />
 	                                    <span class="input-group-addon">to</span>
 	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="to" value="{{ \Carbon\Carbon::now()->format('d-m-Y') }}"/>
 	                                </div>
@@ -40,12 +40,16 @@
 			            </div>
 			        </div>
 			    </div>
+			    <div class="col-md-12">
+			    	<h3 class="pull-right">TOTAL CONFIRM DEPOSIT : RM <span id="totalDeposit">0.00</span></h3>
+			    </div>
 			</div>
 		</div>
     </div>
 @include('admin.footer')
 <script>
     
+
 	var oTable = $('#transaction-table').DataTable({
             processing: true,
             serverSide: true,
@@ -63,7 +67,7 @@
                 { data: 'user_id', name: 'user_id' },
                 { data: 'user_email', name: 'user_email' },
                 { data: 'group', name: 'group' },
-                { data: 'bank', name: 'bank' },
+                { data: 'bank_id', name: 'bank_id' },
                 { data: 'amount', name: 'amount' },
                 { data: 'status', name: 'status' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }
@@ -79,10 +83,26 @@
 
 	$("input[name=from]").change(function(){
 	    oTable.draw();
+	    calculateTotal();
 	});
 
 	$("input[name=to]").change(function(){
 	    oTable.draw();
+	    calculateTotal();
 	});
+
+	calculateTotal();
+
+	function calculateTotal()
+	{
+		var from_date = $('input[name=from]').val();
+		var to_date = $('input[name=to]').val();
+
+		$.get("{{ url('api/admin/depositTotal?fromdate=') }}"+ from_date + "&todate=" + to_date, function(data, status){
+	        
+	        $("#totalDeposit").text(data);
+
+	    });
+	}
 </script>
 </body></html>

@@ -25,8 +25,21 @@ Route::get('/promotions', 'FrontController@promotions');
 Route::get('/contact_us', 'FrontController@contact_us');
 
 
-//api/admin/notification
+// API START
+
 Route::post('api/admin/notification', 'ApiController@adminNotofication');
+
+Route::get('api/admin/depositTotal', 'ApiController@depositTotal');
+Route::get('api/admin/withdrawTotal', 'ApiController@withdrawTotal');
+
+
+
+
+
+
+
+
+// API END
 
 Route::get('/player/verification', 'PlayerController@verification');
 Route::post('/player/verification', 'PlayerController@verification_confirm');

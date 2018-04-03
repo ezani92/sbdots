@@ -44,6 +44,20 @@
 			                					</td>
 			                				</tr>
 			                				<tr>
+			                					<td><strong>Daily Used Once?</strong></td>
+			                					<td>
+			                						@if($bonus->daily == 0)
+			                							No
+			                						@else
+			                							Yes 
+			                						@endif
+			                					</td>
+			                				</tr>
+			                				<tr>
+			                					<td><strong>Minimum Deposit Required</strong></td>
+			                					<td>RM {{ $bonus->min_deposit }}</td>
+			                				</tr>
+			                				<tr>
 			                					<td><strong>Created At</strong></td>
 			                					<td>{{ $bonus->created_at->format('d M Y,  h:iA') }}</td>
 			                				</tr>

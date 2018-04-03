@@ -15,9 +15,6 @@
 					<div class="well"><h3>Today Bonus : RM {{ $today_bonus_amount }}</h3></div>
 				</div>
 				<div class="col-md-3">
-					<div class="well"><h3>Total Transaction  : {{ $total_transaction }}</h3></div>
-				</div>
-				<div class="col-md-3">
 					<div class="well"><h3>Total Pending Transaction  : {{ $pending_transaction_count }}</h3></div>
 				</div>
         	</div>

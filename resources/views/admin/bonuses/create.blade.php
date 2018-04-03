@@ -44,6 +44,13 @@
 							        </select>
 							    </div>
 							    <div class="form-group">
+							        <label>Daily Used Once</label>
+							        <select name="daily" class="form-control" required>
+							        	<option value="0">No</option>
+							        	<option value="1">Yes</option>
+							        </select>
+							    </div>
+							    <div class="form-group">
 							        <label>Minimum Deposit To Used This Code</label>
 							        <input type="number" name="min_deposit" class="form-control" required>
 							    </div>

@@ -21,6 +21,7 @@ class CreateBonusesTable extends Migration
             $table->string('type');
             $table->string('value');
             $table->integer('allow_multiple');
+            $table->integer('daily');
             $table->decimal('min_deposit',10,2);
             $table->timestamps();
             $table->softDeletes();
