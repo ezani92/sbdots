@@ -4,7 +4,7 @@ body {
 	font-size: 13px;
 	background-color: #000;
 	color: #fff;
-	background-image: url(../images/common/black-floral-patterns-3.jpg);
+	background-image: url(../images/common/cosmic2_bg.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -417,11 +417,11 @@ flex: 45;
 	font-weight: 700;
 	padding: 7px 22px;
 	text-transform:uppercase;
-	background: #ffa830; /* Old browsers */
-	background: -moz-linear-gradient(left, #ffa830 29%, #ffc642 45%, #ffc642 55%, #ffa830 66%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #ffa830 29%,#ffc642 45%,#ffc642 55%,#ffa830 66%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #ffa830 29%,#ffc642 45%,#ffc642 55%,#ffa830 66%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa830', endColorstr='#ffa830',GradientType=1 ); /* IE6-9 */	
+	background: #ffd65e; /* Old browsers */
+background: -moz-linear-gradient(top, #ffd65e 3%, #fcc735 21%, #ff9f0f 47%, #ff9f0f 47%, #ff9f0f 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ffd65e 3%,#fcc735 21%,#ff9f0f 47%,#ff9f0f 47%,#ff9f0f 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ffd65e 3%,#fcc735 21%,#ff9f0f 47%,#ff9f0f 47%,#ff9f0f 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#ff9f0f',GradientType=0 ); /* IE6-9 */
 }
 #menu > ul > li.home-menu > a {
 
@@ -631,6 +631,10 @@ font-size:18px;
 	background-image: linear-gradient(to top, #976e2d, #fde487 42%, #976e2d);
 }
 
+.download-icon.play-now-button {
+    margin-top: 24px;
+}
+
 /* Footer */
 .footer {
 	background: #070707; /* Old browsers */
@@ -707,6 +711,22 @@ align-items: center;
     width: 100%;
 }
 
+.container.downloads {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #31525b;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-box-shadow: inset 0 0 5px 3px rgba(255,255,255,0.3);
+    box-shadow: inset 0 0 5px 3px rgba(255,255,255,0.3);
+}
+
+.container.downloads > img {
+
+width:100%;
+
+}
 .half-box.icon p.description {
     padding-left: 30px;
 }
@@ -1631,7 +1651,7 @@ textarea {
 	position:relative;
 	margin-right:5px;
 }
-#gamingsoft {
+/* #gamingsoft {
 	background:url(../images/common/mobile_gs.jpg)top center no-repeat;
 }
 #naga {
@@ -1654,7 +1674,13 @@ textarea {
 }
 #joker {
 	background:url(../images/common/mobile_joker.jpg)top center no-repeat;
+} */
+
+i.fa.fa-whatsapp {
+    font-size: 32px;
+    margin-right: 35px;
 }
+
 .table_mobile {
 	text-align:center; 
 	margin-bottom:20px;
@@ -1673,7 +1699,7 @@ textarea {
 	text-decoration:none;
 }
 .qrcode {
-	margin-top:215px;
+	margin-top:65px;
 	margin-bottom:10px;
 }	
 .qrcode img.code {

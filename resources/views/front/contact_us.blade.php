@@ -29,14 +29,14 @@
 					<div class="box"><img src="images/common/contact_email.jpg"/>Email: <a href="cdn-cgi/l/email-protection/index.html" class="__cf_email__" data-cfemail="57242227273825231735322336243e3679393223">[email&#160;protected]</a></div>
 				</div>
 				<div class="horizontal clearfix">
-					<div class="box p-r"><img src="images/common/contact_thai.jpg"/>+66 600 035 106</div>
+					<div class="box p-r"><img src="images/common/whatsapp.png"/>Whatsapp</div>
 					<div class="box"><img src="images/common/contact_wechat.png"/>betasia_my</div>
 				</div>
 				<div class="horizontal clearfix">
 					<div class="box p-r"><img src="images/common/contact_live.png"/><input type="button" class="btn btn-warning btn-more btn-chat" value="LIVE CHAT 24/7" onclick="parent.LC_API.open_chat_window({source:'minimized'})"></div>
 				</div>
 			</div>
-			<div class="register">
+			<!-- <div class="register">
 				<div class="title-wrap">
 					<div class="outer-mask">
 						<div class="inner-mask">
@@ -107,7 +107,7 @@
 				<div class="clearfix">
                     <input type="submit" name="ctl00$MainContent$btnsend" value="SUBMIT" id="ctl00_MainContent_btnsend" class="btn btn-warning btn-more pull-right" />
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>

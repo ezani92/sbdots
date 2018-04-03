@@ -42,11 +42,8 @@
                             
 								<div id="cny-2018" class="portfolio latest new">
 									<div class="promo-item">
-										<div><img src="images/en/Promo-newmember.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/bnr1.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
-											<div class="promo-title-row">
-												<div class="promo-button btn-more">MORE INFO</div>
-											</div>
 											<div class="promo-content">
 													<h4>New Member: Welcome 1st Deposit Bonus 30% up to MYR 3,000</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
@@ -98,11 +95,8 @@
                             
 								<div id="slot" class="portfolio latest new">
 									<div class="promo-item">
-										<div><img src="images/en/Main1.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/bnr2.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
-											<div class="promo-title-row">
-												<div class="promo-button btn-more">MORE INFO</div>
-											</div>
 											<div class="promo-content">
 													<h4>New Member 2 : Deposit MYR100 get MYR200</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
@@ -151,11 +145,8 @@
 								</div>
 								<div id="daily-bonus" class="portfolio latest deposit">
 									<div class="promo-item">
-										<div><img src="images/en/Promo-10deposit.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/bnr4.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
-											<div class="promo-title-row">
-												<div class="promo-button btn-more">MORE INFO</div>
-											</div>
 											<div class="promo-content">
 													<h4>Existing Member: 10% Deposit Bonus</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
@@ -206,11 +197,8 @@
 								</div>
 								<div id="deposit-bonus" class="portfolio latest deposit">
 									<div class="promo-item">
-										<div><img src="images/en/Promo-3deposit.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/bnr3.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
-											<div class="promo-title-row">
-												<div class="promo-button btn-more">MORE INFO</div>
-											</div>
 											<div class="promo-content">
 													<h4>Existing Member: 3% Deposit Bonus (No Turnover)</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
@@ -261,11 +249,8 @@
 								</div>
 								<div id="mobile" class="portfolio latest rebate">
 									<div class="promo-item">
-										<div><img src="images/en/Promo-1rebate.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/bnr5.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
-											<div class="promo-title-row">
-												<div class="promo-button btn-more">MORE INFO</div>
-											</div>
 											<div class="promo-content">
 												<h4>Rebate: 1% Casino Rebate</h4>
 												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
@@ -297,13 +282,10 @@
 										</div>
 									</div>
 								</div>
-								<div id="welcome" class="portfolio latest rebate">
+								<div id="welcome" class="portfolio latest special">
 									<div class="promo-item">
-										<div><img src="images/en/Promo-1rebatesport.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/bnr6.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
-											<div class="promo-title-row">
-												<div class="promo-button btn-more">MORE INFO</div>
-											</div>
 											<div class="promo-content">
 													<h4>Rebate: 1% Sports Rebate</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
@@ -335,13 +317,10 @@
 										</div>
 									</div>
 								</div>
-								<div id="starter" class="portfolio latest special">
+								<!-- <div id="starter" class="portfolio latest special">
 									<div class="promo-item">
-										<div><img src="images/en/Main3.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/Main3.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
-											<div class="promo-title-row">
-												<div class="promo-button btn-more">MORE INFO</div>
-											</div>
 											<div class="promo-content">
 												<h4>Special: WeChat MYR8 Bonus</h4>
 												
@@ -358,7 +337,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -446,17 +425,17 @@
         $(".promo-button").show();
         $('.promo-button').click(function () {
             // $(".promo-content").slideToggle();
-            $(this).parent().parent().parent().find(".promo-content").slideToggle();
+            $(this).parent().parent().find(".promo-content").slideToggle();
         });
     });
-    $('.promo-button').click(function () {
+    /* $('.promo-button').click(function () {
         if ($(this).text() === 'LESS INFO') {
             $(this).text('MORE INFO');
         }
         else {
             $(this).text('LESS INFO');
         }
-    });
+    }); */
 </script>
 
 <script type="text/javascript">

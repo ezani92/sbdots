@@ -31,9 +31,7 @@
 							<li>Games (Multiplayer, Slots, Cards...)</li>
 							<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
 						</ul>
-						<input type="button" class="btn btn-warning btn-more" value="MORE INFO" onclick="location.href='game-joker123.aspx'">
-						<div class="single-download">download now</div>
-						<div class="download-icon">
+						<div class="download-icon play-now-button">
 							<a href="mobile#joker"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>

@@ -41,13 +41,10 @@
 							<div class="app-img"><img src="images/common/app-holdem.png"/></div>
 						</div>
 						-->
-						<input type="button" class="btn btn-warning btn-more" value="MORE INFO" onclick="location.href='poker-app.aspx'">
-						<div class="single-download">download now</div>
-						<div class="download-icon">
-							<a href="http://dl.p8network.com/md/win/prod/md.exe" target="_blank"><div class="d-img"><img src="images/common/download-pc.png"/></div></a>
-							<a href="http://dl.p8network.com/md/mac/prod/md.pkg" target="_blank"><div class="d-img"><img src="images/common/download-osx.png"/></div></a>
-							<a href="http://www.p8poker.com/Info/ios-download-en" target="_blank"><div class="d-img"><img src="images/common/download-ios.png"/></div></a>
-							<a href="http://dl.p8network.com/md/android/prod/md.apk" target="_blank"><div class="d-img"><img src="images/common/download-android.png"/></div></a>
+						<!-- <input type="button" class="btn btn-warning btn-more" value="MORE INFO" onclick="location.href='poker-app.aspx'">
+						<div class="single-download">download now</div> -->
+						<div class="download-icon play-now-button">
+							<a href="#"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>

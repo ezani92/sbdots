@@ -32,9 +32,7 @@
 							<li>Games (Slots & Arcade)</li>
 							<li>Live Casino (Baccarat, Sic Bo, 3 Pictures, Blackjack...)</li>
 						</ul>
-						<input type="button" class="btn btn-warning btn-more" value="MORE INFO" onclick="location.href='sportsbook-winningft.aspx'">
-						<div class="single-download">download now</div>
-						<div class="download-icon">
+						<div class="download-icon play-now-button">
 							<!-- <a href="#"><div class="d-img"><img src="images/common/download-pc.png"/></div></a> -->
 							<a href="#"><div class="d-img">PLAY NOW!</div></a>
 						</div>
@@ -52,7 +50,10 @@
 							<li>Sportsbook (Soccer, E-Sports, Mix Parlay, Horse Racing...)</li>
 							<li>Live Casino (Baccarat & Roulette)</li>
 						</ul>
-						<input type="button" class="btn btn-warning btn-more" value="MORE INFO" onclick="location.href='sportsbook-ibcbet.aspx'">
+						<div class="download-icon play-now-button">
+							<!-- <a href="#"><div class="d-img"><img src="images/common/download-pc.png"/></div></a> -->
+							<a href="#"><div class="d-img">PLAY NOW!</div></a>
+						</div>
 						<!--
 						<div class="single-download">download now</div>
 						<div class="download-icon">
@@ -76,7 +77,10 @@
 							<li>Live Casino (Baccarat, Roulette)</li>
 							<li>Games (Slots, Hi Lo, Scratchcards, Bingo/Keno, Dice)</li>
 						</ul>
-						<input type="button" class="btn btn-warning btn-more" value="MORE INFO" onclick="location.href='sportsbook-sbobet.aspx'">
+						<div class="download-icon play-now-button">
+							<!-- <a href="#"><div class="d-img"><img src="images/common/download-pc.png"/></div></a> -->
+							<a href="#"><div class="d-img">PLAY NOW!</div></a>
+						</div>
 						<!--
 						<div class="single-download">download now</div>
 						<div class="download-icon">

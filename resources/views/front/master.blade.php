@@ -29,7 +29,7 @@
     <div id="header">
         <div class="headWrap container">
             <div class="logo"><a href="{{ url('/') }}">
-                <img src="../images/common/sb_logo.jpg" alt="" height="85px">
+                <img src="../images/common/SB_Dot_logo_black-01.png" alt="" height="85px">
             </a></div>
             @if(Auth::guest())
             <div class="loginpart pull-right">
@@ -107,8 +107,9 @@
                     <div id="slider" class="nivoSlider" style="height:350px;"> 
                         <!-- <a href="promotions"><img src="images/en/Main1.jpg" width="1040" height="350" alt=""/></a> 
                         <a href="promotions"><img src="images/en/Main2.jpg" width="1040" height="350" alt=""/></a> -->
-                        <a href="promotions"><img src="images/en/Main3.jpg" width="1040" height="350" alt=""/></a>
-                        <a href="promotions"><img src="images/en/homepagebanner_new.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/main1_new.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/main2_new.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/main3_new.jpg" width="1040" height="350" alt=""/></a>
                         <!-- <a href="promotions"><img src="images/en/Promo-1rebate.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/Promo-1rebatesport.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/Promo-3deposit.jpg" width="1040" height="350" alt=""/></a>
@@ -117,7 +118,7 @@
                     </div>
                 </div>
                 @else
-                    @yield ('banner')
+                    {{-- @yield ('banner') --}}
                 @endif
             </div>
         </div>
@@ -127,5 +128,16 @@
 
     @include('front.footer')
     @yield('script')
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+    window._lc = window._lc || {};
+    window.__lc.license = 9644895;
+    (function() {
+      var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+      lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+    </script>
+    <!-- End of LiveChat code -->
     </body>
 </html>

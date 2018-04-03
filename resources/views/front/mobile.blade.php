@@ -16,7 +16,7 @@
 			<div class="title-wrap">
 				<div class="outer-mask">
 					<div class="inner-mask">
-						<div class="title-p"><h2>mobile</h2></div>
+						<div class="title-p"><h2>Download</h2></div>
 					</div>
 				</div>
 			</div>
@@ -27,7 +27,7 @@
 					<li><a href="#calibet" data-toggle="tab">Calibet</a></li>
 					<li><a href="#scr888" data-toggle="tab">SCR888</a></li>
 					<li><a href="#suncity" data-toggle="tab">Club SunCity</a></li>
-					<li><a href="#poker" data-toggle="tab">Poker</a></li>
+					<!-- <li><a href="#poker" data-toggle="tab">Poker</a></li> -->
 					<li><a href="#live22" data-toggle="tab">Live 22</a></li>
 					<li><a href="#joker" data-toggle="tab">joker</a></li>
 				</ul>
@@ -37,6 +37,9 @@
 				
 				<div class="tab-content">
 					<div class="tab-pane fade in active" id="gamingsoft">
+						<div class="container downloads">
+							<img src="images/common/sportsbook-ibc.png" alt=""/>
+						</div>
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
@@ -83,6 +86,9 @@
 					</div>
 					
 					<div class="tab-pane" id="wft">
+							<div class="container downloads">
+									<img src="images/common/sportsbook-ibc.png" alt=""/>
+								</div>
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
@@ -129,6 +135,9 @@
 					</div>
 					
 					<div class="tab-pane" id="calibet">
+							<div class="container downloads">
+									<img src="images/common/sportsbook-ibc.png" alt=""/>
+								</div>
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
@@ -165,6 +174,9 @@
 					</div>
 					
 					<div class="tab-pane" id="scr888">
+							<div class="container downloads">
+									<img src="images/common/sportsbook-ibc.png" alt=""/>
+								</div>
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
@@ -201,6 +213,9 @@
 					</div>
 					
 					<div class="tab-pane" id="suncity">
+							<div class="container downloads">
+									<img src="images/common/sportsbook-ibc.png" alt=""/>
+								</div>
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
@@ -236,13 +251,17 @@
 												
 					</div>
 					
-					<div class="tab-pane" id="poker" style="margin:-12px;">
+					<!-- <div class="tab-pane" id="poker" style="margin:-12px;">
+
 						<iframe frameborder="0" allowtransparency="yes" scrolling="no" width="800" height="380" src="poker/index.html"></iframe>
 						<br><br>
 												
-					</div>
+					</div> -->
 									
 					<div class="tab-pane" id="live22">
+							<div class="container downloads">
+									<img src="images/common/sportsbook-ibc.png" alt=""/>
+								</div>
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
@@ -299,6 +318,9 @@
 					</div>
 									
 					<div class="tab-pane" id="joker">
+							<div class="container downloads">
+									<img src="images/common/sportsbook-ibc.png" alt=""/>
+								</div>
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
