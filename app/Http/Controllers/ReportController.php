@@ -40,6 +40,8 @@ class ReportController extends Controller
             $worth_bonus = DB::table('transactions')->where('deposit_type','bonus')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
 
             $transactions = Transaction::where('created_at','>=',$from)->where('created_at','<=',$to)->paginate(10);
+
+
         }
         else
         {
@@ -66,6 +68,7 @@ class ReportController extends Controller
             $transactions = Transaction::paginate(10);
         }
         
+        $winlose = $worth_deposit - $worth_withdrawal;
 
         // where('created_at','>=',$from)->where('created_at','<=',$to)->
 
@@ -85,7 +88,8 @@ class ReportController extends Controller
             'worth_deposit' => $worth_deposit,
             'worth_withdrawal' => $worth_withdrawal,
             'worth_bonus' => $worth_bonus,
-            'input' => $input
+            'input' => $input,
+            'winlose' => $winlose
     	]);
     }
 }

@@ -81,6 +81,16 @@
                                 <td><strong>Bonus Worth</strong></td>
                                 <td>RM {{ $worth_bonus }}</td>
                             </tr>
+                            <tr>
+                                <td><strong>WIN / LOSE</strong></td>
+                                <td>
+                                    @if($winlose < 0)
+                                        <span class="label label-danger">RM {{ $winlose }}</span>
+                                    @else
+                                        <span class="label label-success">RM {{ $winlose }}</span>
+                                    @endif
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
