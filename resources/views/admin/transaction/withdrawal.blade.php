@@ -6,7 +6,7 @@
 			@endif
 			<div class="row">
 			    <div class="col-md-12">
-			        <h3>Deposit Transaction List's</h3>
+			        <h3>Withdrawal Transaction List's</h3>
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <br />

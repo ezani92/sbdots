@@ -59,7 +59,7 @@
             <div class="forgotpw"><a href="{{ url('password/reset') }}">forgot password?</a></div>
             @else
             <div class="loginpart pull-right">
-                <div class="welcome">Welcome {{ Auth::user()->name }}!<span id="ctl00_lblusername" style="xmargin-right: 10px;"></span></div>
+                <div class="welcome">Welcome {{ Auth::user()->name }}! <i style="color:{{ Auth::user()->group->color }}" class="fas fa-{{ Auth::user()->group->icon }}"></i><span id="ctl00_lblusername" style="xmargin-right: 10px;"></span></div>
                 <div class="loginfield">
                     <input type="button" class="btn-register" value="My Account" onclick="location.href='{{ url('player') }}'" />
                 </div>

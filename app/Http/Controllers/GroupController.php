@@ -61,6 +61,7 @@ class GroupController extends Controller
 
         $group->name = $input['name'];
         $group->icon = $input['icon'];
+        $group->color = $input['color'];
 
         $group->save();
 
@@ -89,7 +90,7 @@ class GroupController extends Controller
      */
     public function edit(Group $group)
     {
-        //
+        return view('admin.groups.edit',compact('group'));
     }
 
     /**
@@ -101,7 +102,18 @@ class GroupController extends Controller
      */
     public function update(Request $request, Group $group)
     {
-        //
+        $input = $request->all();
+
+        $group->name = $input['name'];
+        $group->icon = $input['icon'];
+        $group->color = $input['color'];
+
+        $group->save();
+
+        Session::flash('message', 'Group succesfully updated!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        return redirect('admin/groups');
     }
 
     /**

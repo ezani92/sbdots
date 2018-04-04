@@ -39,7 +39,7 @@ class ReportController extends Controller
             $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->where('status','2')->sum('amount');
             $worth_bonus = DB::table('transactions')->where('deposit_type','bonus')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
 
-            $transactions = Transaction::where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->paginate(10);
+            $transactions = Transaction::where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->get();
 
 
         }
@@ -65,7 +65,7 @@ class ReportController extends Controller
             $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->where('status','2')->sum('amount');
             $worth_bonus = DB::table('transactions')->where('deposit_type','bonus')->sum('amount');
 
-            $transactions = Transaction::where('status',2)->paginate(10);
+            $transactions = Transaction::where('status',2)->get();
         }
         
         $winlose = $worth_deposit - $worth_withdrawal;

@@ -48,6 +48,6 @@ class ApiController extends Controller
         $from_date = Carbon::create($arrStart[2], $arrStart[1], $arrStart[0], 0, 0, 0);
         $to_date = Carbon::create($arrEnd[2], $arrEnd[1], $arrEnd[0], 23, 59, 59);
 
-        return $transactions = Transaction::where('transaction_type','withdraw')->where('deposit_type','normal')->where('created_at','<=',$to_date)->where('status','2')->where('created_at','>=',$from_date)->sum('amount');
+        return $transactions = Transaction::where('transaction_type','withdraw')->where('created_at','<=',$to_date)->where('status','2')->where('created_at','>=',$from_date)->sum('amount');
     }
 }

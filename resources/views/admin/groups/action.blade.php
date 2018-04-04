@@ -1,1 +1,1 @@
-<a href="{{ URL::to('admin/groups/'.$group->id.'/delete') }}" class="btn btn-xs btn-danger">Delete</a>
+<a href="{{ URL::to('admin/groups/'.$group->id.'/edit') }}" class="btn btn-xs btn-info">Edit</a> <a href="{{ URL::to('admin/groups/'.$group->id.'/delete') }}" class="btn btn-xs btn-danger">Delete</a>

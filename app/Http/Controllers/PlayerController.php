@@ -15,6 +15,7 @@ use App\Notifications\NewDeposit;
 use App\Notifications\NewWithdraw;
 use App\Notifications\NewTransfer;
 use Pusher\Pusher;
+use Carbon\Carbon;
 
 class PlayerController extends Controller
 {	
@@ -173,7 +174,33 @@ class PlayerController extends Controller
                 return back()->withInput();
             }
             else
-            {
+            {   
+
+
+                if($bonus->daily == 1)
+                {
+                    $arrToday = explode("-", Carbon::now()->format('d-m-Y'));
+
+                    $from_date = Carbon::create($arrToday[2], $arrToday[1], $arrToday[0], 0, 0, 0);
+                    $to_date = Carbon::create($arrToday[2], $arrToday[1], $arrToday[0], 23, 59, 59);
+
+                    $today_count = Transaction::where('bonus_id',$bonus->id)->where('user_id',\Auth::user()->id)->where('created_at','<=',$to_date)->where('created_at','>=',$from_date)->count();
+
+                    if($today_count == 1)
+                    {
+                        Session::flash('message', 'You Already Used This Code Today, Come Back Tomorrow To use this Code.'); 
+                        Session::flash('alert-class', 'alert-danger');
+
+                        return back()->withInput();
+                    }
+                    else
+                    {
+                        $can_use_bonus = 1;
+                    }
+                    
+                }
+
+
                 if($input['amount'] < $bonus->min_deposit)
                 {
                     Session::flash('message', 'Minimum deposit to use this code is MYR '.$bonus->min_deposit); 

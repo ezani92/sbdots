@@ -25,6 +25,10 @@
 							        <label>Bank Account No</label>
 							        <input type="text" name="account_no" class="form-control" value="{{ $bank->account_no }}" required>
 							    </div>
+							    <div class="form-group">
+							        <label>Initial Bank Balance (RM)</label>
+							        <input type="number" step="0.01" name="balance" value="{{ $bank->balance }}"" class="form-control" required>
+							    </div>
 							    
 							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Update Bank Details</button>

@@ -85,9 +85,12 @@ class BankController extends Controller
         $win = $bank->records->where('record',1)->sum('amount');
         $loss = $bank->records->where('record',0)->sum('amount');
 
-        $bank_balance = $win - $loss;
+        $current_balance = $bank->balance + $win - $loss;
 
-        return view('admin.banks.show',compact('bank','bank_balance'));
+        $records = BankRecord::where('bank_id',$bank->id)->get();
+
+
+        return view('admin.banks.show',compact('bank','current_balance','records'));
     }
 
     /**

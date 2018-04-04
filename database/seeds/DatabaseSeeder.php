@@ -52,6 +52,8 @@ class UserTableSeeder extends Seeder {
             'role' => 1,
             'tac_no' => '123456',
             'phone_verification' => 1,
+            'bank_name' => 'RHB Bank',
+            'bank_account_no' => '12345678',
             'affiliate_id' => str_random('8')
 
     	));
@@ -64,6 +66,8 @@ class UserTableSeeder extends Seeder {
             'role' => 3,
             'tac_no' => '123456',
             'phone_verification' => 1,
+            'bank_name' => 'RHB Bank',
+            'bank_account_no' => '12345678',
             'affiliate_id' => str_random('8')
 
         ));
@@ -76,6 +80,8 @@ class UserTableSeeder extends Seeder {
             'role' => 3,
             'tac_no' => '123456',
             'phone_verification' => 1,
+            'bank_name' => 'RHB Bank',
+            'bank_account_no' => '12345678',
             'affiliate_id' => str_random('8')
 
         ));
@@ -88,6 +94,8 @@ class UserTableSeeder extends Seeder {
             'role' => 3,
             'tac_no' => '123456',
             'phone_verification' => 1,
+            'bank_name' => 'RHB Bank',
+            'bank_account_no' => '12345678',
             'affiliate_id' => str_random('8')
 
         ));
@@ -103,22 +111,26 @@ class GroupTableSeeder extends Seeder {
 
         Group::create(array(
             'name' => 'Basic',
-            'icon' => 'fa fa-user',
+            'icon' => 'user',
+            'color' => '#FFFFFF',
         ));
 
         Group::create(array(
             'name' => 'Silver',
-            'icon' => 'fa fa-user',
+            'icon' => 'user-secret',
+            'color' => '#FFFFFF',
         ));
 
         Group::create(array(
             'name' => 'Platinum',
-            'icon' => 'fa fa-user',
+            'icon' => 'superpowers',
+            'color' => '#FFFFFF',
         ));
 
         Group::create(array(
             'name' => 'Gold',
-            'icon' => 'fa fa-user',
+            'icon' => 'female',
+            'color' => '#FFFFFF',
         ));
     }
 
@@ -157,6 +169,7 @@ class BankTableSeeder extends Seeder {
             'name' => 'Maybank',
             'account_no' => '123456789',
             'account_name' => 'ABC Sdn Bhd',
+            'balance' => 0
 
         ));
     }
