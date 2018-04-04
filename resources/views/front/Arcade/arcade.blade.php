@@ -23,8 +23,8 @@
 			<div class="single-wrap">
 				<div class="single-p clearfix">
 					<div class="left">
-						<img src="images/common/game-joker.png"/>
-						<div class="poweredby">powered by</div>
+						<img src="images/common/game-918.png"/>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -37,6 +37,58 @@
 					</div>
 				</div>
 			</div>
+			<div class="single-wrap">
+					<div class="single-p clearfix">
+						<div class="left">
+							<img src="images/common/game-joker.png"/>
+							
+						</div>
+						<div class="right">
+							<ul>
+								<li>Games (Multiplayer, Slots, Cards...)</li>
+								<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
+							</ul>
+							<div class="download-icon play-now-button">
+								<a href="mobile#joker"><div class="d-img">PLAY NOW!</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="single-wrap">
+						<div class="single-p clearfix">
+							<div class="left">
+								<img src="images/common/game-mega888.png"/>
+								
+							</div>
+							<div class="right">
+								<ul>
+									<li>Games (Multiplayer, Slots, Cards...)</li>
+									<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
+								</ul>
+								<div class="download-icon play-now-button">
+									<a href="mobile#joker"><div class="d-img">PLAY NOW!</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="single-wrap">
+							<div class="single-p clearfix">
+								<div class="left">
+									<img src="images/common/game-suncity.png"/>
+									
+								</div>
+								<div class="right">
+									<ul>
+										<li>Games (Multiplayer, Slots, Cards...)</li>
+										<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
+									</ul>
+									<div class="download-icon play-now-button">
+										<a href="mobile#joker"><div class="d-img">PLAY NOW!</div></a>
+									</div>
+								</div>
+							</div>
+						</div>
+		</div>			
 		</div>
 	</div>
 </div>

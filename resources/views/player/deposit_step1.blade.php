@@ -30,22 +30,41 @@
                         <div class="member-main">
                             <form method="get" action="{{ url('player/deposit/step2') }}">
                                 @csrf
-                                <div class="row clearfix">
-                                    @foreach($games as $game)
-                                        <div class="col-md-4 col-xs-4">
+                                <div class="deposit-form clearfix">
+
+                                    <select class="game-select" name="games">
+                                        @foreach($game_cat as $cat)
+
+                                        <optgroup label="{{ $cat }}">
+
+                                            @foreach ($games as $game)
+                                            
+                                                @if ($game->category == $cat)
+
+                                                    <option value="{{$game->id}}">{{$game->name}}</option>
+
+                                                @endif
+
+                                            @endforeach
+
+                                         </optgroup>
+
+                                        @endforeach
+                                    </select>
+
+                                    <!-- <div class="col-md-4 col-xs-4">
                                             <div class="member-col">
-                                                <div class="{{ $game->category }}"><img src="{{ secure_asset('images/common/provider/'.$game->logo) }}"/></div>
+                                                <div class="{{-- $game->category --}}"><img src="{{-- secure_asset('images/common/provider/'.$game->logo) --}}"/></div>
                                             </div>
                                             <div class="member-input">
-                                                <input value="{{ $game->id }}" name="games" type="radio" id="" style="outline: none;" />
-                                                <span>{{ $game->name }}</span>
+                                                <input value="{{-- $game->id --}}" name="games" type="radio" id="" style="outline: none;" />
+                                                <span>{{-- $game->name --}}</span>
                                             </div>
-                                        </div>
-                                    @endforeach
+                                        </div> -->
 
                                 </div>
-                                <div class="clearfix">
-                                    <input type="submit" name="" value="NEXT" id="" class="btn btn-warning btn-more pull-right" />
+                                <div class="deposit-form clearfix">
+                                    <input type="submit" name="" value="NEXT" id="" class="btn btn-warning btn-more pull-right align" />
                                 </div>
                             </form>
                         </div>

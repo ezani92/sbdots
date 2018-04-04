@@ -23,8 +23,8 @@
 			<div class="single-wrap">
 				<div class="single-p clearfix">
 					<div class="left">
-						<img src="images/common/game-live22.png"/>
-						<div class="poweredby">powered by</div>
+						<img src="images/common/slot-1scasino.png"/>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -40,8 +40,8 @@
 			<div class="single-wrap">
 				<div class="single-p clearfix">
 					<div class="left">
-						<img src="images/common/slot-1scasino.png"/>
-						<div class="poweredby">powered by</div>
+						<img src="images/common/slot-3win88.png"/>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -57,8 +57,8 @@
 			<div class="single-wrap">
 				<div class="single-p clearfix">
 					<div class="left">
-						<img src="images/common/slot-gs.png"/>
-						<div class="poweredby">powered by</div>
+						<img src="images/common/slotlive22.png"/>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -75,7 +75,7 @@
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/slot-918.png"/>
-						<!-- <div class="poweredby">powered by</div> -->
+						<!--  -->
 					</div>
 					<div class="right">
 						<ul>
@@ -91,7 +91,7 @@
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/slot-suncity.png"/>
-						<!-- <div class="poweredby">powered by</div> -->
+						<!--  -->
 					</div>
 					<div class="right">
 						<ul>
@@ -104,6 +104,57 @@
 					</div>
 				</div>
 			</div>
+			<div class="single-wrap">
+					<div class="single-p clearfix">
+						<div class="left">
+							<img src="images/common/slot-lpe.png"/>
+							<!--  -->
+						</div>
+						<div class="right">
+							<ul>
+								<li>Live Casino - Baccarat, Blackjack, Dragon Tiger, Sic bo ...</li>
+								<li>Slot Games - Table games, Virtual Sports, 3 Reels, 5 Reels slots ...</li>
+							</ul>
+							<div class="download-icon play-now-button">
+								<a href="mobile#suncity"><div class="d-img">PLAY NOW!</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="single-wrap">
+						<div class="single-p clearfix">
+							<div class="left">
+								<img src="images/common/slot-mega888.png"/>
+								<!--  -->
+							</div>
+							<div class="right">
+								<ul>
+									<li>Live Casino - Baccarat, Blackjack, Dragon Tiger, Sic bo ...</li>
+									<li>Slot Games - Table games, Virtual Sports, 3 Reels, 5 Reels slots ...</li>
+								</ul>
+								<div class="download-icon play-now-button">
+									<a href="mobile#suncity"><div class="d-img">PLAY NOW!</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="single-wrap">
+							<div class="single-p clearfix">
+								<div class="left">
+									<img src="images/common/slot-rollex.png"/>
+									<!--  -->
+								</div>
+								<div class="right">
+									<ul>
+										<li>Live Casino - Baccarat, Blackjack, Dragon Tiger, Sic bo ...</li>
+										<li>Slot Games - Table games, Virtual Sports, 3 Reels, 5 Reels slots ...</li>
+									</ul>
+									<div class="download-icon play-now-button">
+										<a href="mobile#suncity"><div class="d-img">PLAY NOW!</div></a>
+									</div>
+								</div>
+							</div>
+						</div>
 		</div>
 	</div>
 </div>    

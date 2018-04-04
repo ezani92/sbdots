@@ -16,15 +16,14 @@
 			<div class="title-wrap">
 				<div class="outer-mask">
 					<div class="inner-mask">
-						<div class="title-p"><h2>poker</h2></div>
+						<div class="title-p"><h2>Lottery</h2></div>
 					</div>
 				</div>
 			</div>
 			<div class="single-wrap">
 				<div class="single-p clearfix">
 					<div class="left" style="padding-top:7px;">
-						<img src="images/common/poker-combine.png"/>
-						<div class="poweredby">powered by</div>
+						<img src="images/common/lottery-ace88.png"/>
 					</div>
 					<div class="right" style="padding-top:0;">
 						<ul>

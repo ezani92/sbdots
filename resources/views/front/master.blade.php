@@ -7,12 +7,10 @@
     <div id="topLanguage">
         <div class="container">
             <div class="social-menu">
-                <span><a href="#" class="social-link">Facebook</a></span>
-                <span> | </span>
-                <span><a href="#" class="social-link">Twitter</a></span>
+                <span><a href="#" class="social-link"><i class="fas fa-facebook"></i></a></span>
+                <span><a href="#" class="social-link"><i class="fas fa-instagram"></i></a></span>
             </div>
             <div class="help-bar">
-                <div class="helpCenter"><a href="#"><i class="fa fa-question-circle"></i> help</a></div>
                 <div class="languageWrap">
                     <div class="dropdown">
                         <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-language"> English <span class="caret" style=""></span> </button>
@@ -29,7 +27,7 @@
     <div id="header">
         <div class="headWrap container">
             <div class="logo"><a href="{{ url('/') }}">
-                <img src="../images/common/SB_Dot_logo_black-01.png" alt="" height="85px">
+                <img src="../images/common/SB_Dot_logo_black-01.png" alt="" height="120px">
             </a></div>
             @if(Auth::guest())
             <div class="loginpart pull-right">
@@ -79,7 +77,7 @@
                     <li><a href="live_casinos" class="">live casinos</a></li>
                     <li><a href="slots" class="">slots</a></li>
                     <li><a href="arcades" class="">arcades</a></li>
-                    <li><a href="poker_" class="">poker</a></li>
+                    <li><a href="poker_" class="">lottery</a></li>
                     <li><a href="promotions" class="">promotions</a></li>
                     <li><a href="contact_us" class="">contact us</a></li>
                     <li class="comment"><a href="#" onclick="parent.LC_API.open_chat_window({source:'minimized'}); return false"><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
@@ -91,7 +89,7 @@
         <div class="bg-banner">
             <div class="container">
                 <div id="announcement">
-                    <div class="announceIcon"><i class="fa fa-fw fa-bullhorn"></i></div>
+                    <div class="announceIcon"><i class="fas fa-fw fa-bullhorn"></i></div>
                     <div class="annContent">
                         <div class="annTitle">News:</div>
                         <div class="runText">
@@ -109,7 +107,7 @@
                         <a href="promotions"><img src="images/en/Main2.jpg" width="1040" height="350" alt=""/></a> -->
                         <a href="promotions"><img src="images/en/main1_new.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/main2_new.jpg" width="1040" height="350" alt=""/></a>
-                        <a href="promotions"><img src="images/en/main3_new.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/bnr6.jpg" width="1040" height="350" alt=""/></a>
                         <!-- <a href="promotions"><img src="images/en/Promo-1rebate.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/Promo-1rebatesport.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/Promo-3deposit.jpg" width="1040" height="350" alt=""/></a>

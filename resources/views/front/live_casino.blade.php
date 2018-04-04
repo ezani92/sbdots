@@ -24,7 +24,7 @@
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/casino-live22.png"/>
-						<div class="poweredby">powered by</div>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -41,7 +41,7 @@
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/casino-1scasino.png"/>
-						<div class="poweredby">powered by</div>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -57,8 +57,8 @@
 			<div class="single-wrap">
 				<div class="single-p clearfix">
 					<div class="left">
-						<img src="images/common/casino-gs.png"/>
-						<div class="poweredby">powered by</div>
+						<img src="images/common/casino-asia855.png"/>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -75,7 +75,7 @@
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/casino-calibet.png"/>
-						<div class="poweredby">powered by</div>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -91,7 +91,7 @@
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/casino-joker.png"/>
-						<div class="poweredby">powered by</div>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -103,7 +103,40 @@
 						</div>
 					</div>
 				</div>
-			</div>			
+			</div>
+			<div class="single-wrap">
+					<div class="single-p clearfix">
+						<div class="left">
+							<img src="images/common/casino-lpe.png"/>
+							
+						</div>
+						<div class="right">
+							<ul>
+								<li>Games (Multiplayer, Slots, Cards...)</li>
+								<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
+							</ul>
+							<div class="download-icon play-now-button">
+								<a href="mobile#joker"><div class="d-img">PLAY NOW!</div></a>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="single-wrap">
+						<div class="single-p clearfix">
+							<div class="left">
+								<img src="images/common/casino-rollex.png"/>
+							</div>
+							<div class="right">
+								<ul>
+									<li>Games (Multiplayer, Slots, Cards...)</li>
+									<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
+								</ul>
+								<div class="download-icon play-now-button">
+									<a href="mobile#joker"><div class="d-img">PLAY NOW!</div></a>
+								</div>
+							</div>
+						</div>
+					</div>				
 		</div>
 	</div>
 </div>

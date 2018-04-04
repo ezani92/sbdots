@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link href="{{ secure_asset('images/common/favicon.ico') }}" rel="icon" type="image/x-icon" />
+        <link href="{{ asset('images/common/favicon.png') }}" rel="icon" type="image/x-icon" />
         <title>
             Super B
         </title>
-        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/font-awesome.min.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/banner/nivo-slider.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/main.css') }}" />
-        <link href="{{ secure_asset('css/constant.css') }}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/banner/nivo-slider.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
+        <link href="{{ asset('css/constant.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     </head>
@@ -18,12 +18,10 @@
         <div id="topLanguage">
             <div class="container">
                 <div class="social-menu">
-                    <span><a href="#" class="social-link">Facebook</a></span>
-                    <span> | </span>
-                    <span><a href="#" class="social-link">Twitter</a></span>
+                    <span><a href="#" class="social-link"><i class="fas fa-facebook"></i></a></span>
+                    <span><a href="#" class="social-link"><i class="fas fa-instagram"></i></a></span>
                 </div>
                 <div class="help-bar">
-                    <div class="helpCenter"><a href="#"><i class="fa fa-question-circle"></i> help</a></div>
                     <div class="languageWrap">
                         <div class="dropdown">
                             <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-language"> English <span class="caret" style=""></span> </button>
@@ -40,7 +38,7 @@
         <div id="header">
             <div class="headWrap container">
                 <div class="logo"><a href="{{ url('/') }}">
-                <img src="../images/common/sb_logo.jpg" alt="" height="85px">
+                    <img src="../images/common/SB_Dot_logo_black-01.png" alt="" height="120px">
                 </a></div>
                 @if(Auth::guest())
 	                <div class="loginpart pull-right">
@@ -76,12 +74,12 @@
                 @endif
                 <div id="menu">
                     <ul>
-                        <li class="home-menu"><a href="{{ url('/') }}" class="">Home</a></li>
+                        <li><a href="{{ url('/') }}" class="">Home</a></li>
                         <li><a href="sportsbooks" class="">sportsbooks</a></li>
                         <li><a href="live_casinos" class="">live casinos</a></li>
                         <li><a href="slots" class="">slots</a></li>
                         <li><a href="arcades" class="">arcades</a></li>
-                        <li><a href="poker_" class="">poker</a></li>
+                        <li><a href="poker_" class="">lottery</a></li>
                         <li><a href="promotions" class="">promotions</a></li>
                         <li><a href="contact_us" class="">contact us</a></li>
                         <li class="comment"><a href="#" onclick="parent.LC_API.open_chat_window({source:'minimized'}); return false"><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
@@ -93,7 +91,7 @@
             <div class="bg-banner">
                 <div class="container">
                     <div id="announcement">
-                        <div class="announceIcon"><img src="{{ secure_asset('images/common/announce-left.png') }}" width="38" height="30" alt=""/></div>
+                        <div class="announceIcon"><i class="fas fa-fw fa-bullhorn"></i></div>
                         <div class="annContent">
                             <div class="annTitle">Annoucement:</div>
                             <div class="runText">
@@ -103,9 +101,6 @@
                             </div>
                         </div>
                         <div class="annTime"><i class="fa fa-clock-o fa-lg"></i><span id="nowTime"></span></div>
-                    </div>
-                    <div class="banner-p">
-                        <img src="{{ secure_asset('images/common/banner-contact.jpg') }}"/>
                     </div>
                 </div>
             </div>

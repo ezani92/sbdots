@@ -11,7 +11,7 @@
                     <li><a href="{{ url('player/transaction') }}" class="">transaction</a></li>
                     <li><a href="{{ url('player/profile') }}" class="">profile</a></li>
                 </ul>
-                <div class="tab-content">
+                <!-- <div class="tab-content">
                     <div class="tab-pane fade in active">
                         <div class="title-wrap">
                             <div class="outer-mask">
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="tab-content short">
                     <div class="tab-pane fade in active">
                         <div class="title-wrap">
@@ -50,7 +50,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="start-arrow"><img src="images/common/arrow.png"/></div>
+                                <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
                                 <div class="member-col-wrap">
                                     <div class="member-col">
                                         <div class="member-start">
@@ -59,7 +59,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="start-arrow"><img src="images/common/arrow.png"/></div>
+                                <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
                                 <div class="member-col-wrap">
                                     <div class="member-col">
                                         <div class="member-start">
@@ -93,7 +93,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="start-arrow"><img src="images/common/arrow.png"/></div>
+                                <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
                                 <div class="member-col-wrap">
                                     <div class="member-col">
                                         <div class="member-start">
@@ -102,7 +102,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="start-arrow"><img src="images/common/arrow.png"/></div>
+                                <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
                                 <div class="member-col-wrap">
                                     <div class="member-col">
                                         <div class="member-start">
@@ -121,7 +121,7 @@
                             <div class="outer-mask">
                                 <div class="inner-mask">
                                     <div class="title-p">
-                                        <h2 class="smaller">Try Other Gaming Products!</h2>
+                                        <h2 class="smaller" style="font-size:22px;">Try Other Gaming Products!</h2>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="start-arrow"><img src="images/common/arrow.png"/></div>
+                                <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
                                 <div class="member-col-wrap">
                                     <div class="member-col">
                                         <div class="member-start">
@@ -145,7 +145,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="start-arrow"><img src="images/common/arrow.png"/></div>
+                                <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
                                 <div class="member-col-wrap">
                                     <div class="member-col">
                                         <div class="member-start">

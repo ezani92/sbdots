@@ -8,27 +8,22 @@
             <div class="row-p clearfix">
                 <a href="sportsbooks">
                     <div class="home-wrap">
-                        <img src="images/common/maxbet.jpg" width="502" height="238"/>
+                        <img src="images/common/1-maxbet.jpg" width="502" height="238"/>
                         <div class="home-text">
                             <div class="home-name">maxbet</div>
-                <a href="mobile#gamingsoft">
-                <div class="pull-right download-icon">
-                    <div class="d-img">PLAY NOW!</div>
-                </div>
-                </a>
-                </div>
+                        </div>
                 </div>
                 </a>
                 <a href="live_casinos">
                     <div class="home-wrap">
-                        <img src="images/common/1scasino.jpg" width="502" height="238"/>
+                        <img src="images/common/1-rollex.jpg" width="502" height="238"/>
                         <div class="home-text">
-                            <div class="home-name">1scasino</div>
-                <a href="mobile#gamingsoft">
+                            <div class="home-name">rollex</div>
+                <!-- <a href="mobile#gamingsoft">
                 <div class="pull-right download-icon">
                     <div class="d-img">PLAY NOW!</div>
                 </div>
-                </a>
+                </a> -->
                 </div>
                 </div>
                 </a>			
@@ -39,12 +34,7 @@
                         <img src="images/common/joker.jpg" width="499" height="214"/>
                         <div class="home-text">
                             <div class="home-name">joker</div>
-                <a href="mobile#joker">
-                <div class="pull-right download-icon">
-                    <div class="d-img">PLAY NOW!</div>
-                </div>
-                </a>
-                </div>
+                        </div>
                 </div>
                 </a>
                 <a href="sportsbooks">
@@ -52,25 +42,15 @@
                         <img src="images/common/winningft.jpg" width="244" height="214"/>
                         <div class="home-text">
                             <div class="home-name">winningft</div>
-                <a href="mobile#wft">
-                <div class="pull-right download-icon">
-                    <div class="d-img">PLAY NOW!</div>
-                </div>
-                </a>
-                </div>
+                        </div>
                 </div>
                 </a>
                 <a href="live_casinos">
                     <div class="home-wrap">
-                        <img src="images/common/gamingsoft.jpg" width="244" height="214"/>
+                        <img src="images/common/mega888.jpg" width="244" height="214"/>
                         <div class="home-text">
-                            <div class="home-name">gamingsoft</div>
-                <a href="mobile#gamingsoft">
-                <div class="pull-right download-icon">
-                    <div class="d-img">PLAY NOW!</div>
-                </div>
-                </a>
-                </div>
+                            <div class="home-name">mega888</div>
+                        </div>
                 </div>
                 </a>
             </div>
@@ -81,25 +61,15 @@
                             <img src="images/common/sbobet.jpg" width="499" height="111"/>
                             <div class="home-text">
                                 <div class="home-name">sbobet</div>
-                    <a href="mobile#poker">
-                    <div class="pull-right download-icon">
-                        <div class="d-img">PLAY NOW!</div>
-                    </div>
-                    </a>
-                    </div>
+                            </div>
                     </div>
                     </a>
                     <a href="live_casinos">
                         <div class="home-wrap">
-                            <img src="images/common/lucky_palace.jpg" width="499" height="111"/>
+                            <img src="images/common/1-luckypalace.jpg" width="499" height="111"/>
                             <div class="home-text">
                                 <div class="home-name">lucky palace</div>
-                    <a href="mobile#naga">
-                    <div class="pull-right download-icon">
-                        <div class="d-img">PLAY NOW!</div>
-                    </div>
-                    </a>
-                    </div>
+                            </div>
                     </div>
                     </a>
                 </div>
@@ -108,12 +78,7 @@
                         <img src="images/common/live22.jpg" width="244" height="237"/>
                         <div class="home-text">
                             <div class="home-name">live22</div>
-                <a href="mobile#live22">
-                <div class="pull-right download-icon">
-                    <div class="d-img">PLAY NOW!</div>
-                </div>
-                </a>
-                </div>
+                        </div>
                 </div>
                 </a>
                 <a href="slots">
@@ -121,12 +86,7 @@
                         <img src="images/common/suncity.jpg" width="244" height="237"/>
                         <div class="home-text">
                             <div class="home-name">suncity</div>
-                <a href="mobile#suncity">
-                <div class="pull-right download-icon">
-                    <div class="d-img">PLAY NOW!</div>
-                </div>
-                </a>
-                </div>
+                        </div>
                 </div>
                 </a>
             </div>

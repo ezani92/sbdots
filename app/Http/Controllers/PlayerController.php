@@ -112,7 +112,19 @@ class PlayerController extends Controller
         $games = Game::all();
         $banks = Bank::all();
 
-    	return view('player.deposit_step1',['games' => $games , 'banks' => $banks]);
+        $cat_game = Game::select('category')->orderBy('category','ASC')->get();
+
+        $cat_array = array();
+
+        foreach($cat_game as $cat) {
+
+            $cat_array[] = $cat->category;
+
+        }
+
+        $game_cat = array_unique($cat_array);
+
+    	return view('player.deposit_step1',['games' => $games , 'banks' => $banks, 'game_cat' => $game_cat]);
     }
 
     public function deposit_step2(Request $request)

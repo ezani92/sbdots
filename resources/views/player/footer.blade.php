@@ -44,30 +44,34 @@
                 </div>
     
                 <div class="container payments">
-                    <div class="row center-payments">
-                        <div class="col title-payments"><h2 class="title">Payments: </h2></div>
-                        <div class="col banks">
-                            <div class="bank"><img src="{{ secure_asset('images/common/Maybank_logo.jpg') }}"/></div>
-                            <div class="bank"><img src="{{ secure_asset('images/common/cimb.jpg') }}"/></div>
-                            <div class="bank"><img src="{{ secure_asset('images/common/hong-leong.jpg') }}"/></div>
-                            <div class="bank"><img src="{{ secure_asset('images/common/publicbank-logo.png') }}"/></div>
+                        <div class="center-payments">
+                            <div class="col title-payments"><h2 class="title">Payments: </h2></div>
+                            <div class="col banks">
+                                <div class="bank"><img src="{{ asset('images/common/Maybank_logo.jpg') }}"/></div>
+                                <div class="bank"><img src="{{ asset('images/common/cimb.jpg') }}"/></div>
+                                <div class="bank"><img src="{{ asset('images/common/hong-leong.jpg') }}"/></div>
+                                <div class="bank"><img src="{{ asset('images/common/publicbank.jpg') }}"/></div>
+                            </div>
                         </div>
+                        <img class="footer-poweredby" src="{{ asset('images/common/poweredby.jpg') }}"/>
                     </div>
-                </div>
     
                 <div class="container logos">
                     <div class="provider clearfix">
-                        <img src="{{ secure_asset('images/common/provider/logo-ibc.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-wft.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-sbo.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-1s.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-gs.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-naga.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-calibet.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-joker.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-suncity.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-poker.png') }}"/>
-                        <img src="{{ secure_asset('images/common/provider/logo-918.png') }}"/>
+                        <img src="{{ asset('images/common/provider/1_Maxbet.png') }}"/>
+                        <img src="{{ asset('images/common/provider/2_sbobet.png') }}"/>
+                        <img src="{{ asset('images/common/provider/3_winningft.png') }}"/>
+                        <img src="{{ asset('images/common/provider/4_rollex.png') }}"/>
+                        <img src="{{ asset('images/common/provider/5_918kis.png') }}"/>
+                        <img src="{{ asset('images/common/provider/6_joker.png') }}"/>
+                        <img src="{{ asset('images/common/provider/7_live22.png') }}"/>
+                        <img src="{{ asset('images/common/provider/8_mega888.png') }}"/>
+                        <img src="{{ asset('images/common/provider/9_suncity.png') }}"/>
+                        <img src="{{ asset('images/common/provider/10_asia855.png') }}"/>
+                        <img src="{{ asset('images/common/provider/11_luckypalace.png') }}"/>
+                        <img src="{{ asset('images/common/provider/12_3win8.png') }}"/>
+                        <img src="{{ asset('images/common/provider/13_calibet.png') }}"/>
+                        <img src="{{ asset('images/common/provider/14_1s.png') }}"/>
                     </div>
                 </div>
     
@@ -86,7 +90,7 @@
     
                 <div class="container">
                     <div class="row">
-                        <div class="copyright">© Copyrights 2012 - 2018. All rights reserved. Betasia.net © is a registered trademark.</div>
+                        <div class="copyright"> SBDot.net © Copyrights 2018. All rights reserved.</div>
                     </div>
                 </div>
     
@@ -109,17 +113,17 @@
                                 <div class="bank">Public Bank</div>
                             </div>
                         </div>
-                        <div class="f-title"><img src="{{ secure_asset('images/common/f-secure.jpg') }}"/></div>
+                        <div class="f-title"><img src="{{ asset('images/common/f-secure.jpg') }}"/></div>
                     </div>
                 </div> -->
             </div>
-        <script type="text/javascript" src="{{ secure_asset('js/jquery-sidebar.js') }}"></script>
-        <script type="text/javascript" src="{{ secure_asset('js/jquery-1.12.4.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery-sidebar.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script type="text/javascript" src="{{ secure_asset('js/bootstrap.min.js') }}"></script>
-        <script type="text/javascript" src="{{ secure_asset('js/banner/jquery.nivo.slider.js') }}"></script>
-        <script type="text/javascript" src="{{ secure_asset('js/push_menus.js') }}"></script>
-        <script src="{{ secure_asset('js/moment.js') }}" type="text/javascript"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/banner/jquery.nivo.slider.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/push_menus.js') }}"></script>
+        <script src="{{ asset('js/moment.js') }}" type="text/javascript"></script>
         <script type="text/javascript">
             $(window).load(function () {
                 $('#slider').nivoSlider();

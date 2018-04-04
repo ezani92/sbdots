@@ -24,7 +24,7 @@
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/sportsbook-wft.png"/>
-						<div class="poweredby">powered by</div>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -43,7 +43,7 @@
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/sportsbook-ibc.png"/>
-						<div class="poweredby">powered by</div>
+						
 					</div>
 					<div class="right">
 						<ul>
@@ -69,7 +69,7 @@
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/sportsbook-sbo.png"/>
-						<div class="poweredby">powered by</div>
+						
 					</div>
 					<div class="right">
 						<ul>
