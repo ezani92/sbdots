@@ -35,8 +35,8 @@ class ReportController extends Controller
 
             $total_transaction = $count_deposit + $count_withdrawal;
 
-            $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->where('deposit_type','normal')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
-            $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+            $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->where('deposit_type','normal')->where('created_at','>=',$from)->where('created_at','<=',$to)->where('status','2')->sum('amount');
+            $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->where('status','2')->sum('amount');
             $worth_bonus = DB::table('transactions')->where('deposit_type','bonus')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
 
             $transactions = Transaction::where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->paginate(10);
@@ -61,8 +61,8 @@ class ReportController extends Controller
 
             $total_transaction = $count_deposit + $count_withdrawal;
 
-            $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->where('deposit_type','normal')->sum('amount');
-            $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->sum('amount');
+            $worth_deposit = DB::table('transactions')->where('transaction_type','deposit')->where('deposit_type','normal')->where('status','2')->sum('amount');
+            $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->where('status','2')->sum('amount');
             $worth_bonus = DB::table('transactions')->where('deposit_type','bonus')->sum('amount');
 
             $transactions = Transaction::where('status',2)->paginate(10);
