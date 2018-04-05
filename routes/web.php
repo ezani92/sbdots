@@ -14,13 +14,13 @@ Route::any('/webhook', 'WebhookController@test');
 
 
 Route::get('/', 'FrontController@index');
-Route::get('/mobile', 'FrontController@mobile');
+Route::get('/downloads', 'FrontController@downloads');
 Route::get('/sportsbooks', 'FrontController@sportsbooks');
 Route::get('/live_casinos', 'FrontController@live_casinos');
 Route::get('/slots', 'FrontController@slots');
 Route::get('/arcades', 'FrontController@arcades');
 Route::get('/game-live22', 'FrontController@game_live22');
-Route::get('/poker_', 'FrontController@poker');
+Route::get('/lottery', 'FrontController@lottery');
 Route::get('/promotions', 'FrontController@promotions');
 Route::get('/contact_us', 'FrontController@contact_us');
 

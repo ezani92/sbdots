@@ -77,10 +77,10 @@
                     <li><a href="live_casinos" class="">live casinos</a></li>
                     <li><a href="slots" class="">slots</a></li>
                     <li><a href="arcades" class="">arcades</a></li>
-                    <li><a href="poker_" class="">lottery</a></li>
+                    <li><a href="lottery" class="">lottery</a></li>
                     <li><a href="promotions" class="">promotions</a></li>
                     <li><a href="contact_us" class="">contact us</a></li>
-                    <li class="comment"><a href="#" onclick="parent.LC_API.open_chat_window({source:'minimized'}); return false"><i class="fa fa-fw fa-commenting"></i>live chat</a></li>
+                    <li class="comment"><a href="#" onclick="parent.LC_API.open_chat_window({source:'minimized'}); return false"><i class="fas fa-fw fa-comment-dots"></i>live chat</a></li>
                 </ul>
             </div>
         </div>

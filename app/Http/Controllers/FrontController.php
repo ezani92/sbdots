@@ -17,9 +17,9 @@ class FrontController extends Controller
     	return view('front.index');
     }
 
-    public function mobile()
+    public function downloads()
     {
-    	return view('front.mobile');
+    	return view('front.downloads');
     }
 
     public function sportsbooks()
@@ -47,9 +47,9 @@ class FrontController extends Controller
     	return view('front.Arcade.game-live22');
     }
 
-    public function poker()
+    public function lottery()
     {
-    	return view('front.poker');
+    	return view('front.lottery');
     }
 
     public function promotions()

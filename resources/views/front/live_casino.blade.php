@@ -32,7 +32,7 @@
 							<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Sic Bo...)</li>
 						</ul>
 						<div class="download-icon play-now-button">
-							<a href="mobile#live22"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#live22"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 							<li>Games (Slots, Scratch Cards, Arcade, Video Poker...)</li>
 						</ul>
 						<div class="download-icon play-now-button">
-							<a href="mobile#gamingsoft"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#gamingsoft"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 							<li>Live Casino (Baccarat,Dragon Tiger, Roulette, Blackjack...)</li>
 						</ul>
 						<div class="download-icon play-now-button">
-							<a href="mobile#calibet"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#calibet"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -99,7 +99,7 @@
 							<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
 						</ul>
 						<div class="download-icon play-now-button">
-							<a href="mobile#joker"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#joker"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 								<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
 							</ul>
 							<div class="download-icon play-now-button">
-								<a href="mobile#joker"><div class="d-img">PLAY NOW!</div></a>
+								<a href="downloads#joker"><div class="d-img">PLAY NOW!</div></a>
 							</div>
 						</div>
 					</div>
@@ -132,7 +132,7 @@
 									<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
 								</ul>
 								<div class="download-icon play-now-button">
-									<a href="mobile#joker"><div class="d-img">PLAY NOW!</div></a>
+									<a href="downloads#joker"><div class="d-img">PLAY NOW!</div></a>
 								</div>
 							</div>
 						</div>
