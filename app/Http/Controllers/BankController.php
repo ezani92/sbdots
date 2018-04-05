@@ -63,6 +63,7 @@ class BankController extends Controller
         $bank->name = $input['name'];
         $bank->account_name = $input['account_name'];
         $bank->account_no = $input['account_no'];
+        $bank->balance = $input['balance'];
 
         $bank->save();
 
