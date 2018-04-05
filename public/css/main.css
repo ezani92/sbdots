@@ -518,7 +518,7 @@ svg.svg-inline--fa.fa-bullhorn.fa-w-18.fa-fw {
 		height: 30px;
 		background: #b83e25;
 }
-#announcement .announceIcon i.fa.fa-fw.fa-bullhorn {
+#announcement .announceIcon i.fas.fa-bullhorn {
     width: 100%;
     height: 100%;
     display: flex;
@@ -1749,25 +1749,20 @@ textarea {
 	background:url(../images/common/mobile_joker.jpg)top center no-repeat;
 } */
 
-i.fa.fa-whatsapp {
-    font-size: 32px;
-    margin-right: 35px;
-}
-
-i.fa.fa-facebook {
+i.fab.fa-facebook {
 
 margin-right: 24px;
 
 }
 
-i.fa.fa-facebook,i.fa.fa-instagram {
+i.fab.fa-facebook,i.fab.fa-instagram {
 
 	font-size: 18px;
 	margin-top: 4px;
 	
 }
 
-i.fa.fa-facebook:hover,i.fa.fa-instagram:hover {
+i.fab.fa-facebook:hover,i.fab.fa-instagram:hover {
 
 color:#ff9f0f;
 

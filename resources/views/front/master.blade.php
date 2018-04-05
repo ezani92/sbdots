@@ -98,7 +98,7 @@
                             </marquee>
                         </div>
                     </div>
-                    <div class="annTime"><i class="far fa-clock-o fa-lg"></i><span id="nowTime"></span></div>
+                    <div class="annTime"><i class="far fa-clock fa-lg"></i><span id="nowTime"></span></div>
                 </div>
                 @if(Request::is('/'))
                 <div class="slider-wrapper theme-default">

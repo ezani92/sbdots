@@ -91,7 +91,7 @@
             <div class="bg-banner">
                 <div class="container">
                     <div id="announcement">
-                        <div class="announceIcon"><i class="far fa-fw fa-bullhorn"></i></div>
+                        <div class="announceIcon"><i class="fas fa-fw fa-bullhorn"></i></div>
                         <div class="annContent">
                             <div class="annTitle">Annoucement:</div>
                             <div class="runText">
@@ -100,7 +100,7 @@
                                 </marquee>
                             </div>
                         </div>
-                        <div class="annTime"><i class="fa fa-clock-o fa-lg"></i><span id="nowTime"></span></div>
+                        <div class="annTime"><i class="fa fa-clock fa-lg"></i><span id="nowTime"></span></div>
                     </div>
                 </div>
             </div>
