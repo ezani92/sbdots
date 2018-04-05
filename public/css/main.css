@@ -1784,11 +1784,15 @@ svg.svg-inline--fa.fa-facebook:hover, svg.svg-inline--fa.fa-instagram:hover {
 .qrcode {
 	margin-top:65px;
 	margin-bottom:10px;
-}	
+}
+.qrcode img {
+    width: 136px;
+    object-fit: contain;
+}
 .qrcode img.code {
-	padding:12px;
+	/*padding:12px;
 	-webkit-box-shadow:inset 0 0 0 6px rgba(255,255,255,0.3);
-	box-shadow:inset 0 0 0 6px rgba(255,255,255,0.3);
+	box-shadow:inset 0 0 0 6px rgba(255,255,255,0.3); */
 }
 .mobile_tittle {
 	color:#a8f0e3; 

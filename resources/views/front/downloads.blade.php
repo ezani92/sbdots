@@ -49,9 +49,9 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-									<td><div class="qrcode"><img src="images/common/qr_pt_casino.png" width="140" height="140" class="code"></div></td>
-									<td><div class="qrcode"><img src="images/common/qr_pt_games.png" width="140" height="140" class="code"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/android.jpg"  class="code"></div></td>
+									<td><div class="qrcode"><img src="images/common/ios.jpg"  class="code"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">live casino &amp; games</td>
@@ -98,7 +98,7 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/mobile_pc.png" width="140" height="140" class="code"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.jpg"  class="code"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">sports</td>
@@ -127,7 +127,7 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">sports</td>
@@ -156,28 +156,38 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
-									<td><div class="qrcode"><img src="images/common/naga_ios.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">live casino</td>
 									<td class="mobile_tittle">live casino</td>
+									<td class="mobile_tittle">live casino</td>
 								</tr>
 								<tr>
+									<td>PC Download</td>
 									<td>Android Download</td>
 									<td>iOS Download</td>
 								</tr>
 								<tr>
 									<td>
 										<div class="qr-wrap">
-											<a href="http://m.918kiss.com" target="_blank">
+											<a href="http://www.live22.com/" target="_blank">
+												<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
+											</a>
+										</div>
+									</td>
+									<td>
+										<div class="qr-wrap">
+											<a href="http://download.cuci22.com/mobileservice/download/live22/android" target="_blank">
 												<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 											</a>
 										</div>
 									</td>
 									<td>
 										<div class="qr-wrap">
-											<a href="http://m.918kiss.com" target="_blank">
+											<a href="itms-services://?action=download-manifest&url=https://download.cuci22.com/mobileservice/download/live22/plist" target="_blank">
 												<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 											</a>
 										</div>
@@ -195,8 +205,8 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-									<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">live casino</td>
@@ -209,14 +219,14 @@
 								<tr>
 									<td>
 										<div class="qr-wrap">
-											<a href="https://www.playboy888.cc/Installer" target="_blank">
+											<a href="#" target="_blank">
 												<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
 											</a>
 										</div>
 									</td>
 									<td>
 										<div class="qr-wrap">
-											<a href="https://www.playboy888.cc/APK" target="_blank">
+											<a href="#" target="_blank">
 												<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 											</a>
 										</div>
@@ -241,48 +251,38 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-									<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-									<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
-									<td><div class="qrcode"><img src="images/common/naga_ios.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
 								</tr>
 								<tr>
-									<td class="mobile_tittle">desktop</td>
 									<td class="mobile_tittle">desktop</td>
 									<td class="mobile_tittle">live casino</td>
 									<td class="mobile_tittle">live casino</td>
 								</tr>
 								<tr>
 									<td>PC Download</td>
-									<td>IMAC Download</td>
 									<td>Android Download</td>
 									<td>iOS Download</td>
 								</tr>
 								<tr>
 									<td>
 										<div class="qr-wrap">
-											<a href="http://download.cuci22.com/mobileservice/download/live22/pc" target="_blank">
+											<a href="http://www.asia855.com/" target="_blank">
 												<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">PC Download</span></div>
 											</a>
 										</div>
 									</td>
 									<td>
 										<div class="qr-wrap">
-											<a href="http://download.cuci22.com/mobileservice/download/live22/mac" target="_blank">
-												<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">IMAC Download</span></div>
-											</a>
-										</div>
-									</td>
-									<td>
-										<div class="qr-wrap">
-											<a href="http://download.cuci22.com/mobileservice/download/live22/android" target="_blank">
+											<a href="http://www.asia855.com/" target="_blank">
 												<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 											</a>
 										</div>
 									</td>
 									<td>
 										<div class="qr-wrap">
-											<a href="itms-services://?action=download-manifest&url=https://download.cuci22.com/mobileservice/download/live22/plist" target="_blank">
+											<a href="http://www.asia855.com/" target="_blank">
 												<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 											</a>
 										</div>
@@ -300,46 +300,19 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td colspan="2"><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-									<td><div class="qrcode"><img src="images/common/qr-joker.gif" width="140" height="140" class="code"></div></td>
-									<td><div class="qrcode"><img src="images/common/qr-joker.gif" width="140" height="140" class="code"></div></td>
+									<td colspan="2"><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
 								</tr>
 								<tr>
-									<td colspan="2" class="mobile_tittle">joker</td>
-									<td class="mobile_tittle">joker</td>
-									<td class="mobile_tittle">joker</td>
+									<td colspan="2" class="mobile_tittle">Calibet</td>
 								</tr>
 								<tr>
 									<td colspan="2">PC Download</td>
-									<td>Android</td>
-									<td>iOS</td>
 								</tr>
 								<tr>
 									<td>
 										<div class="qr-wrap">
-											<a href="http://www.joker123.net/download/lobby" target="_blank">
+											<a href="https://www.calibet.com" target="_blank">
 												<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
-											</a>
-										</div>
-									</td>
-									<td>
-										<div class="qr-wrap">
-											<a href="http://www.joker123.net/Manual" target="_blank">
-												<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">install guide</span></div>
-											</a>
-										</div>
-									</td>
-									<td>
-										<div class="qr-wrap">
-											<a href="http://www.joker123.net/Manual" target="_blank">
-												<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">install guide</span></div>
-											</a>
-										</div>
-									</td>
-									<td>
-										<div class="qr-wrap">
-											<a href="http://www.joker123.net/Manual" target="_blank">
-												<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">install guide</span></div>
 											</a>
 										</div>
 									</td>
@@ -354,36 +327,53 @@
 								<img src="images/common/game-joker.png" alt=""/>
 							</div>
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
-						<tbody>
-							<tr>
-								<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-								<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
-							</tr>
-							<tr>
-								<td class="mobile_tittle">live casino</td>
-								<td class="mobile_tittle">live casino</td>
-							</tr>
-							<tr>
-								<td>PC Download</td>
-								<td>Android Download</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="qr-wrap">
-										<a href="https://www.playboy888.cc/Installer" target="_blank">
-											<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
-										</a>
-									</div>
-								</td>
-								<td>
-									<div class="qr-wrap">
-										<a href="https://www.playboy888.cc/APK" target="_blank">
-											<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
-										</a>
-									</div>
-								</td>
-							</tr>
-						</tbody>
+							<tbody>
+									<tr>
+										<td colspan="2"><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+										<td><div class="qrcode"><img src="images/common/android.jpg"  class="code"></div></td>
+										<td><div class="qrcode"><img src="images/common/ios.jpg"  class="code"></div></td>
+									</tr>
+									<tr>
+										<td colspan="2" class="mobile_tittle">joker</td>
+										<td class="mobile_tittle">joker</td>
+										<td class="mobile_tittle">joker</td>
+									</tr>
+									<tr>
+										<td colspan="2">PC Download</td>
+										<td>Android</td>
+										<td>iOS</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="qr-wrap">
+												<a href="http://www.joker368.net" target="_blank">
+													<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div class="qr-wrap">
+												<a href="http://www.joker368.net/Manual" target="_blank">
+													<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">install guide</span></div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div class="qr-wrap">
+												<a href="http://www.joker368.net/Manual" target="_blank">
+													<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">install guide</span></div>
+												</a>
+											</div>
+										</td>
+										<td>
+											<div class="qr-wrap">
+												<a href="http://www.joker368.net/Manual" target="_blank">
+													<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">install guide</span></div>
+												</a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
 					</table>
 											
 				</div>
@@ -395,32 +385,42 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 					<tbody>
 						<tr>
-							<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-							<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
+							<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+							<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+							<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
 						</tr>
 						<tr>
 							<td class="mobile_tittle">live casino</td>
-							<td class="mobile_tittle">live casino</td>
+							<td class="mobile_tittle">mobile slot</td>
+							<td class="mobile_tittle">mobile casino</td>
 						</tr>
 						<tr>
 							<td>PC Download</td>
+							<td>Android Download</td>
 							<td>Android Download</td>
 						</tr>
 						<tr>
 							<td>
 								<div class="qr-wrap">
-									<a href="https://www.playboy888.cc/Installer" target="_blank">
+									<a href="http://www.lpe88.com/" target="_blank">
 										<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
 									</a>
 								</div>
 							</td>
 							<td>
 								<div class="qr-wrap">
-									<a href="https://www.playboy888.cc/APK" target="_blank">
+									<a href="http://m.ld176988.com/download.html" target="_blank">
 										<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 									</a>
 								</div>
 							</td>
+							<td>
+									<div class="qr-wrap">
+										<a href="http://m.ld176988.com/live/download.html" target="_blank">
+											<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
+										</a>
+									</div>
+								</td>
 						</tr>
 					</tbody>
 				</table>
@@ -434,12 +434,12 @@
 			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 				<tbody>
 					<tr>
-						<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-						<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
+						<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+						<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
 					</tr>
 					<tr>
-						<td class="mobile_tittle">live casino</td>
-						<td class="mobile_tittle">live casino</td>
+						<td class="mobile_tittle">slot</td>
+						<td class="mobile_tittle">slot</td>
 					</tr>
 					<tr>
 						<td>PC Download</td>
@@ -448,14 +448,14 @@
 					<tr>
 						<td>
 							<div class="qr-wrap">
-								<a href="https://www.playboy888.cc/Installer" target="_blank">
+								<a href="http://play.rollex11.com/" target="_blank">
 									<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
 								</a>
 							</div>
 						</td>
 						<td>
 							<div class="qr-wrap">
-								<a href="https://www.playboy888.cc/APK" target="_blank">
+								<a href="http://m.rollex11.com/" target="_blank">
 									<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 								</a>
 							</div>
@@ -472,32 +472,42 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 					<tbody>
 						<tr>
-							<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-							<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
+							<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+							<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+							<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
 						</tr>
 						<tr>
-							<td class="mobile_tittle">live casino</td>
-							<td class="mobile_tittle">live casino</td>
+							<td class="mobile_tittle">slot</td>
+							<td class="mobile_tittle">slot</td>
+							<td class="mobile_tittle">slot</td>
 						</tr>
 						<tr>
 							<td>PC Download</td>
 							<td>Android Download</td>
+							<td>iOS Download</td>
 						</tr>
 						<tr>
 							<td>
 								<div class="qr-wrap">
-									<a href="https://www.playboy888.cc/Installer" target="_blank">
+									<a href="http://cdn.ispeedycdn.com/ed/3win8Pc5001002.exe" target="_blank">
 										<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
 									</a>
 								</div>
 							</td>
 							<td>
 								<div class="qr-wrap">
-									<a href="https://www.playboy888.cc/APK" target="_blank">
+									<a href="http://cdn.ispeedycdn.com/ed/3win85001002.apk" target="_blank">
 										<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 									</a>
 								</div>
 							</td>
+							<td>
+									<div class="qr-wrap">
+										<a href="itms-services://?action=download-manifest&url=https://ed.3win8.com/3win85001002.plist" target="_blank">
+											<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
+										</a>
+									</div>
+								</td>
 						</tr>
 					</tbody>
 				</table>
@@ -511,29 +521,29 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 						<tbody>
 							<tr>
-								<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-								<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
+								<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+								<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
 							</tr>
 							<tr>
-								<td class="mobile_tittle">live casino</td>
-								<td class="mobile_tittle">live casino</td>
+								<td class="mobile_tittle">Game</td>
+								<td class="mobile_tittle">Game</td>
 							</tr>
 							<tr>
-								<td>PC Download</td>
 								<td>Android Download</td>
+								<td>iOS Download</td>
 							</tr>
 							<tr>
 								<td>
 									<div class="qr-wrap">
-										<a href="https://www.playboy888.cc/Installer" target="_blank">
-											<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
+										<a href="https://tm.kiosk-918kiss.com/918Kiss.apk" target="_blank">
+											<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">pc download</span></div>
 										</a>
 									</div>
 								</td>
 								<td>
 									<div class="qr-wrap">
-										<a href="https://www.playboy888.cc/APK" target="_blank">
-											<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
+										<a href="http://tm.918kiss.com" target="_blank">
+											<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 										</a>
 									</div>
 								</td>
@@ -550,29 +560,39 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 						<tbody>
 							<tr>
-								<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-								<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
+								<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+								<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+								<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
 							</tr>
 							<tr>
-								<td class="mobile_tittle">live casino</td>
-								<td class="mobile_tittle">live casino</td>
+								<td class="mobile_tittle">game</td>
+								<td class="mobile_tittle">game</td>
+								<td class="mobile_tittle">game</td>
 							</tr>
 							<tr>
 								<td>PC Download</td>
 								<td>Android Download</td>
+								<td>iOS Download</td>
 							</tr>
 							<tr>
 								<td>
 									<div class="qr-wrap">
-										<a href="https://www.playboy888.cc/Installer" target="_blank">
+										<a href="https://clubsuncity.gomonkey888.com/Installer/Download/ClubSunCity.html" target="_blank">
 											<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
 										</a>
 									</div>
 								</td>
 								<td>
 									<div class="qr-wrap">
-										<a href="https://www.playboy888.cc/APK" target="_blank">
+										<a href="https://clubsuncity.gomonkey888.com/Installer/Download/ClubSunCity_APK.html" target="_blank">
 											<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
+										</a>
+									</div>
+								</td>
+								<td>
+									<div class="qr-wrap">
+										<a href="https://clubsuncity.gomonkey888.com/Installer/Download/ClubSunCity_iOS.html" target="_blank">
+											<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 										</a>
 									</div>
 								</td>
@@ -589,29 +609,29 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 						<tbody>
 							<tr>
-								<td><div class="qrcode"><img src="images/common/mobile_pc.png"></div></td>
-								<td><div class="qrcode"><img src="images/common/naga_android.png"></div></td>
+								<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+								<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
 							</tr>
 							<tr>
-								<td class="mobile_tittle">live casino</td>
-								<td class="mobile_tittle">live casino</td>
+								<td class="mobile_tittle">game</td>
+								<td class="mobile_tittle">game</td>
 							</tr>
 							<tr>
-								<td>PC Download</td>
 								<td>Android Download</td>
+								<td>iOS Download</td>
 							</tr>
 							<tr>
 								<td>
 									<div class="qr-wrap">
-										<a href="https://www.playboy888.cc/Installer" target="_blank">
-											<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
+										<a href="http://m.mega888.cc" target="_blank">
+											<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">pc download</span></div>
 										</a>
 									</div>
 								</td>
 								<td>
 									<div class="qr-wrap">
-										<a href="https://www.playboy888.cc/APK" target="_blank">
-											<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
+										<a href="http://m.mega888.cc" target="_blank">
+											<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 										</a>
 									</div>
 								</td>
