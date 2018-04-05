@@ -49,9 +49,9 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
-									<td><div class="qrcode"><img src="images/common/android.jpg"  class="code"></div></td>
-									<td><div class="qrcode"><img src="images/common/ios.jpg"  class="code"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/android.png"  class="code"></div></td>
+									<td><div class="qrcode"><img src="images/common/ios.png"  class="code"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">live casino &amp; games</td>
@@ -98,7 +98,7 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/desktop.jpg"  class="code"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.png"  class="code"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">sports</td>
@@ -127,7 +127,7 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">sports</td>
@@ -156,9 +156,9 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
-									<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
-									<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/android.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/ios.png"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">live casino</td>
@@ -205,8 +205,8 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
-									<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/android.png"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">live casino</td>
@@ -251,9 +251,9 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
-									<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
-									<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
+									<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/android.png"></div></td>
+									<td><div class="qrcode"><img src="images/common/ios.png"></div></td>
 								</tr>
 								<tr>
 									<td class="mobile_tittle">desktop</td>
@@ -300,7 +300,7 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 								<tr>
-									<td colspan="2"><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
+									<td colspan="2"><div class="qrcode"><img src="images/common/desktop.png"></div></td>
 								</tr>
 								<tr>
 									<td colspan="2" class="mobile_tittle">Calibet</td>
@@ -329,9 +329,9 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 							<tbody>
 									<tr>
-										<td colspan="2"><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
-										<td><div class="qrcode"><img src="images/common/android.jpg"  class="code"></div></td>
-										<td><div class="qrcode"><img src="images/common/ios.jpg"  class="code"></div></td>
+										<td colspan="2"><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+										<td><div class="qrcode"><img src="images/common/android.png" class="code"></div></td>
+										<td><div class="qrcode"><img src="images/common/ios.png" class="code"></div></td>
 									</tr>
 									<tr>
 										<td colspan="2" class="mobile_tittle">joker</td>
@@ -385,9 +385,9 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 					<tbody>
 						<tr>
-							<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
-							<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
-							<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+							<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+							<td><div class="qrcode"><img src="images/common/android.png"></div></td>
+							<td><div class="qrcode"><img src="images/common/android.png"></div></td>
 						</tr>
 						<tr>
 							<td class="mobile_tittle">live casino</td>
@@ -434,8 +434,8 @@
 			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 				<tbody>
 					<tr>
-						<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
-						<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
+						<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+						<td><div class="qrcode"><img src="images/common/android.png"></div></td>
 					</tr>
 					<tr>
 						<td class="mobile_tittle">slot</td>
@@ -472,9 +472,9 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 					<tbody>
 						<tr>
-							<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
-							<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
-							<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
+							<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+							<td><div class="qrcode"><img src="images/common/android.png"></div></td>
+							<td><div class="qrcode"><img src="images/common/ios.png"></div></td>
 						</tr>
 						<tr>
 							<td class="mobile_tittle">slot</td>
@@ -521,8 +521,8 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 						<tbody>
 							<tr>
-								<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
-								<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
+								<td><div class="qrcode"><img src="images/common/android.png"></div></td>
+								<td><div class="qrcode"><img src="images/common/ios.png"></div></td>
 							</tr>
 							<tr>
 								<td class="mobile_tittle">Game</td>
@@ -560,9 +560,9 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 						<tbody>
 							<tr>
-								<td><div class="qrcode"><img src="images/common/desktop.jpg"></div></td>
-								<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
-								<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
+								<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+								<td><div class="qrcode"><img src="images/common/android.png"></div></td>
+								<td><div class="qrcode"><img src="images/common/ios.png"></div></td>
 							</tr>
 							<tr>
 								<td class="mobile_tittle">game</td>
@@ -609,8 +609,8 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
 						<tbody>
 							<tr>
-								<td><div class="qrcode"><img src="images/common/android.jpg"></div></td>
-								<td><div class="qrcode"><img src="images/common/ios.jpg"></div></td>
+								<td><div class="qrcode"><img src="images/common/android.png"></div></td>
+								<td><div class="qrcode"><img src="images/common/ios.png"></div></td>
 							</tr>
 							<tr>
 								<td class="mobile_tittle">game</td>
