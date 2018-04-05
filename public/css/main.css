@@ -1757,7 +1757,7 @@ margin-right: 24px;
 
 svg.svg-inline--fa.fa-facebook, svg.svg-inline--fa.fa-instagram {
     font-size: 20px;
-    margin: 2px 0;
+    margin-top: 2px;
 }
 
 svg.svg-inline--fa.fa-facebook:hover, svg.svg-inline--fa.fa-instagram:hover {
