@@ -63,7 +63,7 @@ class UserTableSeeder extends Seeder {
             'email' => 'shaiful@naxpansion.com',
             'password' => bcrypt('123456'),
             'phone' => '60129718420',
-            'role' => 3,
+            'role' => 4,
             'tac_no' => '123456',
             'phone_verification' => 1,
             'bank_name' => 'RHB Bank',

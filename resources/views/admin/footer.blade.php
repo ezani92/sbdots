@@ -21,6 +21,7 @@
         <script type="text/javascript" src="https://cdn.rawgit.com/mouse0270/bootstrap-notify/6a83ec48/bootstrap-notify.js"></script>
         <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
             	//initialize the javascript

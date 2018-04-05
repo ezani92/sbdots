@@ -8,6 +8,13 @@ use DataTables;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
+use App\Game;
+use App\Bank;
+use App\Bonus;
+use App\Notifications\NewDeposit;
+use App\Notifications\NewWithdraw;
+use App\Notifications\NewTransfer;
+use Pusher\Pusher;
 
 class UserController extends Controller
 {
@@ -109,8 +116,11 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
+        $games = Game::all();
+        $banks = Bank::all();
+        $bonuses = Bonus::all();
 
-        return view('admin.users.show',compact('user'));
+        return view('admin.users.show',compact('user','games','banks','bonuses'));
     }
 
     public function transactiondata(Datatables $datatables,$user_id)
@@ -119,6 +129,9 @@ class UserController extends Controller
         return Datatables::of($transactions)
             ->addColumn('actions', function($transaction) {
                 return view('admin.transaction.action', compact('transaction'))->render();
+            })
+            ->editColumn('transaction_id', function ($transaction) {
+                return '#'.sprintf('%06d', $transaction->id);
             })
             ->editColumn('status', function ($transaction) {
                 
@@ -222,5 +235,210 @@ class UserController extends Controller
         Session::flash('alert-class', 'alert-success');
 
         return redirect('admin/users/'.$user->id);
+    }
+
+    public function deposit(Request $request)
+    {
+        $input = $request->all();
+
+        $transaction = new Transaction;
+
+        if(isset($input['bonus_code']))
+        {
+            $bonus = Bonus::where('bonus_code',$input['bonus_code'])->first();
+
+            if ($bonus == null)
+            {
+                Session::flash('message', 'Bonus code does not exist! Leave blank if you dont have bonus code!'); 
+                Session::flash('alert-class', 'alert-danger');
+
+                return back()->withInput();
+            }
+            else
+            {   
+
+
+                if($bonus->daily == 1)
+                {
+                    $arrToday = explode("-", Carbon::now()->format('d-m-Y'));
+
+                    $from_date = Carbon::create($arrToday[2], $arrToday[1], $arrToday[0], 0, 0, 0);
+                    $to_date = Carbon::create($arrToday[2], $arrToday[1], $arrToday[0], 23, 59, 59);
+
+                    $today_count = Transaction::where('bonus_id',$bonus->id)->where('user_id',\Auth::user()->id)->where('created_at','<=',$to_date)->where('created_at','>=',$from_date)->count();
+
+                    if($today_count == 1)
+                    {
+                        Session::flash('message', 'User Already Used This Code Today, Come Back Tomorrow To use this Code.'); 
+                        Session::flash('alert-class', 'alert-danger');
+
+                        return back()->withInput();
+                    }
+                    else
+                    {
+                        $can_use_bonus = 1;
+                    }
+                    
+                }
+
+
+                if($input['amount'] < $bonus->min_deposit)
+                {
+                    Session::flash('message', 'Minimum deposit to use this code is MYR '.$bonus->min_deposit); 
+                    Session::flash('alert-class', 'alert-danger');
+
+                    return back()->withInput();
+                }
+
+                $transaction_count = Transaction::where('bonus_id',$bonus->id)->where('user_id',\Auth::user()->id)->count();
+
+                if($bonus->allow_multiple == 0)
+                {
+                    if($transaction_count == 0)
+                    {
+                        $can_use_bonus = 1;
+                        $transaction->bonus_id = $bonus->id;
+                    }
+                    else
+                    {
+                        Session::flash('message', 'You already use this code. Please use other code OR leave blank to continue.'); 
+                        Session::flash('alert-class', 'alert-danger');
+
+                        return back()->withInput();
+                    }
+                }
+                else
+                {
+                    $can_use_bonus = 1;
+                    $transaction->bonus_id = $bonus->id;
+                }
+            }
+        }
+
+        $data_raw = array();
+        $data_raw = array_add($data_raw, 'game_id', $input['game_id']);
+        $data_raw = array_add($data_raw, 'payment_method', $input['payment_method']);
+        $data = json_encode($data_raw);
+
+        if ($request->hasFile('receipt')) {
+            
+            $file = $request->file('receipt');
+            $filename = time().'.'.$file->getClientOriginalExtension();
+            $destinationPath = 'storage/receipt';
+            $file->move($destinationPath,$filename);
+
+            $transaction->receipt_file = $filename;
+        }
+
+        
+
+        $transaction->user_id = $input['user_id'];
+        $transaction->transaction_id = time();
+        $transaction->transaction_type = 'deposit';
+        $transaction->deposit_type = 'normal';
+        $transaction->data = $data;
+        $transaction->amount = $input['amount'];
+        $transaction->bank_id = $input['bank'];
+        $transaction->datetime = $input['deposit_date']." ".$input['deposit_hour'].":".$input['deposit_minutes']." ".$input['deposit_stamp'];
+        $transaction->refference_no = $input['refference_no'];
+        $transaction->status = 1;
+
+        $transaction->save();
+
+        $admins = User::where('role',1)->get();
+        foreach($admins as $admin)
+        {
+            $admin->notify(new NewDeposit($transaction));
+        }
+
+        $options = array(
+            'cluster' => 'ap1',
+            'encrypted' => true
+        );
+        $pusher = new Pusher('32a087e0e1378c7b7210', 'bda79f5550252850598e', '494870', $options);
+        $pusher->trigger('sbdots', 'transaction', []);
+
+        Session::flash('message', 'Deposit transaction succesfully added, You still need to approve the deposit at transaction page!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        return redirect('admin/users/'.$input['user_id']);
+    }
+
+    public function withdraw(Request $request)
+    {
+        $input = $request->all();
+
+        $transaction = new Transaction;
+
+        $data_raw = array();
+        $data_raw = array_add($data_raw, 'game_id', $input['game_id']);
+        $data = json_encode($data_raw);
+
+        $transaction->user_id = $input['user_id'];
+        $transaction->transaction_id = time();
+        $transaction->transaction_type = 'withdraw';
+        $transaction->data = $data;
+        $transaction->bank_id = $input['bank'];
+        $transaction->amount = $input['amount'];
+        $transaction->status = 1;
+
+        $transaction->save();
+
+        $admins = User::where('role',1)->get();
+        foreach($admins as $admin)
+        {
+            $admin->notify(new NewWithdraw($transaction));
+        }
+
+        $options = array(
+            'cluster' => 'ap1',
+            'encrypted' => true
+        );
+        $pusher = new Pusher('32a087e0e1378c7b7210', 'bda79f5550252850598e', '494870', $options);
+        $pusher->trigger('sbdots', 'transaction', []);
+
+        session::flash('message', 'Withdraw transaction succesfully added, You still need to approve the withdraw at transaction page!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        return redirect('admin/users/'.$input['user_id']);
+    }
+
+    public function transfer(Request $request)
+    {
+        $input = $request->all();
+
+        $transaction = new Transaction;
+
+        $data_raw = array();
+        $data_raw = array_add($data_raw, 'from_game', $input['from_game_id']);
+        $data_raw = array_add($data_raw, 'to_game', $input['to_game_id']);
+        $data = json_encode($data_raw);
+
+        $transaction->user_id = $input['user_id'];
+        $transaction->transaction_id = time();
+        $transaction->transaction_type = 'transfer';
+        $transaction->data = $data;
+        $transaction->amount = $input['amount'];
+        $transaction->status = 1;
+
+        $transaction->save();
+
+        $admins = User::where('role',1)->get();
+        foreach($admins as $admin)
+        {
+            $admin->notify(new NewTransfer($transaction));
+        }
+
+        $options = array(
+            'cluster' => 'ap1',
+            'encrypted' => true
+        );
+        $pusher = new Pusher('32a087e0e1378c7b7210', 'bda79f5550252850598e', '494870', $options);
+        $pusher->trigger('sbdots', 'transaction', []);
+
+        session::flash('message', 'Transfer transaction succesfully added, You still need to approve the transfer at transaction page!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        return redirect('admin/users/'.$input['user_id']);
     }
 }

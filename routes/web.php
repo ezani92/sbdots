@@ -88,6 +88,10 @@ Route::middleware(['isadmin'])->group(function () {
     Route::get('/admin/users/{user_id}/unban', 'UserController@unban');
     Route::resource('/admin/users', 'UserController');
 
+    Route::post('admin/user/transaction/deposit', 'UserController@deposit');
+    Route::post('admin/user/transaction/withdraw', 'UserController@withdraw');
+    Route::post('admin/user/transaction/transfer', 'UserController@transfer');
+
     Route::get('/admin/groups/data', 'GroupController@data');
     Route::resource('/admin/groups', 'GroupController');
 
