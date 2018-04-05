@@ -43,7 +43,7 @@
 						<!-- <input type="button" class="btn btn-warning btn-more" value="MORE INFO" onclick="location.href='poker-app.aspx'">
 						<div class="single-download">download now</div> -->
 						<div class="download-icon play-now-button">
-							<a href="#"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>

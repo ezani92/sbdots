@@ -32,7 +32,7 @@
 							<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Sic Bo...)</li>
 						</ul>
 						<div class="download-icon play-now-button">
-							<a href="downloads#live22"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#1scasino"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -49,7 +49,7 @@
 							<li>Games (Slots, Table, Jackpots, Video Poker...)</li>
 						</ul>
 						<div class="download-icon play-now-button">
-							<a href="mobile"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#3win8"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 							<li>Games (Slots, Scratch Cards, Arcade, Video Poker...)</li>
 						</ul>
 						<div class="download-icon play-now-button">
-							<a href="downloads#gamingsoft"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#live22"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 							<li>Slot Games - 100++ slots, multiplayer games & P2P arcade, 3d slots, video slots...</li>
 						</ul>
 						<div class="download-icon play-now-button">
-							<a href="downloads#scr888"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#918kiss"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 								<li>Slot Games - Table games, Virtual Sports, 3 Reels, 5 Reels slots ...</li>
 							</ul>
 							<div class="download-icon play-now-button">
-								<a href="downloads#suncity"><div class="d-img">PLAY NOW!</div></a>
+								<a href="downloads#luckypalace"><div class="d-img">PLAY NOW!</div></a>
 							</div>
 						</div>
 					</div>
@@ -133,7 +133,7 @@
 									<li>Slot Games - Table games, Virtual Sports, 3 Reels, 5 Reels slots ...</li>
 								</ul>
 								<div class="download-icon play-now-button">
-									<a href="downloads#suncity"><div class="d-img">PLAY NOW!</div></a>
+									<a href="downloads#mega888"><div class="d-img">PLAY NOW!</div></a>
 								</div>
 							</div>
 						</div>
@@ -150,7 +150,7 @@
 										<li>Slot Games - Table games, Virtual Sports, 3 Reels, 5 Reels slots ...</li>
 									</ul>
 									<div class="download-icon play-now-button">
-										<a href="downloads#suncity"><div class="d-img">PLAY NOW!</div></a>
+										<a href="downloads#rollex"><div class="d-img">PLAY NOW!</div></a>
 									</div>
 								</div>
 							</div>

@@ -6,7 +6,7 @@
     <div class="container">
         <div class="home-content">
             <div class="row-p clearfix">
-                <a href="sportsbooks">
+                <a href="downloads#maxbet">
                     <div class="home-wrap">
                         <img src="images/common/1-maxbet.jpg" width="502" height="238"/>
                         <div class="home-text">
@@ -14,7 +14,7 @@
                         </div>
                 </div>
                 </a>
-                <a href="live_casinos">
+                <a href="downloads#rollex">
                     <div class="home-wrap">
                         <img src="images/common/1-rollex.jpg" width="502" height="238"/>
                         <div class="home-text">
@@ -29,7 +29,7 @@
                 </a>			
             </div>
             <div class="row-p clearfix">
-                <a href="arcades">
+                <a href="downloads#joker">
                     <div class="home-wrap">
                         <img src="images/common/joker.jpg" width="499" height="214"/>
                         <div class="home-text">
@@ -37,7 +37,7 @@
                         </div>
                 </div>
                 </a>
-                <a href="sportsbooks">
+                <a href="downloads#wft">
                     <div class="home-wrap">
                         <img src="images/common/winningft.jpg" width="244" height="214"/>
                         <div class="home-text">
@@ -45,7 +45,7 @@
                         </div>
                 </div>
                 </a>
-                <a href="live_casinos">
+                <a href="downloads#mega888">
                     <div class="home-wrap">
                         <img src="images/common/mega888.jpg" width="244" height="214"/>
                         <div class="home-text">
@@ -56,7 +56,7 @@
             </div>
             <div class="row-p clearfix">
                 <div style="width: 500px; float: left; margin-right: 13px;">
-                    <a href="sportsbooks">
+                    <a href="downloads#sbo">
                         <div class="home-wrap long">
                             <img src="images/common/sbobet.jpg" width="499" height="111"/>
                             <div class="home-text">
@@ -64,7 +64,7 @@
                             </div>
                     </div>
                     </a>
-                    <a href="live_casinos">
+                    <a href="downloads#luckypalace">
                         <div class="home-wrap">
                             <img src="images/common/1-luckypalace.jpg" width="499" height="111"/>
                             <div class="home-text">
@@ -73,7 +73,7 @@
                     </div>
                     </a>
                 </div>
-                <a href="live_casinos">
+                <a href="downloads#live22">
                     <div class="home-wrap">
                         <img src="images/common/live22.jpg" width="244" height="237"/>
                         <div class="home-text">
@@ -81,7 +81,7 @@
                         </div>
                 </div>
                 </a>
-                <a href="slots">
+                <a href="downloads#suncity">
                     <div class="home-wrap">
                         <img src="images/common/suncity.jpg" width="244" height="237"/>
                         <div class="home-text">

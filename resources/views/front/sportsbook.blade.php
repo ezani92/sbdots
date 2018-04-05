@@ -34,7 +34,7 @@
 						</ul>
 						<div class="download-icon play-now-button">
 							<!-- <a href="#"><div class="d-img"><img src="images/common/download-pc.png"/></div></a> -->
-							<a href="#"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#wft"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 						</ul>
 						<div class="download-icon play-now-button">
 							<!-- <a href="#"><div class="d-img"><img src="images/common/download-pc.png"/></div></a> -->
-							<a href="#"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#maxbet"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 						<!--
 						<div class="single-download">download now</div>
@@ -79,7 +79,7 @@
 						</ul>
 						<div class="download-icon play-now-button">
 							<!-- <a href="#"><div class="d-img"><img src="images/common/download-pc.png"/></div></a> -->
-							<a href="#"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#sbo"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 						<!--
 						<div class="single-download">download now</div>

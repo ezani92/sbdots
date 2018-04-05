@@ -32,7 +32,7 @@
 							<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
 						</ul>
 						<div class="download-icon play-now-button">
-							<a href="downloads#joker"><div class="d-img">PLAY NOW!</div></a>
+							<a href="downloads#918kiss"><div class="d-img">PLAY NOW!</div></a>
 						</div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 									<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
 								</ul>
 								<div class="download-icon play-now-button">
-									<a href="downloads#joker"><div class="d-img">PLAY NOW!</div></a>
+									<a href="downloads#mega888"><div class="d-img">PLAY NOW!</div></a>
 								</div>
 							</div>
 						</div>
@@ -83,7 +83,7 @@
 										<li>Live Casino (Baccarat, Roulette, Dragon Tiger, Lotto 48...)</li>
 									</ul>
 									<div class="download-icon play-now-button">
-										<a href="downloads#joker"><div class="d-img">PLAY NOW!</div></a>
+										<a href="downloads#suncity"><div class="d-img">PLAY NOW!</div></a>
 									</div>
 								</div>
 							</div>
