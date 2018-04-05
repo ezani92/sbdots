@@ -1749,23 +1749,19 @@ textarea {
 	background:url(../images/common/mobile_joker.jpg)top center no-repeat;
 } */
 
-i.fab.fa-facebook {
+svg.svg-inline--fa.fa-facebook {
 
 margin-right: 24px;
 
 }
 
-i.fab.fa-facebook,i.fab.fa-instagram {
-
-	font-size: 18px;
-	margin-top: 4px;
-	
+svg.svg-inline--fa.fa-facebook, svg.svg-inline--fa.fa-instagram {
+    font-size: 20px;
+    margin: 2px 0;
 }
 
-i.fab.fa-facebook:hover,i.fab.fa-instagram:hover {
-
-color:#ff9f0f;
-
+svg.svg-inline--fa.fa-facebook:hover, svg.svg-inline--fa.fa-instagram:hover {
+    color:#ff9f0f;
 }
 
 .table_mobile {
