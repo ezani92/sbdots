@@ -22,7 +22,11 @@
 							    </div>
 							    <div class="form-group">
 							        <label>Role</label>
-							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate'], 3, ['class' => 'form-control']) }}
+							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate'], 3, ['class' => 'form-control role']) }}
+							    </div>
+							    <div class="form-group" id="affiliate_rate" style="display: none;">
+							        <label>Affiliate Commision Rate</label>
+							        <input type="number" min="1" max="100" step="0.02" name="affiliate_rate" class="form-control" required>
 							    </div>
 							    <div class="form-group">
 							        <label>Phone No</label>
@@ -54,4 +58,20 @@
 		</div>
     </div>
 @include('admin.footer')
+<script type="text/javascript">
+	
+	$(".role").change(function(){
+
+		if(this.value == 4)
+		{
+			$('#affiliate_rate').show();
+		}
+		else
+		{
+			$('#affiliate_rate').hide();
+		}
+
+	});
+
+</script>
 </body></html>

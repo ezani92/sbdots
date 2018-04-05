@@ -68,7 +68,8 @@ class UserTableSeeder extends Seeder {
             'phone_verification' => 1,
             'bank_name' => 'RHB Bank',
             'bank_account_no' => '12345678',
-            'affiliate_id' => str_random('8')
+            'affiliate_id' => str_random('8'),
+            'affiliate_rate' => '20'
 
         ));
 
@@ -82,7 +83,7 @@ class UserTableSeeder extends Seeder {
             'phone_verification' => 1,
             'bank_name' => 'RHB Bank',
             'bank_account_no' => '12345678',
-            'affiliate_id' => str_random('8')
+            'affiliate_id' => str_random('8'),
 
         ));
 

@@ -36,6 +36,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('last_login');
             $table->string('referred_by')->nullable();
             $table->string('affiliate_id')->unique();
+            $table->string('affiliate_rate')->nullable();
             $table->timestamps();
         });
     }

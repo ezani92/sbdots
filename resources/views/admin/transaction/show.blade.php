@@ -6,7 +6,7 @@
 			@endif
 			<div class="row">
 			    <div class="col-md-12">
-			        <h3>Transaction Details [#{{ $transaction->transaction_id }}]</h3>
+			        <h3>Transaction Details [#{{ sprintf('%06d', $transaction->id) }}]</h3>
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <div class="row">
@@ -107,6 +107,25 @@
 				                					<td><span class="label label-danger">Decline</span></td>
 				                				</tr>
 			                				@endif
+			                				@php
+
+                                                $data = json_decode($transaction->data, true);
+                                                $transfer_from = \App\Game::find($data['from_game']);
+                                                $transfer_to = \App\Game::find($data['to_game']);
+
+                                            @endphp
+                                            <tr>
+			                					<td><strong>From Game</strong></td>
+			                					<td>{{ $transfer_from->name }}</td>
+			                				</tr>
+			                				<tr>
+			                					<td><strong>To Game</strong></td>
+			                					<td>{{ $transfer_to->name }}</td>
+			                				</tr>
+			                				<tr>
+			                					<td><strong>Amount</strong></td>
+			                					<td>RM {{ $transaction->amount }}</td>
+			                				</tr>
 			                				<tr>
 			                					<td><strong>Remarks / Notes</strong></td>
 			                					<td>{{ $transaction->remarks }}</td>

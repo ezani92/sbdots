@@ -25,6 +25,14 @@
 							        <label>Role</label>
 							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate'], $user->role, ['class' => 'form-control']) }}
 							    </div>
+							    @if($user->role == 4)
+							    	<div class="form-group" id="affiliate_rate">
+								        <label>Affiliate Commision Rate</label>
+								        <input type="number" min="1" max="100" step="0.02" value="{{ $user->affiliate_rate }}" name="affiliate_rate" class="form-control" required>
+								    </div>
+							    @else
+
+							    @endif
 							    <div class="form-group">
 							        <label>Group</label>
 							        {{ Form::select('group', \App\Group::all()->pluck('name', 'id'), $user->group_id, ['class' => 'form-control']) }}

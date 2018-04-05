@@ -63,10 +63,18 @@
 			                					<td><strong>Register At</strong></td>
 			                					<td>{{ $user->created_at->format('d M Y,  h:iA') }}</td>
 			                				</tr>
+			                				@if($user->referred_by != null)
 			                				<tr>
 			                					<td><strong>Referral By</strong></td>
-			                					<td>{{ $user->referred_by }}</td>
+			                					<td>
+			                						@php
+			                							$referred_by = \App\User::where('affiliate_id',$user->referred_by)->first();
+			                						@endphp
+			                						{{ $referred_by->name }} <a href="{{ url('admin/users/'.$referred_by->id) }}" class="label label-info">view</a>
+
+			                					</td>
 			                				</tr>
+			                				@endif
 			                			</tbody>
 			                		</table>
 			                	</div>

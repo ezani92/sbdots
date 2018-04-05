@@ -15,7 +15,9 @@
 			                        <tr>
 			                            <th>Transaction ID</th>
 			                            <th>Name</th>
-			                            <th>Transaction Type</th>
+			                            <th>From Game</th>
+			                            <th>To Game</th>
+			                            <th>Amount</th>
 			                            <th>Status</th>
 			                            <th>Date Created</th>
 			                            <th>Action</th>
@@ -39,7 +41,9 @@
             columns: [
                 { data: 'transaction_id', name: 'transaction_id' },
                 { data: 'user_id', name: 'user_id' },
-                { data: 'transaction_type', name: 'transaction_type' },
+                { data: 'from_game', name: 'from_game' },
+                { data: 'to_game', name: 'to_game' },
+                { data: 'amount', name: 'amount' },
                 { data: 'status', name: 'status' },
                 { data: 'created_at', name: 'created_at' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }

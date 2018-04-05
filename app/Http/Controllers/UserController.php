@@ -48,6 +48,10 @@ class UserController extends Controller
                 {
                     return 'User';
                 }
+                else if($user->role == 4)
+                {
+                    return 'Affiliate';
+                }
             })
             ->editColumn('phone_verification', function ($user) {
                 if($user->phone_verification == 1)
@@ -96,8 +100,15 @@ class UserController extends Controller
         $user->password = bcrypt($input['password']);
         $user->email = $input['email'];
         $user->role = $input['role'];
+
+        if(isset($input['affiliate_rate']))
+        {
+            $user->affiliate_rate = $input['affiliate_rate'];
+        }
+        
         $user->phone_verification = $input['phone_verification'];
         $user->phone = $input['phone'];
+        $user->affiliate_id = str_random('8');
 
         $user->save();
 
@@ -116,11 +127,26 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        $games = Game::all();
-        $banks = Bank::all();
-        $bonuses = Bonus::all();
 
-        return view('admin.users.show',compact('user','games','banks','bonuses'));
+        if($user->role == 4)
+        {
+            $games = Game::all();
+            $banks = Bank::all();
+            $bonuses = Bonus::all();
+
+            $members = User::where('referred_by',$user->affiliate_id)->get();
+
+            return view('admin.users.affiliate',compact('user','games','banks','bonuses','members'));
+        }
+        else
+        {
+            $games = Game::all();
+            $banks = Bank::all();
+            $bonuses = Bonus::all();
+
+            return view('admin.users.show',compact('user','games','banks','bonuses'));
+        }
+        
     }
 
     public function transactiondata(Datatables $datatables,$user_id)
@@ -186,6 +212,12 @@ class UserController extends Controller
         $user->name = $input['name'];
         $user->email = $input['email'];
         $user->role = $input['role'];
+
+        if(isset($input['affiliate_rate']))
+        {
+            $user->affiliate_rate = $input['affiliate_rate'];
+        }
+
         $user->group_id = $input['group'];
         $user->phone = $input['phone'];
         $user->phone_verification = $input['phone_verification'];

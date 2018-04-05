@@ -209,11 +209,31 @@ class TransactionController extends Controller
     {
         $transactions = Transaction::where('transaction_type','transfer');
         return Datatables::of($transactions)
+            ->editColumn('transaction_id', function ($transaction) {
+                return '#'.sprintf('%06d', $transaction->id);
+            })
             ->addColumn('actions', function($transaction) {
                 return view('admin.transaction.action', compact('transaction'))->render();
             })
             ->editColumn('user_id', function ($transaction) {
                 return $transaction->user->name;
+            })
+            ->editColumn('from_game', function ($transaction) {
+                
+                $data = json_decode($transaction->data, true);
+                $transfer_from = \App\Game::find($data['from_game']);
+
+                return $transfer_from->name;
+
+
+            })
+            ->editColumn('to_game', function ($transaction) {
+                
+                $data = json_decode($transaction->data, true);
+                $transfer_from = \App\Game::find($data['to_game']);
+
+                return $transfer_from->name;
+
             })
             ->editColumn('status', function ($transaction) {
                 
