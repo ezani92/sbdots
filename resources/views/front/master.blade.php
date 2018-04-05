@@ -7,8 +7,8 @@
     <div id="topLanguage">
         <div class="container">
             <div class="social-menu">
-                <span><a href="#" class="social-link"><i class="fas fa-facebook"></i></a></span>
-                <span><a href="#" class="social-link"><i class="fas fa-instagram"></i></a></span>
+                <span><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></span>
+                <span><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></span>
             </div>
             <div class="help-bar">
                 <div class="languageWrap">
@@ -98,7 +98,7 @@
                             </marquee>
                         </div>
                     </div>
-                    <div class="annTime"><i class="fa fa-clock-o fa-lg"></i><span id="nowTime"></span></div>
+                    <div class="annTime"><i class="far fa-clock-o fa-lg"></i><span id="nowTime"></span></div>
                 </div>
                 @if(Request::is('/'))
                 <div class="slider-wrapper theme-default">
