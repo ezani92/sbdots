@@ -51,6 +51,8 @@ Route::post('/player/verification', 'PlayerController@verification_confirm');
 
 Auth::routes();
 
+Route::get('/admin/login', 'DashboardController@login');
+
 Route::middleware(['isadmin'])->group(function () {
     
     Route::get('/admin', 'DashboardController@index');
