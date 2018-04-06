@@ -27,6 +27,13 @@ class FrontController extends Controller
 
     public function downloads()
     {
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return 'mobile';
+        }
+        
     	return view('front.downloads');
     }
 
