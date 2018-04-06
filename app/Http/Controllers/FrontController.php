@@ -31,7 +31,7 @@ class FrontController extends Controller
 
         if($agent->isMobile())
         {
-            return 'mobile.downloads';
+            return 'mobile.download';
         }
 
     	return view('front.downloads');
@@ -39,21 +39,43 @@ class FrontController extends Controller
 
     public function sportsbooks()
     {
+
+        if($agent->isMobile())
+        {
+            return 'mobile.sportsbook';
+        }
+
     	return view('front.sportsbook');
     }
 
     public function live_casinos()
     {
+        if($agent->isMobile())
+        {
+            return 'mobile.live_casino';
+        }
+
     	return view('front.live_casino');
     }
 
     public function slots()
     {
+        if($agent->isMobile())
+        {
+            return 'mobile.slot';
+        }
+
     	return view('front.slot');
     }
 
     public function arcades()
     {
+
+        if($agent->isMobile())
+        {
+            return 'mobile.arcade';
+        }
+        
     	return view('front.Arcade.arcade');
     }
 
@@ -64,16 +86,33 @@ class FrontController extends Controller
 
     public function lottery()
     {
+        if($agent->isMobile())
+        {
+            return 'mobile.lottery';
+        }
+
     	return view('front.lottery');
     }
 
     public function promotions()
     {
+
+        if($agent->isMobile())
+        {
+            return 'mobile.promotion';
+        }
+
     	return view('front.promotion');
     }
 
     public function contact_us()
     {
+
+        if($agent->isMobile())
+        {
+            return 'mobile.contactus';
+        }
+
     	return view('front.contact_us');
     }
 
