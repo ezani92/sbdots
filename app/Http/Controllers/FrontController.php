@@ -19,7 +19,7 @@ class FrontController extends Controller
 
         if($agent->isMobile())
         {
-            return 'mobile';
+            return view('mobile.index');
         }
 
         return view('front.index');
@@ -31,9 +31,9 @@ class FrontController extends Controller
 
         if($agent->isMobile())
         {
-            return 'mobile';
+            return 'mobile.downloads';
         }
-        
+
     	return view('front.downloads');
     }
 
