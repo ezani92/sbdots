@@ -64,6 +64,16 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input name="referred_by" type="text" autocomplete="referred_by" placeholder="Reffered ID" class="field-register" />
+                                </td>
+                                <td class="col-2">If you are reffered by someone. Enter their ID here. Else leave empty.</td>
+                                <td><span class="text-error">
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
                                 <td style="width: 375px;">
                                     <div class="g-recaptcha" data-sitekey="6LdrOUoUAAAAAO3ICDvvbpAnGFz55RoADJ1YP4Vt"></div>
                                 </td>

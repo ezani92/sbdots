@@ -45,6 +45,18 @@
 							        <label>Daily Used Once?</label>
 							        {{ Form::select('daily', ['0' => 'No', '1' => 'Yes'], $bonus->daily, ['class' => 'form-control']) }}
 							    </div>
+							    <div class="form-group">
+							        <label>Exclude Games To Used This Code</label>
+							        @php
+							        	$exclude_games_raw = explode(',', $bonus->exclude_games);
+
+							        	$exclude_games = \App\Game::find($exclude_games_raw);
+
+							        	$games = \App\Game::all()->pluck('name','id');
+
+							        @endphp
+							        {{ Form::select('exclude_games[]', $games, $exclude_games, ['class' => 'form-control multiselect' , 'multiple' => 'multiple']) }}
+							    </div>
 							    
 							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Update Bonus Details</button>
@@ -58,4 +70,11 @@
 		</div>
     </div>
 @include('admin.footer')
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+	    $('.multiselect').select2();
+	});
+
+</script>
 </body></html>

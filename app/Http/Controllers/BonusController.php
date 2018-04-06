@@ -84,8 +84,15 @@ class BonusController extends Controller
         $bonus->min_deposit = $input['min_deposit'];
         $bonus->daily = $input['daily'];
 
-        $exclude_string = implode(",",$input['exclude_games']);
-        $bonus->exclude_games = $exclude_string;
+        if(isset($input['exclude_games']))
+        {
+            $exclude_string = implode(",",$input['exclude_games']);
+            $bonus->exclude_games = $exclude_string;
+        }
+        else
+        {
+            $bonus->exclude_games = null;
+        }
 
         $bonus->save();
 
@@ -136,6 +143,16 @@ class BonusController extends Controller
         $bonus->min_deposit = $input['min_deposit'];
         $bonus->allow_multiple = $input['allow_multiple'];
         $bonus->daily = $input['daily'];
+
+        if(isset($input['exclude_games']))
+        {
+            $exclude_string = implode(",",$input['exclude_games']);
+            $bonus->exclude_games = $exclude_string;
+        }
+        else
+        {
+            $bonus->exclude_games = null;
+        }
 
         $bonus->save();
 

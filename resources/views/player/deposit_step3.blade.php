@@ -192,7 +192,16 @@
                                                 <select name="bonus_code"  class="field-register">
                                                     <option value="">No Bonus</option>
                                                     @foreach($bonuses as $bonus)
-                                                        <option value="{{ $bonus->bonus_code }}">{{ $bonus->name }}</option>
+
+                                                        @php
+                                                            $exclude_games = explode(',', $bonus->exclude_games);
+                                                        @endphp
+
+                                                        @if(in_array($game_id,$exclude_games))
+
+                                                        @else
+                                                            <option value="{{ $bonus->bonus_code }}">{{ $bonus->name }}</option>
+                                                        @endif
                                                     @endforeach
                                                 </select>
                                             </td>

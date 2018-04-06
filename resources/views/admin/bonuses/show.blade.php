@@ -59,18 +59,21 @@
 			                				</tr>
 			                				<tr>
 			                					<td><strong>Game Exclude From Code Used</strong></td>
-			                					<td>
-			                						@php
+			                					<td>@if($bonus->exclude_games != null)
+				                						@php
 
-			                							$exclude_games = explode(',', $bonus->exclude_games);
+				                							$exclude_games = explode(',', $bonus->exclude_games);
 
-			                						@endphp
-			                						@foreach($exclude_games as $exclude_game)
-			                							@php
-			                								$game = \App\Game::find($exclude_game);
-			                							@endphp
-			                							{{ $game->name }},
-			                						@endforeach
+				                						@endphp
+				                						@foreach($exclude_games as $exclude_game)
+				                							@php
+				                								$game = \App\Game::find($exclude_game);
+				                							@endphp
+				                							{{ $game->name }},
+				                						@endforeach
+				                					@else
+				                						none
+				                					@endif
 			                					</td>
 			                				</tr>
 			                				<tr>
