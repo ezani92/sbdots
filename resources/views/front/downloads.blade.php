@@ -502,12 +502,12 @@
 								</div>
 							</td>
 							<td>
-									<div class="qr-wrap">
-										<a href="itms-services://?action=download-manifest&url=https://ed.3win8.com/3win85001002.plist" target="_blank">
-											<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
-										</a>
-									</div>
-								</td>
+								<div class="qr-wrap">
+									<a href="itms-services://?action=download-manifest&url=https://ed.3win8.com/3win85001002.plist" target="_blank">
+										<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
+									</a>
+								</div>
+							</td>
 						</tr>
 					</tbody>
 				</table>

@@ -40,7 +40,7 @@
 						<div class="tab-pane fade in active">
 							<div id="portfoliolist">
                             
-								<div id="cny-2018" class="portfolio latest new">
+								<div class="portfolio latest new">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr1.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">

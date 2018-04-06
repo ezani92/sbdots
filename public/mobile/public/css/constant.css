@@ -1,0 +1,32 @@
+
+.modalBackground
+{
+    background-color: #808080;
+    filter:alpha(opacity=60);
+    opacity:0.6;
+    /*-ms-filter: alpha(opacity=60);
+    -ms-opacity: 0.6;*/
+}
+.ModalWindow
+{
+    padding: 5px 5px 5px 10px;
+    background-color: #486489;
+    border-width: 3px;
+    border-style: solid;
+    border-color: Gray;
+    width: 350px;
+    height: 55px;
+    color: #FFFFFF;
+}
+
+.errortext { font-size: 11px; color: Red;}
+
+.table-member .pgr tr td {
+	line-height:22px;
+	padding: 5px 10px;
+	border:none;
+}
+.table-member .pgr tr td span
+{
+    text-decoration: underline;
+}
