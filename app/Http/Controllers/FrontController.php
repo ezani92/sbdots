@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Jenssegers\Agent\Agent;
 
 class FrontController extends Controller
 {
@@ -14,7 +15,14 @@ class FrontController extends Controller
 
     public function index()
     {
-    	return view('front.index');
+    	$agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return 'mobile';
+        }
+
+        return view('front.index');
     }
 
     public function downloads()

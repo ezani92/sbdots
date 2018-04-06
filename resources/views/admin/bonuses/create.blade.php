@@ -55,6 +55,14 @@
 							        <input type="number" name="min_deposit" class="form-control" required>
 							    </div>
 							    <div class="form-group">
+							        <label>Exclude Games To Used This Code</label>
+							        <select class="form-control multiselect" name="exclude_games[]" multiple="multiple">
+										@foreach($games as $game)
+											<option value="{{ $game->id }}">{{ $game->name }}</option>
+										@endforeach
+									</select>
+							    </div>
+							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Submit</button>
 							    </div>
 							</form>
@@ -66,4 +74,11 @@
 		</div>
     </div>
 @include('admin.footer')
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+	    $('.multiselect').select2();
+	});
+
+</script>
 </body></html>

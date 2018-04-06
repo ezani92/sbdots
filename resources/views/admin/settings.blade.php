@@ -30,6 +30,10 @@
 							    </div>
 							    <hr />
 							    <div class="form-group">
+							        <label>Annoucement</label>
+							        <textarea class="form-control" name="annoucement">{{ \App\Setting::find(7)->value }}</textarea>
+							    </div>
+							    <div class="form-group">
 							        <label>Minimum Deposit</label>
 							        <input type="number" name="min_deposit" class="form-control" value="{{ \App\Setting::find(5)->value }}" required>
 							    </div>

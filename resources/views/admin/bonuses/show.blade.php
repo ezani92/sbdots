@@ -58,6 +58,22 @@
 			                					<td>RM {{ $bonus->min_deposit }}</td>
 			                				</tr>
 			                				<tr>
+			                					<td><strong>Game Exclude From Code Used</strong></td>
+			                					<td>
+			                						@php
+
+			                							$exclude_games = explode(',', $bonus->exclude_games);
+
+			                						@endphp
+			                						@foreach($exclude_games as $exclude_game)
+			                							@php
+			                								$game = \App\Game::find($exclude_game);
+			                							@endphp
+			                							{{ $game->name }},
+			                						@endforeach
+			                					</td>
+			                				</tr>
+			                				<tr>
 			                					<td><strong>Created At</strong></td>
 			                					<td>{{ $bonus->created_at->format('d M Y,  h:iA') }}</td>
 			                				</tr>

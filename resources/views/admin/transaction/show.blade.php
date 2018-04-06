@@ -89,43 +89,45 @@
 				                				
 			                				@elseif($transaction->transaction_type == 'transfer')
 
-			                				@endif
+			                					@if($transaction->status == 1)
+					                				<tr>
+					                					<td><strong>Status</strong></td>
+					                					<td><span class="label label-warning">Progress</span></td>
+					                				</tr>
+				                				@elseif($transaction->status == 2)
+				                					<tr>
+					                					<td><strong>Status</strong></td>
+					                					<td><span class="label label-success">Success</span></td>
+					                				</tr>
+				                				@elseif($transaction->status == 3)
+				                					<tr>
+					                					<td><strong>Status</strong></td>
+					                					<td><span class="label label-danger">Decline</span></td>
+					                				</tr>
+				                				@endif
+				                				@php
 
-			                				@if($transaction->status == 1)
+	                                                $data = json_decode($transaction->data, true);
+	                                                $transfer_from = \App\Game::find($data['from_game']);
+	                                                $transfer_to = \App\Game::find($data['to_game']);
+
+	                                            @endphp
+	                                            <tr>
+				                					<td><strong>From Game</strong></td>
+				                					<td>{{ $transfer_from->name }}</td>
+				                				</tr>
 				                				<tr>
-				                					<td><strong>Status</strong></td>
-				                					<td><span class="label label-warning">Progress</span></td>
+				                					<td><strong>To Game</strong></td>
+				                					<td>{{ $transfer_to->name }}</td>
 				                				</tr>
-			                				@elseif($transaction->status == 2)
-			                					<tr>
-				                					<td><strong>Status</strong></td>
-				                					<td><span class="label label-success">Success</span></td>
+				                				<tr>
+				                					<td><strong>Amount</strong></td>
+				                					<td>RM {{ $transaction->amount }}</td>
 				                				</tr>
-			                				@elseif($transaction->status == 3)
-			                					<tr>
-				                					<td><strong>Status</strong></td>
-				                					<td><span class="label label-danger">Decline</span></td>
-				                				</tr>
+				                				
 			                				@endif
-			                				@php
 
-                                                $data = json_decode($transaction->data, true);
-                                                $transfer_from = \App\Game::find($data['from_game']);
-                                                $transfer_to = \App\Game::find($data['to_game']);
-
-                                            @endphp
-                                            <tr>
-			                					<td><strong>From Game</strong></td>
-			                					<td>{{ $transfer_from->name }}</td>
-			                				</tr>
-			                				<tr>
-			                					<td><strong>To Game</strong></td>
-			                					<td>{{ $transfer_to->name }}</td>
-			                				</tr>
-			                				<tr>
-			                					<td><strong>Amount</strong></td>
-			                					<td>RM {{ $transaction->amount }}</td>
-			                				</tr>
+			                				
 			                				<tr>
 			                					<td><strong>Remarks / Notes</strong></td>
 			                					<td>{{ $transaction->remarks }}</td>

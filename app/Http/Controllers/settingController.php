@@ -41,6 +41,10 @@ class settingController extends Controller
     	$setting_6->value = $input['max_deposit'];
     	$setting_6->save();
 
+        $setting_7 = Setting::find(7);
+        $setting_7->value = $input['annoucement'];
+        $setting_7->save();
+
     	Session::flash('message', 'Settings Succesfully Updated'); 
         Session::flash('alert-class', 'alert-success');
 

@@ -26,7 +26,7 @@
 							    </div>
 							    <div class="form-group" id="affiliate_rate" style="display: none;">
 							        <label>Affiliate Commision Rate</label>
-							        <input type="number" min="1" max="100" step="0.02" name="affiliate_rate" class="form-control" required>
+							        <input type="number" min="1" max="100" step="0.02" name="affiliate_rate" class="form-control">
 							    </div>
 							    <div class="form-group">
 							        <label>Phone No</label>

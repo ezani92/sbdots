@@ -23,6 +23,7 @@ class CreateBonusesTable extends Migration
             $table->integer('allow_multiple');
             $table->integer('daily');
             $table->decimal('min_deposit',10,2);
+            $table->string('exclude_games')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

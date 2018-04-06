@@ -7,6 +7,7 @@ use DataTables;
 use Carbon\Carbon;
 use Session;
 use Illuminate\Http\Request;
+use App\Game;
 
 class BonusController extends Controller
 {
@@ -57,7 +58,9 @@ class BonusController extends Controller
      */
     public function create()
     {
-        return view('admin.bonuses.create');
+        $games = Game::all();
+
+        return view('admin.bonuses.create',compact('games'));
     }
 
     /**
@@ -80,6 +83,9 @@ class BonusController extends Controller
         $bonus->allow_multiple = $input['multi_used'];
         $bonus->min_deposit = $input['min_deposit'];
         $bonus->daily = $input['daily'];
+
+        $exclude_string = implode(",",$input['exclude_games']);
+        $bonus->exclude_games = $exclude_string;
 
         $bonus->save();
 
