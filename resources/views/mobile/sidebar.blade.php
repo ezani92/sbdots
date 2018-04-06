@@ -11,16 +11,16 @@
                 <a href="home" class="main-nav active" style="background-image: url(mobile/images/common/icon-home.png);">Home</a>
             </div>
             <div class="nav-item">
-                <a href="sportsbook" class="main-nav " style="background-image: url(mobile/images/common/icon-sportsbook.png);">Sportsbook</a>
+                <a href="sportsbooks" class="main-nav " style="background-image: url(mobile/images/common/icon-sportsbook.png);">Sportsbook</a>
             </div>
             <div class="nav-item">
-                <a href="live_casino" class="main-nav " style="background-image: url(mobile/images/common/icon-livecasino.png);">Live Casino</a>
+                <a href="live_casinos" class="main-nav " style="background-image: url(mobile/images/common/icon-livecasino.png);">Live Casino</a>
             </div>
             <div class="nav-item">
-                <a href="slot" class="main-nav " style="background-image: url(mobile/images/common/icon-slots.png);">Slots</a>
+                <a href="slots" class="main-nav " style="background-image: url(mobile/images/common/icon-slots.png);">Slots</a>
             </div> 
             <div class="nav-item">
-                <a href="arcade" class="main-nav " style="background-image: url(mobile/images/common/icon-games.png);">Arcade</a>
+                <a href="arcades" class="main-nav " style="background-image: url(mobile/images/common/icon-games.png);">Arcade</a>
             </div> 
             <div class="nav-item">
                 <a href="lottery" class="main-nav " style="background-image: url(mobile/images/common/icon-poker.png);">Lottery</a>
@@ -29,7 +29,7 @@
                 <a href="promotions" class="main-nav " style="background-image: url(mobile/images/common/icon-promotion.png);">Promotions</a>
             </div> 
             <div class="nav-item">
-                <a href="contactus" class="main-nav " style="background-image: url(mobile/images/common/icon-contact.png);">Contact Us</a>
+                <a href="contact_us" class="main-nav " style="background-image: url(mobile/images/common/icon-contact.png);">Contact Us</a>
             </div>
             
         </div>      
