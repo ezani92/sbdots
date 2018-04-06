@@ -21,7 +21,9 @@ class isAdmin
         {
             return $next($request); 
         }
-        
-        abort(404);
+        else
+        {
+            return redirect('admin/login');
+        }
     }
 }
