@@ -31,7 +31,7 @@
 						<li><span class="filter" data-filter=".deposit">deposit bonus</span></li>
 						<li><span class="filter" data-filter=".rebate">rebate</span></li>
 						<li><span class="filter" data-filter=".special">special</span></li>
-						<li><span class="filter" data-filter=".scr88">scr88</span></li>
+						<li><span class="filter" data-filter=".888">888</span></li>
 					</ul>
 					
 					<!-- hash link -->
@@ -283,7 +283,7 @@
 										</div>
 									</div>
 								</div>
-								<div id="welcome" class="portfolio latest special scr88">
+								<div id="welcome" class="portfolio latest special 888">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr6.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">

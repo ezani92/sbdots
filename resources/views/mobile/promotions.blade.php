@@ -24,7 +24,7 @@
                         <li><a href="#" class="deposit">Deposit Bonus</a></li>
                         <li><a href="#" class="rebate">Rebate</a></li>
                         <li><a href="#" class="special">Special</a></li>
-                        <li><a href="#" class="scr88">SCR88</a></li>
+                        <li><a href="#" class="888">888</a></li>
                     </ul>
         
                     <div id="ourHolder" class="promo-box">
@@ -256,7 +256,7 @@
                                 </div>						
                             </div>
 
-                            <div class="promo special scr88">
+                            <div class="promo special 888">
                                 <h3><img src="{{ asset('mobile/images/en/bnr6.jpg') }}" class="img-responsive width-full"/></h3>
                                 <div class="promo-font">
                                         <h4>Special: 10% Extra Winning Bonus</h4>
