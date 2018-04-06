@@ -325,14 +325,14 @@ a.deploy-contact:focus, a.deploy-contact:hover {
 }
 .nav-item a.active, .nav-item a:focus {
 	/* text-shadow:0 1px 1px #ffff00; */
-	border-left:6px solid #976e2d;
+	border-left:6px solid #ff9f0f;
 }
 .desktop {
 	margin-bottom:50px;
 }
 .desktop a{
 	text-align:center;
-	color:gold;
+	color:#ff9f0f;
 }
 .main-nav {	
 	background-position: 20px 8px;
@@ -425,6 +425,19 @@ a.deploy-contact:focus, a.deploy-contact:hover {
 .center-text {
 	text-align: center;
 }
+
+.form-register span.input-group-addon {
+    background: #ff9f0f;
+    color: #000;
+    border-color: #ff9f0f;
+}
+
+.form-register input:not(#btnsend) {
+    background: transparent;
+    border-color: #ff9f0f;
+    color: #fff;
+}
+
 /* ----- Fixed Bottom Bar -----*/
 
 .col.banks {
@@ -521,7 +534,7 @@ h2 {
 	padding-bottom: 10px;
 	border-bottom: 1px dashed #02303b;
 	margin-top:10px;
-	color:#ffbf47;
+	color:#ff9f0f;
 	font-weight:700;
 	text-transform:capitalize;
 }
@@ -1027,11 +1040,12 @@ ul#filterOptions li.active a {
 	/* padding:6px 25px; */
 	-webkit-box-shadow: 0 1px 1px 1px rgba(0,0,0,0.5);
 	box-shadow: 0 1px 1px 1px rgba(0,0,0,0.5);
-	background: #a37c37; /* Old browsers */
-	background: -moz-linear-gradient(top,  #a37c37 0%, #b49046 6%, #d0af5e 13%, #d8b966 17%, #f1d67d 33%, #f9e084 40%, #fde487 48%, #fbe085 50%, #d8b966 52%, #cfae5f 54%, #c6a556 60%, #aa833e 83%, #9a712f 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  #a37c37 0%,#b49046 6%,#d0af5e 13%,#d8b966 17%,#f1d67d 33%,#f9e084 40%,#fde487 48%,#fbe085 50%,#d8b966 52%,#cfae5f 54%,#c6a556 60%,#aa833e 83%,#9a712f 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  #a37c37 0%,#b49046 6%,#d0af5e 13%,#d8b966 17%,#f1d67d 33%,#f9e084 40%,#fde487 48%,#fbe085 50%,#d8b966 52%,#cfae5f 54%,#c6a556 60%,#aa833e 83%,#9a712f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a37c37', endColorstr='#9a712f',GradientType=0 ); /* IE6-9 */	
+	background: #ffd65e;
+    background: -moz-linear-gradient(top, #ffd65e 3%, #fcc735 21%, #ff9f0f 47%, #ff9f0f 47%, #ff9f0f 99%);
+    background: -webkit-linear-gradient(top, #ffd65e 3%,#fcc735 21%,#ff9f0f 47%,#ff9f0f 47%,#ff9f0f 99%);
+    background: linear-gradient(to bottom, #ffd65e 3%,#fcc735 21%,#ff9f0f 47%,#ff9f0f 47%,#ff9f0f 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#ff9f0f',GradientType=0 );
+	
 }
 .product-wrap {
 	/* border:1px solid #cf9700; */
@@ -1049,7 +1063,7 @@ ul#filterOptions li.active a {
 	padding-right:10px;
 }
 .reg-form {
-	background:#02303b;
+	background:transparent;
 	padding:15px;
 	margin-bottom:10px;
     text-shadow: none;
@@ -1223,19 +1237,19 @@ a.ui-link {
     margin-bottom: 10px;
 }
 .icon-background1 {
-	background: #976e2d; /* Old browsers */
-	background: -moz-linear-gradient(top,  #976e2d 0%, #fde487 42%, #976e2d 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  #976e2d 0%,#fde487 42%,#976e2d 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  #976e2d 0%,#fde487 42%,#976e2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#976e2d', endColorstr='#976e2d',GradientType=0 ); /* IE6-9 */
 	-webkit-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;	
 	color:transparent;
+	background: #ffd65e;
+    background: -moz-linear-gradient(top, #ffd65e 3%, #fcc735 21%, #ff9f0f 47%, #ff9f0f 47%, #ff9f0f 99%);
+    background: -webkit-linear-gradient(top, #ffd65e 3%,#fcc735 21%,#ff9f0f 47%,#ff9f0f 47%,#ff9f0f 99%);
+    background: linear-gradient(to bottom, #ffd65e 3%,#fcc735 21%,#ff9f0f 47%,#ff9f0f 47%,#ff9f0f 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#ff9f0f',GradientType=0 );
 }
 .fill_1 {fill: #fde487;}
 .fill_2 {fill: #02303b;}
 .fa-stack-1x:before {
-	color:#02303b;
+	color:#000;
 }
 .bank-table {
 	background: #111111;
@@ -1523,7 +1537,7 @@ ul.bank-name {
 
 }
 .why-title {
-	color:#ffbf47;
+	color:#ff9f0f;
 	font-weight:700;
 	font-size:16px;
 }

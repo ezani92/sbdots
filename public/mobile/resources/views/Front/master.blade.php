@@ -10,6 +10,8 @@
 
     @yield ('content')
 
+    @include ('Front.modal')
+
     @yield ('scripts')
 
 <!-- Start of LiveChat (www.livechatinc.com) code -->
