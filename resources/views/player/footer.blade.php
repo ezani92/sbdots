@@ -13,10 +13,10 @@
                 <div class="link">
                     <div class="container">
                         <ul class="f-link">
-                            <li><a href="about_us">About Us</a></li>
-                            <li><a href="banking">banking</a></li>
-                            <li><a href="faq">faqs</a></li>
-                            <li><a href="tnc">terms & conditions</a></li>
+                            <li><a href="{{ url('about_us') }}">About Us</a></li>
+                            <li><a href="{{ url('banking') }}">banking</a></li>
+                            <li><a href="{{ url('faq') }}">faqs</a></li>
+                            <li><a href="{{ url('tnc') }}">terms & conditions</a></li>
                         </ul>
                     </div>
                 </div>

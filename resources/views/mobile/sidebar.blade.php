@@ -4,32 +4,32 @@
         <div class="navigation-items">
         
             <div class="nav-item">
-                <a href="registration" class="main-nav " style="background-image: url(mobile/images/common/icon-join.png);">Join Now</a>
+                <a href="{{ url('registration') }}" class="main-nav " style="background-image: url(mobile/images/common/icon-join.png);">Join Now</a>
             </div>
         
             <div class="nav-item">
-                <a href="home" class="main-nav active" style="background-image: url(mobile/images/common/icon-home.png);">Home</a>
+                <a href="{{ url('home') }}" class="main-nav active" style="background-image: url(mobile/images/common/icon-home.png);">Home</a>
             </div>
             <div class="nav-item">
-                <a href="sportsbooks" class="main-nav " style="background-image: url(mobile/images/common/icon-sportsbook.png);">Sportsbook</a>
+                <a href="{{ url('sportsbooks') }}" class="main-nav " style="background-image: url(mobile/images/common/icon-sportsbook.png);">Sportsbook</a>
             </div>
             <div class="nav-item">
-                <a href="live_casinos" class="main-nav " style="background-image: url(mobile/images/common/icon-livecasino.png);">Live Casino</a>
+                <a href="{{ url('live_casinos') }}" class="main-nav " style="background-image: url(mobile/images/common/icon-livecasino.png);">Live Casino</a>
             </div>
             <div class="nav-item">
-                <a href="slots" class="main-nav " style="background-image: url(mobile/images/common/icon-slots.png);">Slots</a>
+                <a href="{{ url('slots') }}" class="main-nav " style="background-image: url(mobile/images/common/icon-slots.png);">Slots</a>
             </div> 
             <div class="nav-item">
-                <a href="arcades" class="main-nav " style="background-image: url(mobile/images/common/icon-games.png);">Arcade</a>
+                <a href="{{ url('arcades') }}" class="main-nav " style="background-image: url(mobile/images/common/icon-games.png);">Arcade</a>
             </div> 
             <div class="nav-item">
-                <a href="lottery" class="main-nav " style="background-image: url(mobile/images/common/icon-poker.png);">Lottery</a>
+                <a href="{{ url('lottery') }}" class="main-nav " style="background-image: url(mobile/images/common/icon-poker.png);">Lottery</a>
             </div> 
             <div class="nav-item">
-                <a href="promotions" class="main-nav " style="background-image: url(mobile/images/common/icon-promotion.png);">Promotions</a>
+                <a href="{{ url('promotions') }}" class="main-nav " style="background-image: url(mobile/images/common/icon-promotion.png);">Promotions</a>
             </div> 
             <div class="nav-item">
-                <a href="contact_us" class="main-nav " style="background-image: url(mobile/images/common/icon-contact.png);">Contact Us</a>
+                <a href="{{ url('contact_us') }}" class="main-nav " style="background-image: url(mobile/images/common/icon-contact.png);">Contact Us</a>
             </div>
             
         </div>      

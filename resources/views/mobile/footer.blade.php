@@ -41,7 +41,7 @@
                     </li>
                     <li>
                         <div class="col-xs-3 footer-xs">
-                            <a href="banking">
+                            <a href="{{ url('banking') }}">
                                 <button href="#" class="navbar-toggle collapsed btn-bottom" type="button"> 
                                 <img src="{{ asset('mobile/images/common/icon-bank.png') }}"/>banking</button>
                             </a>
@@ -49,7 +49,7 @@
                     </li>
                     <li>
                         <div class="col-xs-3 footer-xs">
-                            <a href="contact_us">
+                            <a href="{{ url('contact_us') }}">
                                 <button href="#" class="navbar-toggle collapsed btn-bottom" type="button"> 
                                 <img src="{{ asset('mobile/images/common/icon-contact.png') }}"/>contact us</button>
                             </a>

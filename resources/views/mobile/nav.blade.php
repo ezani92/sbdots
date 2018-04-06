@@ -10,7 +10,7 @@
             <ul class="nav" id="tab_change">
                 <li class="active">
                     <div class="col-md-20 footer-xs"> 
-                        <a href="home">
+                        <a href="{{ url('home') }}">
                             <button href="" class="navbar-toggle collapsed btn-top" type="button"> 
                             <img src="{{ asset('mobile/images/common/icon-home.png') }}"/>home</button>
                         </a> 
@@ -18,7 +18,7 @@
                 </li>
                 <li>
                     <div class="col-md-20 footer-xs"> 
-                        <a href="promotions">
+                        <a href="{{ url('promotions') }}">
                             <button href="#" class="navbar-toggle collapsed btn-top" type="button"> 
                             <img src="{{ asset('mobile/images/common/icon-promotion.png') }}"/>promotions</button>
                         </a> 
@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <div class="col-md-20 footer-xs"> 
-                        <a href="registration">
+                        <a href="{{ url('registration') }}">
                             <button href="#" class="navbar-toggle collapsed btn-top" type="button"> 
                             <img src="{{ asset('mobile/images/common/icon-register.png') }}"/>register</button>
                         </a> 
@@ -34,7 +34,7 @@
                 </li> 
                 <li>
                     <div class="col-md-20 footer-xs"> 
-                        <a href="downloads">
+                        <a href="{{ url('downloads') }}">
                             <button class="navbar-toggle collapsed btn-top" type="button"> 
                             <img src="{{ asset('mobile/images/common/icon-download.png') }}"/>download</button>
                         </a> 
