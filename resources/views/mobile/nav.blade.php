@@ -1,6 +1,6 @@
 <div class="content-controls">
     <a href="#" class="deploy-sidebar"><i class="fa fa-fw fa-bars"></i></a>
-    <em class="content-title"><a href="home"><img src="{{ asset('mobile/images/common/sb_logo.png') }}" class="logo"></a></em>
+    <em class="content-title"><a href="home"><img src="{{ asset('images/common/sb_logo.png') }}" class="logo"></a></em>
     <a href="#" id="ctl00_btnloginfront" class="deploy-contact" data-toggle="modal" data-target="#login">login</a>
 </div>
 
@@ -34,7 +34,7 @@
                 </li> 
                 <li>
                     <div class="col-md-20 footer-xs"> 
-                        <a href="download">
+                        <a href="downloads">
                             <button class="navbar-toggle collapsed btn-top" type="button"> 
                             <img src="{{ asset('mobile/images/common/icon-download.png') }}"/>download</button>
                         </a> 

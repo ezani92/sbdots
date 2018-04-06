@@ -22,6 +22,8 @@ Route::get('/arcades', 'FrontController@arcades');
 Route::get('/game-live22', 'FrontController@game_live22');
 Route::get('/lottery', 'FrontController@lottery');
 Route::get('/promotions', 'FrontController@promotions');
+Route::get('/banking', 'FrontController@banking');
+Route::get('/registration', 'FrontController@registration');
 Route::get('/contact_us', 'FrontController@contact_us');
 
 

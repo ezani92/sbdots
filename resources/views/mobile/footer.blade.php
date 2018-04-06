@@ -49,7 +49,7 @@
                     </li>
                     <li>
                         <div class="col-xs-3 footer-xs">
-                            <a href="contactus">
+                            <a href="contact_us">
                                 <button href="#" class="navbar-toggle collapsed btn-bottom" type="button"> 
                                 <img src="{{ asset('mobile/images/common/icon-contact.png') }}"/>contact us</button>
                             </a>

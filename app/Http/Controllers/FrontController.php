@@ -120,6 +120,30 @@ class FrontController extends Controller
     	return view('front.promotion');
     }
 
+    public function banking()
+    {
+
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.banking');
+        }
+
+    }
+
+    public function registration()
+    {
+
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.registration');
+        }
+
+    }
+
     public function contact_us()
     {
 

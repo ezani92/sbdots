@@ -790,9 +790,9 @@ width:100%;
     padding-left: 30px;
 }
 
-.half-box.icon h2.title.footer-sportbook:before {
+.half-box.icon h2.title.footer-icon1:before {
 	content: "";
-    background: url(../images/common/Malaysia-Sportsbook.png);
+    background: url(../images/common/icon_1.png);
     position: absolute;
     left: -70px;
     width: 64px;
@@ -806,9 +806,9 @@ width:100%;
     box-sizing: border-box;
 }
 
-.half-box.icon h2.title.footer-slotgame:before {
+.half-box.icon h2.title.footer-icon2:before {
 	content: "";
-    background: url(../images/common/slot.png);
+    background: url(../images/common/icon_2.png);
     position: absolute;
     left: -70px;
     width: 64px;
@@ -822,9 +822,9 @@ width:100%;
     box-sizing: border-box;
 }
 
-.half-box.icon h2.title.footer-livecasino:before {
+.half-box.icon h2.title.footer-icon3:before {
 	content: "";
-    background: url(../images/common/casino.png);
+    background: url(../images/common/icon_3.png);
     position: absolute;
     left: -70px;
     width: 64px;
@@ -838,9 +838,9 @@ width:100%;
     box-sizing: border-box;
 }
 
-.half-box.icon h2.title.footer-lotterygame:before {
+.half-box.icon h2.title.footer-icon4:before {
 	content: "";
-    background: url(../images/common/totoico.png);
+    background: url(../images/common/icon_4.png);
     position: absolute;
     left: -70px;
     width: 64px;
