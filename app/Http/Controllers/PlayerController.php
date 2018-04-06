@@ -400,24 +400,25 @@ class PlayerController extends Controller
     public function transaction(Request $request)
     {
         $input = $request->all();
+        $user_id = \Auth::user()->id;
 
         if(!isset($input['tab']) || $input['tab'] == 'deposit')
         {   
-            $transactions = Transaction::where('transaction_type','deposit')->get();
+            $transactions = Transaction::where('transaction_type','deposit')->where('user_id',$user_id)->get();
 
             return view('player.transaction.deposit',['transactions' => $transactions]);
         }
 
         if($input['tab'] == 'withdrawal')
         {   
-            $transactions = Transaction::where('transaction_type','withdraw')->get();
+            $transactions = Transaction::where('transaction_type','withdraw')->where('user_id',$user_id)->get();
 
             return view('player.transaction.withdrawal',['transactions' => $transactions]);
         }
 
         else if($input['tab'] == 'transfer')
         {   
-            $transactions = Transaction::where('transaction_type','transfer')->get();
+            $transactions = Transaction::where('transaction_type','transfer')->where('user_id',$user_id)->get();
 
             return view('player.transaction.transfer',['transactions' => $transactions]);
         }

@@ -27,7 +27,6 @@
                 <div class="modal-footer center-text">
                     <p>Not a member? <a href="registration">Sign Up</a></p>
                     <p>Forgot <a href="#" data-toggle="modal" data-target="#forgot">Password?</a></p>
-                    <p>TAC <a href="tacvalidation">Validation</a></p>
                 </div>
             </div>
         </div>
