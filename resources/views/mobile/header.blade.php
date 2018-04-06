@@ -4,7 +4,7 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
 <link rel="icon" type="image/ico" href="{{ asset('mobile/images/common/favicon.ico') }}" />
 
-<title>Home</title>
+<title>SUperb - Malaysia Top Online Gaming Sites</title>
 
 <link href="{{ asset('mobile/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('mobile/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
