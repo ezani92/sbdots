@@ -26,19 +26,9 @@
                                 </span>
                                 <h3>Telephone:</h3>
                             </div>
-                            <p>Malaysia: +603 9212 8135</p>
-                            <p>Thailand : +66 600 035 106</p>
+                            <p>Malaysia: +6016 959 3762</p>
                         </div>
-                        <div class="contact-box">
-                            <div class="contact-title"> 
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-square fa-stack-2x icon-background1"></i>
-                                    <i class="fa fa-envelope fa-stack-1x"></i>
-                                </span>
-                                <h3>EMAIL:</h3>
-                            </div>
-                            <p><a href="cdn-cgi/l/email-protection/index.html#56252326263924221634332237253f3778383322" class="ui-link"><span class="__cf_email__" data-cfemail="285b5d5858475a5c684a4d5c495b414906464d5c">[email&#160;protected]</span></a></p>
-                        </div>
+
                         <div class="contact-box">
                             <div class="contact-title"> 
                                 <span class="fa-stack fa-lg">
@@ -205,7 +195,7 @@
             
         <div class="overlay" />
                     <div class="overlayContent">
-                        <img src="{{ asset('images/ajax-loader.gif') }}" alt="Loading" border="1" />
+                        <img src="{{ asset('mobile/images/ajax-loader.gif') }}" alt="Loading" border="1" />
                     </div>
             
         </div>

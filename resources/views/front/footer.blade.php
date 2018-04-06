@@ -3,9 +3,10 @@
             <div class="link">
                 <div class="container">
                     <ul class="f-link">
-                        <li><a href="banking_deposit.aspx">banking</a></li>
-                        <li><a href="faq.aspx">faqs</a></li>
-                        <li><a href="tnc.aspx">terms & conditions</a></li>
+                        <li><a href="about_us">About Us</a></li>
+                        <li><a href="banking">banking</a></li>
+                        <li><a href="faq">faqs</a></li>
+                        <li><a href="tnc">terms & conditions</a></li>
                     </ul>
                 </div>
             </div>
@@ -28,7 +29,7 @@
                     </div>
                     <div class="half-box icon">
                         <h2 class="title footer-icon4">Quality Customer Service 24/7</h2>
-                        <p class="description">To ensure the best experience and hassle-free casino playing session at Sbdot, we have made our customer support team available to all, 24 hours a day and 7 days a week. Our in-house support team are definitely not robots, but a group of skilled customer service representatives who know very well on our products and are ready to help you and assist you with anything related to Sbdot. The fastest and most efficient way to reach us is by chatting with us on LiveChat, where you’ll get your answers anytime of the day within seconds. Alternatively, you can also contact us via email, telephone, Facebook page, or WeChat, details are available at our Contact Us Page. </p>
+                        <p class="description">To ensure the best experience and hassle-free casino playing session at Sbdot, we have made our customer support team available to all, 24 hours a day and 7 days a week. Our in-house support team are definitely not robots, but a group of skilled customer service representatives who know very well on our products and are ready to help you and assist you with anything related to Sbdot.</p>
                     </div>
                 </div>
             </div>
@@ -43,7 +44,10 @@
                         <div class="bank"><img src="{{ asset('images/common/publicbank.jpg') }}"/></div>
                     </div>
                 </div>
-                <img class="footer-poweredby" src="{{ asset('images/common/poweredby.jpg') }}"/>
+                <div class="powered_by">
+                    <h3>Powered By</h3>
+                    <img class="footer-poweredby" src="{{ asset('images/common/sb_logo.png') }}"/>
+                </div>
             </div>
 
             <div class="container logos">

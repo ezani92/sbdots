@@ -23,22 +23,22 @@
                 <div class="container">
                     <div class="row">
                         <div class="half-box icon">
-                            <h2 class="title footer-sportbook">Sportbook</h2>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id nisi molestie, tempus tortor eu, consequat urna. Nullam pharetra eros ac diam bibendum ullamcorper. Nullam nec sem eget nibh porta dapibus ac sed dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel nulla dignissim.</p>
+                            <h2 class="title footer-icon1">Secured, Trusted & Reliable Online Casino Malaysia.</h2>
+                            <p class="description">Sbdot Online Casino Malaysia aim to be the most secured, trusted and online gaming and sportsbook betting services, allowing everyone to play their favorite online casino games, slots with peace of mind without concerning on the payout. We guaranteed not just your payout in 100% but also privacy secure with us. All information filled or provided with us are protected with a very safe technology encrypted with SSL certifications to prevent any hacking or leaking to unauthorized parties. </p>
                         </div>
                         <div class="half-box icon">
-                            <h2 class="title footer-slotgame">Slot Game</h2>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id nisi molestie, tempus tortor eu, consequat urna. Nullam pharetra eros ac diam bibendum ullamcorper. Nullam nec sem eget nibh porta dapibus ac sed dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel nulla dignissim.</p>
+                            <h2 class="title footer-icon2">Download Free Online Casino Software or Play Instantly Via Web</h2>
+                            <p class="description">Play Sbdot casino games the way you like anywhere. Sbdot offer many alternatives of gaming options, including “no download” flash gaming platform, enabling you to instantly play a huge and diverse range of over 150 popular, as well as up and coming new games. Most of the popular games titles are available with free trials and complimentary credits, without any risks involved, under the “fun play” option to test the game preference.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="half-box icon">
-                            <h2 class="title footer-livecasino">Live Casino</h2>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id nisi molestie, tempus tortor eu, consequat urna. Nullam pharetra eros ac diam bibendum ullamcorper. Nullam nec sem eget nibh porta dapibus ac sed dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel nulla dignissim.</p>
+                            <h2 class="title footer-icon3">The Bonuses Just Get Bigger and It Never Ends</h2>
+                            <p class="description">One of the most popular bonuses for newly registered players is Sbdot Welcome Bonus, which offer a 100% Bonus on the first deposit. Other promotions which are open to all Sbdot members include 20% bonus on daily first deposit and re-deposit bonuses, weekly cash backs. Almost all of SBdot fabulous promotions run 365 a year, meaning you will enjoy you play with extra bonus every day! </p>
                         </div>
                         <div class="half-box icon">
-                            <h2 class="title footer-lotterygame">Lottery Game</h2>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id nisi molestie, tempus tortor eu, consequat urna. Nullam pharetra eros ac diam bibendum ullamcorper. Nullam nec sem eget nibh porta dapibus ac sed dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel nulla dignissim.</p>
+                            <h2 class="title footer-icon4">Quality Customer Service 24/7</h2>
+                            <p class="description">To ensure the best experience and hassle-free casino playing session at Sbdot, we have made our customer support team available to all, 24 hours a day and 7 days a week. Our in-house support team are definitely not robots, but a group of skilled customer service representatives who know very well on our products and are ready to help you and assist you with anything related to Sbdot. The fastest and most efficient way to reach us is by chatting with us on LiveChat, where you’ll get your answers anytime of the day within seconds. Alternatively, you can also contact us via email, telephone, Facebook page, or WeChat, details are available at our Contact Us Page. </p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,10 @@
                                 <div class="bank"><img src="{{ asset('images/common/publicbank.jpg') }}"/></div>
                             </div>
                         </div>
-                        <img class="footer-poweredby" src="{{ asset('images/common/poweredby.jpg') }}"/>
+                        <div class="powered_by">
+                            <h3>Powered By</h3>
+                            <img class="footer-poweredby" src="{{ asset('images/common/sb_logo.png') }}"/>
+                        </div>
                     </div>
     
                 <div class="container logos">

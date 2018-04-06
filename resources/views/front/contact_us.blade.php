@@ -25,14 +25,11 @@
 			</div>
 			<div class="contact-box">
 				<div class="horizontal clearfix">
-					<div class="box p-r"><img src="images/common/contact_my.jpg"/>+603 9212 8135</div>
-					<div class="box"><img src="images/common/contact_email.jpg"/>Email: <a href="cdn-cgi/l/email-protection/index.html" class="__cf_email__" data-cfemail="57242227273825231735322336243e3679393223">[email&#160;protected]</a></div>
-				</div>
-				<div class="horizontal clearfix">
+					<div class="box p-r"><img src="images/common/contact_my.jpg"/>+6016 959 3762</div>
 					<div class="box p-r"><img src="images/common/whatsapp.png"/>Whatsapp</div>
-					<div class="box"><img src="images/common/contact_wechat.png"/>betasia_my</div>
 				</div>
 				<div class="horizontal clearfix">
+					<div class="box p-r"><img src="images/common/contact_wechat.png"/>sbdot_my</div>
 					<div class="box p-r"><img src="images/common/contact_live.png"/><input type="button" class="btn btn-warning btn-more btn-chat" value="LIVE CHAT 24/7" onclick="parent.LC_API.open_chat_window({source:'minimized'}); return false"></div>
 				</div>
 			</div>

@@ -17,53 +17,85 @@
                 <div class="container bg-dark">
                     <h2>Banking</h2>
                     <div class="form-register">
-                        <div class="table-responsive no-bottom">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table promo-table">
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="2">Banking Options</td>
-                                        <td colspan="2">Transaction Limit (MYR)</td>
-                                        <td rowspan="2">Transaction Timeline</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Minimum</td>
-                                        <td>Maximum</td>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="4"><strong>Deposit</strong></th>
-                                    </tr>
-                                    <tr>
-                                        <td>ATM</td>
-                                        <td rowspan="2" style="vertical-align:middle;">30.00</td>
-                                        <td rowspan="2" style="vertical-align:middle;">50,000.00</td>
-                                        <td rowspan="2" style="vertical-align:middle;">15 Minutes</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Internet Banking</td>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="4"><strong>Withdrawal</strong></th>
-                                    </tr>
-                                    <tr>
-                                        <td>Local Bank Transfer</td>
-                                        <td style="vertical-align:middle;">50.00</td>
-                                        <td style="vertical-align:middle;">30,000.00</td>
-                                        <td style="vertical-align:middle;">Quick(<5,000) = 15 Minutes<br>Normal = 1 Day</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive no-bottom">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table promo-table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Bank Name</th>
+                                            <th>Transaction</th>
+                                            <th>Min. Transaction</th>
+                                            <th>Min. Processing Time</th>
+                                            <th>Max. Processing Time</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Maybank</td>
+                                            <td>Deposit</td>
+                                            <td>30.00</td>
+                                            <td>20 seconds</td>
+                                            <td>10 minutes</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Withdrawal</td>
+                                            <td>100.00</td>
+                                            <td>1 minutes</td>
+                                            <td>12 hours</td>
+                                        </tr>
+                                        <tr>
+                                                <td>CIMB Bank</td>
+                                                <td>Deposit</td>
+                                                <td>30.00</td>
+                                                <td>20 seconds</td>
+                                                <td>10 minutes</td>
+                                        </tr>
+                                        <tr>
+                                                <td></td>
+                                                <td>Withdrawal</td>
+                                                <td>30.00</td>
+                                                <td>20 seconds</td>
+                                                <td>10 minutes</td>
+                                        </tr>
+                                        <tr>
+                                                <td>HLB Bank</td>
+                                                <td>Deposit</td>
+                                                <td>30.00</td>
+                                                <td>20 seconds</td>
+                                                <td>10 minutes</td>
+                                        </tr>
+                                        <tr>
+                                                <td></td>
+                                                <td>Withdrawal</td>
+                                                <td>30.00</td>
+                                                <td>20 seconds</td>
+                                                <td>10 minutes</td>
+                                        </tr>
+                                        <tr>
+                                                <td>Public Bank</td>
+                                                <td>Deposit</td>
+                                                <td>30.00</td>
+                                                <td>20 seconds</td>
+                                                <td>10 minutes</td>
+                                        </tr>
+                                        <tr>
+                                                <td></td>
+                                                <td>Withdrawal</td>
+                                                <td>30.00</td>
+                                                <td>20 seconds</td>
+                                                <td>10 minutes</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br>
+                            <h5>Friendly Reminder</h5>
+                            <ol class="padding-style9">
+                                <li>All Deposit and Withdrawal Processing time are subject to Online Banking availability.</li>
+                                <li>Withdrawal are only to be paid to individual bank account with the same REGISTERED name</li> 
+                                <li>Please be inform that large withdrawal amount might be take longer processing time.</li> 
+                                <li>Please note that if you have any outstanding bonuses on your account, you may not be able to withdraw until you meet the terms of that bonus.</li> 
+                                <li>All Deposit are required to meet at least (1) one time rollover amount of the deposit before any withdrawal are to be made.</li>                                         
+                            </ol>				
                         </div>
-                        <br>
-                        <ol class="padding-style9">
-                            <li>The minimum amount is based on per transaction.</li>
-                            <li>The maximum amount is based on per transaction per day.</li>
-                            <li>Large withdrawal amount might take longer to be processed.</li>
-                            <li>Processing times only come into effect once we have received and verified your transaction request.</li>
-                            <li>Please note that if you have any outstanding bonuses on your account you may not be able to withdraw until you meet the terms of that bonus.</li>
-                            <li>In the condition of the stakes that below 50% of the total deposited amount, any withdrawal requests would be subjected to 10% service &amp; administration charges based on total deposited amount.</li>
-                            <li>An SMS notification will be sent to you every time funds are deposited to or withdrawn from your player account.</li>			
-                        </ol>				
-                    </div>
                 </div>
                 
         
@@ -73,7 +105,7 @@
             
         <div class="overlay" />
                     <div class="overlayContent">
-                        <img src="{{ asset('images/ajax-loader.gif') }}" alt="Loading" border="1" />
+                        <img src="{{ asset('mobile/images/ajax-loader.gif') }}" alt="Loading" border="1" />
                     </div>
             
         </div>

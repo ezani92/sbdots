@@ -20,7 +20,7 @@
                             <div class="row product-wrap margin-none-side">
                                 <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
                                     <div class="col-md-12 padding-style6">
-                                        <img src="{{ asset('images/common/product/winningft.jpg') }}" class="img-responsive width-full" />
+                                        <img src="{{ asset('mobile/images/common/product/winningft.jpg') }}" class="img-responsive width-full" />
                                     </div>
                                     <div class="col-md-12 download-wrap">
                                         <button type="button" class="btn btn-warning btn-block"><i class="fa fa-html5"></i> play now</button>
@@ -31,7 +31,7 @@
                             <div class="row product-wrap margin-none-side">
                                 <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
                                     <div class="col-md-12 padding-style6">
-                                        <img src="{{ asset('images/common/product/maxbet.jpg') }}" class="img-responsive width-full" />
+                                        <img src="{{ asset('mobile/images/common/product/maxbet.jpg') }}" class="img-responsive width-full" />
                                     </div>
                                     <div class="col-md-12 download-wrap">
                                         <button type="button" class="btn btn-warning btn-block"><i class="fa fa-html5"></i> play now</button>
@@ -42,7 +42,7 @@
                             <div class="row product-wrap margin-none-side">
                                 <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
                                     <div class="col-md-12 padding-style6">
-                                        <img src="{{ asset('images/common/product/sbobet.jpg') }}" class="img-responsive width-full" />
+                                        <img src="{{ asset('mobile/images/common/product/sbobet.jpg') }}" class="img-responsive width-full" />
                                     </div>
                                     <div class="col-md-12 download-wrap">
                                         <button type="button" class="btn btn-warning btn-block"><i class="fa fa-apple"></i><i class="fa fa-android"></i> Download</button>
@@ -58,7 +58,7 @@
             
         <div class="overlay" />
                     <div class="overlayContent">
-                        <img src="{{ asset('images/ajax-loader.gif') }}" alt="Loading" border="1" />
+                        <img src="{{ asset('mobile/images/ajax-loader.gif') }}" alt="Loading" border="1" />
                     </div>
             
         </div>

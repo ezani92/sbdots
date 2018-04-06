@@ -25,6 +25,18 @@ class FrontController extends Controller
         return view('front.index');
     }
 
+    public function about_us()
+    {
+    	$agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.about_us');
+        }
+
+        return view('front.about_us');
+    }
+
     public function downloads()
     {
         $agent = new Agent;
@@ -130,6 +142,8 @@ class FrontController extends Controller
             return view('mobile.banking');
         }
 
+        return view('front.banking');
+
     }
 
     public function registration()
@@ -155,6 +169,32 @@ class FrontController extends Controller
         }
 
     	return view('front.contact_us');
+    }
+
+    public function faq()
+    {
+
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.faq');
+        }
+
+    	return view('front.faq');
+    }
+
+    public function tnc()
+    {
+
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.tnc');
+        }
+
+    	return view('front.tnc');
     }
 
 }

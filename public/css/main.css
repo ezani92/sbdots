@@ -702,12 +702,18 @@ display:flex;
 }
 
 .half-box.icon {
-    padding-left: 75px;
+	padding-left: 75px;
+	flex: 1;
 }
 
 .half-box h2.title {
-	position: relative;
-	color: #ffbf47;
+    position: relative;
+    color: #ffbf47;
+    min-height: 70px;
+    vertical-align: middle;
+    display: flex;
+	align-items: center;
+	font-size: 26px;
 }
 
 .container.terms h2.title {
@@ -723,6 +729,18 @@ padding: 36px 12px;
 
 }
 
+li.main-faq {
+    margin-bottom: 30px;
+}
+
+.container.payments > div {
+    flex: 1;
+}
+
+.container.payments > div.powered_by {
+    text-align: center;
+}
+
 .container.payments h2.title {
 
 	text-transform: capitalize;
@@ -734,7 +752,6 @@ padding: 36px 12px;
 
 .container.payments img.footer-poweredby {
     width: 200px;
-    height: 100%;
     margin: 0 auto;
 }
 

@@ -121,7 +121,7 @@
             
         <div class="overlay" />
                     <div class="overlayContent">
-                        <img src="{{ asset('images/ajax-loader.gif') }}" alt="Loading" border="1" />
+                        <img src="{{ asset('mobile/images/ajax-loader.gif') }}" alt="Loading" border="1" />
                     </div>
             
         </div>

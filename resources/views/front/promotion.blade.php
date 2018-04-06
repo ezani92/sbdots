@@ -31,6 +31,7 @@
 						<li><span class="filter" data-filter=".deposit">deposit bonus</span></li>
 						<li><span class="filter" data-filter=".rebate">rebate</span></li>
 						<li><span class="filter" data-filter=".special">special</span></li>
+						<li><span class="filter" data-filter=".scr88">scr88</span></li>
 					</ul>
 					
 					<!-- hash link -->
@@ -85,7 +86,7 @@
 														<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
 														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
-														<li>This promotion is not applicable for SCR888 and 918kiss.</li>
+														<li>This promotion is not applicable for SCR888 and 918kiss and Mega888.</li>
 														<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
 													</ol>
 												</div>
@@ -136,7 +137,7 @@
 														<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
 														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
-														<li>This promotion is not applicable for SCR888 and 918kiss.</li>
+														<li>This promotion is not applicable for SCR888 and 918kiss and Mega888.</li>
 														<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
 													</ol>
 												</div>
@@ -188,7 +189,7 @@
 														<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
 														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
-														<li>This promotion is not applicable for SCR888 and 918kiss.</li>
+														<li>This promotion is not applicable for SCR888 and 918kiss and Mega888.</li>
 														<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
 													</ol>
 												</div>
@@ -200,7 +201,7 @@
 										<div class="promo-button"><img src="images/en/bnr3.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
-													<h4>Existing Member: 3% Deposit Bonus (No Turnover)</h4>
+													<h4>Existing Member: 5% Deposit Bonus</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
 														<tr>
 															<th>DEPOSIT AMOUNT (RM) </th>
@@ -210,15 +211,15 @@
 														</tr>
 														<tr>
 															<td>100</td>
-															<td>3%</td>
+															<td>5%</td>
 															<td>RM1000</td>
-															<td>x1</td>
+															<td>x2</td>
 														</tr>
 													</table>
 													
 													Terms & Conditions:
 													<ol>
-														<li>SBdots will be giving away extra 3% deposit bonus to all existing member deposit.</li>
+														<li>SBdots will be giving away extra 5% deposit bonus to all existing member deposit.</li>
 														<li>
 															Member only can withdraw their deposit bonus after achieving the required rollover of deposit amount and bonus.
 															<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
@@ -229,18 +230,18 @@
 																	</tr>
 																	<tr>
 																		<td>Bonus</td>
-																		<td>RM3</td>
+																		<td>RM5</td>
 																	</tr>
 																	<tr>
 																		<td>Rollover Requirement </td>
-																		<td>(100 + 3) x 1 = RM103</td>
+																		<td>(100 + 5) x 2 = RM210</td>
 																	</tr>
 																</table>
 														</li>
 														<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
 														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
-														<li>This promotion is not applicable for SCR888 and 918kiss.</li>
+														<li>This promotion is applicable for all GAMES including slots.</li>
 														<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
 													</ol>
 												</div>
@@ -252,7 +253,7 @@
 										<div class="promo-button"><img src="images/en/bnr5.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
-												<h4>Rebate: 1% Casino Rebate</h4>
+												<h4>Rebate: 1% Cash Rebates for Sports & Live Casino </h4>
 												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
 													<tr>
 														<th>ROLLOVER</th>
@@ -268,50 +269,61 @@
 												
 												Terms & Conditions:
 												<ol>
-													<li>All active members are entitled to 0.5% cash rebate on their total amount wagered in SBdot casino product only.</li>
+													<li>All active members are entitled to 1% cash rebate on their total amount wagered in Sbdot Sportsbook & Live Casino product only.</li>
 													<li>Every Monday after 12PM (GMT+8) onwards. Member will receive the bonus into their product account within 24 hours.</li> 
 													<li>Member only can withdraw their bonus after 1x turnover of Bonus.</li> 
 													<li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus within the week, they will not be entitled to claim this rebate bonus.</li>
 													<li>Any bet place on two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement.</li> 
 													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li> 
 													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirements are no longer applicable to subsequent deposits (Credits lower than RM10 that mean member has losses the full bonus amount).</li>
-													<li>This promotion is not applicable for SCR888, 918kiss.</li>
+													<li>This promotion is not applicable for SCR888, 918kiss and Mega888.</li>
 													<li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  	
 												</ol>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div id="welcome" class="portfolio latest special">
+								<div id="welcome" class="portfolio latest special scr88">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr6.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
-													<h4>Rebate: 1% Sports Rebate</h4>
+													<h4>Special: 10% Extra Winning Bonus</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
 														<tr>
-															<th>ROLLOVER</th>
-															<th>REBATE BONUS (%)</th>
-															<th>ROLLOVER REQUIREMENT</th>
+															<th>REQUIREMENT</th>
+															<th>BONUS AMOUNT</th>
+															<th>MAXIMUM BONUS PAYOUT</th>
 														</tr>
 														<tr>
-															<td>10k></td>
-															<td>1%</td>
-															<td>x1</td>
+															<td>5 times of deposit amount  </td>
+															<td>5%</td>
+															<td>RM500</td>
+														</tr>
+														<tr>
+															<td>15 times of deposit amount  </td>
+															<td>10%</td>
+															<td>RM1000</td>
 														</tr>
 													</table>
 													
 													Terms & Conditions:
 													<ol>
-														<li>All active members are entitled to 0.25% cash rebate on their total amount wagered in SBdot sport product only.</li>
-														<li>Every Monday after 12PM (GMT+8) onwards. Member will receive the bonus into their product account within 24 hours.</li> 
-														<li>Member only can withdraw their bonus after 1x turnover of Bonus.</li> 
-														<li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus within the week, they will not be entitled to claim this rebate bonus.</li>
+														<li>All members are that taken 5% deposit bonus are entitled for this special bonus. If members are able to win up to 5 times of the deposit amount, they will be eligible to receive extra 5% winning bonus during their withdrawal. If members are able to win up to 10 times of their deposit amount, they will eligible to receive extra 10% winning bonus during withdrawal.</li>
+														<li>Example: 
+															<ol type="a">
+																<li>Deposit = RM500</li> 
+																<li>Bonus taken = 5% daily deposit</li> 
+																<li>Total Winning Withdrawal = (RM500 + RM25) x 10 times = RM5,250</li> 
+																<li>Extra Bonus = RM525</li> 
+															</ol>
+														</li>
+														<li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus (except for 5% deposit bonus) within the transactions, they will not be entitled to claim this special bonus.</li>
 														<li>Any bet place on two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement.</li> 
-														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li> 
+														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirements are no longer applicable to subsequent deposits (Credits lower than RM10 that mean member has losses the full bonus amount).</li>
-														<li>This promotion is not applicable for SCR888, 918kiss.</li>
-														<li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  	
+														<li>This promotion is not applicable for SCR888, 918kiss and Mega888.</li> 
+														<li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  															
 													</ol>
 												</div>
 										</div>

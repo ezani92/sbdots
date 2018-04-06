@@ -14,6 +14,7 @@ Route::any('/webhook', 'WebhookController@test');
 
 
 Route::get('/', 'FrontController@index');
+Route::get('/about_us', 'FrontController@about_us');
 Route::get('/downloads', 'FrontController@downloads');
 Route::get('/sportsbooks', 'FrontController@sportsbooks');
 Route::get('/live_casinos', 'FrontController@live_casinos');
@@ -25,6 +26,8 @@ Route::get('/promotions', 'FrontController@promotions');
 Route::get('/banking', 'FrontController@banking');
 Route::get('/registration', 'FrontController@registration');
 Route::get('/contact_us', 'FrontController@contact_us');
+Route::get('/faq', 'FrontController@faq');
+Route::get('/tnc', 'FrontController@tnc');
 
 
 // API START
