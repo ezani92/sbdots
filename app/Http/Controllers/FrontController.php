@@ -40,6 +40,8 @@ class FrontController extends Controller
     public function sportsbooks()
     {
 
+        $agent = new Agent;
+
         if($agent->isMobile())
         {
             return 'mobile.sportsbook';
@@ -50,6 +52,9 @@ class FrontController extends Controller
 
     public function live_casinos()
     {
+
+        $agent = new Agent;
+
         if($agent->isMobile())
         {
             return 'mobile.live_casino';
@@ -60,6 +65,9 @@ class FrontController extends Controller
 
     public function slots()
     {
+
+        $agent = new Agent;
+
         if($agent->isMobile())
         {
             return 'mobile.slot';
@@ -70,6 +78,8 @@ class FrontController extends Controller
 
     public function arcades()
     {
+
+        $agent = new Agent;
 
         if($agent->isMobile())
         {
@@ -86,6 +96,9 @@ class FrontController extends Controller
 
     public function lottery()
     {
+
+        $agent = new Agent;
+
         if($agent->isMobile())
         {
             return 'mobile.lottery';
@@ -97,6 +110,8 @@ class FrontController extends Controller
     public function promotions()
     {
 
+        $agent = new Agent;
+
         if($agent->isMobile())
         {
             return 'mobile.promotion';
@@ -107,6 +122,8 @@ class FrontController extends Controller
 
     public function contact_us()
     {
+
+        $agent = new Agent;
 
         if($agent->isMobile())
         {
