@@ -38,4 +38,9 @@ class DashboardController extends Controller
     		'pending_transactions' => $pending_transactions
     	]);
     }
+
+    public function login()
+    {
+        return view('admin.login');
+    }
 }
