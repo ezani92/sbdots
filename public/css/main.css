@@ -803,9 +803,9 @@ flex-basis:100%;
 width:100%;
 
 }
-.half-box.icon p.description {
+/*.half-box.icon p.description {
     padding-left: 30px;
-}
+} */
 
 .half-box.icon h2.title.footer-icon1:before {
 	content: "";

@@ -1,6 +1,6 @@
 <div class="content-controls">
     <a href="#" class="deploy-sidebar"><i class="fa fa-fw fa-bars"></i></a>
-    <em class="content-title"><a href="home"><img src="{{ asset('images/common/sb_logo.png') }}" class="logo"></a></em>
+    <em class="content-title"><a href="home"><img src="{{ asset('images/common/SB_Dot_logo_black-01.png') }}" class="logo"></a></em>
     <a href="#" id="ctl00_btnloginfront" class="deploy-contact" data-toggle="modal" data-target="#login">login</a>
 </div>
 
