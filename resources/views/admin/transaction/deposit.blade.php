@@ -77,7 +77,7 @@
 </script>
 <script type="text/javascript">
 	$('[data-toggle="datepicker"]').datepicker({
-	  	format: 'dd-mm-yyyy',
+	  	dateFormat: 'dd-mm-yy',
 	  	autoclose: true,
 	});
 

@@ -48,7 +48,17 @@ class LoginController extends Controller
         
         else if (\Auth::user()->role == '2')
         {
-            return '/agent';
+            return '/staff';
+        }
+
+        else if (\Auth::user()->role == '3')
+        {
+            return '/player';
+        }
+
+        else if (\Auth::user()->role == '4')
+        {
+            return '/affiliate';
         }
     }
 }

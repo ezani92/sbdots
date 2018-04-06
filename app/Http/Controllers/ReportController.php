@@ -16,6 +16,7 @@ class ReportController extends Controller
 
         if(isset($input['date_from']))
         {
+
             $from = Carbon::createFromFormat('d-m-Y',$input['date_from']);
             $to = Carbon::createFromFormat('d-m-Y',$input['date_to']);
 
