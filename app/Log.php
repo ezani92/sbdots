@@ -16,3 +16,5 @@ class Log extends Model
         return $this->belongsTo('App\Transaction');
     }
 }
+
+//this is comment
