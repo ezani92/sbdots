@@ -54,40 +54,7 @@
                             </li>
                         </ul>
                         <div class="page-title"><span></span></div>
-                        <ul class="nav navbar-nav navbar-right be-icons-nav">
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle"><span class="icon mdi mdi-notifications"></span><span class="indicator"></span></a>
-                                <ul class="dropdown-menu be-notifications">
-                                    <li>
-                                        <div class="title">Notifications<span class="badge">{{ \Auth::user()->unreadNotifications->count() }}</span></div>
-                                        <div class="list">
-                                            <div class="be-scroller">
-                                                <div class="content">
-                                                    <ul>
-                                                        @foreach(Auth::user()->unreadNotifications as $notification)
-                                                        <li class="notification notification-unread">
-                                                            @if($notification->type == 'App\Notifications\NewDeposit')
-                                                            <a href="{{ url('/admin/transaction/'.$notification->data['transaction_id']) }}">
-                                                                <div class="image"><img src="{{ secure_asset('assets/img/avatar2.png') }}" alt="Avatar"></div>
-                                                                <div class="notification-info">
-                                                                    <div class="text"><span class="user-name">{{ $notification->data['title'] }}</span> {{ $notification->data['message'] }}</div>
-                                                                    <span class="date">{{ $notification->created_at->diffForHumans() }}</span>
-                                                                </div>
-                                                            </a>
-                                                            @else
-
-                                                            @endif
-                                                        </li>
-                                                        @endforeach
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="footer"> <a href="{{ url('admin/') }}">View all notifications</a></div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                        
                     </div>
                 </div>
             </nav>
@@ -99,74 +66,14 @@
                             <div class="left-sidebar-content">
                                 <ul class="sidebar-elements">
                                     <li class="divider">Menu</li>
-                                    <li class="{{ Request::is('admin') ? 'active' : '' }}"><a href="{{ url('admin') }}"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
-                                    </li>
-                                    <li class="parent {{ Request::is('admin/games*') ? 'active' : '' }}">
-                                        <a href="#"><i class="icon mdi mdi-gamepad"></i><span>Games</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="{{ Request::is('admin/games') ? 'active' : '' }}"><a href="{{ url('admin/games') }}">Game Lists</a>
-                                            </li>
-                                            <li class="{{ Request::is('admin/games/create') ? 'active' : '' }}"><a href="{{ url('admin/games/create') }}">Add New Game</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="parent {{ Request::is('admin/banks*') ? 'active' : '' }}">
-                                        <a href="#"><i class="icon mdi mdi-city"></i><span>Banks</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="{{ Request::is('admin/banks') ? 'active' : '' }}"><a href="{{ url('admin/banks') }}">Bank Lists</a>
-                                            </li>
-                                            <li class="{{ Request::is('admin/banks/create') ? 'active' : '' }}"><a href="{{ url('admin/banks/create') }}">Add New Bank</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="parent {{ Request::is('admin/bonuses*') ? 'active' : '' }}">
-                                        <a href="#"><i class="icon mdi mdi-ticket-star"></i><span>Bonuses</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="{{ Request::is('admin/bonuses') ? 'active' : '' }}"><a href="{{ url('admin/bonuses') }}">Bonus Lists</a>
-                                            </li>
-                                            <li class="{{ Request::is('admin/bonuses/create') ? 'active' : '' }}"><a href="{{ url('admin/bonuses/create') }}">Add New Bonus Code</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="parent {{ Request::is('admin/transaction*') ? 'active' : '' }}">
-                                        <a href="#"><i class="icon mdi mdi-view-list-alt"></i><span>Transactions</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="{{ Request::is('admin/transaction/deposit') ? 'active' : '' }}"><a href="{{ url('admin/transaction/deposit') }}">Deposit Transaction</a>
-                                            </li>
-                                            <li class="{{ Request::is('admin/transaction/withdrawal') ? 'active' : '' }}"><a href="{{ url('admin/transaction/withdrawal') }}">Withdrawal Transaction</a>
-                                            </li>
-                                            <li class="{{ Request::is('admin/transaction/transfer') ? 'active' : '' }}"><a href="{{ url('admin/transaction/transfer') }}">Transfer Transaction</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="{{ Request::is('admin/reports*') ? 'active' : '' }}"><a href="{{ url('admin/reports') }}"><i class="icon mdi mdi-chart"></i><span>Reports</span></a>
+                                    <li class="{{ Request::is('affiliate') ? 'active' : '' }}"><a href="{{ url('admin') }}"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
                                     </li>
                                     
-                                    <li class="divider">Admin Action</li>
-                                    <li class="parent {{ Request::is('admin/users*') ? 'active' : '' }}">
-                                        <a href="#"><i class="icon mdi mdi-account"></i><span>User Accounts</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="{{ Request::is('admin/users') ? 'active' : '' }}"><a href="{{ url('admin/users') }}">User Lists</a>
-                                            </li>
-                                            <li class="{{ Request::is('admin/users/create') ? 'active' : '' }}"><a href="{{ url('admin/users/create') }}">Add New User</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="parent {{ Request::is('admin/groups*') ? 'active' : '' }}">
-                                        <a href="#"><i class="icon mdi mdi-accounts"></i><span>User Group</span></a>
-                                        <ul class="sub-menu">
-                                            <li class="{{ Request::is('admin/groups') ? 'active' : '' }}"><a href="{{ url('admin/groups') }}">Group Lists</a>
-                                            </li>
-                                            <li class="{{ Request::is('admin/groups/create') ? 'active' : '' }}"><a href="{{ url('admin/groups/create') }}">Add New Group</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="{{ Request::is('admin/settings*') ? 'active' : '' }}"><a href="{{ url('admin/settings') }}"><i class="icon mdi mdi-settings"></i><span>Settings</span></a>
-                                    </li>
+
+                                    {{-- <li class="{{ Request::is('affiliate/reports*') ? 'active' : '' }}"><a href="{{ url('affiliate/reports') }}"><i class="icon mdi mdi-chart"></i><span>Reports</span></a>
+                                    </li> --}}
+                                    
+                                    
                                     
                                 </ul>
                             </div>

@@ -22,4 +22,9 @@ class Transaction extends Model
     {
         return $this->belongsTo('App\Bank');
     }
+
+    public function logs()
+    {
+        return $this->hasMany('App\Log');
+    }
 }

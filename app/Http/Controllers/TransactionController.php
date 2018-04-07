@@ -320,13 +320,16 @@ class TransactionController extends Controller
      */
     public function show(Transaction $transaction)
     {   
+
+        $logs = Log::where('transaction_id',$transaction->id)->get();
+
         if(\Auth::user()->role == 1)
         {
-            return view('admin.transaction.show',compact('transaction'));
+            return view('admin.transaction.show',compact('transaction','logs'));
         }
         else
         {
-            return view('staff.transaction.show',compact('transaction'));
+            return view('staff.transaction.show',compact('transaction','logs'));
         }
         
     }

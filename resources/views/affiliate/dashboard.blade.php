@@ -1,77 +1,85 @@
-@include('admin.header')
+@include('affiliate.header')
     <div class="be-content">
         <div class="main-content container-fluid">
+        	<div class="row">
+        		<div class="col-md-12">
+        			<div class="well"><h3>My Referral Link : {{ url('/') }}/?ref={{ \Auth::user()->affiliate_id }}</h3></div>
+        		</div>
+        	</div>
 			<div class="row">
 				<div class="col-md-3">
-					<div class="well"><h3>Today Registered : {{ $user_today }}</h3></div>
+					<div class="well"><h3>Today Members Registered  : {{ $user_today }}</h3></div>
 				</div>
 				<div class="col-md-3">
-					<div class="well"><h3>Today Deposit : RM {{ $today_deposit_sum }}</h3></div>
+					<div class="well"><h3>Today Members Deposit : RM {{ $today_deposit_sum }}</h3></div>
 				</div>
 				<div class="col-md-3">
-					<div class="well"><h3>Today Withdrawal : RM {{ $today_withdraw_sum }}</h3></div>
+					<div class="well"><h3>Today Members Withdraw : RM {{ $today_withdraw_sum }}</h3></div>
 				</div>
 				<div class="col-md-3">
-					<div class="well"><h3>Today Bonus : RM {{ $today_bonus_amount }}</h3></div>
-				</div>
-				<div class="col-md-3">
-					<div class="well"><h3>Total Pending Transaction  : {{ $pending_transaction_count }}</h3></div>
+					<div class="well"><h3>Today Win/Lose  : RM{{ $today_winlose }}</h3></div>
 				</div>
         	</div>
         	<div class="row">
-        		<div class="col-md-12">
-        			<h3>Pending Transaction</h3>
+			    <div class="col-md-12">
+			        <h3>All List of Members Under This Affiliate</h3>
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
-			                <br />
-			                <table id="transaction-table" class="table table-striped table-hover table-fw-widget">
-			                    <thead>
-			                        <tr>
-			                            <th>Transaction ID</th>
-			                            <th>Name</th>
-			                            <th>Transaction Type</th>
-			                            <th>Status</th>
-			                            <th>Date Created</th>
-			                            <th>Action</th>
-			                        </tr>
-			                    </thead>
-			                    @if($pending_transactions->count() == 0)
-			                    	<tr><td colspan="6">No Pending Transaction</td></tr>
-			                    @else
-			                    <tbody>
-			                    	@foreach($pending_transactions as $pending_transaction)
-			                    	<tr>
-			                    		<td>{{ $pending_transaction->transaction_id }}</td>
-			                    		<td>{{ $pending_transaction->user->name }}</td>
-			                    		<td>{{ $pending_transaction->transaction_type }}</td>
-			                    		<td>
-			                    			@if($pending_transaction->status == 1)
-                								<span class="label label-warning">Progress</span>
-                							@elseif($pending_transaction->status == 2)
-                    							<span class="label label-success">Complete</span>
-                							@elseif($pending_transaction->status == 3)
-                								<span class="label label-danger">Decline</span>
-                							@endif
-                						</td>
-			                    		<td>{{ $pending_transaction->created_at->format('d M Y, h:i A')  }}</td>
-			                    		<td>
-			                    			<a href="{{ URL::to('admin/transaction/'.$pending_transaction->id) }}" class="btn btn-xs btn-info">View</a>
-			                    		</td>
-			                    	</tr>
-			                    	@endforeach
-			                    </tbody>
-			                    @endif
-			                </table>
-			                {{ $pending_transactions->links() }}
-			                <br />
-			            </div>
-			        </div>
-				</div>
-        	</div>
+					        <table id="user-transaction-table" class="table table-striped table-hover table-fw-widget">
+					            <thead>
+					                <tr>
+					                    <th>Fullname</th>
+					                    <th>Email</th>
+					                    <th>Phone Number</th>
+					                    <th>Registered at</th>
+					                    <th>Win/Lose</th>
+					                </tr>
+					            </thead>
+					            <tbody>
+					            	@if($members->count() == 0)
+					            		<tr>
+					            			<td colspan="5">You have no affiliate members.</td>
+					            		</tr>
+					            	@else
+						                @foreach($members as $member)
+						                <tr>
+						                    <td>{{ $member->name }}</td>
+						                    <td>{{ $member->email }}</td>
+						                    <td>{{ $member->phone }}</td>
+						                    <td>{{ $member->created_at->format('d M Y, h:iA') }}</td>
+						                    <td>
+						                    	@php
+						                    		$member_dep = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('status',2)->sum('amount');
+
+						                    		$member_withdraw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+						                    	
+						                    		$winlose_raw = $member_dep - $member_withdraw;
+
+						                    		if($winlose_raw < 0)
+						                    		{
+						                    			$winlose = '<span class="label label-danger">RM '.number_format($winlose_raw,2).'</span>';
+						                    		}
+						                    		else
+						                    		{
+						                    			$winlose = '<span class="label label-success">RM '.number_format($winlose_raw,2).'</span>';
+						                    		}
+
+						                    	@endphp
+						                    	{!! $winlose !!}
+						                    </td>
+						                </tr>
+						                @endforeach
+						            @endif
+					            </tbody>
+					        </table>
+					    </div>
+					</div>
+			    </div>
+			</div>
 
             
                     
         </div>
     </div>
-@include('admin.footer')
+@include('affiliate.footer')
 </body></html>

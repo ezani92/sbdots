@@ -107,7 +107,26 @@
 					                    			<td>{{ $member->email }}</td>
 					                    			<td>{{ $member->phone }}</td>
 					                    			<td>{{ $member->created_at->format('d M Y, h:iA') }}</td>
-					                    			<td>-</td>
+					                    			<td>
+					                    				@php
+								                    		$member_dep = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('status',2)->sum('amount');
+
+								                    		$member_withdraw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+								                    	
+								                    		$winlose_raw = $member_dep - $member_withdraw;
+
+								                    		if($winlose_raw < 0)
+								                    		{
+								                    			$winlose = '<span class="label label-danger">RM '.number_format($winlose_raw,2).'</span>';
+								                    		}
+								                    		else
+								                    		{
+								                    			$winlose = '<span class="label label-success">RM '.number_format($winlose_raw,2).'</span>';
+								                    		}
+
+								                    	@endphp
+								                    	{!! $winlose !!}
+					                    			</td>
 					                    			<td><a class="label label-info" href="{{ url('admin/users/'.$member->id) }}">View</a></td>
 					                    		</tr>
 					                    	@endforeach

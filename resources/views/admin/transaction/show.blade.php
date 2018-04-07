@@ -37,6 +37,14 @@
 				                					<td>RM {{ $transaction->amount }}</td>
 				                				</tr>
 				                				<tr>
+				                					<td><strong>To Bank Account Name</strong></td>
+				                					<td>{{ $transaction->bank->account_name }}</td>
+				                				</tr>
+				                				<tr>
+				                					<td><strong>To Bank Account No</strong></td>
+				                					<td>{{ $transaction->bank->account_no }}</td>
+				                				</tr>
+				                				<tr>
 				                					<td><strong>Payment Menthod</strong></td>
 				                					<td>{{ $data['payment_method'] }}</td>
 				                				</tr>
@@ -150,6 +158,26 @@
 			                	</div>
 			                	<div class="col-md-6">
 			                		<a href="{{ url('admin/transaction/'.$transaction->id.'/edit') }}" class="btn btn-info btn-block">Edit Transaction</a><br />
+			                		<br />
+			                		<h4>Transaction Logs</h4>
+			                		<table class="table table-bordered table-striped">
+			                			<thead>
+					                        <tr>
+					                            <th>Staff / Admin Name</th>
+					                            <th>Details</th>
+					                            <th>Date & Time</th>
+					                        </tr>
+					                    </thead>
+			                			<tbody>
+			                				@foreach($logs as $log)
+			                				<tr>
+			                					<td>{{ $log->user->name }}</td>
+			                					<td>{!! $log->detail !!}</td>
+			                					<td>{{ $log->created_at->format('d M Y, h:i A') }}</td>
+			                				</tr>
+			                				@endforeach
+			                			</tbody>
+			                		</table>
 			                	</div>
 			                </div>
 			            </div>
