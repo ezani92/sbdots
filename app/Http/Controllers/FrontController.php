@@ -82,7 +82,7 @@ class FrontController extends Controller
 
         if($agent->isMobile())
         {
-            return view('mobile.slot');
+            return view('mobile.slots');
         }
 
     	return view('front.slot');

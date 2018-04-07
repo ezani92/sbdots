@@ -21,16 +21,16 @@
                     <div class="row why-logo"><span>why</span><img src="{{ asset('mobile/images/common/sb_logo.png') }}" class="img-responsive"/><span>?</span></div>
                     <div class="row why-wrap">
                         <div class="col-md-6 col-xs-12">
-                            <div class="why-title">300% Welcome Bonus</div>
-                            <div class="why-text">Available for NEW members for limited time only!</div>
+                            <div class="why-title">Great Promotion</div>
+                            <div class="why-text">Available for NEW Members & Existing Members all time!</div>
                         </div>
                         <div class="col-md-6 col-xs-12">
-                            <div class="why-title">Trusted & 24/7 Customer Service</div>
-                            <div class="why-text">Provide best gaming experience to thousands of Malaysian Players!</div>
+                            <div class="why-title">Trusted 24/7 Customer Services</div>
+                            <div class="why-text">Provide best gaming experiences to all of our Dear Members</div>
                         </div>
                         <div class="col-md-6 col-xs-12">
-                            <div class="why-title">Licensed & Powered by</div>
-                            <div class="why-text"><img class="footer-poweredby" src="{{ asset('images/common/sb_logo.png') }}"/></div>
+                            <div class="why-title">Powered by</div>
+                            <div class="why-text">SUperb Group, a Brand with more than 5 years experiences that you can Trust</div>
                         </div>
                     </div>			
                 </div>
