@@ -1,4 +1,4 @@
-@include('admin.header')
+@include('staff.header')
     <div class="be-content">
         <div class="main-content container-fluid">
         	@if(Session::has('message'))
@@ -11,7 +11,7 @@
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <br />
-			                <form method="POST" action="{{ url('admin/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
+			                <form method="POST" action="{{ url('staff/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
 			                	@csrf
 			                	@method('patch')
 			                	<input type="hidden" name="type_transaction" value="{{ $transaction->transaction_type }}">
@@ -55,7 +55,7 @@
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <br />
-			                <form method="POST" action="{{ url('admin/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
+			                <form method="POST" action="{{ url('staff/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
 			                	@csrf
 			                	@method('patch')
 			                	<input type="hidden" name="type_transaction" value="{{ $transaction->transaction_type }}">
@@ -98,7 +98,7 @@
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <br />
-			                <form method="POST" action="{{ url('admin/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
+			                <form method="POST" action="{{ url('staff/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
 			                	@csrf
 			                	@method('patch')
 			                	<input type="hidden" name="type_transaction" value="{{ $transaction->transaction_type }}">

@@ -1,0 +1,109 @@
+@include('admin.header')
+    <div class="be-content">
+        <div class="main-content container-fluid">
+        	@if(Session::has('message'))
+				<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+			@endif
+			<div class="row">
+			    <div class="col-md-12">
+			        <h3>User Details</h3>
+			        <div class="panel panel-default panel-border-color panel-border-color-primary">
+			            <div class="panel-body">
+			                <div class="row">
+			                	<div class="col-md-6">
+			                		<table class="table table-bordered table-striped">
+			                			<tbody>
+			                				<tr>
+			                					<td width="30%"><strong>Full Name</strong></td>
+			                					<td>{{ $user->name }}</td>
+			                				</tr>
+			                				<tr>
+			                					<td width="30%"><strong>Email</strong></td>
+			                					<td>{{ $user->email }}</td>
+			                				</tr>
+			                				<tr>
+			                					<td width="30%"><strong>Role</strong></td>
+			                					<td>
+			                						@if($user->role == 1)
+			                							Administrator
+			                						@elseif($user->role == 2)
+			                							Staff
+			                						@elseif($user->role == 3)
+			                							User
+			                						@endif
+			                					</td>
+			                				</tr>
+			                				<tr>
+			                					<td width="30%"><strong>Phone Number</strong></td>
+			                					<td>{{ $user->phone }}</td>
+			                				</tr>
+			                				<tr>
+			                					<td><strong>Register At</strong></td>
+			                					<td>{{ $user->created_at->format('d M Y,  h:iA') }}</td>
+			                				</tr>
+			                			</tbody>
+			                		</table>
+			                	</div>
+			                	<div class="col-md-6">
+			                		{{-- <table class="table table-bordered table-striped">
+			                			<tbody>
+			                				<tr>
+			                					<td width="60%"><strong>Total Approve Deposit</strong></td>
+			                					<td>{{ $user->transactions->where('transaction_type','deposit')->where('status',2)->count() }} (RM {{ $user->transactions->where('transaction_type','deposit')->where('status',2)->sum('amount') }})</td>
+			                				</tr>
+			                				<tr>
+			                					<td width="60%"><strong>Total Approve Withdraw</strong></td>
+			                					<td>{{ $user->transactions->where('transaction_type','withdraw')->where('status',2)->count() }} (RM {{ $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount') }})</td>
+			                				</tr>
+			                				<tr>
+			                					<td width="60%"><strong>Win Lost Rate (Withdraw - deposit)</strong></td>
+			                					<td>RM {{ $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount') - $user->transactions->where('transaction_type','deposit')->where('status',2)->sum('amount') }}</td>
+			                				</tr>
+			                			</tbody>
+			                		</table> --}}
+
+			                		<a href="{{ url('admin/users/'.$user->id.'/edit') }}" class="btn btn-info btn-block">Edit User</a><br />
+
+			                		@if($user->is_ban == 0)
+			                			<a href="{{ url('admin/users/'.$user->id.'/ban') }}" onclick="return confirm('Are you sure?');" class="btn btn-danger btn-block">Ban User</a><br />
+			                		@else
+			                			<a href="{{ url('admin/users/'.$user->id.'/unban') }}" onclick="return confirm('Are you sure?');" class="btn btn-success btn-block">Un-Ban User</a><br />
+			                		@endif
+			                	</div>
+			                </div>
+			                <div class="row">
+			                	<div class="col-md-12">
+			                		<h3>Staff Log</h3>
+			                		<table id="staff-log-table" class="table table-striped table-hover table-fw-widget">
+					                    <thead>
+					                        <tr>
+					                            <th>Date Time</th>
+					                            <th>Transaction</th>
+					                            <th>Details</th>
+					                        </tr>
+					                    </thead>
+					                </table>
+			                	</div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+    </div>
+@include('admin.footer')
+<script>
+    $(function() {
+        $('#staff-log-table').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: '{{ url('admin/users/'.$user->id.'/logs-data') }}',
+            columns: [
+                { data: 'created_at', name: 'created_at' },
+                { data: 'transaction_id', name: 'transaction_id' },
+                { data: 'detail', name: 'detail' },
+            ]
+        });
+    });
+</script>
+</body></html>

@@ -1,0 +1,1 @@
+<a href="{{ URL::to('admin/users/'.$user->id) }}" class="btn btn-xs btn-info">View</a>

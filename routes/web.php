@@ -91,6 +91,7 @@ Route::middleware(['isadmin'])->group(function () {
 
     Route::get('/admin/users/data', 'UserController@data');
     Route::get('/admin/users/{user_id}/transaction-data', 'UserController@transactiondata');
+    Route::get('/admin/users/{user_id}/logs-data', 'UserController@logsdata');
     Route::get('/admin/users/{user_id}/ban', 'UserController@ban');
     Route::get('/admin/users/{user_id}/unban', 'UserController@unban');
     Route::resource('/admin/users', 'UserController');
@@ -107,9 +108,53 @@ Route::middleware(['isadmin'])->group(function () {
 
 Route::middleware(['isstaff'])->group(function () {
     
-    Route::get('/staff', function () {
-	    return 'staff';
-	});
+    Route::get('/staff', 'DashboardController@index');
+
+    Route::get('/staff/games/data', 'GameController@data');
+    Route::resource('/staff/games', 'GameController');
+
+    Route::get('/staff/banks/data', 'BankController@data');
+    Route::resource('/staff/banks', 'BankController');
+    Route::get('/staff/banks/{bank_id}/data', 'BankRecordController@data');
+    Route::post('/staff/banks/{bank_id}/debit', 'BankController@debit');
+    Route::post('/staff/banks/{bank_id}/credit', 'BankController@credit');
+
+    Route::get('/staff/bonuses/data-active', 'BonusController@dataActive');
+    Route::get('/staff/bonuses/data-deactive', 'BonusController@dataDeactive');
+    Route::resource('/staff/bonuses', 'BonusController');
+    Route::get('/staff/bonuses/{bonus_id}/restore', 'BonusController@restore');
+
+    Route::get('/staff/transaction/data', 'TransactionController@data');
+
+    Route::get('/staff/transaction/deposit', 'TransactionController@deposit');
+    Route::get('/staff/transaction/deposit-data', 'TransactionController@depositData');
+
+    Route::get('/staff/transaction/withdrawal', 'TransactionController@withdrawal');
+    Route::get('/staff/transaction/withdrawal-data', 'TransactionController@withdrawalData');
+
+    Route::get('/staff/transaction/transfer', 'TransactionController@transfer');
+    Route::get('/staff/transaction/transfer-data', 'TransactionController@transferData');
+
+    Route::get('/staff/reports', 'ReportController@index');
+
+    Route::resource('/staff/transaction', 'TransactionController');
+
+    Route::get('/staff/settings', 'settingController@index');
+    Route::post('/staff/settings', 'settingController@update');
+
+    Route::get('/staff/users/data', 'UserController@data');
+    Route::get('/staff/users/{user_id}/transaction-data', 'UserController@transactiondata');
+    Route::get('/staff/users/{user_id}/logs-data', 'UserController@logsdata');
+    Route::get('/staff/users/{user_id}/ban', 'UserController@ban');
+    Route::get('/staff/users/{user_id}/unban', 'UserController@unban');
+    Route::resource('/staff/users', 'UserController');
+
+    Route::post('staff/user/transaction/deposit', 'UserController@deposit');
+    Route::post('staff/user/transaction/withdraw', 'UserController@withdraw');
+    Route::post('staff/user/transaction/transfer', 'UserController@transfer');
+
+    Route::get('/staff/groups/data', 'GroupController@data');
+    Route::resource('/staff/groups', 'GroupController');
     
 });
 

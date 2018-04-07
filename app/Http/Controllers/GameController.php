@@ -19,7 +19,16 @@ class GameController extends Controller
     {
         $games = Game::all();
 
-        return view('admin.games.index');
+        if(\Auth::user()->role == 1)
+        {
+
+            return view('admin.games.index');
+
+        }
+        else
+        {
+            return view('staff.games.index');
+        }
     }
 
     public function data(Datatables $datatables)
@@ -84,7 +93,17 @@ class GameController extends Controller
      */
     public function show(Game $game)
     {
-        return view('admin.games.show',compact('game'));
+        if(\Auth::user()->role == 1)
+        {
+
+            return view('admin.games.show',compact('game'));
+
+        }
+        else
+        {
+            return view('staff.games.show',compact('game'));
+        }
+        
     }
 
     /**

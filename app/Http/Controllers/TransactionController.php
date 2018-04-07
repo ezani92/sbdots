@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
 use App\BankRecord;
+use App\Log;
 use Auth;
 
 class TransactionController extends Controller
@@ -74,7 +75,17 @@ class TransactionController extends Controller
 
     public function deposit()
     {
-        return view('admin.transaction.deposit');
+        if(\Auth::user()->role == 1)
+        {
+
+            return view('admin.transaction.deposit');
+
+        }
+        else
+        {
+            return view('staff.transaction.deposit');
+        }
+
     }
 
     public function depositData(Datatables $datatables,Request $request)
@@ -135,7 +146,18 @@ class TransactionController extends Controller
 
     public function withdrawal()
     {
-        return view('admin.transaction.withdrawal');
+        if(\Auth::user()->role == 1)
+        {
+
+            return view('admin.transaction.withdrawal');
+
+        }
+        else
+        {
+            return view('staff.transaction.withdrawal');
+        }
+
+
     }
 
     public function withdrawalData(Datatables $datatables,Request $request)
@@ -202,7 +224,17 @@ class TransactionController extends Controller
 
     public function transfer()
     {
-        return view('admin.transaction.transfer');
+        if(\Auth::user()->role == 1)
+        {
+
+            return view('admin.transaction.transfer');
+
+        }
+        else
+        {
+            return view('staff.transaction.transfer');
+        }
+
     }
 
     public function transferData(Datatables $datatables)
@@ -287,8 +319,16 @@ class TransactionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Transaction $transaction)
-    {
-        return view('admin.transaction.show',compact('transaction'));
+    {   
+        if(\Auth::user()->role == 1)
+        {
+            return view('admin.transaction.show',compact('transaction'));
+        }
+        else
+        {
+            return view('staff.transaction.show',compact('transaction'));
+        }
+        
     }
 
     /**
@@ -308,7 +348,16 @@ class TransactionController extends Controller
             $bonus = $transaction->bonus->name;
         }
 
-        return view('admin.transaction.edit',compact('transaction','bonus'));
+        if(\Auth::user()->role == 1)
+        {
+            return view('admin.transaction.edit',compact('transaction','bonus'));
+        }
+        else
+        {
+            return view('staff.transaction.edit',compact('transaction','bonus'));
+        }
+
+        
     }
 
     /**
@@ -321,6 +370,22 @@ class TransactionController extends Controller
     public function update(Request $request, Transaction $transaction)
     {
         $input = $request->all();
+
+        $log = new Log;
+        $log->user_id = Auth::user()->id;
+
+        if($input['status'] == 1)
+        {
+            $status = '<span class="label label-warning">Progress</span>';
+        }
+        else if($input['status'] == 3)
+        {
+            $status = '<span class="label label-danger">Rejected</span>';
+        }
+        else if($input['status'] == 2)
+        {
+            $status = '<span class="label label-success">Success</span>';  
+        }
 
         if($input['type_transaction'] == 'deposit')
         {
@@ -338,6 +403,8 @@ class TransactionController extends Controller
                 $transaction_bonus->remarks = 'Bonus for deposit transaction [#'.sprintf('%06d', $transaction->id).']';
 
                 $transaction_bonus->save();
+
+                $log->detail = 'Add bonus for transaction [#'.sprintf('%06d', $transaction->id).']';
             }
 
 
@@ -359,7 +426,6 @@ class TransactionController extends Controller
 
                 $transaction->first_time_update = 1;
             }
-
             
 
         }
@@ -396,12 +462,27 @@ class TransactionController extends Controller
             $transaction->remarks = $input['remarks'];
         }
 
+        $log->transaction_id = $transaction->id;
+        $log->detail = 'SET transaction as '.$status;
+        $log->save();
+
         $transaction->save();
 
         Session::flash('message', 'Transaction succesfully updated!'); 
         Session::flash('alert-class', 'alert-success');
 
-        return redirect('admin/transaction/'.$transaction->id);
+        if(\Auth::user()->role == 1)
+        {
+
+            return redirect('admin/transaction/'.$transaction->id);
+
+        }
+        else
+        {
+            return redirect('staff/transaction/'.$transaction->id);
+        }
+
+        
     }
 
     /**

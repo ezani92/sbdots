@@ -1,0 +1,1 @@
+<a href="{{ URL::to('admin/bonuses/'.$bonus->id.'/restore') }}" class="btn btn-xs btn-success">Activated</a>

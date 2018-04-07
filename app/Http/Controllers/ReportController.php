@@ -73,24 +73,46 @@ class ReportController extends Controller
 
         // where('created_at','>=',$from)->where('created_at','<=',$to)->
 
-
+        if(\Auth::user()->role == 1)
+        {
+            return view('admin.reports.summary',[
+                'transactions' => $transactions ,
+                'total_user' => $total_user,
+                'user_today' => $user_today,
+                'total_transaction' => $total_transaction,
+                'pending_transaction_count' => $pending_transaction_count,
+                'pending_transactions' => $pending_transactions,
+                'count_deposit' => $count_deposit,
+                'count_withdrawal' => $count_withdrawal,
+                'count_transfer' => $count_transfer,
+                'worth_deposit' => $worth_deposit,
+                'worth_withdrawal' => $worth_withdrawal,
+                'worth_bonus' => $worth_bonus,
+                'input' => $input,
+                'winlose' => $winlose
+            ]);
+        }
+        else
+        {
+            return view('staff.reports.summary',[
+                'transactions' => $transactions ,
+                'total_user' => $total_user,
+                'user_today' => $user_today,
+                'total_transaction' => $total_transaction,
+                'pending_transaction_count' => $pending_transaction_count,
+                'pending_transactions' => $pending_transactions,
+                'count_deposit' => $count_deposit,
+                'count_withdrawal' => $count_withdrawal,
+                'count_transfer' => $count_transfer,
+                'worth_deposit' => $worth_deposit,
+                'worth_withdrawal' => $worth_withdrawal,
+                'worth_bonus' => $worth_bonus,
+                'input' => $input,
+                'winlose' => $winlose
+            ]);
+        }
     	
 
-    	return view('admin.reports.summary',[
-            'transactions' => $transactions ,
-    		'total_user' => $total_user,
-    		'user_today' => $user_today,
-    		'total_transaction' => $total_transaction,
-    		'pending_transaction_count' => $pending_transaction_count,
-    		'pending_transactions' => $pending_transactions,
-    		'count_deposit' => $count_deposit,
-    		'count_withdrawal' => $count_withdrawal,
-    		'count_transfer' => $count_transfer,
-            'worth_deposit' => $worth_deposit,
-            'worth_withdrawal' => $worth_withdrawal,
-            'worth_bonus' => $worth_bonus,
-            'input' => $input,
-            'winlose' => $winlose
-    	]);
+    	
     }
 }

@@ -28,15 +28,32 @@ class DashboardController extends Controller
 
     	$pending_transactions = Transaction::where('status',1)->paginate(10);
 
-    	return view('admin.dashboard',[
-    		'user_today' => $user_today,
-            'today_deposit_sum' => $today_deposit_sum,
-            'today_withdraw_sum' => $today_withdraw_sum,
-            'today_bonus_amount' => $today_bonus_amount,
-    		'total_transaction' => $total_transaction,
-    		'pending_transaction_count' => $pending_transaction_count,
-    		'pending_transactions' => $pending_transactions
-    	]);
+        if(\Auth::user()->role == 1)
+        {
+            return view('admin.dashboard',[
+                'user_today' => $user_today,
+                'today_deposit_sum' => $today_deposit_sum,
+                'today_withdraw_sum' => $today_withdraw_sum,
+                'today_bonus_amount' => $today_bonus_amount,
+                'total_transaction' => $total_transaction,
+                'pending_transaction_count' => $pending_transaction_count,
+                'pending_transactions' => $pending_transactions
+            ]);$role = 'admin';
+        }
+        else
+        {
+            return view('staff.dashboard',[
+                'user_today' => $user_today,
+                'today_deposit_sum' => $today_deposit_sum,
+                'today_withdraw_sum' => $today_withdraw_sum,
+                'today_bonus_amount' => $today_bonus_amount,
+                'total_transaction' => $total_transaction,
+                'pending_transaction_count' => $pending_transaction_count,
+                'pending_transactions' => $pending_transactions
+            ]);
+        }
+
+    	
     }
 
     public function login()

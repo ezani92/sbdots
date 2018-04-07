@@ -11,6 +11,7 @@ use Session;
 use App\Game;
 use App\Bank;
 use App\Bonus;
+use App\Log;
 use App\Notifications\NewDeposit;
 use App\Notifications\NewWithdraw;
 use App\Notifications\NewTransfer;
@@ -128,6 +129,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
+
         if($user->role == 4)
         {
             $games = Game::all();
@@ -138,7 +140,7 @@ class UserController extends Controller
 
             return view('admin.users.affiliate',compact('user','games','banks','bonuses','members'));
         }
-        else
+        else if($user->role == 3)
         {
             $games = Game::all();
             $banks = Bank::all();
@@ -146,6 +148,18 @@ class UserController extends Controller
 
             return view('admin.users.show',compact('user','games','banks','bonuses'));
         }
+
+        else
+        {
+            $games = Game::all();
+            $banks = Bank::all();
+            $bonuses = Bonus::all();
+
+            $members = User::where('referred_by',$user->affiliate_id)->get();
+
+            return view('admin.users.staff',compact('user','games','banks','bonuses','members'));
+        }
+          
         
     }
 
@@ -472,5 +486,23 @@ class UserController extends Controller
         Session::flash('alert-class', 'alert-success');
 
         return redirect('admin/users/'.$input['user_id']);
+    }
+
+    public function logsdata(Datatables $datatables,$user_id)
+    {
+        $logs = Log::where('user_id',$user_id);
+
+        return Datatables::of($logs)
+            ->editColumn('created_at', function ($log) {
+                return $log->created_at ? with(new Carbon($log->created_at))->format('d M Y, h:i A') : '';
+            })
+            ->editColumn('transaction_id', function ($log) {
+                return '#'.sprintf('%05d', $log->id);
+            })
+            ->editColumn('detail', function ($log) {
+                return $log->detail;
+            })
+            ->rawColumns(['detail'])
+            ->make(true);
     }
 }

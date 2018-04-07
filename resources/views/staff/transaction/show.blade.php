@@ -1,4 +1,4 @@
-@include('admin.header')
+@include('staff.header')
     <div class="be-content">
         <div class="main-content container-fluid">
         	@if(Session::has('message'))
@@ -149,7 +149,7 @@
 			                		</table>
 			                	</div>
 			                	<div class="col-md-6">
-			                		<a href="{{ url('admin/transaction/'.$transaction->id.'/edit') }}" class="btn btn-info btn-block">Edit Transaction</a><br />
+			                		<a href="{{ url('staff/transaction/'.$transaction->id.'/edit') }}" class="btn btn-info btn-block">Edit Transaction</a><br />
 			                	</div>
 			                </div>
 			            </div>
@@ -158,5 +158,5 @@
 			</div>
 		</div>
     </div>
-@include('admin.footer')
+@include('staff.footer')
 </body></html>

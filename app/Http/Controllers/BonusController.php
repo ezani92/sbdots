@@ -20,7 +20,14 @@ class BonusController extends Controller
     {
         $bonuses = Bonus::all();
 
-        return view('admin.bonuses.index');
+        if(\Auth::user()->role == 1)
+        {
+            return view('admin.bonuses.index');
+        }
+        else
+        {
+            return view('staff.bonuses.index');
+        }
     }
 
     public function dataActive(Datatables $datatables)
@@ -110,7 +117,14 @@ class BonusController extends Controller
      */
     public function show(Bonus $bonus)
     {
-        return view('admin.bonuses.show',compact('bonus'));
+        if(\Auth::user()->role == 1)
+        {
+            return view('admin.bonuses.show',compact('bonus'));
+        }
+        else
+        {
+            return view('staff.bonuses.show',compact('bonus'));
+        }
     }
 
     /**
