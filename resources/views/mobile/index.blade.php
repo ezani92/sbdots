@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-md-6 col-xs-12">
                             <div class="why-title">Licensed & Powered by</div>
-                            <div class="why-text">GamingSoft, Calibet, WinningFT, Live22, SCR888, 1SCasino...</div>
+                            <div class="why-text"><img class="footer-poweredby" src="{{ asset('images/common/sb_logo.png') }}"/></div>
                         </div>
                     </div>			
                 </div>
