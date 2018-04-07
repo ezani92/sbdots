@@ -18,7 +18,7 @@
                                 <h2>Live Casino</h2>
                                 
                                 <div class="row product-wrap margin-none-side">
-                                    <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
+                                    <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
                                             <img src="{{ asset('mobile/images/common/product/live22.jpg') }}" class="img-responsive width-full"/>
                                         </div>
@@ -29,7 +29,7 @@
                                 </div>
                                 
                                 <div class="row product-wrap margin-none-side">
-                                    <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
+                                    <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
                                             <img src="{{ asset('mobile/images/common/product/products-casino-1s.jpg') }}" class="img-responsive width-full"/>
                                         </div>
@@ -40,7 +40,7 @@
                                 </div>
 
                                 <div class="row product-wrap margin-none-side">
-                                    <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
+                                    <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
                                             <img src="{{ asset('mobile/images/common/product/products-casino-calibet.jpg') }}" class="img-responsive width-full" />
                                         </div>
@@ -51,7 +51,7 @@
                                 </div>
                                 
                                 <div class="row product-wrap margin-none-side">
-                                    <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
+                                    <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
                                             <img src="{{ asset('mobile/images/common/product/joker.jpg') }}" class="img-responsive width-full"/>
                                         </div>
@@ -62,7 +62,7 @@
                                 </div>
                                 
                                 <div class="row product-wrap margin-none-side">
-                                    <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
+                                    <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
                                             <img src="{{ asset('mobile/images/common/product/luckypalace.jpg') }}" class="img-responsive width-full"/>
                                         </div>
@@ -73,7 +73,7 @@
                                 </div>
                                             
                                 <div class="row product-wrap margin-none-side">
-                                    <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
+                                    <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
                                             <img src="{{ asset('mobile/images/common/product/rollex.jpg') }}" class="img-responsive width-full"/>
                                         </div>

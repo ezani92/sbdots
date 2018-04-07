@@ -214,13 +214,9 @@
                         <li>account settlement (or other elements of the services) issues arise as a result of systems' errors, communications'
                             errors, bugs or viruses; or</li>
                         <li>damage to Your computer equipment or software results in a loss of data by You.</li>
-                    </ol>
-                </ol>
-            </ol>
-            <p>We also reserve the right to void all affected games and take necessary action to correct such errors. However we are not
+                <p>We also reserve the right to void all affected games and take necessary action to correct such errors. However we are not
                 required to provide any back up network and/or systems or similar services.</p>
-            <ol>
-                <ol>
+                
                     <li>You agree that we shall not be responsible for any loss, including loss of winnings, resulting from the websites,
                         or products, failure to operate correctly because of, but not limited to the following:</li>
                     <ol>
@@ -230,6 +226,7 @@
                         <li>any person's misuse of the websites (including content of such websites); or</li>
                         <li>any other factors beyond our control.</li>
                     </ol>
+                </ol>
                 </ol>
                 <li>Events Outside Our Control</li>
                 <ol>
@@ -319,6 +316,7 @@
                         Team.</li>
                 </ol>
             </ol>
+        </ol>
 		</div>
 	</div>
 </div>

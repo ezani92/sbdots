@@ -19,7 +19,7 @@
                                 <h2>Arcade</h2>
                                 
                                 <div class="row product-wrap margin-none-side">
-                                    <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
+                                    <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
                                             <img src="{{ asset('mobile/images/common/product/joker.jpg') }}" class="img-responsive width-full"/>
                                         </div>
@@ -30,7 +30,7 @@
                                 </div>
 
                                 <div class="row product-wrap margin-none-side">
-                                    <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
+                                    <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
                                             <img src="{{ asset('mobile/images/common/product/mega888.jpg') }}" class="img-responsive width-full" />
                                         </div>
@@ -41,7 +41,7 @@
                                 </div>
 
                                 <div class="row product-wrap margin-none-side">
-                                    <a href="download" data-wow-duration="0.2s" class="wow pulse animated">
+                                    <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
                                             <img src="{{ asset('mobile/images/common/product/suncity.jpg') }}" class="img-responsive width-full" />
                                         </div>

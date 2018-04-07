@@ -84,7 +84,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="copyright"> SBDot.net © Copyrights 2018. All rights reserved.</div>
+                    <div class="copyright">SBDot.net © Copyrights 2018. All rights reserved.</div>
                 </div>
             </div>
 

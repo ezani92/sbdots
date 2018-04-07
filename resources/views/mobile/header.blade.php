@@ -2,7 +2,7 @@
     
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
-<link rel="icon" type="image/ico" href="{{ asset('mobile/images/common/favicon.ico') }}" />
+<link rel="icon" type="image/ico" href="{{ asset('images/common/favicon.png') }}" />
 
 <title>SUperb - Malaysia Top Online Gaming Sites</title>
 

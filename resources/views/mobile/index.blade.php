@@ -25,7 +25,7 @@
                             <div class="why-text">Available for NEW members for limited time only!</div>
                         </div>
                         <div class="col-md-6 col-xs-12">
-                            <div class="why-title">Trusted & 247 Customer Service</div>
+                            <div class="why-title">Trusted & 24/7 Customer Service</div>
                             <div class="why-text">Provide best gaming experience to thousands of Malaysian Players!</div>
                         </div>
                         <div class="col-md-6 col-xs-12">

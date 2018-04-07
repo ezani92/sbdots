@@ -33,6 +33,30 @@
                             <div class="contact-title"> 
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-square fa-stack-2x icon-background1"></i>
+                                    <i class="fa fa-whatsapp fa-stack-1x"></i>
+                                </span>					
+                                <h3>Whatsapp:</h3>
+                            </div>
+                            <div class="contact-detail">
+                                <a href="https://api.whatsapp.com/send?phone=60169593762" class="btn btn-warning btn-more btn-chat">Whatsapp</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-box">
+                            <div class="contact-title"> 
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-square fa-stack-2x icon-background1"></i>
+                                    <i class="fa fa-wechat fa-stack-1x"></i>
+                                </span>					
+                                <h3>WeChat:</h3>
+                            </div>
+                            <p>sbdot_my</p>
+                        </div>
+
+                        <div class="contact-box">
+                            <div class="contact-title"> 
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-square fa-stack-2x icon-background1"></i>
                                     <i class="fa fa-comments fa-stack-1x"></i>
                                 </span>					
                                 <h3>Live Chat:</h3>

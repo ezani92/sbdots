@@ -7,8 +7,8 @@
     <div id="topLanguage">
         <div class="container">
             <div class="social-menu">
-                <span><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></span>
-                <span><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></span>
+                <span><a href="https://www.facebook.com/sbdot88/" class="social-link"><i class="fab fa-facebook"></i></a></span>
+                <span><a href="https://www.instagram.com/Sbdot88/" class="social-link"><i class="fab fa-instagram"></i></a></span>
             </div>
             <div class="help-bar">
                 <div class="languageWrap">

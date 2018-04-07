@@ -33,17 +33,25 @@
                 <ul class="nav" id="tab_change">
                     <li class="active">
                         <div class="col-xs-3 footer-xs ">
-                            <a href="#" target="_blank">
-                                <button href="" class="navbar-toggle collapsed btn-bottom" type="button"> 
-                                <img src="{{ asset('mobile/images/common/icon-facebook.png') }}"/>facebook</button>
+                            <a href="https://www.facebook.com/sbdot88/" target="_blank">
+                                <button href="https://www.facebook.com/sbdot88/" class="navbar-toggle collapsed btn-bottom" type="button"> 
+                                <img src="{{ asset('mobile/images/common/icon_facebook.png') }}"/>facebook</button>
                             </a>
                         </div>
                     </li>
                     <li>
+                            <div class="col-xs-3 footer-xs">
+                                <a href="https://www.instagram.com/Sbdot88/">
+                                    <button href="#" class="navbar-toggle collapsed btn-bottom" type="button"> 
+                                    <img src="{{ asset('mobile/images/common/icon_instagram.png') }}"/>instagram</button>
+                                </a>
+                            </div>
+                        </li>
+                    <li>
                         <div class="col-xs-3 footer-xs">
                             <a href="{{ url('banking') }}">
                                 <button href="#" class="navbar-toggle collapsed btn-bottom" type="button"> 
-                                <img src="{{ asset('mobile/images/common/icon-bank.png') }}"/>banking</button>
+                                <img src="{{ asset('mobile/images/common/icon_bank.png') }}"/>banking</button>
                             </a>
                         </div>
                     </li>
@@ -51,18 +59,18 @@
                         <div class="col-xs-3 footer-xs">
                             <a href="{{ url('contact_us') }}">
                                 <button href="#" class="navbar-toggle collapsed btn-bottom" type="button"> 
-                                <img src="{{ asset('mobile/images/common/icon-contact.png') }}"/>contact us</button>
+                                <img src="{{ asset('mobile/images/common/icon_contact.png') }}"/>contact us</button>
                             </a>
                         </div>
                     </li>
-                    <li>
+                    <!-- <li>
                         <div class="col-xs-3 footer-xs">
                             <a href="#" data-toggle="modal" data-target="#language">
                                 <button class="navbar-toggle collapsed btn-bottom" type="button"> 
-                                <img src="{{ asset('mobile/images/common/icon-language.png') }}"/>language</button>
+                                <img src="{{ asset('mobile/images/common/icon_language.png') }}"/>language</button>
                             </a>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
