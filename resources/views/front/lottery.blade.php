@@ -23,7 +23,7 @@
 			<div class="single-wrap">
 				<div class="single-p clearfix">
 					<div class="left" style="padding-top:7px;">
-						<img src="images/common/lottery-ace88.png"/>
+						<img src="images/common/lottery-ace88.jpg"/>
 					</div>
 					<div class="right" style="padding-top:0;">
 						<ul>
