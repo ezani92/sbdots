@@ -43,6 +43,9 @@
             <div class="nav-item">
                 <a href="{{ url('tnc') }}" class="main-nav " style="background-image: url(mobile/images/common/icon_list.png);">Terms & conditions</a>
             </div>
+            <div class="nav-item">
+                <a href="{{ url('api/switch-desktop') }}" class="main-nav " style="background-image: url(mobile/images/common/desktop.png);">Switch To Desktop Version</a>
+            </div>
             
         </div>      
         <p class="sidebar-copyright center-text">SBDot.net © Copyrights 2018. </br> All rights reserved.</p>

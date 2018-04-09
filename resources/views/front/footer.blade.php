@@ -118,6 +118,7 @@
         <script type="text/javascript" src="{{ asset('js/push_menus.js') }}"></script>
         <script src="{{ asset('js/moment.js') }}" type="text/javascript"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
         <script type="text/javascript">
             $(window).load(function () {
                 $('#slider').nivoSlider();

@@ -7,6 +7,9 @@
     <div id="topLanguage">
         <div class="container">
             <div class="social-menu">
+                @if(session('view') !== null)
+                <span><a href="{{ url('api/switch-mobile') }}" class="social-link" style=""></i> Switch To Mobile Site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                @endif
                 <span><a href="https://www.facebook.com/sbdot88/" class="social-link"><i class="fab fa-facebook"></i></a></span>
                 <span><a href="https://www.instagram.com/Sbdot88/" class="social-link"><i class="fab fa-instagram"></i></a></span>
             </div>
@@ -135,6 +138,9 @@
       lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
     })();
+    </script>
+    <script type="text/javascript">
+        $("#stickywell").sticky({topSpacing:0});
     </script>
     <!-- End of LiveChat code -->
     </body>

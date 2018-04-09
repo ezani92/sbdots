@@ -50,4 +50,18 @@ class ApiController extends Controller
 
         return $transactions = Transaction::where('transaction_type','withdraw')->where('created_at','<=',$to_date)->where('status','2')->where('created_at','>=',$from_date)->sum('amount');
     }
+
+    public function desktop()
+    {
+        session(['view' => 'desktop']);
+
+        return back();
+    }
+
+    public function mobile(Request $request)
+    {
+        $request->session()->forget('view');
+
+        return back();
+    }
 }

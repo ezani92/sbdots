@@ -17,6 +17,11 @@ class FrontController extends Controller
     {
     	$agent = new Agent;
 
+        if(session('view') !== null)
+        {
+            return view('front.index');
+        }
+
         if($agent->isMobile())
         {
             return view('mobile.index');
@@ -29,6 +34,11 @@ class FrontController extends Controller
     {
     	$agent = new Agent;
 
+        if(session('view') !== null)
+        {
+            return view('front.about_us');
+        }
+
         if($agent->isMobile())
         {
             return view('mobile.about_us');
@@ -40,6 +50,11 @@ class FrontController extends Controller
     public function downloads()
     {
         $agent = new Agent;
+
+        if(session('view') !== null)
+        {
+            return view('front.downloads');
+        }
 
         if($agent->isMobile())
         {
@@ -54,6 +69,11 @@ class FrontController extends Controller
 
         $agent = new Agent;
 
+        if(session('view') !== null)
+        {
+            return view('front.sportsbook');
+        }
+
         if($agent->isMobile())
         {
             return view('mobile.sportsbook');
@@ -66,6 +86,11 @@ class FrontController extends Controller
     {
 
         $agent = new Agent;
+
+        if(session('view') !== null)
+        {
+            return view('front.live_casino');
+        }
 
         if($agent->isMobile())
         {
@@ -80,6 +105,11 @@ class FrontController extends Controller
 
         $agent = new Agent;
 
+        if(session('view') !== null)
+        {
+            return view('front.slot');
+        }
+
         if($agent->isMobile())
         {
             return view('mobile.slots');
@@ -92,6 +122,11 @@ class FrontController extends Controller
     {
 
         $agent = new Agent;
+
+        if(session('view') !== null)
+        {
+            return view('front.Arcade.arcade');
+        }
 
         if($agent->isMobile())
         {
@@ -111,6 +146,11 @@ class FrontController extends Controller
 
         $agent = new Agent;
 
+        if(session('view') !== null)
+        {
+            return view('front.lottery');
+        }
+
         if($agent->isMobile())
         {
             return view('mobile.lottery');
@@ -124,6 +164,11 @@ class FrontController extends Controller
 
         $agent = new Agent;
 
+        if(session('view') !== null)
+        {
+            return view('front.promotion');
+        }
+
         if($agent->isMobile())
         {
             return view('mobile.promotions');
@@ -136,6 +181,11 @@ class FrontController extends Controller
     {
 
         $agent = new Agent;
+
+        if(session('view') !== null)
+        {
+            return view('front.banking');
+        }
 
         if($agent->isMobile())
         {
@@ -151,6 +201,11 @@ class FrontController extends Controller
 
         $agent = new Agent;
 
+        if(session('view') !== null)
+        {
+            return view('mobile.registration');
+        }
+
         if($agent->isMobile())
         {
             return view('mobile.registration');
@@ -162,6 +217,11 @@ class FrontController extends Controller
     {
 
         $agent = new Agent;
+
+        if(session('view') !== null)
+        {
+            return view('front.contact_us');
+        }
 
         if($agent->isMobile())
         {
@@ -176,6 +236,11 @@ class FrontController extends Controller
 
         $agent = new Agent;
 
+        if(session('view') !== null)
+        {
+            return view('front.faq');
+        }
+
         if($agent->isMobile())
         {
             return view('mobile.faq');
@@ -188,6 +253,11 @@ class FrontController extends Controller
     {
 
         $agent = new Agent;
+
+        if(session('view') !== null)
+        {
+            return view('front.tnc');
+        }
 
         if($agent->isMobile())
         {

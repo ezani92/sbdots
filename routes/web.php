@@ -37,6 +37,9 @@ Route::post('api/admin/notification', 'ApiController@adminNotofication');
 Route::get('api/admin/depositTotal', 'ApiController@depositTotal');
 Route::get('api/admin/withdrawTotal', 'ApiController@withdrawTotal');
 
+Route::get('api/switch-desktop', 'ApiController@desktop');
+Route::get('api/switch-mobile', 'ApiController@mobile');
+
 
 
 
