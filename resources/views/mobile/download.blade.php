@@ -137,6 +137,18 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="cbp-item">
+                            <div class="row product-wrap margin-none-side">
+                                <a href="http://ace88.org/">
+                                    <div class="col-md-12 padding-style6">
+                                        <img src="{{ asset('mobile/images/common/product/lottery-ace88.jpg') }}" class="img-responsive width-full"/>
+                                    </div>
+                                    <div class="col-md-12 download-wrap">
+                                        <button type="button" class="btn btn-warning btn-block"><i class="fa fa-android"></i> Download</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>		
                 

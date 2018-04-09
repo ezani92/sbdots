@@ -27,7 +27,7 @@
 					</div>
 					<div class="right" style="padding-top:0;">
 						<ul>
-							<li>Texas Holdem, Six Cards, Eight Cards, Bull Fight, All In, Trips</li>
+							<li style="list-style-type:none;">Magnum, Toto, Damacai, Singapore, Cashsweep, Lotto 88, STC, GDlotto</li>
 						</ul>
 						<!--
 						<div class="app-icon">

@@ -36,6 +36,7 @@
 					<li><a href="#918kiss" data-toggle="tab">918 Kiss</a></li>
 					<li><a href="#suncity" data-toggle="tab">Club SunCity</a></li>
 					<li><a href="#mega888" data-toggle="tab">Mega888</a></li>
+					<li><a href="#ace88" data-toggle="tab">ace88</a></li>
 				</ul>
 				
 				<!-- hash link -->
@@ -632,6 +633,35 @@
 									<div class="qr-wrap">
 										<a href="http://m.mega888.cc" target="_blank">
 											<div class="os_icon"><img src="images/common/download-ios.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
+										</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+											
+					</div>
+
+					<div class="tab-pane" id="ace88">
+						<div class="container downloads">
+								<img src="images/common/lottery-ace88.jpg" alt=""/>
+							</div>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_mobile">
+						<tbody>
+							<tr>
+								<td><div class="qrcode"><img src="images/common/desktop.png"></div></td>
+							</tr>
+							<tr>
+								<td class="mobile_tittle">game</td>
+							</tr>
+							<tr>
+								<td>Download</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="qr-wrap">
+										<a href="http://ace88.org/" target="_blank">
+											<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
 										</a>
 									</div>
 								</td>
