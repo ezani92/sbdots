@@ -926,7 +926,7 @@ padding:0 !important;
 
 }
 
-table.table.promo-table {
+table.promo-table {
 
 display: table;
 width:100%;
@@ -944,7 +944,7 @@ width:100%;
 	
 }
 
-table.table.promo-table th, table.table.promo-table td {
+table.promo-table th, table.promo-table td {
 
 width: auto;
 
