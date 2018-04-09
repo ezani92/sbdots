@@ -21,7 +21,6 @@
                     <img src="{{ asset('images/common/provider/11_luckypalace.png') }}"/>
                     <img src="{{ asset('images/common/provider/12_3win8.png') }}"/>
                     <img src="{{ asset('images/common/provider/13_calibet.png') }}"/>
-                    <img src="{{ asset('images/common/provider/14_1s.png') }}"/>
                 </div>
             </div>
         </div>		
