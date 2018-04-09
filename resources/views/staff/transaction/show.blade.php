@@ -37,6 +37,14 @@
 				                					<td>RM {{ $transaction->amount }}</td>
 				                				</tr>
 				                				<tr>
+				                					<td><strong>To Bank Account Name</strong></td>
+				                					<td>{{ $transaction->bank->account_name }}</td>
+				                				</tr>
+				                				<tr>
+				                					<td><strong>To Bank Account No</strong></td>
+				                					<td>{{ $transaction->bank->account_no }}</td>
+				                				</tr>
+				                				<tr>
 				                					<td><strong>Payment Menthod</strong></td>
 				                					<td>{{ $data['payment_method'] }}</td>
 				                				</tr>
