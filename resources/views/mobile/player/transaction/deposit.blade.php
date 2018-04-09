@@ -22,11 +22,11 @@
                             <li role="presentation" class=""><a href="{{ url('player/transaction?tab=transfer') }}">Transfer</a></li>
                         </ul>
                         <div id="ctl00_MainContent_UpdatePanel1">
-                            <div class="tab-content" style="overflow: auto;">
+                            <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="deposit">
                                     <div>
                                         <div class="table-responsive no-bottom">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table promo-table">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table promo-table" data-snap-ignore="true">
                                                 <tr>
                                                     <th scope="col">Transaction No</th>
                                                     <th scope="col">Type</th>
