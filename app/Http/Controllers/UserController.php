@@ -220,13 +220,33 @@ class UserController extends Controller
 
     public function transactiondata(Datatables $datatables,$user_id)
     {
-        $transactions = Transaction::where('user_id',$user_id)->where('deposit_type','!=','bonus')->get();
+        $transactions = Transaction::where('user_id',$user_id)->get();
         return Datatables::of($transactions)
             ->addColumn('actions', function($transaction) {
-                return view('admin.transaction.action', compact('transaction'))->render();
+                if($transaction->deposit_type == 'bonus')
+                {
+                    return '-';
+                }
+                else
+                {
+                    return view('admin.transaction.action', compact('transaction'))->render();
+                }
+                
             })
             ->editColumn('transaction_id', function ($transaction) {
                 return '#'.sprintf('%06d', $transaction->id);
+            })
+            ->editColumn('transaction_type', function ($transaction) {
+
+                if($transaction->deposit_type == 'bonus')
+                {
+                    return 'Bonus';
+                }
+                else
+                {
+                    return $transaction->transaction_type;
+                }
+                
             })
             ->editColumn('status', function ($transaction) {
                 
