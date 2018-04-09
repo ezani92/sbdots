@@ -121,6 +121,7 @@
 					                        <tr>
 					                            <th>Transaction ID</th>
 					                            <th>Transaction Type</th>
+					                            <th>Amount (RM)</th>
 					                            <th>Status</th>
 					                            <th>Date Created</th>
 					                            <th>Action</th>
@@ -454,6 +455,7 @@
             columns: [
                 { data: 'transaction_id', name: 'transaction_id' },
                 { data: 'transaction_type', name: 'transaction_type' },
+                { data: 'amount', name: 'amount' },
                 { data: 'status', name: 'status' },
                 { data: 'created_at', name: 'created_at' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }
