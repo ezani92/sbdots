@@ -312,6 +312,18 @@
 						<form method="POST" action="{{ url('admin/user/transaction/withdraw') }}" enctype="multipart/form-data">
 						    @csrf
 						    <input type="hidden" name="user_id" value="{{ $user->id }}">
+
+						    <div class="row">
+							    <div class="form-group col-md-6">
+							        <label>User Bank Name</label>
+							        <input type="text" class="form-control" value="{{ $user->bank_name }}" disabled="true">
+							    </div>
+							     <div class="form-group col-md-6">
+							        <label>User Bank Account No</label>
+							        <input type="text" class="form-control" value="{{ $user->bank_account_no }}" disabled="true">
+							    </div>
+							</div>
+
 						    <div class="row">
 						    	<div class="form-group col-md-12">
 							        <label>Withdraw Amount</label>
@@ -321,16 +333,16 @@
 						    
 						    <div class="row">
 							    <div class="form-group col-md-6">
-							        <label>Bank</label>
+							        <label>From Bank</label>
 							        <select name="bank" class="form-control" required>
 							        	<option value="">Select</option>
 							        	@foreach($banks as $bank)
-							        		<option value="{{ $bank->id }}">{{ $bank->name }}</option>
+							        		<option value="{{ $bank->id }}">{{ $bank->account_name  }} ({{ $bank->account_no }})</option>
 							        	@endforeach
 							        </select>
 							    </div>
 							    <div class="form-group col-md-6">
-							        <label>Games</label>
+							        <label>From Games</label>
 							        <select name="game_id" class="form-control" required>
 							        	<option value="">Select</option>
 							        	@foreach($games as $game)

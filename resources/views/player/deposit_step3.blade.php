@@ -173,7 +173,7 @@
                                         <tr>
                                             <td>Reference No</td>
                                             <td>
-                                                <input name="refference_no" type="text" maxlength="30" class="field-register" value="{{ old('refference_no') }}" required/>
+                                                <input name="refference_no" type="text" maxlength="30" class="field-register" value="{{ old('refference_no') }}"/>
                                             </td>
                                             <td>&nbsp;</td>
                                         </tr>

@@ -17,9 +17,9 @@
                     </ul>
                     <div id="ourHolder" class="promo-box">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="{{ url('player/transaction?tab=deposit') }}">deposit</a></li>
+                            <li role="presentation" class=""><a href="{{ url('player/transaction?tab=deposit') }}">deposit</a></li>
                             <li role="presentation" class=""><a href="{{ url('player/transaction?tab=withdrawal') }}">withdrawal</a></li>
-                            <li role="presentation" class=""><a href="{{ url('player/transaction?tab=transfer') }}">Transfer</a></li>
+                            <li role="presentation" class="active"><a href="{{ url('player/transaction?tab=transfer') }}">Transfer</a></li>
                         </ul>
                         <div id="ctl00_MainContent_UpdatePanel1">
                             <div class="tab-content">

@@ -149,7 +149,11 @@
 			                		</table>
 			                	</div>
 			                	<div class="col-md-6">
-			                		<a href="{{ url('staff/transaction/'.$transaction->id.'/edit') }}" class="btn btn-info btn-block">Edit Transaction</a><br />
+			                		@if($transaction->first_time_update == 1)
+			                			<div class="alert alert-warning">You are not allowed to edit the transaction since the transaction already updated. If you found an error. Please notify Administrator.</div>
+			                		@else
+										<a href="{{ url('staff/transaction/'.$transaction->id.'/edit') }}" class="btn btn-info btn-block">Edit Transaction</a><br />
+			                		@endif
 			                	</div>
 			                </div>
 			            </div>
