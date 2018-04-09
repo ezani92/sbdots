@@ -20,7 +20,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="single-wrap">
+			<!-- <div class="single-wrap">
 				<div class="single-p clearfix">
 					<div class="left">
 						<img src="images/common/slot-1scasino.png"/>
@@ -36,7 +36,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="single-wrap">
 				<div class="single-p clearfix">
 					<div class="left">

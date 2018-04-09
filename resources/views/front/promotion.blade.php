@@ -31,7 +31,7 @@
 						<li><span class="filter" data-filter=".deposit">deposit bonus</span></li>
 						<li><span class="filter" data-filter=".rebate">rebate</span></li>
 						<li><span class="filter" data-filter=".special">special</span></li>
-						<li><span class="filter" data-filter=".scr888">scr888</span></li>
+						<li><span class="filter" data-filter=".918kiss">918Kiss</span></li>
 					</ul>
 					
 					<!-- hash link -->
@@ -46,10 +46,10 @@
 										<div class="promo-button"><img src="images/en/bnr1.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
-													<h4>New Member: Welcome 1st Deposit Bonus 30% up to MYR 3,000</h4>
+													<h4>New Member: Welcome 1<sup>st</sup> Deposit Bonus 30% up to MYR 3,000</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
 														<tr>
-															<th>MINIMUM DEPOSIT AMOUNT (RM) </th>
+															<th>MIN. FIRST DEPOSIT AMOUNT (RM) </th>
 															<th>BONUS (%)</th>
 															<th>MAXIMUM BONUS (RM)</th>
 															<th>ROLLOVER REQUIREMENT</th>
@@ -102,8 +102,8 @@
 													<h4>New Member 2 : Deposit MYR100 get MYR200</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
 														<tr>
-															<th>FIRST DEPOSIT AMOUNT (RM) </th>
-															<th>BONUS</th>
+															<th>MIN. FIRST DEPOSIT AMOUNT (RM) </th>
+															<th>MAX BONUS (RM)</th>
 															<th>ROLLOVER REQUIREMENT</th>
 														</tr>
 														<tr>
@@ -152,13 +152,13 @@
 													<h4>Existing Member: 10% Deposit Bonus</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
 														<tr>
-															<th>DEPOSIT AMOUNT (RM) </th>
+															<th>MIN. DEPOSIT AMOUNT (RM) </th>
 															<th>BONUS</th>
 															<th>MAXIMUM BONUS (RM)</th>
 															<th>ROLLOVER REQUIREMENT</th>
 														</tr>
 														<tr>
-															<td>100</td>
+															<td>30</td>
 															<td>10%</td>
 															<td>RM1000</td>
 															<td>x5</td>
@@ -204,13 +204,13 @@
 													<h4>Existing Member: 5% Deposit Bonus</h4>
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
 														<tr>
-															<th>DEPOSIT AMOUNT (RM) </th>
+															<th>MIN. DEPOSIT AMOUNT (RM) </th>
 															<th>BONUS</th>
 															<th>MAXIMUM BONUS (RM)</th>
 															<th>ROLLOVER REQUIREMENT</th>
 														</tr>
 														<tr>
-															<td>100</td>
+															<td>30</td>
 															<td>5%</td>
 															<td>RM1000</td>
 															<td>x2</td>
@@ -241,7 +241,7 @@
 														<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
 														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
-														<li>This promotion is applicable for all GAMES including slots.</li>
+														<li>This promotion is not applicable for SCR888, 918kiss and Mega888.</li>
 														<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
 													</ol>
 												</div>
@@ -283,7 +283,7 @@
 										</div>
 									</div>
 								</div>
-								<div id="welcome" class="portfolio latest special scr888">
+								<div id="welcome" class="portfolio latest special 918kiss">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr6.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
@@ -292,18 +292,15 @@
 													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
 														<tr>
 															<th>REQUIREMENT</th>
-															<th>BONUS AMOUNT</th>
-															<th>MAXIMUM BONUS PAYOUT</th>
+															<th>BONUS AMOUNT (%)</th>
 														</tr>
 														<tr>
-															<td>5 times of deposit amount  </td>
+															<td>5 times of Deposit amount + Bonus Amount</td>
 															<td>5%</td>
-															<td>RM500</td>
 														</tr>
 														<tr>
-															<td>15 times of deposit amount  </td>
+															<td>10 times of Deposit amount + Bonus Amount</td>
 															<td>10%</td>
-															<td>RM1000</td>
 														</tr>
 													</table>
 													

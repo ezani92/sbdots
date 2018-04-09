@@ -914,6 +914,12 @@ ul#tabmenu li.active a {
 	border-radius: 5px 5px 5px 5px;
 }
 
+table {
+
+overflow-x: scroll !important;
+
+}
+
 .banking-table-holder {
 
 padding:0 !important;
@@ -1701,6 +1707,29 @@ ul.bank-name {
 	width:32%;
 	margin:2px;
 }
+
+.member-main .member-col-wrap {
+	display:inline-block;
+	width:100%;
+	float:none;
+	margin: 0;
+}
+
+.tab-content.short {
+    margin: 16px 0px;
+}
+
+.member-main .member-col-wrap .member-col {
+	display: block;
+	width: 100%;
+	padding: 10px;
+}
+
+.start-arrow {
+    text-align: center;
+    margin: 8px 0;
+}
+	
 .member-col-wrap:last-child {
 	margin-right:0;
 }

@@ -37,7 +37,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
+                                        <div class="start-arrow"><i class="fa fa-chevron-down"></i></div>
                                         <div class="member-col-wrap">
                                             <div class="member-col">
                                                 <div class="member-start">
@@ -46,7 +46,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
+                                        <div class="start-arrow"><i class="fa fa-chevron-down"></i></div>
                                         <div class="member-col-wrap">
                                             <div class="member-col">
                                                 <div class="member-start">
@@ -81,7 +81,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
+                                        <div class="start-arrow"><i class="fa fa-chevron-down"></i></div>
                                         <div class="member-col-wrap">
                                             <div class="member-col">
                                                 <div class="member-start">
@@ -90,7 +90,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
+                                        <div class="start-arrow"><i class="fa fa-chevron-down"></i></div>
                                         <div class="member-col-wrap">
                                             <div class="member-col">
                                                 <div class="member-start">
@@ -109,7 +109,7 @@
                                     <div class="outer-mask">
                                         <div class="inner-mask">
                                             <div class="title-p">
-                                                <h2 class="smaller" style="font-size:22px;">Try Other Gaming Products!</h2>
+                                                <h2 class="smaller" style="font-size:25px;">Try Other Gaming Products!</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -124,7 +124,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
+                                        <div class="start-arrow"><i class="fa fa-chevron-down"></i></div>
                                         <div class="member-col-wrap">
                                             <div class="member-col">
                                                 <div class="member-start">
@@ -133,7 +133,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="start-arrow"><i class="fa fa-chevron-right"></i></div>
+                                        <div class="start-arrow"><i class="fa fa-chevron-down"></i></div>
                                         <div class="member-col-wrap">
                                             <div class="member-col">
                                                 <div class="member-start">

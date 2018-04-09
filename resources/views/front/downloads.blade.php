@@ -26,7 +26,7 @@
 					<li><a href="#maxbet" data-toggle="tab">Maxbet</a></li>
 					<li><a href="#sbo" data-toggle="tab">SBO</a></li>
 					<li><a href="#live22" data-toggle="tab">Live 22</a></li>
-					<li><a href="#1scasino" data-toggle="tab">1sCasino</a></li>
+					<!-- <li><a href="#1scasino" data-toggle="tab">1sCasino</a></li> -->
 					<li><a href="#asia855" data-toggle="tab">Asia855</a></li>
 					<li><a href="#calibet" data-toggle="tab">Calibet</a></li>
 					<li><a href="#joker" data-toggle="tab">Joker</a></li>
@@ -198,7 +198,7 @@
 												
 					</div>
 					
-					<div class="tab-pane" id="1scasino">
+					<!-- <div class="tab-pane" id="1scasino">
 							<div class="container downloads">
 									<img src="images/common/casino-1scasino.png" alt=""/>
 								</div>
@@ -235,7 +235,7 @@
 							</tbody>
 						</table>
 												
-					</div>
+					</div> -->
 					
 					<!-- <div class="tab-pane" id="poker" style="margin:-12px;">
 
