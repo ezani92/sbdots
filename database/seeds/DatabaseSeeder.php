@@ -21,20 +21,20 @@ class DatabaseSeeder extends Seeder
         $this->call('UserTableSeeder');
         $this->command->info('User table seeded!');
 
-        $this->call('GroupTableSeeder');
-        $this->command->info('User Group table seeded!');
+        // $this->call('GroupTableSeeder');
+        // $this->command->info('User Group table seeded!');
 
-        $this->call('GameTableSeeder');
-        $this->command->info('Game table seeded!');
+        // $this->call('GameTableSeeder');
+        // $this->command->info('Game table seeded!');
 
-        $this->call('BankTableSeeder');
-        $this->command->info('Bank table seeded!');
+        // $this->call('BankTableSeeder');
+        // $this->command->info('Bank table seeded!');
         
-        $this->call('SettingTableSeeder');
-        $this->command->info('Setting table seeded!');
+        // $this->call('SettingTableSeeder');
+        // $this->command->info('Setting table seeded!');
 
-        $this->call('BonusTableSeeder');
-        $this->command->info('Bonus table seeded!');
+        // $this->call('BonusTableSeeder');
+        // $this->command->info('Bonus table seeded!');
     }
 }
 
@@ -57,49 +57,6 @@ class UserTableSeeder extends Seeder {
             'affiliate_id' => str_random('8')
 
     	));
-
-        User::create(array(
-            'name' => 'shaiful ezani',
-            'email' => 'shaiful@naxpansion.com',
-            'password' => bcrypt('123456'),
-            'phone' => '60129718420',
-            'role' => 4,
-            'tac_no' => '123456',
-            'phone_verification' => 1,
-            'bank_name' => 'RHB Bank',
-            'bank_account_no' => '12345678',
-            'affiliate_id' => str_random('8'),
-            'affiliate_rate' => '20'
-
-        ));
-
-        User::create(array(
-            'name' => 'Nic Tee',
-            'email' => 'nic@naxpansion.com',
-            'password' => bcrypt('123456'),
-            'phone' => '60123456789',
-            'role' => 3,
-            'tac_no' => '123456',
-            'phone_verification' => 1,
-            'bank_name' => 'RHB Bank',
-            'bank_account_no' => '12345678',
-            'affiliate_id' => str_random('8'),
-
-        ));
-
-        User::create(array(
-            'name' => 'Vic khoo',
-            'email' => 'vickhoo@gmail.com',
-            'password' => bcrypt('123456'),
-            'phone' => '60123456789',
-            'role' => 3,
-            'tac_no' => '123456',
-            'phone_verification' => 1,
-            'bank_name' => 'RHB Bank',
-            'bank_account_no' => '12345678',
-            'affiliate_id' => str_random('8')
-
-        ));
     }
 
 }
