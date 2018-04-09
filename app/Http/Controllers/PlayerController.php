@@ -16,6 +16,7 @@ use App\Notifications\NewWithdraw;
 use App\Notifications\NewTransfer;
 use Pusher\Pusher;
 use Carbon\Carbon;
+use Jenssegers\Agent\Agent;
 
 class PlayerController extends Controller
 {	
@@ -97,7 +98,14 @@ class PlayerController extends Controller
 
     public function main()
     {
-    	return view('player.main');
+    	$agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.main');
+        }
+
+        return view('player.main');
     }
 
     public function deposit_step1()
@@ -124,6 +132,13 @@ class PlayerController extends Controller
 
         $game_cat = array_unique($cat_array);
 
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.deposit_step1',['games' => $games , 'banks' => $banks, 'game_cat' => $game_cat]);
+        }
+
     	return view('player.deposit_step1',['games' => $games , 'banks' => $banks, 'game_cat' => $game_cat]);
     }
 
@@ -139,6 +154,16 @@ class PlayerController extends Controller
 
     		return redirect('player/deposit/step1');
     	}
+
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.deposit_step2',[
+                'game_id' => $input['games'],
+                'banks' => $banks,
+            ]);
+        }
 
     	return view('player.deposit_step2',[
     		'game_id' => $input['games'],
@@ -160,6 +185,17 @@ class PlayerController extends Controller
 
     		return redirect('player/deposit/step1');
     	}
+
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.deposit_step3',[
+                'game_id' => $input['games'],
+                'bonuses' => $bonuses,
+                'banks' => $banks
+            ]);
+        }
 
     	return view('player.deposit_step3',[
     		'game_id' => $input['games'],

@@ -2,10 +2,14 @@
     <div class="page-sidebar-scroll">
                      
         <div class="navigation-items">
-        
+            
+            @guest
             <div class="nav-item">
                 <a href="{{ url('registration') }}" class="main-nav " style="background-image: url(mobile/images/common/icon_join_now.png);">Join Now</a>
             </div>
+            @else
+
+            @endguest
             <div class="nav-item">
                 <a href="{{ url('/') }}" class="main-nav active" style="background-image: url(mobile/images/common/icon_home.png);">Home</a>
             </div>

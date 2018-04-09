@@ -1,4 +1,4 @@
-<form method="post" action="loginRegistration" id="">
+
         
     <div class="modal fade" id="login" role="dialog">
         <div class="modal-dialog">         
@@ -8,17 +8,17 @@
                     <h4><i class="fa fa-lock fa-fw"></i>Login</h4>
                 </div>
                 <div class="modal-body" style="padding:30px 50px 10px 50px;">
-                    <form role="form">
+                    <form action="{{ route('login') }}" method="POST">
+                        @csrf
                         <div class="form-group">
-                            <label for=""><i class="fa fa-user"></i> Username</label>
-                            <input name="ctl00$txtemail" type="text" maxlength="100" id="ctl00_txtemail" class="form-control" placeholder="Enter Username" />
+                            <label for=""><i class="fa fa-user"></i> Email</label>
+                            <input name="email" type="email" class="form-control" placeholder="Enter Email" />
                         </div>
                         <div class="form-group">
                             <label for=""><i class="fa fa-unlock"></i> Password</label>
-                            <input name="ctl00$txtpass" type="password" maxlength="20" id="ctl00_txtpass" class="form-control" placeholder="Enter password" />
+                            <input name="password" type="password" class="form-control" placeholder="Enter Password" />
                         </div>
-                        <a href="javascript:document.getElementById('ctl00_btnmodallogin').click();"><button type="button" class="btn btn-warning btn-block"><i class="fa fa-fw fa-sign-in"></i>Login</button></a>
-                        <input type="submit" name="ctl00$btnmodallogin" value="Login" id="ctl00_btnmodallogin" style="visibility: hidden; position: absolute;" />
+                        <button type="submit" class="btn btn-warning btn-block"><i class="fa fa-fw fa-sign-in"></i>Login</button>
                         <p class="errmsg">
                         
                         </p>
@@ -180,4 +180,3 @@
             });
         </script>
     
-</form>
