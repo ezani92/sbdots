@@ -175,7 +175,7 @@
                             </div>
                         </div>
                         
-                        <div class="promo deposit latest">
+                        <div class="promo deposit latest 918kiss">
                             <h3><img src="{{ asset('mobile/images/en/bnr3.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>Existing Member: 5% Deposit Bonus</h4>
@@ -256,7 +256,7 @@
                                 </div>						
                             </div>
 
-                            <div class="promo special 918kiss">
+                            <div class="promo special">
                                 <h3><img src="{{ asset('mobile/images/en/bnr6.jpg') }}" class="img-responsive width-full"/></h3>
                                 <div class="promo-font">
                                     <h4>Special: 10% Extra Winning Bonus</h4>
