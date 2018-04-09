@@ -417,15 +417,18 @@ class TransactionController extends Controller
 
             if($transaction->first_time_update == 0)
             {
-                $record = new BankRecord;
-                $record->user_id = Auth::user()->id;
-                $record->bank_id = $transaction->bank_id;
-                $record->transaction_type = "Deposit";
-                $record->description = 'Deposit for transaction [#'.sprintf('%06d', $transaction->id).']';
-                $record->record = 1;
-                $record->amount = $input['amount'];
+                if($input['status'] == 2)
+                {
+                    $record = new BankRecord;
+                    $record->user_id = Auth::user()->id;
+                    $record->bank_id = $transaction->bank_id;
+                    $record->transaction_type = "Deposit";
+                    $record->description = 'Deposit for transaction [#'.sprintf('%06d', $transaction->id).']';
+                    $record->record = 1;
+                    $record->amount = $input['amount'];
 
-                $record->save();
+                    $record->save();
+                }
 
                 $transaction->first_time_update = 1;
             }
@@ -442,15 +445,18 @@ class TransactionController extends Controller
             if($transaction->first_time_update == 0)
             {
 
-                $record = new BankRecord;
-                $record->user_id = Auth::user()->id;
-                $record->bank_id = $transaction->bank_id;
-                $record->transaction_type = "Withdraw";
-                $record->description = 'Withdrawal for transaction [#'.sprintf('%06d', $transaction->id).']';
-                $record->record = 0;
-                $record->amount = $input['amount'];
+                if($input['status'] == 2)
+                {
+                    $record = new BankRecord;
+                    $record->user_id = Auth::user()->id;
+                    $record->bank_id = $transaction->bank_id;
+                    $record->transaction_type = "Withdraw";
+                    $record->description = 'Withdrawal for transaction [#'.sprintf('%06d', $transaction->id).']';
+                    $record->record = 0;
+                    $record->amount = $input['amount'];
 
-                $record->save();
+                    $record->save();
+                }
 
                 $transaction->first_time_update = 1;
 
