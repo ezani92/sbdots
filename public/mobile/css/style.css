@@ -442,7 +442,10 @@ a.deploy-contact:focus, a.deploy-contact:hover {
 
 .col.banks {
 
-text-align:center;
+    text-align: center;
+    display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 
 }
 
@@ -450,6 +453,17 @@ text-align:center;
     object-fit: contain;
     width: 100%;
     height: 100%;
+}
+
+.container.logos {
+    padding: 0;
+    margin-top: 24px;
+}
+
+.container.logos .provider.clearfix {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .barFixed {
@@ -940,22 +954,25 @@ ul#tabmenu li.active a {
 	text-transform:capitalize;
 }
 .promo-table {
-	background:#02303b;
+	background:#1a194e;
 	text-align:center;
 	margin-bottom:15px;
-	border:1px solid rgba(255,255,255,0.3)
+	border:1px 1px solid rgba(0,0,0,0.4);
+	width: 100%;
+	overflow:scroll;
 }
 .promo-table tr th {
-	background:#6c6c6c;
-	line-height:28px;
-	padding: 5px 10px;
-	text-align:center;
-	border:1px solid rgba(255,255,255,0.3)
+    background: #6c6c6c;
+    line-height: 28px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.4);
+    color: #fff;
 }
 .promo-table tr td {
 	line-height:28px;
 	padding: 5px 10px;
-	border:1px solid rgba(255,255,255,0.3)
+	border:1px solid rgba(255,255,255,0.3);
 }
 .btn-more, .btn-more:hover, .btn-more:focus, .btn-more:active {
 	margin:10px auto;
@@ -1552,14 +1569,15 @@ ul.bank-name {
 	margin-top:10px;
 }
 .bank {
-	background:#494949;
-	color:#fff;
-	text-align:center;
-	line-height:24px;
-	font-size:13px;
-	width:100px;
-	display:inline-block;
-	margin:5px auto 0 auto;
+	flex-basis: 47.5%;
+    background: #494949;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    font-size: 13px;
+    width: 100px;
+    display: inline-block;
+    margin: 0px auto 8px auto;
 }
 .provider {
 	text-align:center;
@@ -1567,9 +1585,14 @@ ul.bank-name {
 	/* border-bottom:1px dotted #fff; */
 	margin-bottom:20px;
 }
+.container.logos .provider.clearfix > img {
+	margin: 10px 0;
+	flex-basis: 21.5%;
+    flex: auto;
+}
 .provider img {
 	display:inline-block;
-	max-height:30px;
+	max-height:28px;
 	/* float:left; */
 }
 .navbar-inverse {
