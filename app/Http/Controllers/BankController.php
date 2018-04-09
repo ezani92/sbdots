@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Session;
 use App\BankRecord;
 use Auth;
+use App\Transaction;
 
 class BankController extends Controller
 {
@@ -21,7 +22,18 @@ class BankController extends Controller
     {
         $banks = Bank::all();
 
-        return view('admin.banks.index');
+        if(\Auth::user()->role == 1)
+        {
+
+            return view('admin.banks.index');
+
+        }
+        else
+        {
+            return view('staff.banks.index');
+        }
+
+        
     }
 
     public function data(Datatables $datatables)
@@ -33,6 +45,17 @@ class BankController extends Controller
             })
             ->editColumn('created_at', function ($bank) {
                 return $bank->created_at ? with(new Carbon($bank->created_at))->format('d M Y, h:i A') : '';
+            })
+            ->editColumn('balance', function ($bank) {
+
+                $deposit = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+
+                $withdraw = Transaction::where('transaction_type','withdraw')->where('status',2)->sum('amount');
+
+                $bank_balance_raw = $bank->balance + $deposit - $withdraw;
+                $bank_balance = number_format($bank_balance_raw,2);
+
+                return 'RM '.$bank_balance;
             })
             ->rawColumns(['actions'])
             ->make(true);

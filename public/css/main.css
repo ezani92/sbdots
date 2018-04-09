@@ -2133,7 +2133,7 @@ svg.svg-inline--fa.fa-facebook:hover, svg.svg-inline--fa.fa-instagram:hover {
 .member-col .games {
 	background:url(../images/common/products-box-games.jpg)no-repeat;
 }
-.member-col .poker {
+.member-col .lottery {
 	background:url(../images/common/products-box-poker.jpg)no-repeat;
 }
 
@@ -2155,7 +2155,7 @@ svg.svg-inline--fa.fa-facebook:hover, svg.svg-inline--fa.fa-instagram:hover {
 	padding: 30px;
 	text-align: center;
 }
-.poker {
+.lottery {
 	background:url(../images/common/products-box-poker.jpg)no-repeat;
 	padding: 30px;
 	text-align: center;

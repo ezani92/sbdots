@@ -22,6 +22,8 @@
 							        	<option value="">Select</option>
 							        	<option value="livecasino">livecasino</option>
 							        	<option value="sportsbook">sportsbook</option>
+							        	<option value="lottery">Lottery</option>
+							        	<option value="slots">Slots & Arcades</option>
 							        </select>
 							    </div>
 							    <div class="form-group">

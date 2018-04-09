@@ -16,8 +16,7 @@
 			                            <th>Bank Name</th>
 			                            <th>Account No</th>
 			                            <th>Account Name</th>
-			                            <th>Created At</th>
-			                            <th>Action</th>
+			                            <th>Balance</th>
 			                        </tr>
 			                    </thead>
 			                </table>
@@ -39,8 +38,7 @@
                 { data: 'name', name: 'name' },
                 { data: 'account_no', name: 'account_no' },
                 { data: 'account_name', name: 'account_name' },
-                { data: 'created_at', name: 'created_at' },
-                { data: 'actions', name: 'actions', orderable: false, searchable: false }
+                { data: 'balance', name: 'balance' }
             ]
         });
     });

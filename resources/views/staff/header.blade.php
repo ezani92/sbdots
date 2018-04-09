@@ -109,6 +109,14 @@
                                         </ul>
                                     </li>
 
+                                    <li class="parent {{ Request::is('staff/banks*') ? 'active' : '' }}">
+                                        <a href="#"><i class="icon mdi mdi-city"></i><span>Banks</span></a>
+                                        <ul class="sub-menu">
+                                            <li class="{{ Request::is('staff/banks') ? 'active' : '' }}"><a href="{{ url('staff/banks') }}">Bank Lists</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
                                     <li class="parent {{ Request::is('staff/bonuses*') ? 'active' : '' }}">
                                         <a href="#"><i class="icon mdi mdi-ticket-star"></i><span>Bonuses</span></a>
                                         <ul class="sub-menu">
