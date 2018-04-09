@@ -104,6 +104,7 @@
 									    </div>
 									</div><br />
 			                		<a href="{{ url('admin/users/'.$user->id.'/edit') }}" class="btn btn-info btn-block">Edit User</a><br />
+			                		<a data-toggle="modal" data-target="#modal-password" class="btn btn-info btn-block">Update Password</a><br />
 
 			                		@if($user->is_ban == 0)
 			                			<a href="{{ url('admin/users/'.$user->id.'/ban') }}" onclick="return confirm('Are you sure?');" class="btn btn-danger btn-block">Ban User</a><br />
@@ -401,6 +402,40 @@
 						    
 						    <div class="form-group">
 						        <button type="submit" class="btn btn-info btn-block">Submit</button>
+						    </div>
+						</form>
+		            </div>
+		            <div class="modal-footer"></div>
+		        </div>
+		    </div>
+		</div>
+		<div id="modal-password" tabindex="-1" role="dialog" class="modal fade">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+		            </div>
+		            <div class="modal-body">
+						<form method="POST" action="{{ url('admin/users/password') }}">
+						    @csrf
+						    <input type="hidden" name="user_id" value="{{ $user->id }}">
+
+						    <div class="row">
+						    	<div class="form-group col-md-12">
+							        <label>New Password</label>
+							        <input type="password" name="password" min="6" class="form-control" required>
+							    </div>
+						    </div>
+						    
+						    <div class="row">
+						    	<div class="form-group col-md-12">
+							        <label>Confirm Password</label>
+							        <input type="password" name="password_confirm" min="6" class="form-control" required>
+							    </div>
+						    </div>
+						    
+						    <div class="form-group">
+						        <button type="submit" class="btn btn-info btn-block">Update New Password</button>
 						    </div>
 						</form>
 		            </div>

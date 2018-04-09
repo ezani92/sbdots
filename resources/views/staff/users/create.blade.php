@@ -1,4 +1,4 @@
-@include('admin.header')
+@include('staff.header')
     <div class="be-content">
         <div class="main-content container-fluid">
         	@if(Session::has('message'))
@@ -10,7 +10,7 @@
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <br />
-			                <form method="POST" action="{{ url('admin/users/')}}" enctype="multipart/form-data">
+			                <form method="POST" action="{{ url('staff/users/')}}" enctype="multipart/form-data">
 			                	@csrf
 							    <div class="form-group">
 							        <label>Full Name</label>
@@ -22,7 +22,7 @@
 							    </div>
 							    <div class="form-group">
 							        <label>Role</label>
-							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate'], 3, ['class' => 'form-control role']) }}
+							        {{ Form::select('role', ['3' => 'Normal User'], 3, ['class' => 'form-control role']) }}
 							    </div>
 							    <div class="form-group" id="affiliate_rate" style="display: none;">
 							        <label>Affiliate Commision Rate</label>
@@ -57,7 +57,7 @@
 			</div>
 		</div>
     </div>
-@include('admin.footer')
+@include('staff.footer')
 <script type="text/javascript">
 	
 	$(".role").change(function(){

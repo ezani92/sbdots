@@ -129,6 +129,16 @@
                                         </ul>
                                     </li>
 
+                                    <li class="parent {{ Request::is('staff/users*') ? 'active' : '' }}">
+                                        <a href="#"><i class="icon mdi mdi-accounts"></i><span>User</span></a>
+                                        <ul class="sub-menu">
+                                            <li class="{{ Request::is('staff/users') ? 'active' : '' }}"><a href="{{ url('staff/users') }}">User Lists</a>
+                                            </li>
+                                            <li class="{{ Request::is('staff/users/create') ? 'active' : '' }}"><a href="{{ url('staff/users/create') }}">Create New User</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
                                     <li class="{{ Request::is('staff/reports*') ? 'active' : '' }}"><a href="{{ url('staff/reports') }}"><i class="icon mdi mdi-chart"></i><span>Reports</span></a>
                                     </li>
                                     

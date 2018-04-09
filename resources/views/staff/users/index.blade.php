@@ -1,4 +1,4 @@
-@include('admin.header')
+@include('staff.header')
     <div class="be-content">
         <div class="main-content container-fluid">
         	@if(Session::has('message'))
@@ -31,7 +31,7 @@
 			</div>
 		</div>
     </div>
-@include('admin.footer')
+@include('staff.footer')
 <script>
     $(function() {
         $('#games-table').DataTable({

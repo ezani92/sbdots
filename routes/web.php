@@ -89,6 +89,7 @@ Route::middleware(['isadmin'])->group(function () {
     Route::get('/admin/settings', 'settingController@index');
     Route::post('/admin/settings', 'settingController@update');
 
+    Route::post('/admin/users/password', 'UserController@password');
     Route::get('/admin/users/data', 'UserController@data');
     Route::get('/admin/users/{user_id}/transaction-data', 'UserController@transactiondata');
     Route::get('/admin/users/{user_id}/logs-data', 'UserController@logsdata');

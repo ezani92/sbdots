@@ -1,4 +1,4 @@
-@include('admin.header')
+@include('staff.header')
     <div class="be-content">
         <div class="main-content container-fluid">
         	@if(Session::has('message'))
@@ -103,13 +103,6 @@
 									    	<a data-toggle="modal" data-target="#modal-transfer" class="btn btn-default">Add Transfer</a>
 									    </div>
 									</div><br />
-			                		<a href="{{ url('admin/users/'.$user->id.'/edit') }}" class="btn btn-info btn-block">Edit User</a><br />
-
-			                		@if($user->is_ban == 0)
-			                			<a href="{{ url('admin/users/'.$user->id.'/ban') }}" onclick="return confirm('Are you sure?');" class="btn btn-danger btn-block">Ban User</a><br />
-			                		@else
-			                			<a href="{{ url('admin/users/'.$user->id.'/unban') }}" onclick="return confirm('Are you sure?');" class="btn btn-success btn-block">Un-Ban User</a><br />
-			                		@endif
 			                	</div>
 			                </div>
 			                <div class="row">
@@ -140,7 +133,7 @@
 		                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
 		            </div>
 		            <div class="modal-body">
-						<form method="POST" action="{{ url('admin/user/transaction/deposit') }}" enctype="multipart/form-data">
+						<form method="POST" action="{{ url('staff/user/transaction/deposit') }}" enctype="multipart/form-data">
 						    @csrf
 						    <input type="hidden" name="user_id" value="{{ $user->id }}">
 						    <div class="row">
@@ -309,9 +302,20 @@
 		                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
 		            </div>
 		            <div class="modal-body">
-						<form method="POST" action="{{ url('admin/user/transaction/withdraw') }}" enctype="multipart/form-data">
+						<form method="POST" action="{{ url('staff/user/transaction/withdraw') }}" enctype="multipart/form-data">
 						    @csrf
 						    <input type="hidden" name="user_id" value="{{ $user->id }}">
+						    <div class="row">
+							    <div class="form-group col-md-6">
+							        <label>User Bank Name</label>
+							        <input type="text" class="form-control" value="{{ $user->bank_name }}" disabled="true">
+							    </div>
+							     <div class="form-group col-md-6">
+							        <label>User Bank Account No</label>
+							        <input type="text" class="form-control" value="{{ $user->bank_account_no }}" disabled="true">
+							    </div>
+							</div>
+
 						    <div class="row">
 						    	<div class="form-group col-md-12">
 							        <label>Withdraw Amount</label>
@@ -321,16 +325,16 @@
 						    
 						    <div class="row">
 							    <div class="form-group col-md-6">
-							        <label>Bank</label>
+							        <label>From Bank</label>
 							        <select name="bank" class="form-control" required>
 							        	<option value="">Select</option>
 							        	@foreach($banks as $bank)
-							        		<option value="{{ $bank->id }}">{{ $bank->name }}</option>
+							        		<option value="{{ $bank->id }}">{{ $bank->account_name  }} ({{ $bank->account_no }})</option>
 							        	@endforeach
 							        </select>
 							    </div>
 							    <div class="form-group col-md-6">
-							        <label>Games</label>
+							        <label>From Games</label>
 							        <select name="game_id" class="form-control" required>
 							        	<option value="">Select</option>
 							        	@foreach($games as $game)
@@ -356,7 +360,7 @@
 		                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
 		            </div>
 		            <div class="modal-body">
-						<form method="POST" action="{{ url('admin/user/transaction/transfer') }}" enctype="multipart/form-data">
+						<form method="POST" action="{{ url('staff/user/transaction/transfer') }}" enctype="multipart/form-data">
 						    @csrf
 						    <input type="hidden" name="user_id" value="{{ $user->id }}">
 						    <div class="row">
@@ -397,13 +401,13 @@
 		    </div>
 		</div>
     </div>
-@include('admin.footer')
+@include('staff.footer')
 <script>
     $(function() {
         $('#user-transaction-table').DataTable({
             processing: true,
             serverSide: true,
-            ajax: '{{ url('admin/users/'.$user->id.'/transaction-data') }}',
+            ajax: '{{ url('staff/users/'.$user->id.'/transaction-data') }}',
             columns: [
                 { data: 'transaction_id', name: 'transaction_id' },
                 { data: 'transaction_type', name: 'transaction_type' },

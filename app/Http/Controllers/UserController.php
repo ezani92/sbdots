@@ -26,12 +26,35 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index');
+
+        if(\Auth::user()->role == 1)
+        {
+
+            return view('admin.users.index');
+
+        }
+        else
+        {
+            return view('staff.users.index');
+        }
     }
 
     public function data(Datatables $datatables)
     {
-        $users = User::All();
+        
+
+        if(\Auth::user()->role == 1)
+        {
+
+            $users = User::All();
+
+        }
+        else
+        {
+            $users = User::where('role',3)->get();
+        }
+
+
         return Datatables::of($users)
             ->addColumn('actions', function($user) {
                 return view('admin.users.action', compact('user'))->render();
@@ -83,7 +106,15 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        
+        if(\Auth::user()->role == 1)
+        {
+            return view('admin.users.create');
+        }
+        else
+        {
+            return view('staff.users.create');
+        }
     }
 
     /**
@@ -116,7 +147,16 @@ class UserController extends Controller
         Session::flash('message', 'User created succesfully!'); 
         Session::flash('alert-class', 'alert-success');
 
-        return redirect('admin/users/'.$user->id);
+        if(\Auth::user()->role == 1)
+        {
+            return redirect('admin/users/'.$user->id);
+        }
+        else
+        {
+            return redirect('staff/users/'.$user->id);
+        }
+
+        
     }
 
     /**
@@ -129,36 +169,51 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-
-        if($user->role == 4)
+        if(\Auth::user()->role == 1)
         {
-            $games = Game::all();
-            $banks = Bank::all();
-            $bonuses = Bonus::all();
 
-            $members = User::where('referred_by',$user->affiliate_id)->get();
+            if($user->role == 4)
+            {
+                $games = Game::all();
+                $banks = Bank::all();
+                $bonuses = Bonus::all();
 
-            return view('admin.users.affiliate',compact('user','games','banks','bonuses','members'));
+                $members = User::where('referred_by',$user->affiliate_id)->get();
+
+                return view('admin.users.affiliate',compact('user','games','banks','bonuses','members'));
+            }
+            else if($user->role == 3)
+            {
+                $games = Game::all();
+                $banks = Bank::all();
+                $bonuses = Bonus::all();
+
+                return view('admin.users.show',compact('user','games','banks','bonuses'));
+            }
+
+            else
+            {
+                $games = Game::all();
+                $banks = Bank::all();
+                $bonuses = Bonus::all();
+
+                $members = User::where('referred_by',$user->affiliate_id)->get();
+
+                return view('admin.users.staff',compact('user','games','banks','bonuses','members'));
+            }
+
         }
-        else if($user->role == 3)
-        {
-            $games = Game::all();
-            $banks = Bank::all();
-            $bonuses = Bonus::all();
-
-            return view('admin.users.show',compact('user','games','banks','bonuses'));
-        }
-
         else
         {
             $games = Game::all();
             $banks = Bank::all();
             $bonuses = Bonus::all();
 
-            $members = User::where('referred_by',$user->affiliate_id)->get();
-
-            return view('admin.users.staff',compact('user','games','banks','bonuses','members'));
+            return view('staff.users.show',compact('user','games','banks','bonuses'));
         }
+
+
+        
           
         
     }
@@ -386,7 +441,16 @@ class UserController extends Controller
         $transaction->amount = $input['amount'];
         $transaction->bank_id = $input['bank'];
         $transaction->datetime = $input['deposit_date']." ".$input['deposit_hour'].":".$input['deposit_minutes']." ".$input['deposit_stamp'];
-        $transaction->refference_no = $input['refference_no'];
+
+        if(isset($input['refference_no']))
+        {
+            $transaction->refference_no = $input['refference_no'];
+        }
+        else
+        {
+            $transaction->refference_no = 'none';
+        }
+        
         $transaction->status = 1;
 
         $transaction->save();
@@ -407,7 +471,14 @@ class UserController extends Controller
         Session::flash('message', 'Deposit transaction succesfully added, You still need to approve the deposit at transaction page!'); 
         Session::flash('alert-class', 'alert-success');
 
-        return redirect('admin/users/'.$input['user_id']);
+        if(\Auth::user()->role == 1)
+        {
+            return redirect('admin/users/'.$input['user_id']);
+        }
+        else
+        {
+            return redirect('staff/users/'.$input['user_id']);
+        }
     }
 
     public function withdraw(Request $request)
@@ -446,7 +517,16 @@ class UserController extends Controller
         session::flash('message', 'Withdraw transaction succesfully added, You still need to approve the withdraw at transaction page!'); 
         Session::flash('alert-class', 'alert-success');
 
-        return redirect('admin/users/'.$input['user_id']);
+        if(\Auth::user()->role == 1)
+        {
+            return redirect('admin/users/'.$input['user_id']);
+        }
+        else
+        {
+            return redirect('staff/users/'.$input['user_id']);
+        }
+
+        
     }
 
     public function transfer(Request $request)
@@ -485,7 +565,14 @@ class UserController extends Controller
         session::flash('message', 'Transfer transaction succesfully added, You still need to approve the transfer at transaction page!'); 
         Session::flash('alert-class', 'alert-success');
 
-        return redirect('admin/users/'.$input['user_id']);
+        if(\Auth::user()->role == 1)
+        {
+            return redirect('admin/users/'.$input['user_id']);
+        }
+        else
+        {
+            return redirect('staff/users/'.$input['user_id']);
+        }
     }
 
     public function logsdata(Datatables $datatables,$user_id)
@@ -504,5 +591,21 @@ class UserController extends Controller
             })
             ->rawColumns(['detail'])
             ->make(true);
+    }
+
+    public function password(Request $request)
+    {
+        $input = $request->all();
+
+        $user = User::find($input['user_id']);
+
+        $user->password = bcrypt($input['password']);
+
+        $user->save();
+
+        session::flash('message', 'User password successfully updated!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        return redirect('admin/users/'.$user->id);
     }
 }
