@@ -488,6 +488,11 @@ class PlayerController extends Controller
         {   
             $transactions = Transaction::where('transaction_type','deposit')->where('user_id',$user_id)->get();
 
+            if($agent->isMobile())
+            {
+                return view('mobile.player.transaction.deposit',['transactions' => $transactions]);
+            }
+
             return view('player.transaction.deposit',['transactions' => $transactions]);
         }
 
@@ -495,12 +500,22 @@ class PlayerController extends Controller
         {   
             $transactions = Transaction::where('transaction_type','withdraw')->where('user_id',$user_id)->get();
 
+            if($agent->isMobile())
+            {
+                return view('mobile.player.transaction.withdrawal',['transactions' => $transactions]);
+            }
+
             return view('player.transaction.withdrawal',['transactions' => $transactions]);
         }
 
         else if($input['tab'] == 'transfer')
         {   
             $transactions = Transaction::where('transaction_type','transfer')->where('user_id',$user_id)->get();
+
+            if($agent->isMobile())
+            {
+                return view('mobile.player.transaction.transfer',['transactions' => $transactions]);
+            }
 
             return view('player.transaction.transfer',['transactions' => $transactions]);
         }
