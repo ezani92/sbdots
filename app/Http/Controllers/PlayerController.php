@@ -307,7 +307,17 @@ class PlayerController extends Controller
     	$transaction->amount = $input['amount'];
         $transaction->bank_id = $input['bank'];
     	$transaction->datetime = $input['deposit_date']." ".$input['deposit_hour'].":".$input['deposit_minutes']." ".$input['deposit_stamp'];
-    	$transaction->refference_no = $input['refference_no'];
+
+        if(isset($input['refference_no']))
+        {
+            $transaction->refference_no = $input['refference_no'];
+        }
+        else
+        {
+            $transaction->refference_no = 'none';
+        }
+
+    	
     	$transaction->status = 1;
 
     	$transaction->save();
@@ -336,6 +346,13 @@ class PlayerController extends Controller
     {
         $games = Game::all();
 
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.withdrawal.step1',['games' => $games]);
+        }
+
         return view('player.withdrawal.step1',['games' => $games]);
     }
 
@@ -349,6 +366,13 @@ class PlayerController extends Controller
             Session::flash('alert-class', 'alert-danger');
 
             return redirect('player/withdrawal/step1');
+        }
+
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.withdrawal.step2',['input' => $input]);
         }
 
         return view('player.withdrawal.step2',['input' => $input]);
@@ -386,6 +410,13 @@ class PlayerController extends Controller
         $pusher = new Pusher('32a087e0e1378c7b7210', 'bda79f5550252850598e', '494870', $options);
         $pusher->trigger('sbdots', 'transaction', []);
 
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.withdrawal.step3',['transaction' => $transaction]);
+        }
+
         return view('player.withdrawal.step3',['transaction' => $transaction]);
 
     }
@@ -393,6 +424,13 @@ class PlayerController extends Controller
     public function transfer_step1()
     {
         $games = Game::all();
+
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.transfer.step1',['games' => $games]);
+        }
 
         return view('player.transfer.step1',['games' => $games]);
     }
@@ -430,6 +468,13 @@ class PlayerController extends Controller
         $pusher = new Pusher('32a087e0e1378c7b7210', 'bda79f5550252850598e', '494870', $options);
         $pusher->trigger('sbdots', 'transaction', []);
 
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.transfer.step2',['transaction' => $transaction]);
+        }
+
         return view('player.transfer.step2',['transaction' => $transaction]);
     }
 
@@ -437,6 +482,7 @@ class PlayerController extends Controller
     {
         $input = $request->all();
         $user_id = \Auth::user()->id;
+        $agent = new Agent;
 
         if(!isset($input['tab']) || $input['tab'] == 'deposit')
         {   
@@ -462,6 +508,13 @@ class PlayerController extends Controller
 
     public function profile()
     {
+        $agent = new Agent;
+
+        if($agent->isMobile())
+        {
+            return view('mobile.player.profile');
+        }
+
         return view('player.profile');
     }
 
@@ -470,9 +523,6 @@ class PlayerController extends Controller
         $input = $request->all();
 
         $user = User::find($input['user_id']);
-
-        $user->name  = $input['fullname'];
-        $user->phone  = $input['phone'];
         $user->gender  = $input['gender'];
         $user->dob  = $input['dob'];
         $user->address  = $input['address'];

@@ -1741,3 +1741,13 @@ ul.bank-name {
 	font-size:15px;
 	text-transform:capitalize;
 }
+
+.field-register {
+    /* width: 375px; */
+    line-height: 26px;
+    height: 30px;
+    padding: 0px 6px;
+    color: #6d6d6d;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+}

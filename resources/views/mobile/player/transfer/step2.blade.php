@@ -1,31 +1,25 @@
-@include('player.header')
-<div class="content">
-    <div class="container">
-        <div class="page-content">
-            <div class="m-page clearfix">
-                <ul class="member">
-                    <li><a href="{{ url('player') }}" class="">main</a></li>
-                    <li><a href="{{ url('player/deposit/step1') }}" class="">deposit</a></li>
-                    <li><a href="{{ url('player/withdrawal/step1') }}" class="">withdrawal</a></li>
-                    <li><a href="{{ url('player/transfer/step1') }}" class="active">transfer</a></li>
-                    <li><a href="{{ url('player/transaction') }}" class="">transaction</a></li>
-                    <li><a href="{{ url('player/profile') }}" class="">profile</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active">
-                        <div class="title-wrap">
-                            <div class="outer-mask">
-                                <div class="inner-mask">
-                                    <div class="title-p">
-                                        <h2 class="smaller">Transfer</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+@extends('mobile.master')
+@section('content')        
+<div class="all-elements">
+    @include ('mobile.sidebar')
+    <div id="content" class="page-content">
+        @include ('mobile.nav') 
+        <div>
+            <div id="ctl00_UpdatePanel1">
+                <div class="container bg-dark">
+                    <ul id="tabmenu">
+                        <li><a href="{{ url('player') }}">Main</a></li>
+                        <li><a href="{{ url('player/deposit/step1') }}" >Deposit</a></li>
+                        <li><a href="{{ url('player/withdrawal/step1') }}" class="deposit">Withdrawal</a></li>
+                        <li class="active"><a href="{{ url('player/transfer/step1') }}" class="rebate">Transfer</a></li>
+                        <li><a href="{{ url('player/transaction') }}" class="special">Transaction</a></li>
+                        <li><a href="{{ url('player/profile') }}" class="scr888">Profile</a></li>
+                    </ul>
+                    <div id="ourHolder" class="promo-box">
                         @if(Session::has('message'))
                             <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
                         @endif
-                        <h5>Done : Ticket submitted successfully</h5>
+                        <h4>Done : Ticket submitted successfully</h4>
                         <div class="member-main">
                             <div class="member-row">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-member">
@@ -63,15 +57,21 @@
                                     <li>You may view your transaction status at Transaction Status page.</li>
                                 </ol>
                             </div>
-                            <div class="clearfix">
-                                <input type="submit" name="ctl00$MainContent$btnstep2next" value="Back to Main" id="ctl00_MainContent_btnstep2next" class="btn btn-warning btn-more pull-right" />
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="ctl00_UpdateProgress1" style="display:none;">
+            <div class="overlay" />
+                <div class="overlayContent">
+                    <img src="{{ asset('mobile/images/ajax-loader.gif') }}" alt="Loading" border="1" />
+                </div>
+            </div>
+        </div>
+        @include ('mobile.footer')
     </div>
 </div>
-@include('player.footer')
-</body></html>
+@endsection
+@section('scripts')
+@endsection

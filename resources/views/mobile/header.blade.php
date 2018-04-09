@@ -18,6 +18,7 @@
 <script src="{{ asset('mobile/js/wow.min.js') }}"></script>
 <script>    new WOW().init();</script>
 <script type="text/javascript" src="{{ asset('mobile/js/snap.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 <script type="text/javascript">
     function openLoginModal() {
         $('#login').modal({ show: true });
