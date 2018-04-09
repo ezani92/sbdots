@@ -926,7 +926,7 @@ padding:0 !important;
 
 }
 
-.banking-table-holder table.table.promo-table {
+table.table.promo-table {
 
 display: table;
 width:100%;
@@ -942,6 +942,12 @@ width:100%;
 	width: 20%;
 	white-space: initial;
 	
+}
+
+table.table.promo-table th, table.table.promo-table td {
+
+width: auto;
+
 }
 
 .tabs-promo > .tab-content {
