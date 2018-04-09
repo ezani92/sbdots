@@ -48,9 +48,9 @@ class BankController extends Controller
             })
             ->editColumn('balance', function ($bank) {
 
-                $deposit = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->('bank_id',$bank->id)->where('status',2)->sum('amount');
+                $deposit = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->where('bank_id',$bank->id)->where('status',2)->sum('amount');
 
-                $withdraw = Transaction::where('transaction_type','withdraw')->where('status',2)->('bank_id',$bank->id)->sum('amount');
+                $withdraw = Transaction::where('transaction_type','withdraw')->where('status',2)->where('bank_id',$bank->id)->sum('amount');
 
                 $bank_balance_raw = $bank->balance + $deposit - $withdraw;
                 $bank_balance = number_format($bank_balance_raw,2);
