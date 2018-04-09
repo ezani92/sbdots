@@ -17,8 +17,11 @@ class ReportController extends Controller
         if(isset($input['date_from']))
         {
 
-            $from = Carbon::createFromFormat('d-m-Y',$input['date_from']);
-            $to = Carbon::createFromFormat('d-m-Y',$input['date_to']);
+            $arrStart = explode("-", $input['date_from']);
+            $arrEnd = explode("-", $input['date_to']);
+
+            $from = Carbon::create($arrStart[2], $arrStart[1], $arrStart[0], 0, 0, 0);
+            $to = Carbon::create($arrEnd[2], $arrEnd[1], $arrEnd[0], 23, 59, 59);
 
             $total_user = User::where('role',3)->where('created_at','>=',$from)->where('created_at','<=',$to)->count();
 
