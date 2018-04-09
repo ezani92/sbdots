@@ -913,6 +913,31 @@ ul#tabmenu li.active a {
 	-webkit-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;
 }
+
+.banking-table-holder {
+
+padding:0 !important;
+
+}
+
+.banking-table-holder table.table.promo-table {
+
+display: table;
+width:100%;
+
+}
+
+.banking-table-holder table.table.promo-table th, .banking-table-holder table.table.promo-table td  {
+
+	padding: 8px 0 !important;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+	width: 20%;
+	white-space: initial;
+	
+}
+
 .tabs-promo > .tab-content {
 	/* float: left; */
 	/* width: 790px; */
@@ -959,7 +984,6 @@ ul#tabmenu li.active a {
 	margin-bottom:15px;
 	border:1px 1px solid rgba(0,0,0,0.4);
 	width: 100%;
-	overflow:scroll;
 }
 .promo-table tr th {
     background: #6c6c6c;

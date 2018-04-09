@@ -16,7 +16,7 @@
                
                 <div class="container bg-dark">
                     <h2>Banking</h2>
-                    <div class="form-register">
+                    <div class="form-register banking-table-holder">
                             <div class="table-responsive no-bottom">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table promo-table" data-snap-ignore="true">
                                     <tbody>
