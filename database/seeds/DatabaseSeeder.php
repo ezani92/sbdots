@@ -30,8 +30,8 @@ class DatabaseSeeder extends Seeder
         // $this->call('BankTableSeeder');
         // $this->command->info('Bank table seeded!');
         
-        // $this->call('SettingTableSeeder');
-        // $this->command->info('Setting table seeded!');
+        $this->call('SettingTableSeeder');
+        $this->command->info('Setting table seeded!');
 
         // $this->call('BonusTableSeeder');
         // $this->command->info('Bonus table seeded!');
