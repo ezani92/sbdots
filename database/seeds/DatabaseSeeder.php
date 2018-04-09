@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
         $this->call('UserTableSeeder');
         $this->command->info('User table seeded!');
 
-        // $this->call('GroupTableSeeder');
-        // $this->command->info('User Group table seeded!');
+        $this->call('GroupTableSeeder');
+        $this->command->info('User Group table seeded!');
 
         // $this->call('GameTableSeeder');
         // $this->command->info('Game table seeded!');
@@ -70,24 +70,6 @@ class GroupTableSeeder extends Seeder {
         Group::create(array(
             'name' => 'Basic',
             'icon' => 'user',
-            'color' => '#FFFFFF',
-        ));
-
-        Group::create(array(
-            'name' => 'Silver',
-            'icon' => 'user-secret',
-            'color' => '#FFFFFF',
-        ));
-
-        Group::create(array(
-            'name' => 'Platinum',
-            'icon' => 'superpowers',
-            'color' => '#FFFFFF',
-        ));
-
-        Group::create(array(
-            'name' => 'Gold',
-            'icon' => 'female',
             'color' => '#FFFFFF',
         ));
     }
