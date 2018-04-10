@@ -70,6 +70,6 @@ class NewWithdraw extends Notification implements ShouldQueue
         return TelegramMessage::create()
             ->to('-242559530')
             ->content("*ALERT!* \n\n We have new withdraw request from ".$this->transaction->user->name."!")
-            ->button('View Withdraw Request', url('https://sbdots.com'));
+            ->button('View Withdraw Request', url('https://sbdot.net'));
     }
 }

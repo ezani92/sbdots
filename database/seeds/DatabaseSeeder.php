@@ -24,17 +24,17 @@ class DatabaseSeeder extends Seeder
         $this->call('GroupTableSeeder');
         $this->command->info('User Group table seeded!');
 
-        // $this->call('GameTableSeeder');
-        // $this->command->info('Game table seeded!');
+        $this->call('GameTableSeeder');
+        $this->command->info('Game table seeded!');
 
-        // $this->call('BankTableSeeder');
-        // $this->command->info('Bank table seeded!');
+        $this->call('BankTableSeeder');
+        $this->command->info('Bank table seeded!');
         
         $this->call('SettingTableSeeder');
         $this->command->info('Setting table seeded!');
 
-        // $this->call('BonusTableSeeder');
-        // $this->command->info('Bonus table seeded!');
+        $this->call('BonusTableSeeder');
+        $this->command->info('Bonus table seeded!');
     }
 }
 
@@ -48,7 +48,7 @@ class UserTableSeeder extends Seeder {
             'name' => 'Administrator',
         	'email' => 'admin@sbdot.net',
         	'password' => bcrypt('123456'),
-        	'phone' => '60129718420',
+        	'phone' => '60123456789',
             'role' => 1,
             'tac_no' => '123456',
             'phone_verification' => 1,
@@ -57,6 +57,20 @@ class UserTableSeeder extends Seeder {
             'affiliate_id' => str_random('8')
 
     	));
+
+        User::create(array(
+            'name' => 'Shaiful',
+            'email' => 'shaiful@naxpansion.com',
+            'password' => bcrypt('123456'),
+            'phone' => '60129718420',
+            'role' => 3,
+            'tac_no' => '123456',
+            'phone_verification' => 1,
+            'bank_name' => 'RHB Bank',
+            'bank_account_no' => '12345678',
+            'affiliate_id' => str_random('8')
+
+        ));
     }
 
 }

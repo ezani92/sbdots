@@ -70,6 +70,6 @@ class NewDeposit extends Notification implements ShouldQueue
         return TelegramMessage::create()
             ->to('-242559530')
             ->content("*ALERT!* \n\n We have new deposit request from ".$this->transaction->user->name."!")
-            ->button('View Deposit Request', url('https://sbdots.com'));
+            ->button('View Deposit Request', url('https://sbdot.net'));
     }
 }
