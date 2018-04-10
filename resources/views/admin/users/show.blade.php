@@ -153,9 +153,9 @@
 							    <div class="form-group col-md-6">
 							        <label>Deposit Method</label>
 							        <select name="payment_method" class="form-control">
-							        	<option value="deposit">Online</option>
-							        	<option value="withdraw">Atm</option>
-							        	<option value="transfer">Cash</option>
+							        	<option value="Online">Online</option>
+							        	<option value="Atm">Atm</option>
+							        	<option value="Cash">Cash</option>
 							        </select>
 							    </div>
 						    </div>
@@ -290,7 +290,7 @@
 								    <select name="bonus_code" class="form-control">
 								       	<option value="">No Bonus</option>
 								        @foreach($bonuses as $bonus)
-								        	<option value="{{ $bonus->code }}">{{ $bonus->name }}</option>
+								        	<option value="{{ $bonus->id }}">{{ $bonus->name }}</option>
 								        @endforeach
 								    </select>
 								</div>

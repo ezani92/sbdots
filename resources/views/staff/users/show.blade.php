@@ -281,7 +281,7 @@
 								    <select name="bonus_code" class="form-control">
 								       	<option value="">No Bonus</option>
 								        @foreach($bonuses as $bonus)
-								        	<option value="{{ $bonus->code }}">{{ $bonus->name }}</option>
+								        	<option value="{{ $bonus->id }}">{{ $bonus->name }}</option>
 								        @endforeach
 								    </select>
 								</div>

@@ -174,6 +174,8 @@
 			                		@else
 										<a href="{{ url('staff/transaction/'.$transaction->id.'/edit') }}" class="btn btn-info btn-block">Update Transaction</a><br />
 			                		@endif
+
+			                		@if($transaction->transaction_type == 'deposit')
 			                		<button data-toggle="modal" data-target="#modal-bonus" type="button" class="btn btn-info btn-block">Add Bonus For This Transaction</button>
 			                		<br />
 			                		<h4>Bonus</h4>
@@ -198,6 +200,7 @@
 			                			</tbody>
 			                		</table>
 			                		<br />
+			                		@endif
 			                		<h4>Transaction Logs</h4>
 			                		<table class="table table-bordered table-striped">
 			                			<thead>
