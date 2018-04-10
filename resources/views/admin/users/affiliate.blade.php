@@ -110,7 +110,7 @@
 					                    			<td>{{ $member->created_at->format('d M Y, h:iA') }}</td>
 					                    			<td>
 					                    				@php
-								                    		$member_dep = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('status',2)->sum('amount');
+								                    		$member_dep = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
 
 								                    		$member_withdraw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 								                    	
