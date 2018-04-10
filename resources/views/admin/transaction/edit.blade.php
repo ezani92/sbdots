@@ -66,7 +66,7 @@
 			                	
 							    <div class="form-group">
 							        <label>Status</label>
-							        {{ Form::select('status', ['1' => 'Progress', '2' => 'Completed', '3' => 'Rejected'], $transaction->status, ['class' => 'form-control']) }}
+							        {{ Form::select('status', ['' => 'Select', '2' => 'Completed', '3' => 'Rejected'], $transaction->status, ['class' => 'form-control', 'required' => 'required']) }}
 							    </div>
 
 							    <div class="form-group">
@@ -109,7 +109,7 @@
 			                	
 							    <div class="form-group">
 							        <label>Status</label>
-							        {{ Form::select('status', ['1' => 'Progress', '2' => 'Completed', '3' => 'Rejected'], $transaction->status, ['class' => 'form-control']) }}
+							        {{ Form::select('status', ['' => 'Select', '2' => 'Completed', '3' => 'Rejected'], $transaction->status, ['class' => 'form-control', 'required' => 'required']) }}
 							    </div>
 
 							    <div class="form-group">
