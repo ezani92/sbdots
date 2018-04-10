@@ -21,6 +21,18 @@
 			                					<td width="30%"><strong>Transaction Type</strong></td>
 			                					<td>{{ $transaction->transaction_type }}</td>
 			                				</tr>
+			                				<tr>
+			                					<td width="30%"><strong>Transaction Status</strong></td>
+			                					<td>
+			                						@if($transaction->status == 1)
+			                							<span class="label label-warning">Progress</span>
+			                						@elseif($transaction->status == 2)
+			                							<span class="label label-success">Success</span>
+			                						@elseif($transaction->status == 3)
+			                							<span class="label label-danger">Rejected</span>
+			                						@endif
+			                					</td>
+			                				</tr>
 			                				@if($transaction->transaction_type == 'deposit')
 			                					@php
 
@@ -160,8 +172,51 @@
 			                		@if($transaction->first_time_update == 1)
 			                			<div class="alert alert-warning">You are not allowed to edit the transaction since the transaction already updated. If you found an error. Please notify Administrator.</div>
 			                		@else
-										<a href="{{ url('staff/transaction/'.$transaction->id.'/edit') }}" class="btn btn-info btn-block">Edit Transaction</a><br />
+										<a href="{{ url('staff/transaction/'.$transaction->id.'/edit') }}" class="btn btn-info btn-block">Update Transaction</a><br />
 			                		@endif
+			                		<button data-toggle="modal" data-target="#modal-bonus" type="button" class="btn btn-info btn-block">Add Bonus For This Transaction</button>
+			                		<br />
+			                		<h4>Bonus</h4>
+			                		<table class="table table-bordered table-striped">
+			                			<thead>
+					                        <tr>
+					                            <th>Bonus Name</th>
+					                            <th>Amount</th>
+					                            <th>Date & Time</th>
+					                            <th>Action</th>
+					                        </tr>
+					                    </thead>
+			                			<tbody>
+			                				@foreach($bonuses as $bonus)
+			                				<tr>
+			                					<td>{{ $bonus->bonus->name }}</td>
+			                					<td>RM {{ $bonus->amount }}</td>
+			                					<td>{{ $bonus->created_at->format('d M Y, h:i A') }}</td>
+			                					<td><a href="{{ url('staff/transaction/'.$bonus->id.'/deletebonus') }}" class="label label-danger">Delete</a></td>
+			                				</tr>
+			                				@endforeach
+			                			</tbody>
+			                		</table>
+			                		<br />
+			                		<h4>Transaction Logs</h4>
+			                		<table class="table table-bordered table-striped">
+			                			<thead>
+					                        <tr>
+					                            <th>Updated By</th>
+					                            <th>Details</th>
+					                            <th>Date & Time</th>
+					                        </tr>
+					                    </thead>
+			                			<tbody>
+			                				@foreach($logs as $log)
+			                				<tr>
+			                					<td>{{ $log->user->name }}</td>
+			                					<td>{!! $log->detail !!}</td>
+			                					<td>{{ $log->created_at->format('d M Y, h:i A') }}</td>
+			                				</tr>
+			                				@endforeach
+			                			</tbody>
+			                		</table>
 			                	</div>
 			                </div>
 			            </div>
@@ -169,6 +224,57 @@
 			    </div>
 			</div>
 		</div>
+		@if($transaction->bonus_id == 0)
+			<div id="modal-bonus" tabindex="-1" role="dialog" class="modal fade">
+			    <div class="modal-dialog">
+			        <div class="modal-content">
+			            <div class="modal-header">
+			                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+			            </div>
+			            <div class="modal-body">
+							<h3 class="text-center">This Transaction Has No Bonus</h3>
+			            </div>
+			            <div class="modal-footer"></div>
+			        </div>
+			    </div>
+			</div> 	                					
+		@else
+			<div id="modal-bonus" tabindex="-1" role="dialog" class="modal fade">
+			    <div class="modal-dialog">
+			        <div class="modal-content">
+			            <div class="modal-header">
+			                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+			            </div>
+			            <div class="modal-body">
+							<form method="POST" action="{{ url('staff/transaction/addbonus') }}">
+							    @csrf
+							    <input type="hidden" name="user_id" value="{{ $transaction->user_id }}">
+							    <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
+
+							    <div class="row">
+							    	<div class="form-group col-md-12">
+								        <label>Bonus Name</label>
+								        <input type="text" name="bonus_name" class="form-control" value="{{ $transaction->bonus->name }}" readonly="true">
+								    </div>
+							    </div>
+							    
+							    <div class="row">
+							    	<div class="form-group col-md-12">
+								        <label>Bonus Amount (RM)</label>
+								        <input type="number" name="bonus_amount" step="0.01" class="form-control" required>
+								    </div>
+							    </div>
+							    
+							    <div class="form-group">
+							        <button type="submit" class="btn btn-info btn-block">Add Bonus</button>
+							    </div>
+							</form>
+			            </div>
+			            <div class="modal-footer"></div>
+			        </div>
+			    </div>
+			</div>               					
+		@endif
     </div>
 @include('staff.footer')
 </body></html>

@@ -17,22 +17,12 @@
 			                	<input type="hidden" name="type_transaction" value="{{ $transaction->transaction_type }}">
 							    <div class="form-group">
 							        <label>Amount (RM)</label>
-							        <input type="number" step="0.01" name="amount" class="form-control" value="{{ $transaction->amount }}" required>
+							        <input type="number" step="0.01" name="amount" class="form-control" value="{{ $transaction->amount }}" required readonly="true">
 							    </div>
 			                	
 							    <div class="form-group">
 							        <label>Status</label>
 							        {{ Form::select('status', ['' => 'Select', '2' => 'Completed', '3' => 'Rejected'], $transaction->status, ['class' => 'form-control', 'required' => 'required']) }}
-							    </div>
-
-							    <div class="form-group">
-							        <label>Bonus Request</label>
-							        <input type="text" name="bonus" class="form-control" value="{{ $bonus }}" readonly="true">
-							    </div>
-
-							    <div class="form-group">
-							        <label>Bonus Amount (RM) </label>
-							        <input type="number" step="0.01" name="bonus_amount" class="form-control" value="0" required>
 							    </div>
 
 							    <div class="form-group">
@@ -55,7 +45,7 @@
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <br />
-			                <form method="POST" action="{{ url('staff/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
+			                <form method="POST" action="{{ url('admin/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
 			                	@csrf
 			                	@method('patch')
 			                	<input type="hidden" name="type_transaction" value="{{ $transaction->transaction_type }}">
@@ -98,7 +88,7 @@
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <br />
-			                <form method="POST" action="{{ url('staff/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
+			                <form method="POST" action="{{ url('admin/transaction/'.$transaction->id) }}" enctype="multipart/form-data">
 			                	@csrf
 			                	@method('patch')
 			                	<input type="hidden" name="type_transaction" value="{{ $transaction->transaction_type }}">

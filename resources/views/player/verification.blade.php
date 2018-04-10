@@ -1,4 +1,4 @@
-@include('front.header')
+@include('player.header')
 <div class="content">
     <div class="container">
         <div class="page-content">
@@ -16,9 +16,8 @@
                 <div class="r-content">
                     <form method="POST" action="{{ url('player/verification') }}">
                         @csrf
-                        <p>We already send TAC to number {{ Auth::user()->phone }}. We are doing this to verify that you are not BOT. You only do this once.</p>
+                        <p>We already send TAC to number {{ Auth::user()->phone }}. We are doing this to verify that you are not BOT. You only do this once. Please Contact Live Chat Support to retrieve your TAC if you do not receive the TAC number.</p>
                         {{-- <p id="timer_text">You need to wait <span id="time">120</span> second before you can request TAC again.</p> --}}
-                        <p id="reqeust_tac"><a href="{{ Request::url() }}">(Resend TAC Number)</a></p>
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-register">
                             <tr>
                                 <td>
@@ -48,7 +47,7 @@
 </div>
 
 </div>    
-@include('front.footer')
+@include('player.footer')
 <script type="text/javascript">
     
     var i = 119;

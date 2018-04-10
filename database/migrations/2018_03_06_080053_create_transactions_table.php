@@ -26,6 +26,7 @@ class CreateTransactionsTable extends Migration
             $table->string('refference_no')->nullable();
             $table->string('receipt_file')->nullable();
             $table->integer('bonus_id')->nullable();
+            $table->integer('bonus_for')->nullable();
             $table->integer('status');
             $table->text('remarks')->nullable();
             $table->integer('first_time_update')->default(0);

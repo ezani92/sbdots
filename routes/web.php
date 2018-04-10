@@ -74,6 +74,9 @@ Route::middleware(['isadmin'])->group(function () {
     Route::resource('/admin/bonuses', 'BonusController');
     Route::get('/admin/bonuses/{bonus_id}/restore', 'BonusController@restore');
 
+
+    Route::post('/admin/transaction/addbonus', 'TransactionController@addbonus');
+    Route::get('/admin/transaction/{transaction_id}/deletebonus', 'TransactionController@deletebonus');
     Route::get('/admin/transaction/data', 'TransactionController@data');
 
     Route::get('/admin/transaction/deposit', 'TransactionController@deposit');
@@ -128,6 +131,8 @@ Route::middleware(['isstaff'])->group(function () {
     Route::resource('/staff/bonuses', 'BonusController');
     Route::get('/staff/bonuses/{bonus_id}/restore', 'BonusController@restore');
 
+    Route::post('/staff/transaction/addbonus', 'TransactionController@addbonus');
+    Route::get('/staff/transaction/{transaction_id}/deletebonus', 'TransactionController@deletebonus');
     Route::get('/staff/transaction/data', 'TransactionController@data');
 
     Route::get('/staff/transaction/deposit', 'TransactionController@deposit');

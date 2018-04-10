@@ -321,15 +321,17 @@ class TransactionController extends Controller
     public function show(Transaction $transaction)
     {   
 
-        $logs = Log::where('transaction_id',$transaction->id)->get();
+        $logs = Log::where('transaction_id',$transaction->id)->latest('id')->get();
+        $bonuses = Transaction::where('bonus_for',$transaction->id)->get();
+
 
         if(\Auth::user()->role == 1)
         {
-            return view('admin.transaction.show',compact('transaction','logs'));
+            return view('admin.transaction.show',compact('transaction','logs','bonuses'));
         }
         else
         {
-            return view('staff.transaction.show',compact('transaction','logs'));
+            return view('staff.transaction.show',compact('transaction','logs','bonuses'));
         }
         
     }
@@ -392,23 +394,23 @@ class TransactionController extends Controller
 
         if($input['type_transaction'] == 'deposit')
         {
-            if($input['bonus_amount'] != '0')
-            {
-                $transaction_bonus = new Transaction;
+            // if($input['bonus_amount'] != '0')
+            // {
+            //     $transaction_bonus = new Transaction;
 
-                $transaction_bonus->user_id = $transaction->user_id;
-                $transaction_bonus->transaction_id = time();
-                $transaction_bonus->transaction_type = 'deposit';
-                $transaction_bonus->deposit_type = 'bonus';
-                $transaction_bonus->data = $transaction->data;
-                $transaction_bonus->amount = $input['bonus_amount'];
-                $transaction_bonus->status = 2;
-                $transaction_bonus->remarks = 'Bonus for deposit transaction [#'.sprintf('%06d', $transaction->id).']';
+            //     $transaction_bonus->user_id = $transaction->user_id;
+            //     $transaction_bonus->transaction_id = time();
+            //     $transaction_bonus->transaction_type = 'deposit';
+            //     $transaction_bonus->deposit_type = 'bonus';
+            //     $transaction_bonus->data = $transaction->data;
+            //     $transaction_bonus->amount = $input['bonus_amount'];
+            //     $transaction_bonus->status = 2;
+            //     $transaction_bonus->remarks = 'Bonus for deposit transaction [#'.sprintf('%06d', $transaction->id).']';
 
-                $transaction_bonus->save();
+            //     $transaction_bonus->save();
 
-                $log->detail = 'Add bonus for transaction [#'.sprintf('%06d', $transaction->id).']';
-            }
+            //     $log->detail = 'Add bonus for transaction [#'.sprintf('%06d', $transaction->id).']';
+            // }
 
 
             $transaction->amount = $input['amount'];
@@ -503,5 +505,73 @@ class TransactionController extends Controller
     public function destroy(Transaction $transaction)
     {
         //
+    }
+
+    public function addbonus(Request $request)
+    {
+        $input = $request->all();
+
+        $transaction = Transaction::find($input['transaction_id']);
+
+        $transaction_bonus = new Transaction;
+
+        $transaction_bonus->user_id = $transaction->user_id;
+        $transaction_bonus->transaction_id = time();
+        $transaction_bonus->transaction_type = 'deposit';
+        $transaction_bonus->deposit_type = 'bonus';
+        $transaction_bonus->data = $transaction->data;
+        $transaction_bonus->amount = $input['bonus_amount'];
+        $transaction_bonus->bonus_id = $transaction->bonus_id;
+        $transaction_bonus->bonus_for = $transaction->id;
+        $transaction_bonus->status = 2;
+        $transaction_bonus->remarks = 'Bonus for deposit transaction [#'.sprintf('%06d', $transaction->id).']';
+
+        $transaction_bonus->save();
+
+        $log = new Log;
+        $log->user_id = Auth::user()->id;
+        $log->transaction_id = $transaction->id;
+        $log->detail = 'Add [RM'.$input['bonus_amount'].'] bonus for transaction [#'.sprintf('%06d', $transaction->id).']';
+        $log->save();
+
+
+
+        Session::flash('message', 'Bonus Succesfully Added!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        if(\Auth::user()->role == 1)
+        {
+
+            return redirect('admin/transaction/'.$transaction->id);
+
+        }
+        else
+        {
+            return redirect('staff/transaction/'.$transaction->id);
+        }
+    }
+
+    public function deletebonus($transaction_id)
+    {
+        $transaction = Transaction::find($transaction_id);
+        $transaction->delete();
+
+        $log = new Log;
+        $log->user_id = Auth::user()->id;
+        $log->transaction_id = $transaction->bonus_for;
+        $log->detail = 'Delete Bonus For Transaction[#'.sprintf('%06d', $transaction->bonus_for).']';
+        $log->save();
+
+        Session::flash('message', 'Bonus Succesfully Deleted!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        if(\Auth::user()->role == 1)
+        {
+            return redirect('admin/transaction/'.$transaction->bonus_for);
+        }
+        else
+        {
+            return redirect('staff/transaction/'.$transaction->bonus_for);
+        }
     }
 }

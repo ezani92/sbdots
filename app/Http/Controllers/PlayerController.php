@@ -36,7 +36,7 @@ class PlayerController extends Controller
                 'email' => 'sbdots88@gmail.com',
                 'password' => 'Password88',
                 'customer' => $user->phone,
-                'text' => 'sbdots.com verification TAC : '.$user->tac_no
+                'text' => 'sbdot.net verification TAC : '.$user->tac_no
             ))
             ->get();
 
