@@ -165,7 +165,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request,$id)
     {
         $user = User::find($id);
 
@@ -178,9 +178,62 @@ class UserController extends Controller
                 $banks = Bank::all();
                 $bonuses = Bonus::all();
 
-                $members = User::where('referred_by',$user->affiliate_id)->get();
+                $input = $request->all();
 
-                return view('admin.users.affiliate',compact('user','games','banks','bonuses','members'));
+                if(isset($input['date_from']))
+                {
+                    $arrStart = explode("-", $input['date_from']);
+                    $arrEnd = explode("-", $input['date_to']);
+
+                    $from = Carbon::create($arrStart[2], $arrStart[1], $arrStart[0], 0, 0, 0);
+                    $to = Carbon::create($arrEnd[2], $arrEnd[1], $arrEnd[0], 23, 59, 59);
+
+                    $members = User::where('referred_by',$user->affiliate_id)->get();
+
+                    $deposit_sum = 0;
+                    $withdraw_sum = 0;
+
+                    foreach($members as $member)
+                    {
+                        $dep = Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+                        $with = Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+
+                        $deposit_sum = $deposit_sum + $dep;
+                        $withdraw_sum = $withdraw_sum + $with;
+                    }
+
+                    $winlose = $deposit_sum - $withdraw_sum;
+
+                    $commision_rate = \Auth::user()->affiliate_rate;
+                    $final_commision = $commision_rate / 100 * $winlose;
+                }
+
+                else
+                {
+                    $members = User::where('referred_by',$user->affiliate_id)->get();
+
+                    $deposit_sum = 0;
+                    $withdraw_sum = 0;
+
+                    foreach($members as $member)
+                    {
+                        $dep = Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+                        $with = Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+
+                        $deposit_sum = $deposit_sum + $dep;
+                        $withdraw_sum = $withdraw_sum + $with;
+                    }
+
+                    $winlose = $deposit_sum - $withdraw_sum;
+
+                    $commision_rate = \Auth::user()->affiliate_rate;
+                    $final_commision = $commision_rate / 100 * $winlose;
+
+                }
+
+
+
+                return view('admin.users.affiliate',compact('user','games','banks','bonuses','members','members','deposit_sum','withdraw_sum','winlose','final_commision'));
             }
             else if($user->role == 3)
             {
