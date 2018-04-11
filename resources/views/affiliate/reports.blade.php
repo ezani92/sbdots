@@ -109,11 +109,7 @@
                                 <tbody>
                                     @if($members->count() == 0)
 					            		<tr>
-					            			@if(isset($_GET['date_from']))
-					            				<td colspan="5">You have no affiliate members registered in this time frame.</td>
-					            			@else
-					            				<td colspan="5">You have no affiliate members</td>
-					            			@endif
+					            			<td colspan="6">You have no affiliate members registered in this time frame.</td>
 					            		</tr>
 					            	@else
 						                @foreach($members as $member)
@@ -142,7 +138,7 @@
 						                    </td>
 						                    <td>
 						                    	@php
-						                    		$member_dep = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('status',2)->sum('amount');
+						                    		$member_dep = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
 
 						                    		$member_withdraw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 						                    	
