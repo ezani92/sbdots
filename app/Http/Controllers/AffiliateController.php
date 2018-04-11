@@ -52,15 +52,15 @@ class AffiliateController extends Controller
             $from = Carbon::create($arrStart[2], $arrStart[1], $arrStart[0], 0, 0, 0);
             $to = Carbon::create($arrEnd[2], $arrEnd[1], $arrEnd[0], 23, 59, 59);
 
-            $members = User::where('referred_by',\Auth::user()->affiliate_id)->where('created_at','>=',$from)->where('created_at','<=',$to)->get();
+            $members = User::where('referred_by',\Auth::user()->affiliate_id)->get();
 
             $deposit_sum = 0;
             $withdraw_sum = 0;
 
             foreach($members as $member)
             {
-                $dep = Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
-                $with = Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+                $dep = Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+                $with = Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
 
                 $deposit_sum = $deposit_sum + $dep;
                 $withdraw_sum = $withdraw_sum + $with;
