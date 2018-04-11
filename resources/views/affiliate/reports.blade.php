@@ -11,10 +11,10 @@
         	<div class="row">
         		@php
 
-        			if(isset($input['date_from']))
+        			if(isset($_GET['date_from']))
         			{
-        				$date_from= $input['date_from'];
-        				$date_to = $input['date_to'];
+        				$date_from= $_GET['date_from'];
+        				$date_to = $_GET['date_to'];
         			}
         			else
         			{
@@ -25,7 +25,7 @@
         		@endphp
         		<div class="col-md-6">
         			<div class="form-group">
-						<label>From</label>
+						<label>FROM</label>
 						<input data-toggle="datepicker" type="text" name="date_from" class="form-control" value="{{ $date_from }}" required>
 					</div>
         		</div>
