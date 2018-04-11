@@ -197,5 +197,6 @@ Route::middleware(['isplayer','phoneverification'])->group(function () {
 Route::middleware(['isaffiliate','phoneverification'])->group(function () {
 
     Route::get('/affiliate', 'AffiliateController@dashboard');
+    Route::get('/affiliate/reports', 'AffiliateController@reports');
 
 });

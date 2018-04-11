@@ -66,12 +66,12 @@
                             <div class="left-sidebar-content">
                                 <ul class="sidebar-elements">
                                     <li class="divider">Menu</li>
-                                    <li class="{{ Request::is('affiliate') ? 'active' : '' }}"><a href="{{ url('admin') }}"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
+                                    <li class="{{ Request::is('affiliate') ? 'active' : '' }}"><a href="{{ url('affiliate') }}"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
                                     </li>
                                     
 
-                                    {{-- <li class="{{ Request::is('affiliate/reports*') ? 'active' : '' }}"><a href="{{ url('affiliate/reports') }}"><i class="icon mdi mdi-chart"></i><span>Reports</span></a>
-                                    </li> --}}
+                                    <li class="{{ Request::is('affiliate/reports*') ? 'active' : '' }}"><a href="{{ url('affiliate/reports') }}"><i class="icon mdi mdi-chart"></i><span>Reports</span></a>
+                                    </li>
                                     
                                     
                                     
