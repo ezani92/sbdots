@@ -204,7 +204,7 @@ class UserController extends Controller
 
                     $winlose = $deposit_sum - $withdraw_sum;
 
-                    $commision_rate = \Auth::user()->affiliate_rate;
+                    $commision_rate = $user->affiliate_rate;
                     $final_commision = $commision_rate / 100 * $winlose;
                 }
 
@@ -226,7 +226,7 @@ class UserController extends Controller
 
                     $winlose = $deposit_sum - $withdraw_sum;
 
-                    $commision_rate = \Auth::user()->affiliate_rate;
+                    $commision_rate = $user->affiliate_rate;
                     $final_commision = $commision_rate / 100 * $winlose;
 
                 }
