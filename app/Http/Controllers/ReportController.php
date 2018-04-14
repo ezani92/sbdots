@@ -59,7 +59,7 @@ class ReportController extends Controller
 
             $pending_transactions = Transaction::where('status',1)->count();
 
-            $count_deposit = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->count();
+            $count_deposit = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->where('status','2')->count();
             $count_withdrawal = Transaction::where('transaction_type','withdraw')->count();
             $count_transfer = Transaction::where('transaction_type','transfer')->count();
 

@@ -295,6 +295,10 @@ class UserController extends Controller
                 {
                     return 'Bonus';
                 }
+                else if($transaction->deposit_type == 'rebate')
+                {
+                    return 'Rebate';
+                }
                 else
                 {
                     return $transaction->transaction_type;
@@ -569,6 +573,40 @@ class UserController extends Controller
         $pusher->trigger('sbdots', 'transaction', []);
 
         session::flash('message', 'Transfer transaction succesfully added, You still need to approve the transfer at transaction page!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        if(\Auth::user()->role == 1)
+        {
+            return redirect('admin/users/'.$input['user_id']);
+        }
+        else
+        {
+            return redirect('staff/users/'.$input['user_id']);
+        }
+    }
+
+    public function rebate(Request $request)
+    {
+        $input = $request->all();
+
+        $transaction = new Transaction;
+
+        $data_raw = array();
+        $data_raw = array_add($data_raw, 'game_id', $input['game_id']);
+        $data_raw = array_add($data_raw, 'notes', $input['notes']);
+        $data = json_encode($data_raw);
+
+        $transaction->user_id = $input['user_id'];
+        $transaction->transaction_id = time();
+        $transaction->transaction_type = 'deposit';
+        $transaction->deposit_type = 'rebate';
+        $transaction->data = $data;
+        $transaction->amount = $input['amount'];
+        $transaction->status = 2;
+
+        $transaction->save();
+
+        session::flash('message', 'Rebate has successfuly added'); 
         Session::flash('alert-class', 'alert-success');
 
         if(\Auth::user()->role == 1)

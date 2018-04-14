@@ -106,6 +106,7 @@ Route::middleware(['isadmin'])->group(function () {
     Route::post('admin/user/transaction/deposit', 'UserController@deposit');
     Route::post('admin/user/transaction/withdraw', 'UserController@withdraw');
     Route::post('admin/user/transaction/transfer', 'UserController@transfer');
+    Route::post('admin/user/transaction/rebate', 'UserController@rebate');
 
     Route::get('/admin/groups/data', 'GroupController@data');
     Route::resource('/admin/groups', 'GroupController');
@@ -161,6 +162,7 @@ Route::middleware(['isstaff'])->group(function () {
     Route::post('staff/user/transaction/deposit', 'UserController@deposit');
     Route::post('staff/user/transaction/withdraw', 'UserController@withdraw');
     Route::post('staff/user/transaction/transfer', 'UserController@transfer');
+    Route::post('staff/user/transaction/rebate', 'UserController@rebate');
 
     Route::get('/staff/groups/data', 'GroupController@data');
     Route::resource('/staff/groups', 'GroupController');

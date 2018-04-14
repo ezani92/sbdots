@@ -116,6 +116,8 @@
                                 <tbody>
                                     @foreach($transactions as $transaction)
                                         @if($transaction->deposit_type == 'bonus')
+                                        
+                                        @elseif($transaction->deposit_type == 'rebate')
 
                                         @else
                                             <tr>

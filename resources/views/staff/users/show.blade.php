@@ -101,6 +101,7 @@
 									    	<a data-toggle="modal" data-target="#modal-deposit" class="btn btn-default">Add Deposit</a>
 									    	<a data-toggle="modal" data-target="#modal-withdraw" class="btn btn-default">Add Withdraw</a>
 									    	<a data-toggle="modal" data-target="#modal-transfer" class="btn btn-default">Add Transfer</a>
+									    	<a data-toggle="modal" data-target="#modal-rebate" class="btn btn-default">Add Rebate</a>
 									    </div>
 									</div><br />
 			                	</div>
@@ -390,6 +391,52 @@
 							        </select>
 							    </div>
 							</div>
+						    
+						    <div class="form-group">
+						        <button type="submit" class="btn btn-info btn-block">Submit</button>
+						    </div>
+						</form>
+		            </div>
+		            <div class="modal-footer"></div>
+		        </div>
+		    </div>
+		</div>
+		<div id="modal-rebate" tabindex="-1" role="dialog" class="modal fade">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><span class="mdi mdi-close"></span></button>
+		            </div>
+		            <div class="modal-body">
+						<form method="POST" action="{{ url('staff/user/transaction/rebate') }}" enctype="multipart/form-data">
+						    @csrf
+						    <input type="hidden" name="user_id" value="{{ $user->id }}">
+
+						    <div class="row">
+						    	<div class="form-group col-md-12">
+							        <label>Rebate Amount</label>
+							        <input type="number" step="0.01" name="amount" class="form-control" required>
+							    </div>
+						    </div>
+
+						    <div class="row">
+						    	<div class="form-group col-md-12">
+							        <label>Games</label>
+							        <select name="game_id" class="form-control" required>
+							        	<option value="">Select</option>
+							        	@foreach($games as $game)
+							        		<option value="{{ $game->id }}">{{ $game->name }}</option>
+							        	@endforeach
+							        </select>
+							    </div>
+						    </div>
+
+						     <div class="row">
+						    	<div class="form-group col-md-12">
+							        <label>Notes</label>
+							        <textarea class="form-control" name="notes" placeholder="Eg : Weekly Rebates, Yearly Rebates or etc"></textarea>
+							    </div>
+						    </div>
 						    
 						    <div class="form-group">
 						        <button type="submit" class="btn btn-info btn-block">Submit</button>
