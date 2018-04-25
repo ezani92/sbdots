@@ -242,7 +242,7 @@ class TransactionController extends Controller
         $transactions = Transaction::where('transaction_type','transfer');
         return Datatables::of($transactions)
             ->editColumn('transaction_id', function ($transaction) {
-                return '#'.sprintf('%06d', $transaction->id);
+                return '#'.sprintf('%06d', $transaction->id + 7);
             })
             ->addColumn('actions', function($transaction) {
                 return view('admin.transaction.action', compact('transaction'))->render();
