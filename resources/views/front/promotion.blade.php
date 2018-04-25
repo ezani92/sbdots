@@ -86,7 +86,7 @@
 														<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
 														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
-														<li>This promotion is not applicable for SCR888 and 918kiss and Mega888.</li>
+														<li>This promotion is only applicable for Sportsbook & Live Casino Games.</li>
 														<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
 													</ol>
 												</div>
@@ -137,7 +137,7 @@
 														<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
 														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
-														<li>This promotion is not applicable for SCR888 and 918kiss and Mega888.</li>
+														<li>This promotion is only applicable for Sportsbook & Live Casino Games.</li>
 														<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
 													</ol>
 												</div>
@@ -189,7 +189,7 @@
 														<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
 														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
-														<li>This promotion is not applicable for SCR888 and 918kiss and Mega888.</li>
+														<li>This promotion is only applicable for Sportsbook & Live Casino Games.</li>
 														<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
 													</ol>
 												</div>
