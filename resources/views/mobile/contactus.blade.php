@@ -26,7 +26,7 @@
                                 </span>
                                 <h3>Telephone:</h3>
                             </div>
-                            <p>Malaysia: +6016 959 3762</p>
+                            <p>Malaysia: +6016 328 2331</p>
                         </div>
 
                         <div class="contact-box">
@@ -38,7 +38,7 @@
                                 <h3>Whatsapp:</h3>
                             </div>
                             <div class="contact-detail">
-                                <a href="https://api.whatsapp.com/send?phone=60169593762" class="btn btn-warning btn-more btn-chat">Whatsapp</a>
+                                <a href="http://wasap.my/60163282331" class="btn btn-warning btn-more btn-chat">Whatsapp</a>
                             </div>
                         </div>
 
