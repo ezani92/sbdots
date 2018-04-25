@@ -19,7 +19,7 @@
 			                            <th>Role</th>
 			                            <th>Group</th>
 			                            <th>Is Verified?</th>
-			                            <th>Last Login</th>
+			                            <th>Registered At</th>
 			                            <th>Action</th>
 			                        </tr>
 			                    </thead>
@@ -45,7 +45,7 @@
                 { data: 'role', name: 'role' },
                 { data: 'group_id', name: 'group_id' },
                 { data: 'phone_verification', name: 'phone_verification' },
-                { data: 'last_login', name: 'last_login' },
+                { data: 'created_at', name: 'created_at' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }
             ]
         });

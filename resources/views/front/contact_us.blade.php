@@ -25,8 +25,8 @@
 			</div>
 			<div class="contact-box">
 				<div class="horizontal clearfix">
-					<div class="box p-r"><img src="images/common/contact_my.jpg"/>+6016 959 3762</div>
-					<div class="box p-r"><img src="images/common/whatsapp.png"/><a href="https://api.whatsapp.com/send?phone=60169593762" class="btn btn-warning btn-more btn-chat">Whatsapp</a></div>
+					<div class="box p-r"><img src="images/common/contact_my.jpg"/>+6016 328 2331</div>
+					<div class="box p-r"><img src="images/common/whatsapp.png"/><a href="https://api.whatsapp.com/send?phone=60163282331" class="btn btn-warning btn-more btn-chat">Whatsapp</a></div>
 				</div>
 				<div class="horizontal clearfix">
 					<div class="box p-r"><img src="images/common/contact_wechat.png"/>sbdot_my</div>
