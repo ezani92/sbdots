@@ -18,6 +18,7 @@
 			                            <th>Phone</th>
 			                            <th>Role</th>
 			                            <th>Group</th>
+			                            <th>Referred By</th>
 			                            <th>Is Verified?</th>
 			                            <th>Registered At</th>
 			                            <th>Action</th>
@@ -44,6 +45,7 @@
                 { data: 'phone', name: 'phone' },
                 { data: 'role', name: 'role' },
                 { data: 'group_id', name: 'group_id' },
+                { data: 'referred_by', name: 'referred_by' },
                 { data: 'phone_verification', name: 'phone_verification' },
                 { data: 'created_at', name: 'created_at' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }

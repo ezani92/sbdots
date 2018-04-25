@@ -77,6 +77,18 @@ class UserController extends Controller
                     return 'Affiliate';
                 }
             })
+            ->editColumn('referred_by', function ($user) {
+                if($user->referred_by == null)
+                {
+                    return '-';
+                }
+                else
+                {
+                    $referred = User::where('affiliate_id',$user->referred_by)->first();
+
+                    return $referred->name;
+                }
+            })
             ->editColumn('phone_verification', function ($user) {
                 if($user->phone_verification == 1)
                 {
