@@ -24,7 +24,11 @@
 								
 								<div class="form-group">
 							        <label>Bank</label>
-							        {{ Form::select('bank', \App\Bank::pluck('name','id'), null, ['class' => 'form-control', 'required' => 'required']) }}
+							        <select name="bank" class="form-control" required>
+							        	@foreach(\App\Bank::all() as $bank)
+											<option value="id">{{ $bank->account_name }} ({{ $bank->account_no }})</option>
+							        	@endforeach
+							        </select>
 							    </div>
 
 							    @endif
