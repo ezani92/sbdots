@@ -19,6 +19,15 @@
 							        <label>Amount (RM)</label>
 							        <input type="number" step="0.01" name="amount" class="form-control" value="{{ $transaction->amount }}" required readonly="true">
 							    </div>
+
+							    @if($transaction->bank == null)
+								
+								<div class="form-group">
+							        <label>Bank</label>
+							        {{ Form::select('bank', \App\Bank::pluck('name','id'), null, ['class' => 'form-control', 'required' => 'required']) }}
+							    </div>
+
+							    @endif
 			                	
 							    <div class="form-group">
 							        <label>Status</label>

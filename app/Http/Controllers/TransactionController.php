@@ -412,6 +412,11 @@ class TransactionController extends Controller
             //     $log->detail = 'Add bonus for transaction [#'.sprintf('%06d', $transaction->id).']';
             // }
 
+            if(isset($input['bank']))
+            {
+                $transaction->bank_id = $input['bank'];
+            }
+
 
             $transaction->amount = $input['amount'];
             $transaction->status = $input['status'];
