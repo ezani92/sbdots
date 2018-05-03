@@ -48,6 +48,12 @@
 				                					<td><strong>Amount Deposit</strong></td>
 				                					<td>RM {{ $transaction->amount }}</td>
 				                				</tr>
+				                				@if($transaction->bank == null)
+												<tr>
+				                					<td><strong>To Bank Account Name</strong></td>
+				                					<td><code>Not Set</code></td>
+				                				</tr>
+				                				@else
 				                				<tr>
 				                					<td><strong>To Bank Account Name</strong></td>
 				                					<td>{{ $transaction->bank->account_name }}</td>
@@ -56,6 +62,7 @@
 				                					<td><strong>To Bank Account No</strong></td>
 				                					<td>{{ $transaction->bank->account_no }}</td>
 				                				</tr>
+				                				@endif
 				                				<tr>
 				                					<td><strong>Payment Menthod</strong></td>
 				                					<td>{{ $data['payment_method'] }}</td>
