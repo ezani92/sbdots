@@ -54,7 +54,7 @@
                             </li>
                         </ul>
                         <div class="page-title"><span></span></div>
-                        <ul class="nav navbar-nav navbar-right be-icons-nav">
+                        {{-- <ul class="nav navbar-nav navbar-right be-icons-nav">
                             <li class="dropdown">
                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle"><span class="icon mdi mdi-notifications"></span><span class="indicator"></span></a>
                                 <ul class="dropdown-menu be-notifications">
@@ -87,7 +87,7 @@
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </nav>
