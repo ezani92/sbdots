@@ -146,7 +146,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            {{-- {{ $transactions->appends(Request::except('page'))->links() }} --}}
+                            {{ $transactions->appends(Request::except('page'))->links() }}
                             <br />
                         </div>
                     </div>
