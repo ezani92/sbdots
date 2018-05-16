@@ -20,6 +20,7 @@
                     <ul id="filterOptions">
                         <li class="active"><a href="#" class="all">All</a></li>
                         <li><a href="#" class="latest">Latest</a></li>
+                        <li><a href="#" class="worldcup">World Cup</a></li>
                         <li><a href="#" class="new">New Member</a></li>
                         <li><a href="#" class="deposit">Deposit Bonus</a></li>
                         <li><a href="#" class="rebate">Rebate</a></li>
@@ -292,6 +293,144 @@
                                         <li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirements are no longer applicable to subsequent deposits (Credits lower than RM10 that mean member has losses the full bonus amount).</li>
                                         <li>This promotion is only applicable for Sportsbook & Live Casino Games.</li> 
                                         <li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  															
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="promo worldcup">
+                                <h3><img src="{{ asset('mobile/images/en/wc-1.jpg') }}" class="img-responsive width-full"/></h3>
+                                <div class="promo-font">
+                                    <h4>Existing Member (World Cup Edition): World Cup Champion Guessing Bonus up to 1,288!</h4>
+                                            
+                                    Terms & Conditions:
+                                    <ol>
+                                        <li>Promotion Periods: 16/05/2018 – 13/06/2018</li>
+                                        <li>During the promotion periods (15/05 – 12/06), Members are entitled to submit one (1) guessing on the champion team they predict, but with a min. deposit of at least 15 times & min. of RM3,000 during the promotion periods and prizes amount as below table:
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                                <tr>
+                                                    <th>Min. Accumulated Deposit Amount during the periods</th>
+                                                    <th>Prizes Rewards if successful predict the Champion Team</th>
+                                                    <th>Turnover Requirement of the bonus </th>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 3,000</td>
+                                                    <td>188</td>
+                                                    <td>1x</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 15,000</td>
+                                                    <td>388</td>
+                                                    <td>1x</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 50,000</td>
+                                                    <td>1288</td>
+                                                    <td>1x</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                        <li>Example Scenario (A):
+                                            <ul style="list-style-type: lower-alpha;">
+                                                <li>Player (A) has guess the champion team (England) to be the champion of the this World Cup Fifa 2018 and also successfully deposit 15 times during the periods 16/05 – 12/06, and the total accumulated deposit amount is RM15,000</li>
+                                                <li>On the July 15, 2018 when the Champion team is England, player (A) will be rewarded with a RM688 free bonus on his preferred product account and subjected to only 1 times turnover requirement.</li>																
+                                            </ul>
+                                        </li> 
+                                        <li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be not given and the qualification of the players will be waived.</li> 
+                                        <li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  														
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="promo worldcup">
+                                <h3><img src="{{ asset('mobile/images/en/wc-2.jpg') }}" class="img-responsive width-full"/></h3>
+                                <div class="promo-font">
+                                    <h4>Existing Member(World Cup Edition): 25% Sportsbook Deposit Bonus (WORLD CUP MATCHES ONLY)</h4>
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                        <tr>
+                                            <th>MIN. DEPOSIT AMOUNT (RM) </th>
+                                            <th>BONUS</th>
+                                            <th>MAXIMUM BONUS (RM)</th>
+                                            <th>ROLLOVER REQUIREMENT</th>
+                                        </tr>
+                                        <tr>
+                                            <td>100</td>
+                                            <td>25%</td>
+                                            <td>500</td>
+                                            <td>x12</td>
+                                        </tr>
+                                    </table>
+                                    
+                                    Terms & Conditions:
+                                    <ol>
+                                        <li>SBdots will be giving away extra 25% deposit bonus to all existing member deposit.</li>
+                                        <li>
+                                            Member only can withdraw their deposit bonus after achieving the required rollover of deposit amount and bonus.
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                                    <tr>
+                                                        <th rowspan="3">Example</th>
+                                                        <td>First Deposit</td>
+                                                        <td>RM100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bonus</td>
+                                                        <td>RM25</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Rollover Requirement </td>
+                                                        <td>(100 + 25) x 12 = RM1500</td>
+                                                    </tr>
+                                                </table>
+                                        </li>
+                                        <li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
+                                        <li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
+                                        <li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
+                                        <li>This promotion is applicable for Sportsbook betting (World Cup Matches Only)</li>
+                                        <li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="promo worldcup">
+                                <h3><img src="{{ asset('mobile/images/en/wc-3.jpg') }}" class="img-responsive width-full"/></h3>
+                                <div class="promo-font">
+                                    <h4>Existing Member(World Cup Edition): Deposit, Choose & Win up to RM288 Daily!</h4>
+                                            
+                                    Terms & Conditions:
+                                    <ol>
+                                        <li>Promotion Periods: 14/06/2018 – 15/07/2018</li>
+                                        <li>During the promotion periods, Members who’ve successfully deposit are able to pick a winning team on the matches for the following (1) day.
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                                <tr>
+                                                    <th>Deposit Amount (per transactions)</th>
+                                                    <th>Prizes Rewards if won</th>
+                                                    <th>Turnover Requirement of the bonus</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 100 - RM 999</td>
+                                                    <td>18</td>
+                                                    <td>1x</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 1,000 - RM 4,999</td>
+                                                    <td>38</td>
+                                                    <td>1x</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 5,000 and above</td>
+                                                    <td>288</td>
+                                                    <td>1x</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                        <li>Example Scenario (A):
+                                            <ul style="list-style-type: lower-alpha;">
+                                                <li>Player (A) has deposited an amount of RM 500 on 15/06/2018, player (A) will be entitled to guess for a matches he predict within the day or next day itself (matches must be min. 5 hours from the deposit time)</li>
+                                                <li>Player (A) team guessing are correct, player (A) will received extra RM18 on the deposited product account subjected to only 1 times turnover requirement.</li>																															
+                                            </ul>
+                                        </li> 
+                                        <li>Members are only entitled to 1 guess of team per day only.</li> 
+                                        <li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be not given and the qualification of the players will be waived.</li>  	
+                                        <li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>													
                                     </ol>
                                 </div>
                             </div>

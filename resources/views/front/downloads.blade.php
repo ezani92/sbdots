@@ -67,21 +67,21 @@
 								<tr>
 									<td>
 										<div class="qr-wrap">
-											<a href="#" target="_blank">
+											<a href="http://2266ft.com/MainIndex.aspx?lang=EN-US" target="_blank">
 												<div class="os_icon"><img src="images/common/download-pc.png" width="25" height="25"><span class="download_txt">pc download</span></div>
 											</a>
 										</div>
 									</td>
 									<td>
 										<div class="qr-wrap">
-											<a href="#" target="_blank">
+											<a href="http://2266ft.com/MainIndex.aspx?lang=EN-US" target="_blank">
 												<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 											</a>
 										</div>
 									</td>
 									<td>
 										<div class="qr-wrap">
-											<a href="#" target="_blank">
+											<a href="http://2266ft.com/MainIndex.aspx?lang=EN-US" target="_blank">
 												<div class="os_icon"><img src="images/common/download-android.png" width="25" height="25"><span class="download_txt">mobile download</span></div>
 											</a>
 										</div>

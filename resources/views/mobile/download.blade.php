@@ -21,7 +21,7 @@
                                         
                         <div class="cbp-item">
                             <div class="row product-wrap margin-none-side">
-                                <a href="#">
+                                <a href="http://2266ft.com/MainIndex.aspx?lang=EN-US">
                                     <div class="col-md-12 padding-style6">
                                         <img src="{{ asset('mobile/images/common/product/winningft.jpg') }}" class="img-responsive width-full"/>
                                     </div>
