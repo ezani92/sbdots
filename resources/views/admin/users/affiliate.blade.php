@@ -47,6 +47,10 @@
 			                					<td><strong>Register At</strong></td>
 			                					<td>{{ $user->created_at->format('d M Y,  h:iA') }}</td>
 			                				</tr>
+			                				<tr>
+			                					<td width="30%"><strong>Remarks</strong></td>
+			                					<td>{{ $user->remarks }}</td>
+			                				</tr>
 			                			</tbody>
 			                		</table>
 			                	</div>

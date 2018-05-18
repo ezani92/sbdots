@@ -53,6 +53,11 @@
 							        <label>Bank Account No</label>
 							        <input type="text" name="bank_account_no" class="form-control" value="{{ $user->bank_account_no }}" required>
 							    </div>
+							    <div class="form-group">
+							        <label>Remarks</label>
+							        <textarea name="remarks" class="form-control">{{ $user->remarks }}</textarea>
+							    </div>
+
 							    
 							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Update User</button>

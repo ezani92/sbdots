@@ -75,6 +75,10 @@
 			                					</td>
 			                				</tr>
 			                				@endif
+			                				<tr>
+			                					<td width="30%"><strong>Remarks</strong></td>
+			                					<td>{{ $user->remarks }}</td>
+			                				</tr>
 			                			</tbody>
 			                		</table>
 			                	</div>

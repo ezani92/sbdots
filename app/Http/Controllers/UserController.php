@@ -153,6 +153,7 @@ class UserController extends Controller
         $user->phone_verification = $input['phone_verification'];
         $user->phone = $input['phone'];
         $user->affiliate_id = str_random('8');
+        $user->remarks = $input['remarks'];
 
         $user->save();
 
@@ -381,6 +382,7 @@ class UserController extends Controller
         $user->phone_verification = $input['phone_verification'];
         $user->bank_name = $input['bank_name'];
         $user->bank_account_no = $input['bank_account_no'];
+        $user->remarks = $input['remarks'];
 
         $user->save();
 

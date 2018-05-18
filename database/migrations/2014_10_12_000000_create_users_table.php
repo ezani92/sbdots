@@ -37,6 +37,7 @@ class CreateUsersTable extends Migration
             $table->string('referred_by')->nullable();
             $table->string('affiliate_id')->unique();
             $table->string('affiliate_rate')->nullable();
+            $table->text('remarks')->nullable();
             $table->timestamps();
         });
     }
