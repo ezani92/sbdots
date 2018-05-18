@@ -57,7 +57,17 @@ class BankController extends Controller
 
                 return 'RM '.$bank_balance;
             })
-            ->rawColumns(['actions'])
+            ->editColumn('status', function ($bank) {
+                if($bank->active == 1)
+                {
+                    return '<span class="label label-success">Active</span>';
+                }
+                else if($bank->active == 0)
+                {
+                    return '<span class="label label-danger">Not Active</span>';
+                }
+            })
+            ->rawColumns(['actions','status'])
             ->make(true);
     }
 
@@ -143,6 +153,7 @@ class BankController extends Controller
         $bank->name = $input['name'];
         $bank->account_name = $input['account_name'];
         $bank->account_no = $input['account_no'];
+        $bank->active = $input['status'];
 
         $bank->save();
 

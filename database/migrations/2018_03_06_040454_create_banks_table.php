@@ -19,6 +19,7 @@ class CreateBanksTable extends Migration
             $table->string('account_no');
             $table->string('account_name');
             $table->decimal('balance',10,2);
+            $table->integer('active')->default(1);
             $table->timestamps();
         });
     }

@@ -17,6 +17,7 @@
 			                            <th>Account No</th>
 			                            <th>Account Name</th>
 			                            <th>Balance</th>
+			                            <th>Status</th>
 			                        </tr>
 			                    </thead>
 			                </table>
@@ -38,7 +39,8 @@
                 { data: 'name', name: 'name' },
                 { data: 'account_no', name: 'account_no' },
                 { data: 'account_name', name: 'account_name' },
-                { data: 'balance', name: 'balance' }
+                { data: 'balance', name: 'balance' },
+                { data: 'status', name: 'status' }
             ]
         });
     });

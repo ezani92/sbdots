@@ -145,7 +145,7 @@ class PlayerController extends Controller
     public function deposit_step2(Request $request)
     {
     	$input = $request->all();
-    	$banks = Bank::all();
+    	$banks = Bank::where('active',1)->get();
 
     	if(!isset($input['games']))
     	{	
@@ -176,7 +176,7 @@ class PlayerController extends Controller
     	$input = $request->all();
 
         $bonuses = Bonus::all();
-        $banks = Bank::all();
+        $banks = Bank::where('active',1)->get();
 
     	if(!isset($input['games']))
     	{	

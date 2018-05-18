@@ -17,6 +17,7 @@
 			                            <th>Account No</th>
 			                            <th>Account Name</th>
 			                            <th>Created At</th>
+			                            <th>Status</th>
 			                            <th>Action</th>
 			                        </tr>
 			                    </thead>
@@ -40,6 +41,7 @@
                 { data: 'account_no', name: 'account_no' },
                 { data: 'account_name', name: 'account_name' },
                 { data: 'created_at', name: 'created_at' },
+                { data: 'status', name: 'status' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }
             ]
         });

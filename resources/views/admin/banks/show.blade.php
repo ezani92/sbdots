@@ -26,6 +26,16 @@
 			                					<td>{{ $bank->account_no }}</td>
 			                				</tr>
 			                				<tr>
+			                					<td><strong>Bank Status</strong></td>
+			                					<td>
+			                						@if($bank->active == 1)
+									                	<span class="label label-success">Active</span>
+									                @elseif($bank->active == 0)
+									                	<span class="label label-danger">Not Active</span>
+									                @endif
+			                					</td>
+			                				</tr>
+			                				<tr>
 			                					<td><strong>Created At</strong></td>
 			                					<td>{{ $bank->created_at->format('d M Y,  h:iA') }}</td>
 			                				</tr>
