@@ -7,7 +7,7 @@
     <div>
         <div id="ctl00_UpdatePanel1">
             <div class="container padding-style2">   
-                <a href="promotions"><img src="{{ asset('mobile/images/en/banner-1.jpg') }}" class="img-responsive width-full"/></a>
+                <a href="promotions"><img src="{{ asset('mobile/images/en/wc-1.jpg') }}" class="img-responsive width-full"/></a>
             </div>
             <div class="container">
                 <div class="row why-logo"><span>why</span><img src="{{ asset('mobile/images/common/sb_logo.png') }}" class="img-responsive"/><span>?</span></div>

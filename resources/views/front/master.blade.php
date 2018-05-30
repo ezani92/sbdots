@@ -106,8 +106,8 @@
                 @if(Request::is('/'))
                 <div class="slider-wrapper theme-default">
                     <div id="slider" class="nivoSlider" style="height:350px;"> 
-                        <!-- <a href="promotions"><img src="images/en/Main1.jpg" width="1040" height="350" alt=""/></a> 
-                        <a href="promotions"><img src="images/en/Main2.jpg" width="1040" height="350" alt=""/></a> -->
+                        <!-- <a href="promotions"><img src="images/en/Main1.jpg" width="1040" height="350" alt=""/></a>-->
+                        <a href="promotions"><img src="images/en/wc-1.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/main1_new.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/main2_new.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/bnr6.jpg" width="1040" height="350" alt=""/></a>
