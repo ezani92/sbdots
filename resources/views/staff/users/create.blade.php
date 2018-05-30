@@ -45,7 +45,10 @@
 							        <label>Confirm Password</label>
 							        <input type="password" name="password_2" class="form-control" required>
 							    </div>
-							    
+							    <div class="form-group">
+							        <label>Remarks</label>
+							        <textarea name="remarks" class="form-control"></textarea>
+							    </div>
 							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Create New User</button>
 							    </div>

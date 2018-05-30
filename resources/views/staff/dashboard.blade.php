@@ -38,7 +38,7 @@
 			                    <tbody>
 			                    	@foreach($pending_transactions as $pending_transaction)
 			                    	<tr>
-			                    		<td>{{ $pending_transaction->transaction_id }}</td>
+			                    		<td>#{{ sprintf('%06d', $pending_transaction->id) }}</td>
 			                    		<td>{{ $pending_transaction->user->name }}</td>
 			                    		<td>{{ $pending_transaction->transaction_type }}</td>
 			                    		<td>
