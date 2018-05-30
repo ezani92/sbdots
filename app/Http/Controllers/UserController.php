@@ -352,7 +352,18 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('admin.users.edit',compact('user'));
+        if(\Auth::user()->role == 1)
+        {
+
+            return view('admin.users.edit',compact('user'));
+
+        }
+        else
+        {
+            return view('staff.users.edit',compact('user'));
+        }
+
+        
     }
 
     /**
@@ -389,7 +400,17 @@ class UserController extends Controller
         Session::flash('message', 'User succesfully updated!'); 
         Session::flash('alert-class', 'alert-success');
 
-        return redirect('admin/users/'.$user->id);
+        
+        if(\Auth::user()->role == 1)
+        {
+
+            return redirect('admin/users/'.$user->id);
+
+        }
+        else
+        {
+            return redirect('staff/users/'.$user->id);
+        }
 
 
     }

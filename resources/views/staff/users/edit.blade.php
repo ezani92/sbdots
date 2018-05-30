@@ -1,4 +1,4 @@
-@include('admin.header')
+@include('staff.header')
     <div class="be-content">
         <div class="main-content container-fluid">
         	@if(Session::has('message'))
@@ -10,7 +10,7 @@
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <br />
-			                <form method="POST" action="{{ url('admin/users/'.$user->id) }}" enctype="multipart/form-data">
+			                <form method="POST" action="{{ url('staff/users/'.$user->id) }}" enctype="multipart/form-data">
 			                	@csrf
 			                	@method('patch')
 							    <div class="form-group">
@@ -23,16 +23,9 @@
 							    </div>
 							    <div class="form-group">
 							        <label>Role</label>
-							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate'], $user->role, ['class' => 'form-control']) }}
+							        {{ Form::select('role', ['3' => 'Normal User'], $user->role, ['class' => 'form-control']) }}
 							    </div>
-							    @if($user->role == 4)
-							    	<div class="form-group" id="affiliate_rate">
-								        <label>Affiliate Commision Rate</label>
-								        <input type="number" min="1" max="100" step="0.02" value="{{ $user->affiliate_rate }}" name="affiliate_rate" class="form-control" required>
-								    </div>
-							    @else
-
-							    @endif
+							    
 							    <div class="form-group">
 							        <label>Group</label>
 							        {{ Form::select('group', \App\Group::all()->pluck('name', 'id'), $user->group_id, ['class' => 'form-control']) }}
@@ -53,6 +46,11 @@
 							        <label>Bank Account No</label>
 							        <input type="text" name="bank_account_no" class="form-control" value="{{ $user->bank_account_no }}" required>
 							    </div>
+							    <div class="form-group">
+							        <label>Remarks</label>
+							        <textarea name="remarks" class="form-control">{{ $user->remarks }}</textarea>
+							    </div>
+
 							    
 							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Update User</button>
@@ -65,5 +63,5 @@
 			</div>
 		</div>
     </div>
-@include('admin.footer')
+@include('staff.footer')
 </body></html>

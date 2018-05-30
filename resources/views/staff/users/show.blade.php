@@ -104,6 +104,7 @@
 									    	<a data-toggle="modal" data-target="#modal-rebate" class="btn btn-default">Add Rebate</a>
 									    </div>
 									</div><br />
+									<a href="{{ url('staff/users/'.$user->id.'/edit') }}" class="btn btn-info btn-block">Edit User</a><br />
 			                	</div>
 			                </div>
 			                <div class="row">
