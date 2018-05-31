@@ -14,7 +14,7 @@
 	                            <div class="col-xs-4 form-inline" style="position: absolute; z-index: 2;">
 	                                <div class="input-daterange input-group" id="datepicker">
 	                                	<span class="input-group-addon">from</span>
-	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="from" value="{{ \Carbon\Carbon::now()->startOfYear()->format('d-m-Y') }}" />
+	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="from" value="{{ \Carbon\Carbon::now()->startOfMonth()->format('d-m-Y') }}" />
 	                                    <span class="input-group-addon">to</span>
 	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="to" value="{{ \Carbon\Carbon::now()->format('d-m-Y') }}"/>
 	                                </div>
