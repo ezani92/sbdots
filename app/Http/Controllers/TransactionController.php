@@ -119,7 +119,7 @@ class TransactionController extends Controller
             })
             ->editColumn('bank_id', function ($transaction) {
 
-                if($transaction->bank->name == null)
+                if($transaction->bank_id == null)
                 {
                     return 'Not Selected';
                 }
