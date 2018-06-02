@@ -118,7 +118,15 @@ class TransactionController extends Controller
                 return $transaction->user->group->name;
             })
             ->editColumn('bank_id', function ($transaction) {
-                return $transaction->bank->name.' - '.$transaction->bank->account_name;
+
+                if($transaction->bank->name == null)
+                {
+                    return 'Not Selected';
+                }
+                else
+                {
+                    return $transaction->bank->name.' - '.$transaction->bank->account_name;
+                }
             })
             ->editColumn('status', function ($transaction) {
                 
