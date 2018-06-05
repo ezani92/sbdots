@@ -142,7 +142,7 @@
                                         <td>30</td>
                                         <td>10%</td>
                                         <td>RM1000</td>
-                                        <td>x5</td>
+                                        <td>x10</td>
                                     </tr>
                                 </table>
                                 
@@ -163,7 +163,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Rollover Requirement </td>
-                                                    <td>(100 + 10) x 5 = RM550</td>
+                                                    <td>(100 + 10) x 10 = RM1100</td>
                                                 </tr>
                                             </table>
                                     </li>
@@ -191,7 +191,7 @@
                                         <td>30</td>
                                         <td>5%</td>
                                         <td>RM1000</td>
-                                        <td>x2</td>
+                                        <td>x5</td>
                                     </tr>
                                 </table>
                                 
@@ -212,7 +212,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Rollover Requirement </td>
-                                                    <td>(100 + 5) x 2 = RM210</td>
+                                                    <td>(100 + 5) x 5 = RM525</td>
                                                 </tr>
                                             </table>
                                     </li>
@@ -247,7 +247,7 @@
                                     <li>All active members are entitled to 1% cash rebate on their total amount wagered in Sbdot Sportsbook & Live Casino product only.</li>
                                     <li>Every Monday after 12PM (GMT+8) onwards. Member will receive the bonus into their product account within 24 hours.</li> 
                                     <li>Member only can withdraw their bonus after 1x turnover of Bonus.</li> 
-                                    <li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus within the week, they will not be entitled to claim this rebate bonus.</li>
+                                    <li>This promotion can be combined with any other existing promotion.</li>
                                     <li>Any bet place on two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement.</li> 
                                     <li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li> 
                                     <li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirements are no longer applicable to subsequent deposits (Credits lower than RM10 that mean member has losses the full bonus amount).</li>
@@ -431,6 +431,132 @@
                                         <li>Members are only entitled to 1 guess of team per day only.</li> 
                                         <li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be not given and the qualification of the players will be waived.</li>  	
                                         <li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>													
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="promo special">
+                                <h3><img src="{{ asset('mobile/images/en/monthly-free-bonus.jpg') }}" class="img-responsive width-full"/></h3>
+                                <div class="promo-font">
+                                    <h4>Existing Member: MONTHLY FREE BONUS</h4>
+                                            
+                                    Terms & Conditions:
+                                    <ol>
+                                        <li>Each existing members of sbdot can claim FREE BONUS during the 1st of every each month. Total deposit on the previous month will be take into the calculation of the bonus given.
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                                <tr>
+                                                    <th>Total Deposit Month (RM)</th>
+                                                    <th>Bonus</th>
+                                                    <th>Rollover</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 20,000 - RM 39,999</td>
+                                                    <td>188</td>
+                                                    <td>5x</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 40,000 - RM 59,999</td>
+                                                    <td>388</td>
+                                                    <td>6x</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 60,000 - RM 79,999</td>
+                                                    <td>588</td>
+                                                    <td>8x</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RM 80,000 or Above</td>
+                                                    <td>888</td>
+                                                    <td>10x</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                        <li>Amount of free bonus is according to your total deposit amount during the previous month, as shown in table above.</li>
+                                        <li>Rollover must be met before withdrawals can be processed.
+                                            <ul style="list-style-type: lower-alpha;">
+                                                <li>Example: FREE BONUS RM88</li>
+                                                <li>Rollover: RM88 x 5 = 440</li>																															
+                                            </ul>
+                                        </li> 
+                                        <li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be not given and the qualification of the players will be waived.</li> 
+                                        <li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>												
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="promo special">
+                                <h3><img src="{{ asset('mobile/images/en/daily-rescue-bonus.jpg') }}" class="img-responsive width-full"/></h3>
+                                <div class="promo-font">
+                                    <h4>5% Daily Rescue Bonus</h4>
+                                            
+                                    Terms & Conditions:
+                                    <ol>
+                                        <li>Each existing members of Sbdot are allowed to claim 1 time rescue bonus on each day. (Based on total deposit & lost of the day)</li>
+                                        <li>The promotion cannot be combine with other promotion.</li>
+                                        <li>Before you claim the Rescue Bonus should not have any withdraw on the same day. (Wallet Credit Balance must below RM10 to qualify this promotion.</li> 
+                                        <li>Daily rescue bonus will start every day from 00:00:01 until 23:59:59(GMT+8).(Member need to apply on next day within 24 hours via live chat) Only Live Dealer & Sportsbook Game Turnover will be counted, Other games played will be disqualified from this promotion.</li> 
+                                        <li>Example: Rescue Bonus RM10
+                                            <ul style="list-style-type: lower-alpha;">
+                                                <li>Rollover: RM10 x 5 Rollover = 50
+                                            </ul>
+                                        </li>
+                                        <li>Sbdot reserves the rights to decline the payout and freeze the account for investigation if there are any form of suspicious activities and third-party software found. All payout shall be void as well.</li>
+                                        <li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be not given and the qualification of the players will be waived.</li> 
+                                        <li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>                                    
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="promo special">
+                                <h3><img src="{{ asset('mobile/images/en/baccarat-winning-streak.jpg') }}" class="img-responsive width-full"/></h3>
+                                <div class="promo-font">
+                                    <h4>Baccarat Winning Streak Bonus</h4>
+                                            
+                                    Terms & Conditions:
+                                    <ol>
+                                        <li>Each existing members of Sbdot are allowed to claim an additional special bonus if they make a streak win during the gameplay of our baccarat game.
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                                <tr>
+                                                    <th>Total Win Streak /Day</th>
+                                                    <th>Bonus Percentage</th>
+                                                    <th>Max Bonus (RM)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>4 – 7 games</td>
+                                                    <td>10%</td>
+                                                    <td>188</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8 – 9 games</td>
+                                                    <td>20%</td>
+                                                    <td>288</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10 – 11 games</td>
+                                                    <td>40%</td>
+                                                    <td>488</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12 games & above</td>
+                                                    <td>60%</td>
+                                                    <td>888</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                        <li>The bonus percentage will be calculated based on the min. bet of the winning streak.</li>
+                                        <li>For example:
+                                            <ul style="list-style-type: lower-alpha;">
+                                                <li>1<sup>st</sup> game bet rm100, <sup>2nd</sup> game bet rm150, <sup>3rd</sup> game bet rm100, <sup>4th</sup> game bet rm400</li>
+                                                <li>Then, the baccarat player are able to claim a bonus of RM100 *5% = RM5</li>																															
+                                            </ul>
+                                        </li> 
+                                        <li>Player must be in the same table and same platform during the winning streak, tie is not included.</li> 
+                                        <li>Member are only able to claim once (1) per day.</li>
+                                        <li>Min. bet to be entitled is rm20 per stake.</li>
+                                        <li>Member can redeem the bonus via our livechat, wechat, whatsapp within 24 hours.</li>
+                                        <li>Sbdot reserves the rights to decline the payout and freeze the account for investigation if there are any form of suspicious activities and third-party software found. All payout shall be void as well.</li>
+                                        <li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be not given and the qualification of the players will be waived.</li>
+                                        <li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>										
                                     </ol>
                                 </div>
                             </div>
