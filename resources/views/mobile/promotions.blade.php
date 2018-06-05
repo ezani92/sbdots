@@ -547,7 +547,7 @@
                                         <li>For example:
                                             <ul style="list-style-type: lower-alpha;">
                                                 <li>1<sup>st</sup> game bet rm100, <sup>2nd</sup> game bet rm150, <sup>3rd</sup> game bet rm100, <sup>4th</sup> game bet rm400</li>
-                                                <li>Then, the baccarat player are able to claim a bonus of RM100 *5% = RM5</li>																															
+                                                <li>Then, the baccarat player are able to claim a bonus of (RM100 * 4 games) * 5% = RM20</li>																															
                                             </ul>
                                         </li> 
                                         <li>Player must be in the same table and same platform during the winning streak, tie is not included.</li> 
