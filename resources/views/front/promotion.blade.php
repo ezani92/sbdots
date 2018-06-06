@@ -593,12 +593,13 @@
 													<li>For example:
 														<ul style="list-style-type: lower-alpha;">
 															<li>1<sup>st</sup> game bet rm100, <sup>2nd</sup> game bet rm150, <sup>3rd</sup> game bet rm100, <sup>4th</sup> game bet rm400</li>
-															<li>Then, the baccarat player are able to claim a bonus of (RM100 * 4 games) * 5% = RM20</li>																															
+															<li>Then, the baccarat player are able to claim a bonus of (RM100 * 4 games) * 10% = RM40</li>																															
 														</ul>
 													</li> 
 													<li>Player must be in the same table and same platform during the winning streak, tie is not included.</li> 
 													<li>Member are only able to claim once (1) per day.</li>
-													<li>Min. bet to be entitled is rm20 per stake.</li>
+													<li>Min. bet to be entitled is RM20 per stake.</li>
+													<li>This promotion is not able to claim along with other bonus.</li>
 													<li>Member can redeem the bonus via our livechat, wechat, whatsapp within 24 hours.</li>
 													<li>Sbdot reserves the rights to decline the payout and freeze the account for investigation if there are any form of suspicious activities and third-party software found. All payout shall be void as well.</li>
 													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be not given and the qualification of the players will be waived.</li>
