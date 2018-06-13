@@ -271,7 +271,7 @@
 													<li>All active members are entitled to 1% cash rebate on their total amount wagered in Sbdot Sportsbook & Live Casino product only.</li>
 													<li>Every Monday after 12PM (GMT+8) onwards. Member will receive the bonus into their product account within 24 hours.</li> 
 													<li>Member only can withdraw their bonus after 1x turnover of Bonus.</li> 
-													<li>This promotion can be combined with any other existing promotion.</li>
+													<li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus within the week, they will not be entitled to claim this rebate.</li>
 													<li>Any bet place on two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement.</li> 
 													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li> 
 													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirements are no longer applicable to subsequent deposits (Credits lower than RM10 that mean member has losses the full bonus amount).</li>
@@ -314,7 +314,7 @@
 																<li>Extra Bonus = RM525</li> 
 															</ol>
 														</li>
-														<li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus (except for 5% deposit bonus) within the transactions, they will not be entitled to claim this special bonus.</li>
+														<li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus within the week, they will not be entitled to claim this special bonus.</li>
 														<li>Any bet place on two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement.</li> 
 														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
 														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirements are no longer applicable to subsequent deposits (Credits lower than RM10 that mean member has losses the full bonus amount).</li>
