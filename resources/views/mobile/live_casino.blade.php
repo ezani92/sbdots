@@ -31,7 +31,7 @@
                                 <div class="row product-wrap margin-none-side">
                                     <a href="downloads" data-wow-duration="0.2s" class="wow pulse animated">
                                         <div class="col-md-12 padding-style6">
-                                            <img src="{{ asset('mobile/images/common/product/products-casino-calibet.jpg') }}" class="img-responsive width-full" />
+                                            <img src="{{ asset('mobile/images/common/product/asia855.png') }}" class="img-responsive width-full" />
                                         </div>
                                         <div class="col-md-12 download-wrap">
                                             <button type="button" class="btn btn-warning btn-block"><i class="fa fa-apple"></i><i class="fa fa-android"></i> Download</button>
