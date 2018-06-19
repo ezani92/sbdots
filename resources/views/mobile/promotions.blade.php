@@ -127,8 +127,8 @@
                             </div>
                         </div>
                         
-                        <div class="promo deposit">
-                            <h3><img src="{{ asset('mobile/images/en/bnr4.jpg') }}" class="img-responsive width-full"/></h3>
+                        <!--<div class="promo deposit">
+                            <h3><img src="{{-- asset('mobile/images/en/bnr4.jpg') --}}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>Existing Member: 10% Deposit Bonus</h4>
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
@@ -174,7 +174,7 @@
                                     <li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
                                 </ol>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <div class="promo deposit latest 918kiss">
                             <h3><img src="{{ asset('mobile/images/en/bnr3.jpg') }}" class="img-responsive width-full"/></h3>

@@ -143,7 +143,7 @@
 										</div>
 									</div>
 								</div>
-								<div id="daily-bonus" class="portfolio latest deposit">
+								<!--<div id="daily-bonus" class="portfolio latest deposit">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr4.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
@@ -194,7 +194,7 @@
 												</div>
 										</div>
 									</div>
-								</div>
+								</div>-->
 								<div id="deposit-bonus" class="portfolio latest deposit 918kiss">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr3.jpg" alt=""/></div>
