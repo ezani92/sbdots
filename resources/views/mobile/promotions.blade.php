@@ -30,7 +30,7 @@
         
                     <div id="ourHolder" class="promo-box">
                     
-                        <div class="promo new">
+                        <div class="promo new slot">
                             <h3><img src="{{ asset('mobile/images/en/bnr1.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>New Member: Welcome 1<sup>st</sup> Deposit Bonus 30% up to MYR 3,000</h4>
@@ -126,7 +126,7 @@
                             </div>
                         </div>
                         
-                        <div class="promo new latest">
+                        <div class="promo new latest slot">
                             <h3><img src="{{ asset('mobile/images/en/new_member_30_get_90_slot_bonus.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>New Member for SLOTS: Deposit MYR30 get MYR90</h4>
@@ -223,7 +223,7 @@
                             </div>
                         </div>
 
-                        <div class="promo deposit latest">
+                        <div class="promo deposit latest slot">
                             <h3><img src="{{ asset('mobile/images/en/5_slots_deposit_bonus.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>Existing Member: 5% Deposit Bonus for Slots</h4>
@@ -271,7 +271,7 @@
                             </div>
                         </div>
 
-                        <div class="promo deposit latest">
+                        <div class="promo deposit latest slot">
                             <h3><img src="{{ asset('mobile/images/en/existing_member_10_slot.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>Existing Member: 10% Deposit Bonus for Slots</h4>
