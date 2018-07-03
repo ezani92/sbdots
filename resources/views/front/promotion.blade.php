@@ -28,7 +28,7 @@
 						<li><span class="filter" data-filter=".worldcup">World Cup</span></li>
 						<li><span class="filter" data-filter=".new">new member</span></li>
 						<li><span class="filter" data-filter=".deposit">deposit bonus</span></li>
-						<li><span class="filter" data-filter=".rebate">rebate</span></li>
+						<!--<li><span class="filter" data-filter=".rebate">rebate</span></li>-->
 						<li><span class="filter" data-filter=".special">special</span></li>
 						<li><span class="filter" data-filter=".slot">Slots</span></li>
 					</ul>
@@ -354,7 +354,7 @@
 									</div>
 								</div>
 
-								<div id="mobile" class="portfolio latest rebate">
+								<!--<div id="mobile" class="portfolio latest rebate">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr5.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
@@ -388,7 +388,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 
 								<div id="starter" class="portfolio latest worldcup">
 									<div class="promo-item">
@@ -538,7 +538,7 @@
 									</div>
 								</div>
 
-								<div id="welcome" class="portfolio latest special">
+								<!-- <div id="welcome" class="portfolio latest special">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr6.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
@@ -580,7 +580,7 @@
 												</div>
 										</div>
 									</div>
-								</div>
+								</div>-->
 
 								<div id="starter" class="portfolio special latest">
 									<div class="promo-item">

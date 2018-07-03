@@ -23,7 +23,7 @@
                         <li><a href="#" class="worldcup">World Cup</a></li>
                         <li><a href="#" class="new">New Member</a></li>
                         <li><a href="#" class="deposit">Deposit Bonus</a></li>
-                        <li><a href="#" class="rebate">Rebate</a></li>
+                        <!--<li><a href="#" class="rebate">Rebate</a></li>-->
                         <li><a href="#" class="special">Special</a></li>
                         <li><a href="#" class="slot">Slots</a></li>
                     </ul>
@@ -130,7 +130,7 @@
                             <h3><img src="{{ asset('mobile/images/en/new_member_30_get_90_slot_bonus.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>New Member for SLOTS: Deposit MYR30 get MYR90</h4>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                     <tr>
                                         <th>First Deposit Amount (RM)</th>
                                         <th>Total Bonus & Deposit Amount (RM)</th>
@@ -198,7 +198,7 @@
                                     <li>SBdots will be giving away extra 5% deposit bonus to all existing member deposit.</li>
                                     <li>
                                         Member only can withdraw their deposit bonus after achieving the required rollover of deposit amount and bonus.
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                                 <tr>
                                                     <th rowspan="3">Example</th>
                                                     <td>First Deposit</td>
@@ -227,7 +227,7 @@
                             <h3><img src="{{ asset('mobile/images/en/5_slots_deposit_bonus.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>Existing Member: 5% Deposit Bonus for Slots</h4>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                     <tr>
                                         <th>MIN. DEPOSIT AMOUNT (RM) </th>
                                         <th>BONUS</th>
@@ -247,7 +247,7 @@
                                     <li>Sbdot will be giving away extra 5% deposit bonus to their existing member deposit for slot games only.</li>
                                     <li>
                                         Member only can withdraw their deposit bonus after achieving the required winning of deposit amount and bonus:
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                             <tr>
                                                 <th rowspan="3">Example</th>
                                                 <td>First Deposit</td>
@@ -275,7 +275,7 @@
                             <h3><img src="{{ asset('mobile/images/en/existing_member_10_slot.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>Existing Member: 10% Deposit Bonus for Slots</h4>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                     <tr>
                                         <th>MIN. DEPOSIT AMOUNT (RM) </th>
                                         <th>BONUS</th>
@@ -295,7 +295,7 @@
                                     <li>Sbdot will be giving away extra 10% deposit bonus to their existing member deposit for slot games only.</li>
                                     <li>
                                         Member only can withdraw their deposit bonus after achieving the required winning of deposit amount and bonus:
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                             <tr>
                                                 <th rowspan="3">Example</th>
                                                 <td>First Deposit</td>
@@ -319,7 +319,7 @@
                             </div>
                         </div>
                         
-                        <div class="promo rebate">
+                        <!-- <div class="promo rebate">
                             <h3><img src="{{ asset('mobile/images/en/bnr5.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>Rebate: 1% Cash Rebates for Sports & Live Casino </h4>
@@ -349,9 +349,9 @@
                                     <li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  	
                                 </ol>
                                 </div>						
-                            </div>
+                            </div> -->
 
-                            <div class="promo special">
+                            <!--<div class="promo special">
                                 <h3><img src="{{ asset('mobile/images/en/bnr6.jpg') }}" class="img-responsive width-full"/></h3>
                                 <div class="promo-font">
                                     <h4>Special: 10% Extra Winning Bonus</h4>
@@ -389,7 +389,7 @@
                                         <li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  															
                                     </ol>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="promo worldcup">
                                 <h3><img src="{{ asset('mobile/images/en/wc-1.jpg') }}" class="img-responsive width-full"/></h3>
@@ -400,7 +400,7 @@
                                     <ol>
                                         <li>Promotion Periods: 16/05/2018 – 13/06/2018</li>
                                         <li>During the promotion periods (15/05 – 12/06), Members are entitled to submit one (1) guessing on the champion team they predict, but with a min. deposit of at least 15 times & min. of RM3,000 during the promotion periods and prizes amount as below table:
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                                 <tr>
                                                     <th>Min. Accumulated Deposit Amount during the periods</th>
                                                     <th>Prizes Rewards if successful predict the Champion Team</th>
@@ -439,7 +439,7 @@
                                 <h3><img src="{{ asset('mobile/images/en/wc-2.jpg') }}" class="img-responsive width-full"/></h3>
                                 <div class="promo-font">
                                     <h4>Existing Member(World Cup Edition): 25% Sportsbook Deposit Bonus (WORLD CUP MATCHES ONLY)</h4>
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                         <tr>
                                             <th>MIN. DEPOSIT AMOUNT (RM) </th>
                                             <th>BONUS</th>
@@ -459,7 +459,7 @@
                                         <li>SBdots will be giving away extra 25% deposit bonus to all existing member deposit.</li>
                                         <li>
                                             Member only can withdraw their deposit bonus after achieving the required rollover of deposit amount and bonus.
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                                     <tr>
                                                         <th rowspan="3">Example</th>
                                                         <td>First Deposit</td>
@@ -493,7 +493,7 @@
                                     <ol>
                                         <li>Promotion Periods: 14/06/2018 – 15/07/2018</li>
                                         <li>During the promotion periods, Members who’ve successfully deposit are able to pick a winning team on the matches for the following (1) day.
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                                 <tr>
                                                     <th>Deposit Amount (per transactions)</th>
                                                     <th>Prizes Rewards if won</th>
@@ -537,7 +537,7 @@
                                     Terms & Conditions:
                                     <ol>
                                         <li>Each existing members of sbdot can claim FREE BONUS during the 1st of every each month. Total deposit on the previous month will be take into the calculation of the bonus given.
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                                 <tr>
                                                     <th>Total Deposit Month (RM)</th>
                                                     <th>Bonus</th>
@@ -582,7 +582,7 @@
                                 <h3><img src="{{ asset('mobile/images/en/7_days_attendances_bonus.jpg') }}" class="img-responsive width-full"/></h3>
                                 <div class="promo-font">
                                     <h4>Existing Member: Perfect Attendance Bonus up to 7 days</h4>
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                         <tr>
                                             <th>Attendances Day (RM)</th>
                                             <th>Total Accu. Deposit (RM)</th>
@@ -643,7 +643,7 @@
                                     Terms & Conditions:
                                     <ol>
                                         <li>Each existing members of Sbdot are allowed to claim an additional special bonus if they make a streak win during the gameplay of our baccarat game.
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table" data-snap-ignore="true">
                                                 <tr>
                                                     <th>Total Win Streak /Day</th>
                                                     <th>Bonus Percentage</th>
