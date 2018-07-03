@@ -30,7 +30,7 @@
 						<li><span class="filter" data-filter=".deposit">deposit bonus</span></li>
 						<li><span class="filter" data-filter=".rebate">rebate</span></li>
 						<li><span class="filter" data-filter=".special">special</span></li>
-						<li><span class="filter" data-filter=".918kiss">918Kiss</span></li>
+						<li><span class="filter" data-filter=".slot">Slots</span></li>
 					</ul>
 					
 					<!-- hash link -->
@@ -40,7 +40,7 @@
 						<div class="tab-pane fade in active">
 							<div id="portfoliolist">
                             
-								<div class="portfolio latest new">
+								<div class="portfolio latest new slot">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr1.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
@@ -143,59 +143,59 @@
 										</div>
 									</div>
 								</div>
-								<!--<div id="daily-bonus" class="portfolio latest deposit">
+								<div class="portfolio latest new slot">
 									<div class="promo-item">
-										<div class="promo-button"><img src="images/en/bnr4.jpg" alt=""/></div>
+										<!-- Change Banner -->
+										<div class="promo-button"><img src="images/en/new_member_30_get_90_slot_bonus.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
-													<h4>Existing Member: 10% Deposit Bonus</h4>
-													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
-														<tr>
-															<th>MIN. DEPOSIT AMOUNT (RM) </th>
-															<th>BONUS</th>
-															<th>MAXIMUM BONUS (RM)</th>
-															<th>ROLLOVER REQUIREMENT</th>
-														</tr>
-														<tr>
-															<td>30</td>
-															<td>10%</td>
-															<td>RM1000</td>
-															<td>x10</td>
-														</tr>
-													</table>
-													
-													Terms & Conditions:
-													<ol>
-														<li>SBdots will be giving away extra 10% deposit bonus to all existing member deposit.</li>
-														<li>
-															Member only can withdraw their deposit bonus after achieving the required rollover of deposit amount and bonus.
-															<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
-																	<tr>
-																		<th rowspan="3">Example</th>
-																		<td>First Deposit</td>
-																		<td>RM100</td>
-																	</tr>
-																	<tr>
-																		<td>Bonus</td>
-																		<td>RM10</td>
-																	</tr>
-																	<tr>
-																		<td>Rollover Requirement </td>
-																		<td>(100 + 10) x 10 = RM1100</td>
-																	</tr>
-																</table>
-														</li>
-														<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement. </li>
-														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
-														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount) </li>
-														<li>This promotion is only applicable for Sportsbook & Live Casino Games.</li>
-														<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
-													</ol>
-												</div>
+												<h4>New Member for SLOTS: Deposit MYR30 get MYR90</h4>
+												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+													<tr>
+														<th>First Deposit Amount (RM)</th>
+														<th>Total Bonus & Deposit Amount (RM)</th>
+														<th>Winning Requirement</th>
+														<th>Max Withdrawal (RM)</th>
+													</tr>
+													<tr>
+														<td>30</td>
+														<td>90</td>
+														<td>5x</td>
+														<td>500</td>
+													</tr>
+												</table>
+												
+												Terms & Conditions:
+												<ol>
+													<li>Sbdot will be giving away total RM90 for their new registered member that have deposited RM30 for slots only.</li>
+													<li>
+														Member only can withdraw their deposit bonus after achieving the required winning amount of deposit & bonus: 
+														<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+																<tr>
+																	<th rowspan="3">Example</th>
+																	<td>Deposit</td>
+																	<td>RM30</td>
+																</tr>
+																<tr>
+																	<td>Deposit & Bonus</td>
+																	<td>RM90</td>
+																</tr>
+																<tr>
+																	<td>Winning Requirement</td>
+																	<td>(30 + 60) x 5 = RM450</td>
+																</tr>
+															</table>
+													</li>
+													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
+													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount)</li>
+													<li>This promotion is only applicable for SCR888, 918kiss and Mega888 or other slot games only.</li>
+													<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>																									
+												</ol>
+											</div>
 										</div>
 									</div>
-								</div>-->
-								<div id="deposit-bonus" class="portfolio latest deposit 918kiss">
+								</div>
+								<div id="deposit-bonus" class="portfolio latest deposit">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr3.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
@@ -247,6 +247,113 @@
 										</div>
 									</div>
 								</div>
+
+								<div id="deposit-bonus" class="portfolio latest deposit slot">
+									<div class="promo-item">
+										<!-- Change Banner -->
+										<div class="promo-button"><img src="images/en/5%_slots_deposit_bonus.jpg" alt=""/></div>
+										<div class="promo-btm-wrap">
+											<div class="promo-content">
+												<h4>Existing Member: 5% Deposit Bonus for Slots</h4>
+												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+													<tr>
+														<th>MIN. DEPOSIT AMOUNT (RM) </th>
+														<th>BONUS</th>
+														<th>MAXIMUM BONUS (RM)</th>
+														<th>WINNING REQUIREMENT</th>
+													</tr>
+													<tr>
+														<td>30</td>
+														<td>5%</td>
+														<td>N/A</td>
+														<td>x2</td>
+													</tr>
+												</table>
+												
+												Terms & Conditions:
+												<ol>
+													<li>Sbdot will be giving away extra 5% deposit bonus to their existing member deposit for slot games only.</li>
+													<li>
+														Member only can withdraw their deposit bonus after achieving the required winning of deposit amount and bonus:
+														<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+															<tr>
+																<th rowspan="3">Example</th>
+																<td>First Deposit</td>
+																<td>RM100</td>
+															</tr>
+															<tr>
+																<td>Bonus</td>
+																<td>RM5</td>
+															</tr>
+															<tr>
+																<td>Winning Requirement </td>
+																<td>(100 + 5) x 2 = RM210</td>
+															</tr>
+														</table>
+													</li>
+													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
+													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount)</li>
+													<li>This promotion is only applicable for SCR888, 918kiss and Mega888 or other slot games only.</li>
+													<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>																							
+												</ol>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div id="deposit-bonus" class="portfolio latest deposit slot">
+									<div class="promo-item">
+										<!-- Change Banner -->
+										<div class="promo-button"><img src="images/en/existing_member_10%_slot.jpg" alt=""/></div>
+										<div class="promo-btm-wrap">
+											<div class="promo-content">
+												<h4>Existing Member: 10% Deposit Bonus for Slots</h4>
+												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+													<tr>
+														<th>MIN. DEPOSIT AMOUNT (RM) </th>
+														<th>BONUS</th>
+														<th>MAXIMUM BONUS (RM)</th>
+														<th>WINNING REQUIREMENT</th>
+													</tr>
+													<tr>
+														<td>30</td>
+														<td>10%</td>
+														<td>N/A</td>
+														<td>x3</td>
+													</tr>
+												</table>
+												
+												Terms & Conditions:
+												<ol>
+													<li>Sbdot will be giving away extra 10% deposit bonus to their existing member deposit for slot games only.</li>
+													<li>
+														Member only can withdraw their deposit bonus after achieving the required winning of deposit amount and bonus:
+														<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+															<tr>
+																<th rowspan="3">Example</th>
+																<td>First Deposit</td>
+																<td>RM100</td>
+															</tr>
+															<tr>
+																<td>Bonus</td>
+																<td>RM10</td>
+															</tr>
+															<tr>
+																<td>Winning Requirement </td>
+																<td>(100 + 10) x 3 = RM330</td>
+															</tr>
+														</table>
+													</li>
+													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
+													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount)</li>
+													<li>This promotion is only applicable for SCR888, 918kiss and Mega888 or other slot games only.</li>
+													<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>																							
+												</ol>
+											</div>
+										</div>
+									</div>
+								</div>
+
 								<div id="mobile" class="portfolio latest rebate">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr5.jpg" alt=""/></div>
@@ -282,49 +389,7 @@
 										</div>
 									</div>
 								</div>
-								<div id="welcome" class="portfolio latest special">
-									<div class="promo-item">
-										<div class="promo-button"><img src="images/en/bnr6.jpg" alt=""/></div>
-										<div class="promo-btm-wrap">
-											<div class="promo-content">
-													<h4>Special: 10% Extra Winning Bonus</h4>
-													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
-														<tr>
-															<th>REQUIREMENT</th>
-															<th>BONUS AMOUNT (%)</th>
-														</tr>
-														<tr>
-															<td>5 times of Deposit amount + Bonus Amount</td>
-															<td>5%</td>
-														</tr>
-														<tr>
-															<td>10 times of Deposit amount + Bonus Amount</td>
-															<td>10%</td>
-														</tr>
-													</table>
-													
-													Terms & Conditions:
-													<ol>
-														<li>All members are that taken 5% deposit bonus are entitled for this special bonus. If members are able to win up to 5 times of the deposit amount, they will be eligible to receive extra 5% winning bonus during their withdrawal. If members are able to win up to 10 times of their deposit amount, they will eligible to receive extra 10% winning bonus during withdrawal.</li>
-														<li>Example: 
-															<ol type="a">
-																<li>Deposit = RM500</li> 
-																<li>Bonus taken = 5% daily deposit</li> 
-																<li>Total Winning Withdrawal = (RM500 + RM25) x 10 times = RM5,250</li> 
-																<li>Extra Bonus = RM525</li> 
-															</ol>
-														</li>
-														<li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus within the week, they will not be entitled to claim this special bonus.</li>
-														<li>Any bet place on two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement.</li> 
-														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
-														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirements are no longer applicable to subsequent deposits (Credits lower than RM10 that mean member has losses the full bonus amount).</li>
-														<li>This promotion is only applicable for Sportsbook & Live Casino Games.</li> 
-														<li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  															
-													</ol>
-												</div>
-										</div>
-									</div>
-								</div>
+
 								<div id="starter" class="portfolio latest worldcup">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/wc-1.jpg" alt=""/></div>
@@ -472,6 +537,51 @@
 										</div>
 									</div>
 								</div>
+
+								<div id="welcome" class="portfolio latest special">
+									<div class="promo-item">
+										<div class="promo-button"><img src="images/en/bnr6.jpg" alt=""/></div>
+										<div class="promo-btm-wrap">
+											<div class="promo-content">
+													<h4>Special: 10% Extra Winning Bonus</h4>
+													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+														<tr>
+															<th>REQUIREMENT</th>
+															<th>BONUS AMOUNT (%)</th>
+														</tr>
+														<tr>
+															<td>5 times of Deposit amount + Bonus Amount</td>
+															<td>5%</td>
+														</tr>
+														<tr>
+															<td>10 times of Deposit amount + Bonus Amount</td>
+															<td>10%</td>
+														</tr>
+													</table>
+													
+													Terms & Conditions:
+													<ol>
+														<li>All members are that taken 5% deposit bonus are entitled for this special bonus. If members are able to win up to 5 times of the deposit amount, they will be eligible to receive extra 5% winning bonus during their withdrawal. If members are able to win up to 10 times of their deposit amount, they will eligible to receive extra 10% winning bonus during withdrawal.</li>
+														<li>Example: 
+															<ol type="a">
+																<li>Deposit = RM500</li> 
+																<li>Bonus taken = 5% daily deposit</li> 
+																<li>Total Winning Withdrawal = (RM500 + RM25) x 10 times = RM5,250</li> 
+																<li>Extra Bonus = RM525</li> 
+															</ol>
+														</li>
+														<li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus within the week, they will not be entitled to claim this special bonus.</li>
+														<li>Any bet place on two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement.</li> 
+														<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
+														<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirements are no longer applicable to subsequent deposits (Credits lower than RM10 that mean member has losses the full bonus amount).</li>
+														<li>This promotion is only applicable for Sportsbook & Live Casino Games.</li> 
+														<li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  															
+													</ol>
+												</div>
+										</div>
+									</div>
+								</div>
+
 								<div id="starter" class="portfolio special latest">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/monthly-free-bonus.jpg" alt=""/></div>
@@ -524,33 +634,69 @@
 										</div>
 									</div>
 								</div>
+
 								<div id="starter" class="portfolio special latest">
 									<div class="promo-item">
-										<div class="promo-button"><img src="images/en/daily-rescue-bonus.jpg" alt=""/></div>
+										<!-- Change Banner -->
+										<div class="promo-button"><img src="images/en/7_days_attendances_bonus.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
-												<h4>5% Daily Rescue Bonus</h4>
-												
+												<h4>Existing Member: Perfect Attendance Bonus up to 7 days</h4>
+												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+													<tr>
+														<th>Attendances Day (RM)</th>
+														<th>Total Accu. Deposit (RM)</th>
+														<th>Bonus (RM)</th>
+														<th>Turnover Requirement</th>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>300</td>
+														<td>10</td>
+														<td>x1</td>
+													</tr>
+													<tr>
+														<td>4</td>
+														<td>500</td>
+														<td>28</td>
+														<td>x1</td>
+													</tr>
+													<tr>
+														<td>5</td>
+														<td>800</td>
+														<td>58</td>
+														<td>x3</td>
+													</tr>
+													<tr>
+														<td>6</td>
+														<td>1200</td>
+														<td>88</td>
+														<td>x5</td>
+													</tr>
+													<tr>
+														<td>7</td>
+														<td>1600</td>
+														<td>118</td>
+														<td>x7</td>
+													</tr>
+												</table>
+
 												Terms & Conditions:
 												<ol>
-													<li>Each existing members of Sbdot are allowed to claim 1 time rescue bonus on each day. (Based on total deposit & lost of the day)</li>
-													<li>The promotion cannot be combine with other promotion.</li>
-													<li>Before you claim the Rescue Bonus should not have any withdraw on the same day. (Wallet Credit Balance must below RM10 to qualify this promotion.</li> 
-													<li>Daily rescue bonus will start every day from 00:00:01 until 23:59:59(GMT+8).(Member need to apply on next day within 24 hours via live chat) Only Live Dealer & Sportsbook Game Turnover will be counted, Other games played will be disqualified from this promotion.</li> 
-													<li>Example: Rescue Bonus RM10
-														<ul style="list-style-type: lower-alpha;">
-															<li>Rollover: RM10 x 5 Rollover = 50
-														</ul>
-													</li>
-													<li>Sbdot reserves the rights to decline the payout and freeze the account for investigation if there are any form of suspicious activities and third-party software found. All payout shall be void as well.</li>
-													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be not given and the qualification of the players will be waived.</li> 
-													<li>Our company has the right to modify, change or terminate the promotion without prior notice.</li> 
-											
+													<li>To claim the perfect attendance bonus, member must make deposits to their player accounts for a minimum of 3 consecutive days (up to 7 consecutive days) as refer to table above.</li>
+													<li>This promotion will be able to claim once per week.</li>
+													<li>This promotion will be automatically credit into members account. If member did not receive the bonus, simply just notified the customer services via the livechat, whatsapp or wechat to redeem the bonus.</li>
+													<li>Accumulated Deposit will be reset on every Monday and start from 0 again.</li>
+													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
+													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount)</li>
+													<li>This promotion is only applicable for SCR888, 918kiss and Mega888 or other slot games only.</li>
+													<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>														
 												</ol>
 											</div>
 										</div>
 									</div>
 								</div>
+
 								<div id="starter" class="portfolio special latest">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/baccarat-winning-streak.jpg" alt=""/></div>
@@ -609,6 +755,57 @@
 										</div>
 									</div>
 								</div>
+
+								<div id="starter" class="portfolio special latest">
+									<div class="promo-item">
+										<!-- Change Banner -->
+										<div class="promo-button"><img src="images/en/refer_friend_bonus_rm20.jpg" alt=""/></div>
+										<div class="promo-btm-wrap">
+											<div class="promo-content">
+												<h4>Existing Member: Refer Friend Bonus RM20</h4>
+												
+												Terms & Conditions:
+												<ol>
+													<li>To claim the refer friend bonus, your introduced friend must deposit an amount of MYR200, excluding the 1st deposit amount and turnover is subjected to x8. Your friend must notify our customer service support by email or livechat with your game username or email. The bonus credit will be credited into your account once the requirement above is met.</li>
+													<li>Example, once your friend has deposited an amount of RM200, RM20 will be credited into your account and subjected to x8 turnover.</li>
+													<li>Bonus amount is valid for 10 days.</li>
+													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li>
+													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can loses the full bonus amount)</li>
+													<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>												
+												</ol>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div id="starter" class="portfolio special latest">
+									<div class="promo-item">
+										<div class="promo-button"><img src="images/en/daily-rescue-bonus.jpg" alt=""/></div>
+										<div class="promo-btm-wrap">
+											<div class="promo-content">
+												<h4>5% Daily Rescue Bonus</h4>
+												
+												Terms & Conditions:
+												<ol>
+													<li>Each existing members of Sbdot are allowed to claim 1 time rescue bonus on each day. (Based on total deposit & lost of the day)</li>
+													<li>The promotion cannot be combine with other promotion.</li>
+													<li>Before you claim the Rescue Bonus should not have any withdraw on the same day. (Wallet Credit Balance must below RM10 to qualify this promotion.</li> 
+													<li>Daily rescue bonus will start every day from 00:00:01 until 23:59:59(GMT+8).(Member need to apply on next day within 24 hours via live chat) Only Live Dealer & Sportsbook Game Turnover will be counted, Other games played will be disqualified from this promotion.</li> 
+													<li>Example: Rescue Bonus RM10
+														<ul style="list-style-type: lower-alpha;">
+															<li>Rollover: RM10 x 5 Rollover = 50
+														</ul>
+													</li>
+													<li>Sbdot reserves the rights to decline the payout and freeze the account for investigation if there are any form of suspicious activities and third-party software found. All payout shall be void as well.</li>
+													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be not given and the qualification of the players will be waived.</li> 
+													<li>Our company has the right to modify, change or terminate the promotion without prior notice.</li> 
+											
+												</ol>
+											</div>
+										</div>
+									</div>
+								</div>
+
 							</div>
 						</div>
 					</div>
