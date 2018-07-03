@@ -224,7 +224,7 @@
                         </div>
 
                         <div class="promo deposit latest">
-                            <h3><img src="{{ asset('mobile/images/en/5%_slots_deposit_bonus.jpg') }}" class="img-responsive width-full"/></h3>
+                            <h3><img src="{{ asset('mobile/images/en/5_slots_deposit_bonus.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>Existing Member: 5% Deposit Bonus for Slots</h4>
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
@@ -272,7 +272,7 @@
                         </div>
 
                         <div class="promo deposit latest">
-                            <h3><img src="{{ asset('mobile/images/en/existing_member_10%_slot.jpg') }}" class="img-responsive width-full"/></h3>
+                            <h3><img src="{{ asset('mobile/images/en/existing_member_10_slot.jpg') }}" class="img-responsive width-full"/></h3>
                             <div class="promo-font">
                                 <h4>Existing Member: 10% Deposit Bonus for Slots</h4>
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">

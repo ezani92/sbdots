@@ -108,7 +108,7 @@
                     <div id="slider" class="nivoSlider" style="height:350px;"> 
                         <a href="promotions"><img src="images/en/main1_new.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/new_member_30_get_90_slot_bonus.jpg" width="1040" height="350" alt=""/></a>
-                        <a href="promotions"><img src="images/en/existing_member_10%_slot.jpg" width="1040" height="350" alt=""/></a>
+                        <a href="promotions"><img src="images/en/existing_member_10_slot.jpg" width="1040" height="350" alt=""/></a>
                         <!-- <a href="promotions"><img src="images/en/Promo-1rebate.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/Promo-1rebatesport.jpg" width="1040" height="350" alt=""/></a>
                         <a href="promotions"><img src="images/en/Promo-3deposit.jpg" width="1040" height="350" alt=""/></a> -->

@@ -251,7 +251,7 @@
 								<div id="deposit-bonus" class="portfolio latest deposit slot">
 									<div class="promo-item">
 										<!-- Change Banner -->
-										<div class="promo-button"><img src="images/en/5%_slots_deposit_bonus.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/5_slots_deposit_bonus.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
 												<h4>Existing Member: 5% Deposit Bonus for Slots</h4>
@@ -304,7 +304,7 @@
 								<div id="deposit-bonus" class="portfolio latest deposit slot">
 									<div class="promo-item">
 										<!-- Change Banner -->
-										<div class="promo-button"><img src="images/en/existing_member_10%_slot.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/existing_member_10_slot.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
 												<h4>Existing Member: 10% Deposit Bonus for Slots</h4>
