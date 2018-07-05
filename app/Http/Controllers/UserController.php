@@ -105,9 +105,9 @@ class UserController extends Controller
 
             })
             ->editColumn('created_at', function ($user) {
-                return $user->created_at ? with(new Carbon($user->created_at))->format('d M Y, h:i A') : '';
+                return '<span style="display: none;">'. $user->created_at->format('Ymd') .'</span>'.$user->created_at->format('d M Y, h:i A');
             })
-            ->rawColumns(['actions','phone_verification'])
+            ->rawColumns(['actions','phone_verification','created_at'])
             ->make(true);
     }
 

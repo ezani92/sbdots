@@ -13,6 +13,7 @@
 			                <table id="games-table" class="table table-striped table-hover table-fw-widget">
 			                    <thead>
 			                        <tr>
+			                        	<th>Registered At</th>
 			                            <th>Fullname</th>
 			                            <th>Email</th>
 			                            <th>Phone</th>
@@ -20,7 +21,6 @@
 			                            <th>Group</th>
 			                            <th>Referred By</th>
 			                            <th>Is Verified?</th>
-			                            <th>Registered At</th>
 			                            <th>Action</th>
 			                        </tr>
 			                    </thead>
@@ -36,10 +36,12 @@
 <script>
     $(function() {
         $('#games-table').DataTable({
+        	"order": [[ 0, "desc" ]],
             processing: true,
             serverSide: true,
             ajax: 'users/data',
             columns: [
+            	{ data: 'created_at', name: 'created_at' },
                 { data: 'name', name: 'name' },
                 { data: 'email', name: 'email' },
                 { data: 'phone', name: 'phone' },
@@ -47,7 +49,6 @@
                 { data: 'group_id', name: 'group_id' },
                 { data: 'referred_by', name: 'referred_by' },
                 { data: 'phone_verification', name: 'phone_verification' },
-                { data: 'created_at', name: 'created_at' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }
             ]
         });
