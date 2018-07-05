@@ -31,6 +31,7 @@
 			                            <th>Group</th>
 			                            <th>Bank</th>
 			                            <th>Credit</th>
+			                            <th>Bonus</th>
 			                            <th>Status</th>
 			                            <th>Action</th>
 			                        </tr>
@@ -69,6 +70,7 @@
                 { data: 'group', name: 'group' },
                 { data: 'bank_id', name: 'bank_id' },
                 { data: 'amount', name: 'amount' },
+                { data: 'bonus_id', name: 'bonus_id' },
                 { data: 'status', name: 'status' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }
             ]

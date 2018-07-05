@@ -128,6 +128,16 @@ class TransactionController extends Controller
                     return $transaction->bank->name.' - '.$transaction->bank->account_name;
                 }
             })
+            ->editColumn('bonus_id', function ($transaction) {
+                if($transaction->bonus_id == null)
+                {
+                    return 'No Bonus';
+                }
+                else
+                {
+                    return $transaction->bonus->name;
+                }
+            })
             ->editColumn('status', function ($transaction) {
                 
                 if($transaction->status == 1)
