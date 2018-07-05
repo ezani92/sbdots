@@ -101,6 +101,7 @@ Route::middleware(['isadmin'])->group(function () {
     Route::get('/admin/users/{user_id}/logs-data', 'UserController@logsdata');
     Route::get('/admin/users/{user_id}/ban', 'UserController@ban');
     Route::get('/admin/users/{user_id}/unban', 'UserController@unban');
+    Route::get('/admin/users/{user_id}/delete', 'UserController@destroy');
     Route::resource('/admin/users', 'UserController');
 
     Route::post('admin/user/transaction/deposit', 'UserController@deposit');

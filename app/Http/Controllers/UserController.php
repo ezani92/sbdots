@@ -10,6 +10,7 @@ use Carbon\Carbon;
 use Session;
 use App\Game;
 use App\Bank;
+use App\BankRecord;
 use App\Bonus;
 use App\Log;
 use App\Notifications\NewDeposit;
@@ -423,7 +424,15 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+
+        $user->transactions()->delete();
+        $user->delete();
+
+        Session::flash('message', 'User and all transaction attached succesfully Deleted!'); 
+        Session::flash('alert-class', 'alert-success');
+
+        return redirect('admin/users');
     }
 
     public function ban($id)

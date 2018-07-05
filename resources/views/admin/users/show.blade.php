@@ -112,10 +112,12 @@
 			                		<a data-toggle="modal" data-target="#modal-password" class="btn btn-info btn-block">Update Password</a><br />
 
 			                		@if($user->is_ban == 0)
-			                			<a href="{{ url('admin/users/'.$user->id.'/ban') }}" onclick="return confirm('Are you sure?');" class="btn btn-danger btn-block">Ban User</a><br />
+			                			<a href="{{ url('admin/users/'.$user->id.'/ban') }}" onclick="return confirm('Are you sure?');" class="btn btn-warning btn-block">Ban User</a><br />
 			                		@else
 			                			<a href="{{ url('admin/users/'.$user->id.'/unban') }}" onclick="return confirm('Are you sure?');" class="btn btn-success btn-block">Un-Ban User</a><br />
 			                		@endif
+
+			                		<a href="{{ url('admin/users/'.$user->id.'/delete') }}" onclick="return confirm('Are you sure? all the transaction attached to this user also will be deleted! This action cant be restore!');" class="btn btn-danger btn-block">PERMANENTLY DELETE USER</a><br />
 			                	</div>
 			                </div>
 			                <div class="row">
