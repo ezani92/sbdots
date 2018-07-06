@@ -57,7 +57,10 @@
 							        <label>Remarks</label>
 							        <textarea name="remarks" class="form-control">{{ $user->remarks }}</textarea>
 							    </div>
-
+								<div class="form-group">
+							        <label>Refferal By</label>
+							        {{ Form::select('referred_by', $affiliate, $user->referred_by, ['class' => 'form-control']) }}
+							    </div>
 							    
 							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Update User</button>

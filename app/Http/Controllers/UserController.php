@@ -352,16 +352,17 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
+        $affiliate = User::where('role',4)->where('is_ban',0)->pluck('name','affiliate_id');
 
         if(\Auth::user()->role == 1)
         {
 
-            return view('admin.users.edit',compact('user'));
+            return view('admin.users.edit',compact('user','affiliate'));
 
         }
         else
         {
-            return view('staff.users.edit',compact('user'));
+            return view('staff.users.edit',compact('user','affiliate'));
         }
 
         
@@ -395,6 +396,7 @@ class UserController extends Controller
         $user->bank_name = $input['bank_name'];
         $user->bank_account_no = $input['bank_account_no'];
         $user->remarks = $input['remarks'];
+        $user->referred_by = $input['referred_by'];
 
         $user->save();
 
