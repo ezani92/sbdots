@@ -122,6 +122,32 @@
 				                					<td><strong>User Bank Account Number</strong></td>
 				                					<td>{{ $transaction->user->bank_account_no }}</td>
 				                				</tr>
+				                				<tr>
+				                					<td><strong>Last Deposit Transaction</strong></td>
+				                					@php
+
+				                						$last_transaction = \App\Transaction::where('user_id',$transaction->user->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->latest()->first();
+
+				                					@endphp
+				                					@if(!$last_transaction)
+													<td><code style="color: red;">No Last Transaction</code></td>
+				                					@else
+				                					<td>
+														<ul>
+															<li>Transaction ID : [#{{ sprintf('%06d', $last_transaction->id) }}]</li>
+															<li>Deposit Amount : RM {{ $last_transaction->amount }}</li>
+															@if($last_transaction->bonus == null)
+																<li>Bonus Amount : -</li>
+															@else
+																@php
+																	$bonus = \App\Transaction::where('bonus_for',$last_transaction->id)->first();
+																@endphp
+																<li>Bonus Amount : RM {{ $bonus->amount }}</li>
+															@endif
+														</ul>
+				                					</td>
+				                					@endif
+				                				</tr>
 				                				
 			                				@elseif($transaction->transaction_type == 'transfer')
 
