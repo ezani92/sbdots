@@ -165,6 +165,8 @@
                                             </li>
                                         </ul>
                                     </li>
+                                    <li class="{{ Request::is('admin/annoucement*') ? 'active' : '' }}"><a href="{{ url('admin/annoucement') }}"><i class="icon mdi mdi-notifications-active"></i><span>Annoucement</span></a>
+                                    </li>
                                     <li class="{{ Request::is('admin/settings*') ? 'active' : '' }}"><a href="{{ url('admin/settings') }}"><i class="icon mdi mdi-settings"></i><span>Settings</span></a>
                                     </li>
                                     

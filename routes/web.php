@@ -112,6 +112,10 @@ Route::middleware(['isadmin'])->group(function () {
     Route::get('/admin/groups/data', 'GroupController@data');
     Route::resource('/admin/groups', 'GroupController');
 
+    Route::get('/admin/annoucement', 'AnnoucementController@index');
+    Route::get('/admin/annoucement/create', 'AnnoucementController@create');
+    Route::post('/admin/annoucement', 'AnnoucementController@store');
+    Route::get('/admin/annoucement/{annoucement_id}/delete', 'AnnoucementController@destroy');
     
 });
 

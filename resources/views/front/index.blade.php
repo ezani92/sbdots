@@ -113,5 +113,23 @@
     </div>
 </div>
 
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="border-radius: 0px;">
+            <div class="modal-header" style="background: linear-gradient(to bottom, #ffd65e 3%,#fcc735 21%,#ff9f0f 47%,#ff9f0f 47%,#ff9f0f 99%); border: 1px solid orange;">
+                <span type="button" class="close" data-dismiss="modal">&times;</span>
+                <h4 class="modal-title">Annoucement</h4>
+            </div>
+            <div class="modal-body" style="background-color: #373737; color: white;">
+                <ol>
+                    @foreach(\App\Annoucement::all() as $annoucement)
+                        {{ $annoucement->body }}
+                    @endforeach
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 

@@ -125,6 +125,17 @@
 
     @include('front.footer')
     @yield('script')
+    @php
+        $announcement = \App\Annoucement::all()->count();
+    @endphp
+    @if($announcement == 0)
+
+    @else
+        <script type="text/javascript">
+            $("#myModal").modal("show");
+        </script>
+    @endif
+    
 <!-- Start of LiveChat (www.livechatinc.com) code -->
 <script type="text/javascript">
     window.__lc = window.__lc || {};
