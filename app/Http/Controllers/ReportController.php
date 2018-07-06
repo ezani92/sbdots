@@ -7,6 +7,9 @@ use App\User;
 use Carbon\Carbon;
 use App\Transaction;
 use DB;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class ReportController extends Controller
 {
@@ -43,7 +46,11 @@ class ReportController extends Controller
             $worth_withdrawal = DB::table('transactions')->where('transaction_type','withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->where('status','2')->sum('amount');
             $worth_bonus = DB::table('transactions')->where('deposit_type','bonus')->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
 
-            $transactions = Transaction::where('status',2)->where('deposit_type','normal')->orWhere('transaction_type', 'withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->paginate(25);
+            $transactions_1 = Transaction::where('status',2)->where('deposit_type','normal')->where('created_at','>=',$from)->where('created_at','<=',$to)->get();
+            $transactions_2 = Transaction::where('status',2)->Where('transaction_type', 'withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->get();
+
+            $transactions = $transactions_1->merge($transactions_2); // Contains foo and bar.
+            $transactions = $this->paginate($transactions);
 
 
         }
@@ -117,5 +124,12 @@ class ReportController extends Controller
     	
 
     	
+    }
+
+    public function paginate($items, $perPage = 15, $page = null, $options = [])
+    {
+        $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+        $items = $items instanceof Collection ? $items : Collection::make($items);
+        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
     }
 }
