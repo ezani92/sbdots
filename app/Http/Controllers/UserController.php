@@ -353,6 +353,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $affiliate = User::where('role',4)->where('is_ban',0)->pluck('name','affiliate_id');
+        $affiliate->prepend('No Affiliate', '');
 
         if(\Auth::user()->role == 1)
         {
