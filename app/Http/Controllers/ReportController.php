@@ -49,7 +49,7 @@ class ReportController extends Controller
             $transactions_1 = Transaction::where('status',2)->where('deposit_type','normal')->where('created_at','>=',$from)->where('created_at','<=',$to)->get();
             $transactions_2 = Transaction::where('status',2)->Where('transaction_type', 'withdraw')->where('created_at','>=',$from)->where('created_at','<=',$to)->get();
 
-            $transactions = $transactions_1->merge($transactions_2); // Contains foo and bar.
+            $transactions = $transactions_1->merge($transactions_2)->sort(); // Contains foo and bar.
             $transactions = $this->paginate($transactions)->setPath(url('admin/reports'));
 
 
