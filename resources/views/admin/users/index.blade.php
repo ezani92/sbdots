@@ -10,6 +10,19 @@
 			        <div class="panel panel-default panel-border-color panel-border-color-primary">
 			            <div class="panel-body">
 			                <br />
+			                <div class="row">
+	                            <div class="col-xs-8 form-inline" style="position: absolute; z-index: 2;">
+	                                <div class="input-daterange input-group" id="datepicker">
+	                                    <span class="input-group-addon">User Role</span>
+	                                    <select id="status" class="form-control input-sm" style="border-radius: 0;">
+	                                    	<option value="">ALL</option>
+	                                    	<option value="User">User</option>
+	                                    	<option value="Staff">Staff</option>
+	                                    	<option value="Affiliate">Affiliate</option>
+	                                    </select>
+	                                </div>
+	                            </div>
+	                        </div>
 			                <table id="games-table" class="table table-striped table-hover table-fw-widget">
 			                    <thead>
 			                        <tr>
@@ -47,11 +60,15 @@
                 { data: 'phone', name: 'phone' },
                 { data: 'role', name: 'role' },
                 { data: 'group_id', name: 'group_id' },
-                { data: 'referred_by', name: 'referred_by' },
+                { data: 'referred_by', name: 'referred_by',searchable: false },
                 { data: 'phone_verification', name: 'phone_verification' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false }
             ]
         });
     });
+
+    $("#status").on('change', function(){
+		$('#games-table').DataTable().search(this.value).draw();
+	});
 </script>
 </body></html>
