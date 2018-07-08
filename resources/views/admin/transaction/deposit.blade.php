@@ -11,12 +11,18 @@
 			            <div class="panel-body">
 			                <br />
 			                <div class="row">
-	                            <div class="col-xs-4 form-inline" style="position: absolute; z-index: 2;">
+	                            <div class="col-xs-8 form-inline" style="position: absolute; z-index: 2;">
 	                                <div class="input-daterange input-group" id="datepicker">
 	                                	<span class="input-group-addon">from</span>
 	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="from" value="{{ \Carbon\Carbon::now()->startOfMonth()->format('d-m-Y') }}" />
 	                                    <span class="input-group-addon">to</span>
 	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="to" value="{{ \Carbon\Carbon::now()->format('d-m-Y') }}"/>
+	                                    <span class="input-group-addon">Status</span>
+	                                    <select id="status" class="form-control input-sm" style="border-radius: 0;">
+	                                    	<option value="">ALL</option>
+	                                    	<option value="Complete">Complete</option>
+	                                    	<option value="Decline">Decline</option>
+	                                    </select>
 	                                </div>
 	                            </div>
 	                        </div>
@@ -106,5 +112,13 @@
 
 	    });
 	}
+
+	function applyFilter(filter) {
+	    $('#dataTable').DataTable().search(filter).draw();
+	}
+
+	$("#status").on('change', function(){
+		$('#transaction-table').DataTable().search(this.value).draw();
+	});
 </script>
 </body></html>

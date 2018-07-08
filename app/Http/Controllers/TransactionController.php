@@ -199,7 +199,7 @@ class TransactionController extends Controller
             ->editColumn('user_id', function ($transaction) {
                 return $transaction->user->name;
             })
-            ->editColumn('user_email', function ($transaction) {
+            ->editColumn('email', function ($transaction) {
                 return $transaction->user->email;
             })
             ->editColumn('group', function ($transaction) {

@@ -11,12 +11,18 @@
 			            <div class="panel-body">
 			                <br />
 			                <div class="row">
-	                            <div class="col-xs-4 form-inline" style="position: absolute; z-index: 2;">
+	                            <div class="col-xs-8 form-inline" style="position: absolute; z-index: 2;">
 	                                <div class="input-daterange input-group" id="datepicker">
 	                                	<span class="input-group-addon">from</span>
 	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="from" value="{{ \Carbon\Carbon::now()->startOfMonth()->format('d-m-Y') }}" />
 	                                    <span class="input-group-addon">to</span>
 	                                    <input type="text" data-toggle="datepicker" class="input-sm form-control" name="to" value="{{ \Carbon\Carbon::now()->format('d-m-Y') }}"/>
+	                                    <span class="input-group-addon">Status</span>
+	                                    <select id="status" class="form-control input-sm" style="border-radius: 0;">
+	                                    	<option value="">ALL</option>
+	                                    	<option value="Complete">Complete</option>
+	                                    	<option value="Decline">Decline</option>
+	                                    </select>
 	                                </div>
 	                            </div>
 	                        </div>
@@ -50,7 +56,7 @@
     
 	var oTable = $('#transaction-table').DataTable({
             processing: true,
-            serverSide: true,
+            serverSide: false,
             ajax: {
                 url: 'withdrawal-data',
                 data: function(d) {
@@ -63,7 +69,7 @@
                 { data: 'transaction_id', name: 'transaction_id' },
                 { data: 'created_at', name: 'created_at' },
                 { data: 'user_id', name: 'user_id' },
-                { data: 'user_email', name: 'user_email' },
+                { data: 'email', name: 'email' },
                 { data: 'group', name: 'group' },
                 { data: 'bank', name: 'bank' },
                 { data: 'amount', name: 'amount' },
@@ -102,5 +108,8 @@
 
 	    });
 	}
+	$("#status").on('change', function(){
+		$('#transaction-table').DataTable().search(this.value).draw();
+	});
 </script>
 </body></html>
