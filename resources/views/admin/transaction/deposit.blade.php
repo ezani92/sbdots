@@ -53,7 +53,7 @@
 
 	var oTable = $('#transaction-table').DataTable({
             processing: true,
-            serverSide: true,
+            serverSide: false,
             ajax: {
                 url: 'deposit-data',
                 data: function(d) {
@@ -66,7 +66,7 @@
                 { data: 'transaction_id', name: 'transaction_id' },
                 { data: 'created_at', name: 'created_at' },
                 { data: 'user_id', name: 'user_id' },
-                { data: 'user_email', name: 'user_email' },
+                { data: 'email', name: 'email' },
                 { data: 'group', name: 'group' },
                 { data: 'bank_id', name: 'bank_id' },
                 { data: 'amount', name: 'amount' },

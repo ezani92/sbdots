@@ -113,50 +113,65 @@
 					            		</tr>
 					            	@else
 						                @foreach($members as $member)
-						                <tr>
-						                    <td>{{ $member->name }}</td>
-						                    <td>{{ $member->phone }}</td>
-						                    <td>{{ $member->created_at->format('d M Y, h:iA') }}</td>
-						                    <td>
-						                    	@php
-						                    		$member_dep_raw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+                                        @php
 
-						                    		$member_dep = 'RM '.number_format($member_dep_raw,2);
 
-						                    	@endphp
-						                    	{!! $member_dep !!}
-						                    </td>
-						                    <td>
-						                    	@php
+                                                if(isset($_GET['date_from']))
+                                                {
+                                                    $arrStart = explode("-", $_GET['date_from']);
+                                                    $arrEnd = explode("-", $_GET['date_to']);
 
-						                    		$member_withdraw_raw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
-						                    	
-						                    		$member_withdraw = 'RM '.number_format($member_withdraw_raw,2);
+                                                    $from = \Carbon\Carbon::create($arrStart[2], $arrStart[1], $arrStart[0], 0, 0, 0);
+                                                    $to = \Carbon\Carbon::create($arrEnd[2], $arrEnd[1], $arrEnd[0], 23, 59, 59);
+                                                }
 
-						                    	@endphp
-						                    	{!! $member_withdraw !!}
-						                    </td>
-						                    <td>
-						                    	@php
-						                    		$member_dep = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+                                                    if(isset($_GET['date_from']))
+                                                    {
+                                                        $member_dep_raw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+                                                    }
+                                                    else
+                                                    {
+                                                        $member_dep_raw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+                                                    }
+                                                    
+                                                    $member_dep = 'RM '.number_format($member_dep_raw,2);
 
-						                    		$member_withdraw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
-						                    	
-						                    		$winlose_raw = $member_dep - $member_withdraw;
+                                                if(isset($_GET['date_from']))
+                                                    {
+                                                        $member_withdraw_raw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+                                                    }
+                                                    else
+                                                    {
+                                                        $member_withdraw_raw = \App\Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+                                                    }
+                                                
+                                                    $member_withdraw = 'RM '.number_format($member_withdraw_raw,2);
 
-						                    		if($winlose_raw < 0)
-						                    		{
-						                    			$winlose = '<span class="label label-danger">RM '.number_format($winlose_raw,2).'</span>';
-						                    		}
-						                    		else
-						                    		{
-						                    			$winlose = '<span class="label label-success">RM '.number_format($winlose_raw,2).'</span>';
-						                    		}
+                                                    $winlose_raw = $member_dep_raw - $member_withdraw_raw;
 
-						                    	@endphp
-						                    	{!! $winlose !!}
-						                    </td>
-						                </tr>
+                                                    if($winlose_raw < 0)
+                                                    {
+                                                        $winlose = '<span class="label label-danger">RM '.number_format($winlose_raw,2).'</span>';
+                                                    }
+                                                    else
+                                                    {
+                                                        $winlose = '<span class="label label-success">RM '.number_format($winlose_raw,2).'</span>';
+                                                    }
+
+                                        @endphp
+
+                                        @if($winlose_raw == 0)
+
+                                        @else
+                                            <tr>
+                                                <td>{{ $member->name }}</td>
+                                                <td>{{ $member->phone }}</td>
+                                                <td>{{ $member->created_at->format('d M Y, h:iA') }}</td>
+                                                <td>{!! $member_dep !!}</td>
+                                                <td>{!! $member_withdraw !!}</td>
+                                                <td>{!! $winlose !!}</td>
+                                            </tr>
+                                        @endif
 						                @endforeach
 						            @endif
                                 </tbody>
