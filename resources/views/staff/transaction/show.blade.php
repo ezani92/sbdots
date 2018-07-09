@@ -192,7 +192,13 @@
 				                				</tr>
 				                				<tr>
 				                					<td><strong>To Game</strong></td>
-				                					<td>{{ $transfer_to->name }}</td>
+				                					<td>
+				                						@if(!$transfer_to)
+															Game not selected
+														@else
+															{{ $transfer_to->name }}
+														@endif
+				                					</td>
 				                				</tr>
 				                				<tr>
 				                					<td><strong>Amount</strong></td>
