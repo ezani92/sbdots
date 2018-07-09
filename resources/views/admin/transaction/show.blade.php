@@ -42,7 +42,13 @@
                                                 @endphp
 			                					<tr>
 				                					<td><strong>Game Name</strong></td>
-				                					<td>{{ $game->name }}</td>
+				                					<td>
+														@if(!$game)
+															Game not selected
+														@else
+															{{ $game->name }}
+														@endif
+				                					</td>
 				                				</tr>
 				                				<tr>
 				                					<td><strong>Amount Deposit</strong></td>
@@ -174,9 +180,15 @@
 	                                                $transfer_to = \App\Game::find($data['to_game']);
 
 	                                            @endphp
-	                                            <tr>
+				                				<tr>
 				                					<td><strong>From Game</strong></td>
-				                					<td>{{ $transfer_from->name }}</td>
+				                					<td>
+														@if(!$transfer_from)
+															Game not selected
+														@else
+															{{ $transfer_from->name }}
+														@endif
+				                					</td>
 				                				</tr>
 				                				<tr>
 				                					<td><strong>To Game</strong></td>
