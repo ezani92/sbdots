@@ -15,13 +15,13 @@
 					        		<div class="col-md-6">
 					        			<div class="form-group">
 											<label>From</label>
-											<input data-toggle="datepicker" type="text" name="date_from" class="form-control" value="" autocomplete="off" required>
+											<input data-toggle="datepicker" type="text" name="date_from" class="form-control" value="{{ old('date_from') }}" autocomplete="off" required>
 										</div>
 					        		</div>
 					        		<div class="col-md-6">
 					        			<div class="form-group">
 											<label>To</label>
-											<input data-toggle="datepicker" type="text" name="date_to" value="" class="form-control" autocomplete="off" required>
+											<input data-toggle="datepicker" type="text" name="date_to" value="{{ old('date_to') }}" class="form-control" autocomplete="off" required>
 										</div>
 					        		</div>
 					        		<div class="col-md-12">
@@ -32,13 +32,19 @@
 					        		</div>
 					        		<div class="col-md-12">
 					        			<div class="form-group">
+											<label>&nbsp;</label>
+											<input type="checkbox" name="agree" required> I aware data might be lost forever if i mistaken reset the database
+										</div>
+					        		</div>
+					        		<div class="col-md-12">
+					        			<div class="form-group">
 											<input type="submit" name="act" class="btn btn-info btn-block" value="Download">
 										</div>
 					        		</div>
 
 					        		<div class="col-md-12">
 					        			<div class="form-group">
-											<input type="submit" name="act" class="btn btn-danger btn-block" value="Download And Reset">
+											<input type="submit" name="act" class="btn btn-danger btn-block" value="Reset">
 										</div>
 					        		</div>
 					        	</div>
