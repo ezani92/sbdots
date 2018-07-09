@@ -116,6 +116,9 @@ Route::middleware(['isadmin'])->group(function () {
     Route::get('/admin/annoucement/create', 'AnnoucementController@create');
     Route::post('/admin/annoucement', 'AnnoucementController@store');
     Route::get('/admin/annoucement/{annoucement_id}/delete', 'AnnoucementController@destroy');
+
+    Route::get('/admin/backup', 'BackupController@index');
+    Route::post('/admin/backup', 'BackupController@act');
     
 });
 

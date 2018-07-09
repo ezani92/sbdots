@@ -99,7 +99,7 @@ class TransactionController extends Controller
         $to_date = Carbon::create($arrEnd[2], $arrEnd[1], $arrEnd[0], 23, 59, 59);
 
 
-        $transactions = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->where('created_at','<=',$to_date)->where('created_at','>=',$from_date)->latest();
+        $transactions = Transaction::where('transaction_type','deposit')->where('deposit_type','normal')->where('created_at','<=',$to_date)->where('created_at','>=',$from_date)->latest()->with('user');
 
         return Datatables::of($transactions)
             ->addColumn('actions', function($transaction) {
