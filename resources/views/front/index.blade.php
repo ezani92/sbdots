@@ -121,10 +121,10 @@
                 <span type="button" class="close" data-dismiss="modal">&times;</span>
                 <h4 class="modal-title">Annoucement</h4>
             </div>
-            <div class="modal-body" style="background-color: #373737; color: white;">
+            <div class="modal-body text-center" style="background-color: #373737; color: white;">
                 <ol>
                     @foreach(\App\Annoucement::all() as $annoucement)
-                        {{ $annoucement->body }}
+                        <img src="{{ url('storage/image/'.$annoucement->image) }}">
                     @endforeach
                 </ol>
             </div>

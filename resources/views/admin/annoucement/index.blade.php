@@ -13,7 +13,8 @@
 			                <table id="games-table" class="table table-striped table-hover table-fw-widget">
 			                    <thead>
 			                        <tr>
-			                            <th width="70%">Annoucement</th>
+			                            <th width="30%">Title</th>
+			                            <th>Image</th>
 			                            <th>Date Created</th>
 			                            <th>Action</th>
 			                        </tr>
@@ -21,7 +22,8 @@
 			                    <tbody>
 			                    	@foreach($annoucements as $annoucement)
 			                    	<tr>
-			                    		<td>{{ $annoucement->body }}</td>
+			                    		<td>{{ $annoucement->title }}</td>
+			                    		<td><a target="_blank" href="{{ url('storage/image/'.$annoucement->image) }}">View Image</a></td>
 			                    		<td>{{ $annoucement->created_at->format('d M Y, h:i A') }}</td>
 			                    		<td><a onclick="return confirm('Are you sure?');" href="{{ url('admin/annoucement/'.$annoucement->id.'/delete') }}"><span class="label label-danger">Delete</span></a></td>
 			                    	</tr>

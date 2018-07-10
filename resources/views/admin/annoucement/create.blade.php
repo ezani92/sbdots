@@ -13,8 +13,12 @@
 			                <form method="POST" action="{{ url('admin/annoucement') }}" enctype="multipart/form-data">
 			                	@csrf
 							    <div class="form-group">
-							        <label>Annoucement</label>
-							        <textarea class="form-control" name="body" rows="5"></textarea>
+							        <label>Title</label>
+							        <input type="text" name="title" class="form-control" required>
+							    </div>
+							    <div class="form-group">
+							        <label>Image</label>
+							        <input type="file" name="image" class="form-control" required>
 							    </div>
 							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Add New</button>

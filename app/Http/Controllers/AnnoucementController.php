@@ -24,14 +24,32 @@ class AnnoucementController extends Controller
     {
     	$input = $request->all();
 
-    	$annoucement = new Annoucement;
-    	$annoucement->body = $input['body'];
-    	$annoucement->save();
+        if ($request->hasFile('image')) {
+            
+            $file = $request->file('image');
+            $filename = time().'.'.$file->getClientOriginalExtension();
+            $destinationPath = 'storage/image';
+            $file->move($destinationPath,$filename);
 
-    	Session::flash('message', 'Annoucement succesfully created!'); 
-        Session::flash('alert-class', 'alert-success');
+            $annoucement = new Annoucement;
+            $annoucement->title = $input['title'];
+            $annoucement->image = $filename;
+            $annoucement->save();
 
-    	return redirect('admin/annoucement');
+            Session::flash('message', 'Annoucement succesfully created!'); 
+            Session::flash('alert-class', 'alert-success');
+
+            return redirect('admin/annoucement');
+        }
+        else
+        {
+            Session::flash('message', 'Image is required!'); 
+            Session::flash('alert-class', 'alert-danger');
+
+            return redirect('admin/annoucement/create');
+        }
+
+    	
     }
 
     public function destroy($annoucement_id)
