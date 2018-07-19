@@ -15,7 +15,7 @@ class Transaction extends Model
 
     public function bonus()
     {
-        return $this->belongsTo('App\Bonus');
+        return $this->belongsTo('App\Bonus')->withTrashed();
     }
 
     public function bank()
