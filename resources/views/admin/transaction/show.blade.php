@@ -146,7 +146,7 @@
 																<li>Bonus Amount : -</li>
 															@else
 																@php
-																	$bonus = \App\Transaction::where('bonus_for',$last_transaction->id)->first();
+																	$bonus = \App\Transaction::withTrashed()->where('bonus_for',$last_transaction->id)->first();
 																@endphp
 																<li>Bonus Amount : RM {{ $bonus->amount }}</li>
 															@endif
