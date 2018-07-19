@@ -148,7 +148,11 @@
 																@php
 																	$bonus = \App\Transaction::where('bonus_for',$last_transaction->id)->first();
 																@endphp
-																<li>Bonus Amount : RM {{ $bonus }}</li>
+																@if($bonus)
+																<li>Bonus Amount : RM {{ $bonus->amount }}</li>
+																@else
+
+																@endif
 															@endif
 														</ul>
 				                					</td>
