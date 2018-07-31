@@ -31,6 +31,7 @@
 			                            <th>Email</th>
 			                            <th>Phone</th>
 			                            <th>Role</th>
+			                            <th>Win / Lose</th>
 			                            <th>Group</th>
 			                            <th>Referred By</th>
 			                            <th>Is Verified?</th>
@@ -59,6 +60,7 @@
                 { data: 'email', name: 'email' },
                 { data: 'phone', name: 'phone' },
                 { data: 'role', name: 'role' },
+                { data: 'win_lose', name: 'win_lose',searchable: false },
                 { data: 'group_id', name: 'group_id' },
                 { data: 'referred_by', name: 'referred_by',searchable: false },
                 { data: 'phone_verification', name: 'phone_verification' },

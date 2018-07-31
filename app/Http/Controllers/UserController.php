@@ -78,6 +78,22 @@ class UserController extends Controller
                     return 'Affiliate';
                 }
             })
+            ->editColumn('win_lose', function ($user) {
+                $dep = Transaction::where('user_id',$user->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+
+                $with = Transaction::where('user_id',$user->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+
+                $winlose = $dep - $with;
+
+                if($winlose < 0)
+                {
+                    return '<span class="label label-danger">RM '.$winlose.'</span>';
+                }
+                else
+                {
+                    return '<span class="label label-success">RM '.$winlose.'</span>';
+                }
+            })
             ->editColumn('referred_by', function ($user) {
                 if($user->referred_by == null)
                 {
@@ -108,7 +124,7 @@ class UserController extends Controller
             ->editColumn('created_at', function ($user) {
                 return '<span style="display: none;">'. $user->created_at->format('Ymd') .'</span>'.$user->created_at->format('d M Y, h:i A');
             })
-            ->rawColumns(['actions','phone_verification','created_at'])
+            ->rawColumns(['win_lose','actions','phone_verification','created_at'])
             ->make(true);
     }
 

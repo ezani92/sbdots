@@ -17,6 +17,7 @@
 			                            <th>Email</th>
 			                            <th>Phone</th>
 			                            <th>Role</th>
+			                            <th>Win / Lose</th>
 			                            <th>Group</th>
 			                            <th>Is Verified?</th>
 			                            <th>Last Login</th>
@@ -43,6 +44,7 @@
                 { data: 'email', name: 'email' },
                 { data: 'phone', name: 'phone' },
                 { data: 'role', name: 'role' },
+                { data: 'win_lose', name: 'win_lose',searchable: false },
                 { data: 'group_id', name: 'group_id' },
                 { data: 'phone_verification', name: 'phone_verification' },
                 { data: 'last_login', name: 'last_login' },
