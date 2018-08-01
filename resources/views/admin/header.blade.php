@@ -120,7 +120,8 @@
                                             </li>
                                         </ul>
                                     </li>
-
+                                    <li class="{{ Request::is('admin/accounts') ? 'active' : '' }}"><a href="{{ url('admin/accounts') }}"><i class="icon mdi mdi-home"></i><span>Accounting</span></a>
+                                    </li>
                                     <li class="parent {{ Request::is('admin/bonuses*') ? 'active' : '' }}">
                                         <a href="#"><i class="icon mdi mdi-ticket-star"></i><span>Bonuses</span></a>
                                         <ul class="sub-menu">

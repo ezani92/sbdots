@@ -74,6 +74,12 @@ Route::middleware(['isadmin'])->group(function () {
     Route::resource('/admin/bonuses', 'BonusController');
     Route::get('/admin/bonuses/{bonus_id}/restore', 'BonusController@restore');
 
+    Route::get('/admin/accounts', 'AccountController@index');
+    Route::get('/admin/accounts-data', 'AccountController@data');
+    Route::post('/admin/accounts/debit', 'AccountController@debit');
+    Route::post('/admin/accounts/credit', 'AccountController@credit');
+    Route::get('/admin/accounts/{account}/delete', 'AccountController@destroy');
+
 
     Route::post('/admin/transaction/addbonus', 'TransactionController@addbonus');
     Route::get('/admin/transaction/{transaction_id}/deletebonus', 'TransactionController@deletebonus');
