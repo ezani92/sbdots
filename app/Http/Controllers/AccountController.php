@@ -203,7 +203,7 @@ class AccountController extends Controller
         Session::flash('message', 'Debit transaction succesfully added!'); 
         Session::flash('alert-class', 'alert-success');
 
-        return redirect('admin/banks/'.$bank_id);
+        return redirect('admin/accounts/');
     }
 
     public function credit(Request $request)
