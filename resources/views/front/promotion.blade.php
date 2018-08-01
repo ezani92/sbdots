@@ -251,7 +251,7 @@
 								<div id="deposit-bonus" class="portfolio latest deposit slot">
 									<div class="promo-item">
 										<!-- Change Banner -->
-										<div class="promo-button"><img src="images/en/5_slots_deposit_bonus.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/5_slot.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
 												<h4>Existing Member: 5% Deposit Bonus for Slots</h4>
@@ -304,7 +304,7 @@
 								<div id="deposit-bonus" class="portfolio latest deposit slot">
 									<div class="promo-item">
 										<!-- Change Banner -->
-										<div class="promo-button"><img src="images/en/existing_member_10_slot.jpg" alt=""/></div>
+										<div class="promo-button"><img src="images/en/10_slot.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
 												<h4>Existing Member: 10% Deposit Bonus for Slots</h4>
@@ -390,7 +390,7 @@
 									</div>
 								</div> -->
 
-								<div id="starter" class="portfolio latest worldcup">
+								{{-- <div id="starter" class="portfolio latest worldcup">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/wc-1.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
@@ -536,7 +536,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> --}}
 
 								<!-- <div id="welcome" class="portfolio latest special">
 									<div class="promo-item">
