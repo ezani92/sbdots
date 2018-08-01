@@ -25,7 +25,7 @@
 					<ul id="filters" class="nav-tabs">
 						<li><span class="filter" data-filter="*">all</span></li>
 						<li><span class="filter" data-filter=".latest">latest</span></li>
-						<li><span class="filter" data-filter=".worldcup">World Cup</span></li>
+						{{-- <li><span class="filter" data-filter=".worldcup">World Cup</span></li> --}}
 						<li><span class="filter" data-filter=".new">new member</span></li>
 						<li><span class="filter" data-filter=".deposit">deposit bonus</span></li>
 						<!--<li><span class="filter" data-filter=".rebate">rebate</span></li>-->
