@@ -79,19 +79,56 @@ class UserController extends Controller
                 }
             })
             ->editColumn('win_lose', function ($user) {
-                $dep = Transaction::where('user_id',$user->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
-
-                $with = Transaction::where('user_id',$user->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
-
-                $winlose = $dep - $with;
-
-                if($winlose < 0)
+                
+                if($user->role == 3)
                 {
-                    return '<span class="label label-danger">RM '.$winlose.'</span>';
+                    $dep = Transaction::where('user_id',$user->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+
+                    $with = Transaction::where('user_id',$user->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+
+                    $winlose = $dep - $with;
+
+                    if($winlose < 0)
+                    {
+                        return '<span class="label label-danger">RM '.$winlose.'</span>';
+                    }
+                    else
+                    {
+                        return '<span class="label label-success">RM '.$winlose.'</span>';
+                    }
                 }
+
+                else if($user->role == 4)
+                {
+                    $members = User::where('referred_by',$user->affiliate_id)->get();
+
+                    $deposit_sum = 0;
+                    $withdraw_sum = 0;
+
+                    foreach($members as $member)
+                    {
+                        $dep = Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+                        $with = Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->where('created_at','>=',$from)->where('created_at','<=',$to)->sum('amount');
+
+                        $deposit_sum = $deposit_sum + $dep;
+                        $withdraw_sum = $withdraw_sum + $with;
+                    }
+
+                    $winlose = $deposit_sum - $withdraw_sum;
+
+                    if($winlose < 0)
+                    {
+                        return '<span class="label label-danger">RM '.$winlose.'</span>';
+                    }
+                    else
+                    {
+                        return '<span class="label label-success">RM '.$winlose.'</span>';
+                    }
+                }
+
                 else
                 {
-                    return '<span class="label label-success">RM '.$winlose.'</span>';
+                    return '-';
                 }
             })
             ->editColumn('referred_by', function ($user) {
