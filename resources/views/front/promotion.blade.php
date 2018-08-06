@@ -248,9 +248,117 @@
 									</div>
 								</div>
 
+								<div id="deposit-bonus" class="portfolio latest deposit">
+									<div class="promo-item">
+										<div class="promo-button"><img src="images/en/banner-2_em-sportdbook10.jpg" alt=""/></div>
+										<div class="promo-btm-wrap">
+											<div class="promo-content">
+												<h4>Existing Member: 10% Sports Book Deposit Bonus Only</h4>
+												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+													<tr>
+														<th>MIN. DEPOSIT AMOUNT (RM) </th>
+														<th>BONUS</th>
+														<th>MAXIMUM BONUS (RM)</th>
+														<th>WINNING REQUIREMENT</th>
+													</tr>
+													<tr>
+														<td>30</td>
+														<td>10%</td>
+														<td>RM1000</td>
+														<td>x5</td>
+													</tr>
+												</table>
+												
+												Terms & Conditions:
+												<ol>
+													<li>SBdots will be giving away extra 10% deposit bonus to all existing member deposit.</li>
+													<li>
+														Member only can withdraw their deposit bonus after achieving the required rollover of deposit amount and bonus.
+														<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+															<tr>
+																<th rowspan="3">Example</th>
+																<td>First Deposit</td>
+																<td>RM100</td>
+															</tr>
+															<tr>
+																<td>Bonus</td>
+																<td>RM10</td>
+															</tr>
+															<tr>
+																<td>Winning Requirement </td>
+																<td>(100 + 10) x 5 = RM550</td>
+															</tr>
+														</table>
+													</li>
+													<li>Any bet places on the two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement.</li>
+													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all bonus and winning credit will be confiscated.</li>
+													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can losses the full bonus amount)</li>
+													<li>This promotion is applicable for all Sports Book Platform only.</li>
+													<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>
+													<li>The bonus amount and all winnings will be forfeited if the deposit and bonus rollover requirement are not met within 30 days of bonus credit.</li>
+													<li>SBdot reserves the rights to decline the payout and freeze the account for investigation if there are any form of suspicious activities and third-party software found. All payout shall be void as well.</li>
+												</ol>
+											</div>
+										</div>
+									</div>
+								</div>
+
 								<div id="deposit-bonus" class="portfolio latest deposit slot">
 									<div class="promo-item">
-										<!-- Change Banner -->
+										<div class="promo-button"><img src="images/en/Casino-Floor_em-slot-game.jpg" alt=""/></div>
+										<div class="promo-btm-wrap">
+											<div class="promo-content">
+												<h4>Existing Member: 8% 918Kiss Deposit Bonus</h4>
+												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+													<tr>
+														<th>MIN. DEPOSIT AMOUNT (RM) </th>
+														<th>BONUS</th>
+														<th>MAXIMUM BONUS (RM)</th>
+														<th>WINNING REQUIREMENT</th>
+													</tr>
+													<tr>
+														<td>30</td>
+														<td>8%</td>
+														<td>N/A</td>
+														<td>x3</td>
+													</tr>
+												</table>
+												
+												Terms & Conditions:
+												<ol>
+													<li>SBdot will be giving away extra 8% deposit bonus to their existing member deposit for slot games only.</li>
+													<li>
+														Member only can withdraw their deposit bonus after achieving the required winning of deposit amount and bonus:
+														<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
+															<tr>
+																<th rowspan="3">Example</th>
+																<td>First Deposit</td>
+																<td>RM100</td>
+															</tr>
+															<tr>
+																<td>Bonus</td>
+																<td>RM8</td>
+															</tr>
+															<tr>
+																<td>Winning Requirement </td>
+																<td>(100 + 8) x 3 = RM324</td>
+															</tr>
+														</table>
+													</li>
+													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all bonus and winning credit will be confiscated.</li>
+													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can losses the full bonus amount)</li>
+													<li>This promotion is only applicable for 918kiss Platform only.</li>
+													<li>Our Company has the right to modify, change or terminate the promotion without prior notice.</li>
+													<li>The bonus amount and all winnings will be forfeited if the deposit and bonus rollover requirement are not met within 30 days of bonus credit.</li>
+													<li>SBdot reserves the rights to decline the payout and freeze the account for investigation if there are any form of suspicious activities and third-party software found. All payout shall be void as well.</li>
+												</ol>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--<div id="deposit-bonus" class="portfolio latest deposit slot">
+									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/5_slot.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
@@ -303,7 +411,6 @@
 
 								<div id="deposit-bonus" class="portfolio latest deposit slot">
 									<div class="promo-item">
-										<!-- Change Banner -->
 										<div class="promo-button"><img src="images/en/10_slot.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
@@ -352,43 +459,32 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 
-								<!--<div id="mobile" class="portfolio latest rebate">
+								<div id="mobile" class="portfolio latest rebate special">
 									<div class="promo-item">
 										<div class="promo-button"><img src="images/en/bnr5.jpg" alt=""/></div>
 										<div class="promo-btm-wrap">
 											<div class="promo-content">
-												<h4>Rebate: 1% Cash Rebates for Sports & Live Casino </h4>
-												<table width="100%" border="0" cellspacing="0" cellpadding="0" class="promo-table">
-													<tr>
-														<th>ROLLOVER</th>
-														<th>REBATE BONUS (%)</th>
-														<th>ROLLOVER REQUIREMENT</th>
-													</tr>
-													<tr>
-														<td>10k></td>
-														<td>1%</td>
-														<td>x1</td>
-													</tr>
-												</table>
-												
+												<h4>Existing Member: 1% Weekly Rebate Bonus for Live Casino and Sports book only</h4>	
 												Terms & Conditions:
 												<ol>
-													<li>All active members are entitled to 1% cash rebate on their total amount wagered in Sbdot Sportsbook & Live Casino product only.</li>
-													<li>Every Monday after 12PM (GMT+8) onwards. Member will receive the bonus into their product account within 24 hours.</li> 
-													<li>Member only can withdraw their bonus after 1x turnover of Bonus.</li> 
-													<li>This promotion cannot be combined with any other existing promotion. Once member have chosen any bonus within the week, they will not be entitled to claim this rebate.</li>
-													<li>Any bet place on two opposite sides or draw will not be taken into the calculation or count towards any rollover requirement.</li> 
-													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all free credit will be confiscated.</li> 
-													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirements are no longer applicable to subsequent deposits (Credits lower than RM10 that mean member has losses the full bonus amount).</li>
-													<li>This promotion is only applicable for Sportsbook & Live Casino Games.</li>
-													<li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>  	
+													<li>Each existing members of SBdot are allowed to claim 1 time rescue bonus on each day. (Based on total deposit & loss of the day)</li>
+													<li>The promotion cannot be combine with other promotion.</li>
+													<li>Before you claiming the Weekly Rebate Bonus should have above 10000 rollovers on Live Casino or Sportsbook.</li>
+													<li>Weekly Rebate Bonus will start every Monday to Sunday. (Member need to come by the end of the current week and within 7days on our live chat for claim the weekly rebate bonus) Only Live Dealer & Sportsbook Game Turnover will be counted, Other games played will be disqualified from this promotion.</li>
+													<li>Example: Rescue Bonus RM10</li>
+													<li>Rollover: RM10 x 5 Rollover = 50</li>
+													<li>SBdot reserves the rights to decline the payout and freeze the account for investigation if there are any form of suspicious activities and third-party software found. All payout shall be void as well.</li>
+													<li>This promotion is not allowed for multiple accounts, if there is any collusion or usage of multiple account, all bonus and winning credit will be not given and the qualification of the players will be waived.</li>
+													<li>Our company has the right to modify, change or terminate the promotion without prior notice.</li>
+													<li>The bonus amount and all winnings will be forfeited if the deposit and bonus rollover requirement are not met within 30 days of bonus credit.</li>
+													<li>Member may not transfer money out of the Product before the bonus is fully wagered. If the member losses the full bonus amount, then the previous rollover requirement are no longer applicable to subsequent deposits (Credit lower than RM10, that mean member can losses the full bonus amount).</li>
 												</ol>
 											</div>
 										</div>
 									</div>
-								</div> -->
+								</div>
 
 								{{-- <div id="starter" class="portfolio latest worldcup">
 									<div class="promo-item">
