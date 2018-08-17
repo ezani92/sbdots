@@ -140,7 +140,9 @@ class UserController extends Controller
                 {
                     $referred = User::where('affiliate_id',$user->referred_by)->first();
 
-                    return $referred->name;
+                    if($referred){
+                        return $referred->name;
+                    }
                 }
             })
             ->editColumn('phone_verification', function ($user) {
