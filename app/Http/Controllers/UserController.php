@@ -774,7 +774,7 @@ class UserController extends Controller
 
         // Define the Excel spreadsheet headers
 
-        $orderArray[] = ['Name', 'Email', 'Phone Number', 'Address', 'State', 'Register Time', 'Last Login'];
+        $orderArray[] = ['Name', 'Email', 'Phone Number', 'Address', 'State', 'Register Time', 'Last Login','Total Deposit','Total Withdraw'];
 
         // Convert each member of the returned collection into an array,
         // and append it to the payments array.
@@ -796,6 +796,8 @@ class UserController extends Controller
                     $state = $user->state;
                     $register_at = $user->created_at->format('d M Y');
                     $last_login = $user->last_login->format('d M Y');
+                    $deposit = $user->transactions->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+                    $withdraw = $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 
                     // COnvert to excel
 
@@ -806,7 +808,9 @@ class UserController extends Controller
                         $address,
                         $state,
                         $register_at,
-                        $last_login
+                        $last_login,
+                        $deposit,
+                        $withdraw
                     );
                     $orderArray[] = $tempArray;
                 }
@@ -825,6 +829,8 @@ class UserController extends Controller
                     $state = $user->state;
                     $register_at = $user->created_at->format('d M Y');
                     $last_login = $user->last_login->format('d M Y');
+                    $deposit = $user->transactions->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+                    $withdraw = $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 
                     // COnvert to excel
 
@@ -835,7 +841,9 @@ class UserController extends Controller
                         $address,
                         $state,
                         $register_at,
-                        $last_login
+                        $last_login,
+                        $deposit,
+                        $withdraw
                     );
                     $orderArray[] = $tempArray;
                 }
@@ -849,6 +857,7 @@ class UserController extends Controller
         {
             foreach($users as $user)
             {
+
                 $name = $user->name;
                 $email = $user->email;
                 $phone = $user->phone;
@@ -856,6 +865,8 @@ class UserController extends Controller
                 $state = $user->state;
                 $register_at = $user->created_at->format('d M Y');
                 $last_login = $user->last_login->format('d M Y');
+                $deposit = $user->transactions->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+                $withdraw = $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 
                 // COnvert to excel
 
@@ -866,7 +877,9 @@ class UserController extends Controller
                     $address,
                     $state,
                     $register_at,
-                    $last_login
+                    $last_login,
+                    $deposit,
+                    $withdraw
                 );
                 $orderArray[] = $tempArray;
             }
