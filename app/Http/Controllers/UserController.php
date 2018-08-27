@@ -774,7 +774,7 @@ class UserController extends Controller
 
         // Define the Excel spreadsheet headers
 
-        $orderArray[] = ['Name', 'Email', 'Phone Number', 'Address', 'State', 'Register Time', 'Last Login','Total Deposit','Total Withdraw'];
+        $orderArray[] = ['Name', 'Email', 'Phone Number', 'Address', 'State', 'Register Time', 'Last Login','Total Deposit','Total Withdraw', 'Winlose'];
 
         // Convert each member of the returned collection into an array,
         // and append it to the payments array.
@@ -798,6 +798,7 @@ class UserController extends Controller
                     $last_login = $user->last_login->format('d M Y');
                     $deposit = $user->transactions->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
                     $withdraw = $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+                    $winlose = $user->transactions->where('transaction_type','deposit')->where('status',2)->where('deposit_type','normal')->sum('amount') - $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 
                     // COnvert to excel
 
@@ -810,7 +811,8 @@ class UserController extends Controller
                         $register_at,
                         $last_login,
                         $deposit,
-                        $withdraw
+                        $withdraw,
+                        $winlose
                     );
                     $orderArray[] = $tempArray;
                 }
@@ -831,6 +833,7 @@ class UserController extends Controller
                     $last_login = $user->last_login->format('d M Y');
                     $deposit = $user->transactions->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
                     $withdraw = $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+                    $winlose = $user->transactions->where('transaction_type','deposit')->where('status',2)->where('deposit_type','normal')->sum('amount') - $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 
                     // COnvert to excel
 
@@ -843,7 +846,8 @@ class UserController extends Controller
                         $register_at,
                         $last_login,
                         $deposit,
-                        $withdraw
+                        $withdraw,
+                        $winlose
                     );
                     $orderArray[] = $tempArray;
                 }
@@ -867,6 +871,7 @@ class UserController extends Controller
                 $last_login = $user->last_login->format('d M Y');
                 $deposit = $user->transactions->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
                 $withdraw = $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+                $winlose = $user->transactions->where('transaction_type','deposit')->where('status',2)->where('deposit_type','normal')->sum('amount') - $user->transactions->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 
                 // COnvert to excel
 
@@ -879,7 +884,8 @@ class UserController extends Controller
                     $register_at,
                     $last_login,
                     $deposit,
-                    $withdraw
+                    $withdraw,
+                    $winlose
                 );
                 $orderArray[] = $tempArray;
             }
