@@ -8,6 +8,7 @@ use DataTables;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
+use Excel;
 use App\Game;
 use App\Bank;
 use App\BankRecord;
@@ -753,5 +754,140 @@ class UserController extends Controller
         Session::flash('alert-class', 'alert-success');
 
         return redirect('admin/users/'.$user->id);
+    }
+
+    public function export()
+    {
+        return view('admin.users.export');
+    }
+
+    public function runExport(Request $request)
+    {
+        // return $request;
+
+        $users = User::where('role',3)->get();
+
+        // Initialize the array which will be passed into the Excel
+        // generator.
+
+        $orderArray = [];
+
+        // Define the Excel spreadsheet headers
+
+        $orderArray[] = ['Name', 'Email', 'Phone Number', 'Address', 'State', 'Register Time', 'Last Login'];
+
+        // Convert each member of the returned collection into an array,
+        // and append it to the payments array.
+
+        if($request->filter == 1)
+        {
+            foreach($users as $user)
+            {
+                if($user->transactions->count() == 0)
+                {
+                    
+                }
+                else
+                {
+                    $name = $user->name;
+                    $email = $user->email;
+                    $phone = $user->phone;
+                    $address = $user->address;
+                    $state = $user->state;
+                    $register_at = $user->created_at->format('d M Y');
+                    $last_login = $user->last_login->format('d M Y');
+
+                    // COnvert to excel
+
+                    $tempArray = array(
+                        $name,
+                        $email,
+                        $phone,
+                        $address,
+                        $state,
+                        $register_at,
+                        $last_login
+                    );
+                    $orderArray[] = $tempArray;
+                }
+            }
+        }
+        elseif($request->filter == 2)
+        {
+            foreach($users as $user)
+            {
+                if($user->transactions->count() == 0)
+                {
+                    $name = $user->name;
+                    $email = $user->email;
+                    $phone = $user->phone;
+                    $address = $user->address;
+                    $state = $user->state;
+                    $register_at = $user->created_at->format('d M Y');
+                    $last_login = $user->last_login->format('d M Y');
+
+                    // COnvert to excel
+
+                    $tempArray = array(
+                        $name,
+                        $email,
+                        $phone,
+                        $address,
+                        $state,
+                        $register_at,
+                        $last_login
+                    );
+                    $orderArray[] = $tempArray;
+                }
+                else
+                {
+                    
+                }
+            }
+        }
+        else
+        {
+            foreach($users as $user)
+            {
+                $name = $user->name;
+                $email = $user->email;
+                $phone = $user->phone;
+                $address = $user->address;
+                $state = $user->state;
+                $register_at = $user->created_at->format('d M Y');
+                $last_login = $user->last_login->format('d M Y');
+
+                // COnvert to excel
+
+                $tempArray = array(
+                    $name,
+                    $email,
+                    $phone,
+                    $address,
+                    $state,
+                    $register_at,
+                    $last_login
+                );
+                $orderArray[] = $tempArray;
+            }
+        }
+
+        
+
+        Excel::create('sbdot_user')->sheet('sheet1',
+        function ($sheet) use($orderArray)
+        {
+            $sheet->fromArray($orderArray, null, 'A1', false, false);
+            $sheet->row(1,
+            function ($row)
+            {
+                $row->setBackground('#eeeeee');
+            });
+        })->export('xls');
+
+        Session::flash('message', 'Excel File Succesfuly Generated');
+        Session::flash('alert-class', 'alert-danger');
+
+        return redirect('admin/users/export');
     }
 }

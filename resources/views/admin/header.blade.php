@@ -155,6 +155,8 @@
                                             </li>
                                             <li class="{{ Request::is('admin/users/create') ? 'active' : '' }}"><a href="{{ url('admin/users/create') }}">Add New User</a>
                                             </li>
+                                            <li class="{{ Request::is('admin/users/export') ? 'active' : '' }}"><a href="{{ url('admin/users/export') }}">Export User</a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="parent {{ Request::is('admin/groups*') ? 'active' : '' }}">
