@@ -75,7 +75,7 @@
             @endif
             <div id="menu">
                 <ul>
-                    <li><a href="{{ url('/') }}" class="">Home</a></li>
+                    <li><a href="{{ url('/') }}" class="">TEST</a></li>
                     <li><a href="{{ url('sportsbooks') }}" class="">sportsbooks</a></li>
                     <li><a href="{{ url('live_casinos') }}" class="">live casinos</a></li>
                     <li><a href="{{ url('slots') }}" class="">slots</a></li>
