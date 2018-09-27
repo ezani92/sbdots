@@ -447,11 +447,12 @@ class UserController extends Controller
         $user = User::find($id);
         $affiliate = User::where('role',4)->where('is_ban',0)->pluck('name','affiliate_id');
         $affiliate->prepend('No Affiliate', '');
+        $supers = User::where('role',5)->get()->pluck('name','id');
 
         if(\Auth::user()->role == 1)
         {
 
-            return view('admin.users.edit',compact('user','affiliate'));
+            return view('admin.users.edit',compact('user','affiliate','supers'));
 
         }
         else
@@ -482,6 +483,7 @@ class UserController extends Controller
         if(isset($input['affiliate_rate']))
         {
             $user->affiliate_rate = $input['affiliate_rate'];
+            $user->reffered_by = $input['affiliate_super'];
         }
 
         $user->group_id = $input['group'];

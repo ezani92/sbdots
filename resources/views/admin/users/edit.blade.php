@@ -30,6 +30,10 @@
 								        <label>Affiliate Commision Rate</label>
 								        <input type="number" min="1" max="100" step="0.02" value="{{ $user->affiliate_rate }}" name="affiliate_rate" class="form-control" required>
 								    </div>
+								    <div class="form-group" id="affiliate_super">
+								        <label>Master Affiliate </label>
+								        {{ Form::select('affiliate_super',$supers , $user->referred_by, ['placeholder' => 'Not Assign','class' => 'form-control']) }}
+								    </div>
 							    @else
 
 							    @endif
