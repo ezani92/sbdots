@@ -78,6 +78,10 @@ class UserController extends Controller
                 {
                     return 'Affiliate';
                 }
+                else if($user->role == 5)
+                {
+                    return 'Master Affiliate';
+                }
             })
             ->editColumn('win_lose', function ($user) {
                 
@@ -175,10 +179,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        
+        $supers = User::where('role',5)->get();
         if(\Auth::user()->role == 1)
         {
-            return view('admin.users.create');
+            return view('admin.users.create',compact('supers'));
         }
         else
         {
@@ -205,6 +209,7 @@ class UserController extends Controller
         if(isset($input['affiliate_rate']))
         {
             $user->affiliate_rate = $input['affiliate_rate'];
+            $user->referred_by = $input['affiliate_super'];
         }
         
         $user->phone_verification = $input['phone_verification'];
@@ -312,6 +317,38 @@ class UserController extends Controller
                 $bonuses = Bonus::all();
 
                 return view('admin.users.show',compact('user','games','banks','bonuses'));
+            }
+
+            else if($user->role == 5)
+            {
+                $games = Game::all();
+                $banks = Bank::all();
+                $bonuses = Bonus::all();
+
+                $input = $request->all();
+
+                $agents = User::where('referred_by',$user->id)->get();
+
+                $deposit_sum = 0;
+                $withdraw_sum = 0;
+
+                foreach($agents as $agent)
+                {
+                    $dep = Transaction::where('user_id',$agent->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+                    $with = Transaction::where('user_id',$agent->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+
+                    $deposit_sum = $deposit_sum + $dep;
+                    $withdraw_sum = $withdraw_sum + $with;
+                }
+
+                $winlose = $deposit_sum - $withdraw_sum;
+
+                $commision_rate = $user->affiliate_rate;
+                $final_commision = $commision_rate / 100 * $winlose;
+
+
+
+                return view('admin.users.superaffiliate',compact('user','games','banks','bonuses','agents','deposit_sum','withdraw_sum','winlose','final_commision'));
             }
 
             else

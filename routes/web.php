@@ -218,3 +218,11 @@ Route::middleware(['isaffiliate','phoneverification'])->group(function () {
     Route::get('/affiliate/reports', 'AffiliateController@reports');
 
 });
+
+Route::middleware(['ismaster'])->group(function () {
+
+    Route::get('/master', 'MasterController@dashboard');
+    Route::get('/master/agent/{user}', 'MasterController@agent');
+    Route::get('/master/reports', 'MasterController@reports');
+
+});

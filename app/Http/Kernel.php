@@ -62,6 +62,7 @@ class Kernel extends HttpKernel
         'isstaff' => \App\Http\Middleware\isStaff::class,
         'isplayer' => \App\Http\Middleware\isPlayer::class,
         'isaffiliate' => \App\Http\Middleware\isAffiliate::class,
+        'ismaster' => \App\Http\Middleware\isMaster::class,
         'phoneverification' => \App\Http\Middleware\PhoneVerification::class,
         'referral' => \App\Http\Middleware\CheckReferral::class,
     ];

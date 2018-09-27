@@ -22,11 +22,20 @@
 							    </div>
 							    <div class="form-group">
 							        <label>Role</label>
-							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate'], 3, ['class' => 'form-control role']) }}
+							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate','5' => 'Master Affiliate'], 3, ['class' => 'form-control role']) }}
 							    </div>
 							    <div class="form-group" id="affiliate_rate" style="display: none;">
 							        <label>Affiliate Commision Rate</label>
 							        <input type="number" min="1" max="100" step="0.02" name="affiliate_rate" class="form-control">
+							    </div>
+							    <div class="form-group" id="affiliate_super" style="display: none;">
+							        <label>Master Affiliate </label>
+							        <select name="affiliate_super" class="form-control">
+							        	<option value="0">Not Assign</option>
+							        	@foreach($supers as $super)
+											<option value="{{ $super->id }}">{{ $super->name }}</option>
+							        	@endforeach
+							        </select>
 							    </div>
 							    <div class="form-group">
 							        <label>Phone No</label>
@@ -69,10 +78,12 @@
 		if(this.value == 4)
 		{
 			$('#affiliate_rate').show();
+			$('#affiliate_super').show();
 		}
 		else
 		{
 			$('#affiliate_rate').hide();
+			$('#affiliate_super').hide();
 		}
 
 	});

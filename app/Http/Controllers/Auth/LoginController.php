@@ -60,5 +60,10 @@ class LoginController extends Controller
         {
             return '/affiliate';
         }
+
+        else if (\Auth::user()->role == '5')
+        {
+            return '/master';
+        }
     }
 }

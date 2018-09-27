@@ -23,7 +23,7 @@
 							    </div>
 							    <div class="form-group">
 							        <label>Role</label>
-							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate'], $user->role, ['class' => 'form-control']) }}
+							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate','5' => 'Master Affiliate'], $user->role, ['class' => 'form-control']) }}
 							    </div>
 							    @if($user->role == 4)
 							    	<div class="form-group" id="affiliate_rate">
