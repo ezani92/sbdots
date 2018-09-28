@@ -1,9 +1,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="{{ asset('images/common/favicon.png') }}" rel="icon" type="image/x-icon" />
-        <title>
-            SUperb - Malaysia Top Online Gaming Sites
-        </title>
+        <title> 918kiss Casino - Malaysia Top Online Gaming | Register Now! </title>
+        <Meta name="description" content="Sbdot is one of the pioneer online casino gaming site for Malaysian players looking to enjoy the best online slots, blackjack, baccarat, roulette, poker, arcade games, sportsbook betting. We also have 918kiss casino, 918kiss login & register , 918kiss pc download & apk, 918kiss kiosk, etc."> 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/banner/nivo-slider.css') }}" />
