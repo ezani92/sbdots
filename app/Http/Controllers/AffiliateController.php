@@ -46,6 +46,7 @@ class AffiliateController extends Controller
 
         $user = User::find($user_reg->id);
         $user->role = 4;
+        $user->phone_verification = 1;
         $user->save();
 
         Auth::loginUsingId($user->id);

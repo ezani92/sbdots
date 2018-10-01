@@ -34,8 +34,11 @@
 								        <label>Master Affiliate </label>
 								        {{ Form::select('affiliate_super',$supers , $user->referred_by, ['placeholder' => 'Not Assign','class' => 'form-control']) }}
 								    </div>
-							    @else
-
+							    @elseif($user->role == 5)
+									<div class="form-group" id="affiliate_rate">
+								        <label>Master Commision Rate</label>
+								        <input type="number" min="1" max="100" step="0.02" value="{{ $user->affiliate_rate }}" name="affiliate_rate" class="form-control" required>
+								    </div>
 							    @endif
 							    <div class="form-group">
 							        <label>Group</label>
@@ -61,10 +64,12 @@
 							        <label>Remarks</label>
 							        <textarea name="remarks" class="form-control">{{ $user->remarks }}</textarea>
 							    </div>
+							    @if($user->role == 3)
 								<div class="form-group">
 							        <label>Refferal By</label>
 							        {{ Form::select('referred_by', $affiliate, $user->referred_by, ['class' => 'form-control']) }}
 							    </div>
+							    @endif
 							    
 							    <div class="form-group">
 							        <button type="submit" class="btn btn-info">Update User</button>

@@ -28,12 +28,16 @@
 							        <label>Affiliate Commision Rate</label>
 							        <input type="number" min="1" max="100" step="0.02" name="affiliate_rate" class="form-control">
 							    </div>
+							    <div class="form-group" id="master_rate" style="display: none;">
+							        <label>Master Affiliate Commision Rate</label>
+							        <input type="number" min="1" max="100" step="0.02" name="master_rate" class="form-control">
+							    </div>
 							    <div class="form-group" id="affiliate_super" style="display: none;">
 							        <label>Master Affiliate </label>
 							        <select name="affiliate_super" class="form-control">
 							        	<option value="0">Not Assign</option>
 							        	@foreach($supers as $super)
-											<option value="{{ $super->id }}">{{ $super->name }}</option>
+											<option value="{{ $super->affiliate_id }}">{{ $super->name }}</option>
 							        	@endforeach
 							        </select>
 							    </div>
@@ -84,6 +88,15 @@
 		{
 			$('#affiliate_rate').hide();
 			$('#affiliate_super').hide();
+		}
+
+		if(this.value == 5)
+		{
+			$('#master_rate').show();
+		}
+		else
+		{
+			$('#master_rate').hide();
 		}
 
 	});
