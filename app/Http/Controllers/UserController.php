@@ -83,59 +83,59 @@ class UserController extends Controller
                     return 'Master Affiliate';
                 }
             })
-            ->editColumn('win_lose', function ($user) {
+            // ->editColumn('win_lose', function ($user) {
                 
-                if($user->role == 3)
-                {
-                    $dep = Transaction::where('user_id',$user->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+            //     if($user->role == 3)
+            //     {
+            //         $dep = Transaction::where('user_id',$user->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
 
-                    $with = Transaction::where('user_id',$user->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+            //         $with = Transaction::where('user_id',$user->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 
-                    $winlose = $dep - $with;
+            //         $winlose = $dep - $with;
 
-                    if($winlose < 0)
-                    {
-                        return '<span class="label label-danger">RM '.$winlose.'</span>';
-                    }
-                    else
-                    {
-                        return '<span class="label label-success">RM '.$winlose.'</span>';
-                    }
-                }
+            //         if($winlose < 0)
+            //         {
+            //             return '<span class="label label-danger">RM '.$winlose.'</span>';
+            //         }
+            //         else
+            //         {
+            //             return '<span class="label label-success">RM '.$winlose.'</span>';
+            //         }
+            //     }
 
-                else if($user->role == 4)
-                {
-                    $members = User::where('referred_by',$user->affiliate_id)->get();
+            //     else if($user->role == 4)
+            //     {
+            //         $members = User::where('referred_by',$user->affiliate_id)->get();
 
-                    $deposit_sum = 0;
-                    $withdraw_sum = 0;
+            //         $deposit_sum = 0;
+            //         $withdraw_sum = 0;
 
-                    foreach($members as $member)
-                    {
-                        $dep = Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
-                        $with = Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
+            //         foreach($members as $member)
+            //         {
+            //             $dep = Transaction::where('user_id',$member->id)->where('transaction_type','deposit')->where('deposit_type','normal')->where('status',2)->sum('amount');
+            //             $with = Transaction::where('user_id',$member->id)->where('transaction_type','withdraw')->where('status',2)->sum('amount');
 
-                        $deposit_sum = $deposit_sum + $dep;
-                        $withdraw_sum = $withdraw_sum + $with;
-                    }
+            //             $deposit_sum = $deposit_sum + $dep;
+            //             $withdraw_sum = $withdraw_sum + $with;
+            //         }
 
-                    $winlose = $deposit_sum - $withdraw_sum;
+            //         $winlose = $deposit_sum - $withdraw_sum;
 
-                    if($winlose < 0)
-                    {
-                        return '<span class="label label-danger">RM '.$winlose.'</span>';
-                    }
-                    else
-                    {
-                        return '<span class="label label-success">RM '.$winlose.'</span>';
-                    }
-                }
+            //         if($winlose < 0)
+            //         {
+            //             return '<span class="label label-danger">RM '.$winlose.'</span>';
+            //         }
+            //         else
+            //         {
+            //             return '<span class="label label-success">RM '.$winlose.'</span>';
+            //         }
+            //     }
 
-                else
-                {
-                    return '-';
-                }
-            })
+            //     else
+            //     {
+            //         return '-';
+            //     }
+            // })
             ->editColumn('referred_by', function ($user) {
                 if($user->referred_by == null)
                 {
