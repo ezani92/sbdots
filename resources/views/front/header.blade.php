@@ -1,4 +1,13 @@
     <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126731062-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-126731062-1');
+        </script>
+
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="{{ asset('images/common/favicon.png') }}" rel="icon" type="image/x-icon" />
         <title> 918kiss Casino - Malaysia Top Online Gaming | Register Now! </title>
