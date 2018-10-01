@@ -532,7 +532,11 @@ class UserController extends Controller
         if($input['role'] == 4)
         {
             $user->affiliate_rate = $input['affiliate_rate'];
-            $user->referred_by = $input['affiliate_super'];
+            if(isset($input['affiliate_super']))
+            {
+                $user->referred_by = $input['affiliate_super'];
+            }
+            
         }
         elseif($input['role'] == 5)
         {

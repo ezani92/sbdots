@@ -23,11 +23,11 @@
 							    </div>
 							    <div class="form-group">
 							        <label>Role</label>
-							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate','5' => 'Master Affiliate'], $user->role, ['class' => 'form-control']) }}
+							        {{ Form::select('role', ['1' => 'Administrator', '2' => 'Staff', '3' => 'Normal User','4' => 'Affiliate','5' => 'Master Affiliate'], $user->role, ['class' => 'form-control role']) }}
 							    </div>
 							    @if($user->role == 4)
 							    	<div class="form-group" id="affiliate_rate">
-								        <label>Affiliate Commision Rate</label>
+								        <label>Commision Rate</label>
 								        <input type="number" min="1" max="100" step="0.02" value="{{ $user->affiliate_rate }}" name="affiliate_rate" class="form-control" required>
 								    </div>
 								    <div class="form-group" id="affiliate_super">
@@ -36,7 +36,7 @@
 								    </div>
 							    @elseif($user->role == 5)
 									<div class="form-group" id="affiliate_rate">
-								        <label>Master Commision Rate</label>
+								        <label>Commision Rate</label>
 								        <input type="number" min="1" max="100" step="0.02" value="{{ $user->affiliate_rate }}" name="affiliate_rate" class="form-control" required>
 								    </div>
 							    @endif
@@ -83,4 +83,25 @@
 		</div>
     </div>
 @include('admin.footer')
+<script type="text/javascript">
+	
+	$(".role").change(function(){
+
+
+		if(this.value == 4)
+		{
+			$('#affiliate_rate').show();
+			$('#affiliate_super').show();
+		}
+		else
+		{
+			$('#affiliate_rate').hide();
+			$('#affiliate_super').hide();
+		}
+
+		
+
+	});
+
+</script>
 </body></html>
