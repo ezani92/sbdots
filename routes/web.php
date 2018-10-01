@@ -51,7 +51,8 @@ Route::get('api/switch-mobile', 'ApiController@mobile');
 
 Route::get('/player/verification', 'PlayerController@verification');
 Route::post('/player/verification', 'PlayerController@verification_confirm');
-
+Route::get('/aff', 'AffiliateController@viewregister');
+Route::post('/aff', 'AffiliateController@register');
 Auth::routes();
 
 Route::get('/admin/login', 'DashboardController@login');
@@ -212,7 +213,7 @@ Route::middleware(['isplayer','phoneverification'])->group(function () {
     
 });
 
-Route::middleware(['isaffiliate','phoneverification'])->group(function () {
+Route::middleware(['isaffiliate'])->group(function () {
 
     Route::get('/affiliate', 'AffiliateController@dashboard');
     Route::get('/affiliate/reports', 'AffiliateController@reports');

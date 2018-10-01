@@ -1,17 +1,17 @@
 @include('master.header')
     <div class="be-content">
         <div class="main-content container-fluid">
-        	{{-- <div class="row">
+        	<div class="row">
         		<div class="col-md-12">
-        			<div class="well"><h3>My Referral Link : {{ url('/') }}/?ref={{ \Auth::user()->affiliate_id }}</h3></div>
+        			<div class="well"><h3>My Referral Link : {{ url('/') }}/aff/?ref={{ \Auth::user()->affiliate_id }}</h3></div>
         		</div>
-        	</div> --}}
+        	</div>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="well"><h3>Total Agent Under  : {{ $total_agent }}</h3></div>
 				</div>
 				<div class="col-md-6">
-					<div class="well"><h3>Today Win/Lose  : RM{{ $total_win_lose }}</h3></div>
+					<div class="well"><h3>Total Win/Lose  : RM{{ $total_win_lose }}</h3></div>
 				</div>
         	</div>
         	<div class="row">

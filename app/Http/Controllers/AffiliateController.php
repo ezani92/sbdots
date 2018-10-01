@@ -7,9 +7,52 @@ use App\User;
 use App\Transaction;
 use App\Game;
 use Carbon\Carbon;
+use Hash;
+use Auth;
 
 class AffiliateController extends Controller
 {
+    public function viewregister(Request $request)
+    {
+        if(isset($request->ref))
+        {
+            return view('affiliate.register',compact('request'));
+        }
+        else
+        {
+            return abort(404);
+        }
+    }
+
+    public function register(Request $request)
+    {   
+
+        $this->validate(request(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+            'phone' => 'required|min:10|unique:users'
+        ]);
+        
+        
+        $user_reg = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'phone' => $request->phone,
+            'affiliate_id' => str_random(8),
+            'referred_by'   => $request->ref
+        ]);
+
+        $user = User::find($user_reg->id);
+        $user->role = 4;
+        $user->save();
+
+        Auth::loginUsingId($user->id);
+
+        return redirect('affiliate');
+    }
+
     public function dashboard()
     {
 
